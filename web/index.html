@@ -12,46 +12,84 @@
 <link rel="icon" href="static/logo.svg" type="image/svg+xml">
 <meta name="theme-color" content="#000000">
 <script src="static/matrix.js" data-ambient="on" defer></script>
+<script src="static/cursor.js" defer></script>
 </head>
 <body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="brand">
-      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#050607" stroke="#23272d" stroke-width="3"/><g fill="none" stroke-linecap="round" stroke-width="4.5"><path d="M16 27v10" stroke="#ececec"/><path d="M24 19v26" stroke="#4db8ff"/><path d="M32 24v16" stroke="#ececec"/><path d="M41 26h9" stroke="#ececec" stroke-opacity=".6"/><path d="M41 38h5" stroke="#ececec" stroke-opacity=".6"/></g></svg>
-      <div>
-        <h1>Sahaay</h1>
-        <p class="tag">सहाय · offline lecture companion</p>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<nav class="top" aria-label="Site">
+  <div class="wrap top-in">
+    <a class="top-brand" href="#top"><svg class="logo logo-sm" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#050607" stroke="#23272d" stroke-width="3"/><g fill="none" stroke-linecap="round" stroke-width="4.5"><path d="M16 27v10" stroke="#ececec"/><path d="M24 19v26" stroke="#4db8ff"/><path d="M32 24v16" stroke="#ececec"/><path d="M41 26h9" stroke="#ececec" stroke-opacity=".6"/><path d="M41 38h5" stroke="#ececec" stroke-opacity=".6"/></g></svg><span>Sahaay</span></a>
+    <div class="top-links">
+      <a href="#problem">Problem</a>
+      <a href="#npu">Why an NPU</a>
+      <a href="#silicon">Evidence</a>
+      <a href="#run">Run it</a>
+      <a class="top-cta" href="https://github.com/andringodson/Hackathon-SnapdragonAILab">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#050607" stroke="#23272d" stroke-width="3"/><g fill="none" stroke-linecap="round" stroke-width="4.5"><path d="M16 27v10" stroke="#ececec"/><path d="M24 19v26" stroke="#4db8ff"/><path d="M32 24v16" stroke="#ececec"/><path d="M41 26h9" stroke="#ececec" stroke-opacity=".6"/><path d="M41 38h5" stroke="#ececec" stroke-opacity=".6"/></g></svg>
+        <div>
+          <h1 data-text="Sahaay">Sahaay</h1>
+          <p class="tag">सहाय · offline lecture companion</p>
+        </div>
       </div>
+
+      <p class="lede">
+        Live captions, Indian-language translation and a jargon glossary for
+        any lecture playing on your screen — all of it running <em>on the machine</em>,
+        with the network switched off.
+      </p>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="live/">Try it in your browser</a>
+        <a class="btn" href="demo/?play=1">Watch a recorded session</a>
+        <a class="btn" href="https://github.com/andringodson/Hackathon-SnapdragonAILab">Source on GitHub</a>
+      </div>
+
+      <p class="note">
+        Built for the Snapdragon<sup>®</sup> AI Lab Build &amp; Present Challenge 2026.
+        The browser version downloads Whisper once and runs it <strong>on your own
+        machine</strong> — no audio leaves the tab, which is the same claim the
+        desktop app makes. The NPU, system-audio capture and Indian-language
+        translation need the desktop build.
+      </p>
     </div>
 
-    <p class="lede">
-      Live captions, Indian-language translation and a jargon glossary for any
-      lecture playing on your screen — all of it running <em>on the machine</em>,
-      with the network switched off.
-    </p>
-
-    <div class="cta">
-      <a class="btn btn-primary" href="live/">Try it in your browser</a>
-      <a class="btn" href="demo/?play=1">Watch a recorded session</a>
-      <a class="btn" href="https://github.com/andringodson/Hackathon-SnapdragonAILab">Source on GitHub</a>
-    </div>
-
-    <p class="note">
-      Built for the Snapdragon<sup>®</sup> AI Lab Build &amp; Present Challenge 2026.
-      The browser version downloads Whisper once and runs it <strong>on your own
-      machine</strong> — no audio leaves the tab, which is the same claim the
-      desktop app makes. The NPU, system-audio capture and Indian-language
-      translation need the desktop build.
-    </p>
+    <figure class="shot">
+      <div class="shot-frame">
+        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Sahaay · recorded session · Hindi</span></div>
+        <img src="static/hero.webp" width="1600" height="1000" fetchpriority="high" decoding="async"
+             alt="The Sahaay app mid-lecture: English captions, each translated into Hindi with technical terms such as eigenvalue kept in English, and a jargon panel explaining eigenvector and eigenvalue.">
+      </div>
+      <span class="chip chip-a"><b>हिन्दी</b> translated on the device</span>
+      <span class="chip chip-b"><b>eigenvalue</b> stays eigenvalue</span>
+      <span class="chip chip-c"><b>0</b> bytes of audio leave it</span>
+      <figcaption>The real desktop interface, replaying a session it recorded.</figcaption>
+    </figure>
   </div>
 </header>
 
-<main class="wrap">
+<section class="kpis wrap" aria-label="Key measurements">
+  <a class="kpi" href="#npu"><b data-count="1.55" data-dec="2">1.55</b><span>real-time factor on a CPU with the glossary running — the captions fall behind</span></a>
+  <a class="kpi" href="#silicon"><b data-count="13.47" data-dec="2" data-unit=" ms">13.47 ms</b><span>Whisper encoder on the Snapdragon X2 Elite NPU</span></a>
+  <a class="kpi" href="#silicon"><b data-count="129" data-dec="0" data-unit=" / 129">129 / 129</b><span>layers on the Hexagon NPU, zero CPU fallback</span></a>
+  <a class="kpi" href="#offline"><b data-count="0" data-dec="0">0</b><span>outbound connections in a full session — tested, not asserted</span></a>
+</section>
+
+<main class="wrap" id="evidence">
 
   <!-- ---------------------------------------------------------------- -->
-  <section>
-    <h2>The problem</h2>
+  <section class="sec" id="problem">
+    <div class="sec-head"><span class="num">01</span><h2 data-text="The problem">The problem</h2></div>
+    <div class="sec-body">
     <p>
       A student in a regional-language school sits in an online lecture
       delivered in fast English, dense with terms that have no everyday
@@ -65,11 +103,13 @@
       not have, and it means every lecture they attend leaves their machine.
       Sahaay does it locally instead: three models, one laptop, no network.
     </p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section class="feature">
-    <h2>Try it without installing anything</h2>
+  <section class="sec" id="try">
+    <div class="sec-head"><span class="num">02</span><h2 data-text="Try it without installing anything">Try it without installing anything</h2></div>
+    <div class="sec-body card">
     <p class="claim">
       <a href="live/">The browser build</a> downloads Whisper once and runs it
       <strong>on your machine</strong>, in the tab. Your audio never leaves it.
@@ -102,11 +142,13 @@
       so it can show you the problem but not the fix. Those need
       <a href="https://github.com/andringodson/Hackathon-SnapdragonAILab">the desktop build</a>.
     </p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section class="feature">
-    <h2>Why this needs an NPU</h2>
+  <section class="sec" id="npu">
+    <div class="sec-head"><span class="num">03</span><h2 data-text="Why this needs an NPU">Why this needs an NPU</h2></div>
+    <div class="sec-body card">
     <p class="claim">
       Turn the glossary on, and a CPU <strong>stops keeping up with the
       lecturer</strong>.
@@ -147,11 +189,13 @@
       now print the model and the signal beside every number.
     </p>
     <p class="src"><a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/blob/main/docs/CONCURRENCY.md">Method and full results →</a></p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section class="feature">
-    <h2>Measured on Snapdragon silicon</h2>
+  <section class="sec" id="silicon">
+    <div class="sec-head"><span class="num">04</span><h2 data-text="Measured on Snapdragon silicon">Measured on Snapdragon silicon</h2></div>
+    <div class="sec-body card">
     <p>
       Sahaay was developed without a Snapdragon PC on the desk. Rather than
       claim NPU performance that could not be verified, the graphs went to
@@ -188,11 +232,13 @@
       caption. It is not.
     </p>
     <p class="src"><a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/blob/main/docs/AIHUB.md">All device-farm results →</a></p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section>
-    <h2>How it fits together</h2>
+  <section class="sec" id="pipeline">
+    <div class="sec-head"><span class="num">05</span><h2 data-text="How it fits together">How it fits together</h2></div>
+    <div class="sec-body">
     <div class="pipeline">
       <div class="stage"><span class="where cpu">CPU</span><strong>WASAPI loopback</strong><span>Captures whatever is playing — Zoom, YouTube, a recording. No virtual cable, no driver install.</span></div>
       <div class="arrow" aria-hidden="true">↓</div>
@@ -211,11 +257,13 @@
       <span class="where cpu">CPU</span> stays on the CPU by design
     </p>
     <p class="src"><a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/blob/main/docs/ARCHITECTURE.md">Architecture in detail →</a></p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section>
-    <h2>The detail that matters most</h2>
+  <section class="sec" id="terms">
+    <div class="sec-head"><span class="num">06</span><h2 data-text="The detail that matters most">The detail that matters most</h2></div>
+    <div class="sec-body">
     <p>
       A student can work around a garbled function word. A garbled
       <em>eigenvalue</em> breaks the link to the textbook — so technical terms
@@ -237,11 +285,13 @@
       not a forecast. Expect materially worse on a real lecture recording.
     </p>
     <p class="src"><a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/blob/main/docs/ACCURACY.md">Per-utterance results →</a></p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section>
-    <h2>Does it survive a whole lecture?</h2>
+  <section class="sec" id="soak">
+    <div class="sec-head"><span class="num">07</span><h2 data-text="Does it survive a whole lecture?">Does it survive a whole lecture?</h2></div>
+    <div class="sec-body">
     <div class="stats">
       <div class="stat"><b>+0.01 MB</b><span>memory growth per simulated minute, over 60</span></div>
       <div class="stat"><b>4 → 4</b><span>threads, start to finish — nothing leaks</span></div>
@@ -255,11 +305,13 @@
       <em>slope</em>, not a single number.
     </p>
     <p class="src"><a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/blob/main/docs/SOAK.md">Soak method →</a></p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section class="feature">
-    <h2>Offline is tested, not asserted</h2>
+  <section class="sec" id="offline">
+    <div class="sec-head"><span class="num">08</span><h2 data-text="Offline is tested, not asserted">Offline is tested, not asserted</h2></div>
+    <div class="sec-body card">
     <p>
       "Runs offline" is easy to put on a slide. In this repo it is a test:
       <code>tests/test_offline.py</code> patches the socket layer so any
@@ -267,11 +319,13 @@
       and asserts nothing tried. The guard self-tests first — a guard that
       never fires would make the whole test vacuous.
     </p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section>
-    <h2>Run it yourself</h2>
+  <section class="sec" id="run">
+    <div class="sec-head"><span class="num">09</span><h2 data-text="Run it yourself">Run it yourself</h2></div>
+    <div class="sec-body">
     <p>Windows on ARM64 or x86. The installer picks the right model tier for the machine it lands on.</p>
 <pre><code>git clone https://github.com/andringodson/Hackathon-SnapdragonAILab
 cd Hackathon-SnapdragonAILab
@@ -283,11 +337,13 @@ cd Hackathon-SnapdragonAILab
       about it. No Snapdragon device? It runs on CPU, more slowly, and the
       badge in the header says so rather than pretending.
     </p>
+  </div>
   </section>
 
   <!-- ---------------------------------------------------------------- -->
-  <section class="feature">
-    <h2>What is not proven yet</h2>
+  <section class="sec" id="gaps">
+    <div class="sec-head"><span class="num">10</span><h2 data-text="What is not proven yet">What is not proven yet</h2></div>
+    <div class="sec-body card">
     <p>Stated here rather than left for a judge to find:</p>
     <ul class="gaps">
       <li>
@@ -308,6 +364,7 @@ cd Hackathon-SnapdragonAILab
         closes the argument needs a Snapdragon PC and one command.
       </li>
     </ul>
+  </div>
   </section>
 
 </main>
@@ -328,5 +385,6 @@ cd Hackathon-SnapdragonAILab
   </p>
 </footer>
 
+<script src="static/site.js"></script>
 </body>
 </html>
