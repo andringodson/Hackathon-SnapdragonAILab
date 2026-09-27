@@ -61,6 +61,37 @@ _UNITS = (
 )
 _NUMERIC = re.compile(rf"\b\d+(?:\.\d+)?(?:\s?(?:{_UNITS})|%)?\b")
 
+# NLLB sometimes falls into a loop and repeats a word, or a syllable, until
+# the token limit: Gujarati "ગુણાંક ગુણાંક ગુણાંક...", Urdu "بار بار بار...".
+# Measured over 391 real translations: 4 did, each costing 41-50 s and every
+# caption queued behind it. Real translations never needed more than 2.5x
+# the input's tokens, so generation is capped at 3x + 16, decoding stops once
+# a token pattern repeats six times running, and what is left is collapsed.
+# Six, not fewer: Assamese legitimately said "ধীৰে" four times and then
+# finished its sentence. The same patterns run in the browser (terms.js).
+_LOOP_WORDS = re.compile(r"(^|\s)(\S+(?:\s+\S+){0,5}?)(?:\s+\2){3,}(?=\s|$)")
+_LOOP_CHARS = re.compile(r"([^\s\d]{1,6}?)\1{3,}")
+
+
+def collapse_loops(text: str) -> str:
+    """Collapse a loop: four or more repeats of a word run become two, and a
+    syllable repeated four or more times becomes one.
+
+    Two, not one, because Indian languages reduplicate on purpose: Urdu and
+    Sindhi "بار بار" is how "repeatedly" is said, Assamese "ধীৰে ধীৰে" is
+    "slowly". Checked over 391 real translations: only the loops change.
+    """
+    text = _LOOP_CHARS.sub(r"\1", text)
+    return _LOOP_WORDS.sub(r"\1\2 \2", text).strip()
+
+
+def looping(tokens: list[int], repeats: int = 6, max_unit: int = 8) -> bool:
+    """True when the tail is the same 1-8 token unit repeated `repeats` times."""
+    for u in range(1, max_unit + 1):
+        if len(tokens) >= u * repeats and tokens[-u:] * repeats == tokens[-u * repeats:]:
+            return True
+    return False
+
 
 class TermProtector:
     """Swap protected spans for placeholders around the translation call.
@@ -198,8 +229,9 @@ class NllbTranslator:
         decoded: list[int] = [eos, self._lang_token(nllb_code)]
 
         past: dict[str, np.ndarray] = {}
+        limit = min(self.cfg.max_tokens, 3 * len(enc_ids) + 16)
 
-        for step in range(self.cfg.max_tokens):
+        for step in range(limit):
             first_pass = step == 0
             feeds: dict[str, np.ndarray] = {
                 "encoder_hidden_states": enc_out,
@@ -228,8 +260,11 @@ class NllbTranslator:
             if nxt == eos:
                 break
             decoded.append(nxt)
+            if looping(decoded[2:]):
+                break
 
-        return self.tokenizer.decode(decoded[2:], skip_special_tokens=True).strip()
+        text = self.tokenizer.decode(decoded[2:], skip_special_tokens=True).strip()
+        return collapse_loops(text)
 
     def translate(self, text: str, target_language: str) -> TranslationResult:
         t0 = time.perf_counter()

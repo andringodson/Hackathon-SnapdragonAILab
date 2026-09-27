@@ -62,7 +62,7 @@
    "file": "session.gu.json",
    "mode": "real",
    "captions": 18,
-   "duration_s": 152.401
+   "duration_s": 126.403
   },
   {
    "code": "pa",
@@ -86,7 +86,7 @@
    "file": "session.ur.json",
    "mode": "real",
    "captions": 18,
-   "duration_s": 161.52
+   "duration_s": 128.282
   },
   {
    "code": "as",
@@ -94,7 +94,7 @@
    "file": "session.as.json",
    "mode": "real",
    "captions": 18,
-   "duration_s": 151.579
+   "duration_s": 127.906
   },
   {
    "code": "mai",
@@ -118,7 +118,7 @@
    "file": "session.ks.json",
    "mode": "real",
    "captions": 18,
-   "duration_s": 165.133
+   "duration_s": 130.458
   },
   {
    "code": "sd",

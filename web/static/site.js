@@ -78,6 +78,100 @@
   }, { passive: true });
   onScroll();
 
+  /* ---------- the product window: close, minimise, zoom ---------- */
+  // Working macOS traffic lights on the hero screenshot. Zoom animates the
+  // separate `translate` and `scale` properties from the window's place on
+  // the page to its enlarged one, because `transform` carries the tilt.
+  (function windowControls() {
+    const figure = document.querySelector(".shot");
+    const frame = figure && figure.querySelector(".shot-frame");
+    if (!frame) return;
+    const btnClose = figure.querySelector(".light-close");
+    const btnMin = figure.querySelector(".light-min");
+    const btnZoom = figure.querySelector(".light-zoom");
+    const reopen = figure.querySelector(".shot-reopen");
+    const EASE = "cubic-bezier(0.2, 0.7, 0.2, 1)";
+    let backdrop = null;
+
+    const centre = (r) => [r.left + r.width / 2, r.top + r.height / 2];
+    function flip(first, last, ms) {
+      if (reduced || !frame.animate) return;
+      const [fx, fy] = centre(first), [lx, ly] = centre(last);
+      frame.animate(
+        [{ translate: `${fx - lx}px ${fy - ly}px`, scale: String(first.width / last.width) },
+         { translate: "0px 0px", scale: "1" }],
+        { duration: ms, easing: EASE }
+      );
+    }
+
+    function zoom(on) {
+      if (on === figure.classList.contains("zoomed")) return;
+      const first = frame.getBoundingClientRect();
+      if (on) {
+        figure.style.minHeight = figure.getBoundingClientRect().height + "px";
+        backdrop = document.createElement("div");
+        backdrop.className = "shot-backdrop";
+        backdrop.addEventListener("click", () => zoom(false));
+        document.body.append(backdrop);
+        requestAnimationFrame(() => backdrop && backdrop.classList.add("on"));
+        figure.classList.remove("minimised");
+        btnMin.setAttribute("aria-pressed", "false");
+        figure.classList.add("zoomed");
+        btnZoom.setAttribute("aria-label", "Restore the preview");
+      } else {
+        figure.classList.remove("zoomed");
+        btnZoom.setAttribute("aria-label", "Enlarge the preview");
+        const b = backdrop;
+        backdrop = null;
+        if (b) {
+          b.classList.remove("on");
+          setTimeout(() => b.remove(), reduced ? 0 : 350);
+        }
+        setTimeout(() => { figure.style.minHeight = ""; }, reduced ? 0 : 420);
+      }
+      btnZoom.setAttribute("aria-pressed", String(on));
+      flip(first, frame.getBoundingClientRect(), 420);
+    }
+
+    btnZoom.addEventListener("click", () => zoom(!figure.classList.contains("zoomed")));
+    figure.querySelector(".shot-bar").addEventListener("dblclick", (e) => {
+      if (!e.target.closest(".light")) zoom(!figure.classList.contains("zoomed"));
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && figure.classList.contains("zoomed")) zoom(false);
+    });
+
+    btnMin.addEventListener("click", () => {
+      if (figure.classList.contains("zoomed")) zoom(false);
+      const on = figure.classList.toggle("minimised");
+      btnMin.setAttribute("aria-pressed", String(on));
+      btnMin.setAttribute("aria-label", on ? "Restore the preview" : "Minimise the preview");
+    });
+
+    btnClose.addEventListener("click", () => {
+      const done = () => {
+        figure.classList.add("closed");
+        figure.classList.remove("minimised");
+        reopen.hidden = false;
+        reopen.focus({ preventScroll: true });
+      };
+      if (figure.classList.contains("zoomed")) zoom(false);
+      if (reduced || !frame.animate) return done();
+      frame.animate([{ opacity: 1, scale: "1" }, { opacity: 0, scale: "0.92" }],
+        { duration: 220, easing: EASE }).finished.then(done);
+    });
+
+    reopen.addEventListener("click", () => {
+      figure.classList.remove("closed");
+      reopen.hidden = true;
+      btnMin.setAttribute("aria-pressed", "false");
+      if (!reduced && frame.animate) {
+        frame.animate([{ opacity: 0, scale: "0.92" }, { opacity: 1, scale: "1" }], { duration: 320, easing: EASE });
+      }
+      btnClose.focus({ preventScroll: true });
+    });
+  })();
+
   if (reduced) return;
 
   /* ---------- click ripple on buttons ---------- */
@@ -125,7 +219,7 @@
     }
 
     // The product shot tilts toward the cursor while it is on screen.
-    if (shot) {
+    if (shot && !shot.closest(".zoomed")) {
       const r = shot.getBoundingClientRect();
       if (r.bottom > 0 && r.top < innerHeight) {
         const x = (e.clientX - (r.left + r.width / 2)) / innerWidth;

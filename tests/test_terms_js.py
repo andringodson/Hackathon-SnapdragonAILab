@@ -85,3 +85,49 @@ def test_the_terms_that_matter_are_protected(js_results):
     for term in ("eigenvectors", "eigenvalue", "determinant", "diagonalize", "SVD", "eigenvalues",
                  "Diagonalization", "diagonalizing"):
         assert term in spans
+
+
+# Loop collapsing, shared by the desktop translator and the browser worker.
+LOOP_CASES = [
+    # real loops, from the recorded sessions
+    "ગુણાંકમાં ગુણાંક ગુણાંક ગુણાંક ગુણાંક ગુણાંક ગુણાંક ગુણાંક",
+    "Diagonalization ایک مشکل بار بار بار بار بار بار بار بار بار",
+    "یِہٕ ہیکہِ ہمہِ یمہِہِہِہِ یمہِہِہِہِہِہِہِ کہِہِہِہِہِہِہِ",
+    # legitimate reduplication must survive
+    "Diagonalization هڪ سخت بار بار ضرب کي هڪ سادي ۾ بدلجي ٿو.",
+    "গতিকে ই ধীৰে ধীৰে আগবাঢ়ি যাবলৈ উপযুক্ত।",
+    "chu chu chu kan duh chiah chu a ni.",
+    # numbers in any script must not be touched
+    "यह १०००० और 10000 है, 2.5 ms.",
+    "An ordinary sentence with nothing repeated.",
+]
+
+
+def run_js_collapse() -> list[str]:
+    script = (
+        "const { collapseLoops } = require(process.argv[1]);"
+        "const input = JSON.parse(require('fs').readFileSync(0, 'utf8'));"
+        "process.stdout.write(JSON.stringify(input.map(collapseLoops)));"
+    )
+    res = subprocess.run(
+        ["node", "-e", script, str(TERMS_JS)], input=json.dumps(LOOP_CASES),
+        capture_output=True, text=True, encoding="utf-8", check=True,
+    )
+    return json.loads(res.stdout)
+
+
+def test_loop_collapsing_matches_the_desktop():
+    from sahaay.translate import collapse_loops
+
+    assert run_js_collapse() == [collapse_loops(t) for t in LOOP_CASES]
+
+
+def test_loops_collapse_but_reduplication_and_numbers_survive():
+    from sahaay.translate import collapse_loops
+
+    out = [collapse_loops(t) for t in LOOP_CASES]
+    assert out[0] == "ગુણાંકમાં ગુણાંક ગુણાંક"
+    assert out[1] == "Diagonalization ایک مشکل بار بار"
+    assert len(out[2]) < len(LOOP_CASES[2]) / 2
+    for i in range(3, 8):
+        assert out[i] == LOOP_CASES[i].strip(), LOOP_CASES[i]

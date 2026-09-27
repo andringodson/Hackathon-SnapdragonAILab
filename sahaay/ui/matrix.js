@@ -48,8 +48,6 @@
   canvas.setAttribute("aria-hidden", "true");
   const ctx = canvas.getContext("2d", { alpha: true });
 
-  const base = document.createElement("canvas");
-  const bctx = base.getContext("2d");
   const atlas = document.createElement("canvas");
 
   let dpr = 1, w = 0, h = 0, cols = 0, rows = 0;
@@ -57,6 +55,7 @@
   let heat = new Float32Array(0);
   let isHot = new Uint8Array(0);
   let hot = [];
+  let cooled = [];
   let drops = [];
   const ripples = [];
 
@@ -83,8 +82,8 @@
     dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     w = window.innerWidth;
     h = window.innerHeight;
-    canvas.width = base.width = Math.round(w * dpr);
-    canvas.height = base.height = Math.round(h * dpr);
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
     cols = Math.ceil(w / CELL);
     rows = Math.ceil(h / CELL);
 
@@ -96,17 +95,19 @@
     hot = [];
 
     buildAtlas();
-    bctx.clearRect(0, 0, base.width, base.height);
-    bctx.globalAlpha = BASE_ALPHA;
-    for (let i = 0; i < n; i++) blit(bctx, i);
-    bctx.globalAlpha = 1;
+    // The dim field is drawn once, here. Frames only repaint the cells that
+    // changed (see paint), so a frame costs what is lit, not the screen size.
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = BASE_ALPHA;
+    for (let i = 0; i < n; i++) blit(ctx, i);
+    ctx.globalAlpha = 1;
+    cooled = [];
 
     drops = [];
     if (AMBIENT) {
       const count = Math.max(6, Math.round(cols / 5));
       for (let k = 0; k < count; k++) drops.push(newDrop(true));
     }
-    paint();
   }
 
   function blit(c, i) {
@@ -137,7 +138,7 @@
       const i = hot[k];
       heat[i] *= keep;
       if (heat[i] > 0.015) hot[j++] = i;
-      else { heat[i] = 0; isHot[i] = 0; }
+      else { heat[i] = 0; isHot[i] = 0; cooled.push(i); }
     }
     hot.length = j;
 
@@ -204,14 +205,26 @@
     }
   }
 
-  function paint() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(base, 0, 0);
-    for (let k = 0; k < hot.length; k++) {
-      const i = hot[k];
+  // Repaint one cell: the dim glyph, then its heat on top.
+  function cell(i) {
+    const s = Math.ceil(CELL * dpr);
+    ctx.clearRect((i % cols) * CELL * dpr, ((i / cols) | 0) * CELL * dpr, s, s);
+    ctx.globalAlpha = BASE_ALPHA;
+    blit(ctx, i);
+    if (heat[i] > 0) {
       ctx.globalAlpha = Math.min(1, heat[i]) * HOT_ALPHA;
       blit(ctx, i);
     }
+  }
+
+  // Only what changed: lit cells, and cells that just went dark. The old
+  // version cleared and re-blitted the whole canvas every frame - 1.3 M
+  // pixels at 30 fps for the rain - and was most of the page's main-thread
+  // time on a throttled CPU.
+  function paint() {
+    for (let k = 0; k < hot.length; k++) cell(hot[k]);
+    for (let k = 0; k < cooled.length; k++) cell(cooled[k]);
+    cooled.length = 0;
     ctx.globalAlpha = 1;
   }
 
@@ -290,9 +303,16 @@
   function start() {
     document.body.prepend(canvas);
     resize();
+    requestAnimationFrame(() => canvas.classList.add("on"));
     if (AMBIENT) wake();
   }
 
-  if (document.body) start();
-  else document.addEventListener("DOMContentLoaded", start, { once: true });
+  // Decoration waits for the page: the first full draw runs once the page
+  // has loaded and the browser is idle, so it never competes with the first
+  // paint or with the first click. The field fades in.
+  const kick = () => ("requestIdleCallback" in window
+    ? requestIdleCallback(start, { timeout: 1200 })
+    : setTimeout(start, 200));
+  if (document.readyState === "complete") kick();
+  else addEventListener("load", kick, { once: true });
 })();

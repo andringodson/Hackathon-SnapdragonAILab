@@ -81,7 +81,19 @@
     }
   }
 
-  const api = { TermProtector };
+  // Translation loops: sahaay.translate.collapse_loops, same patterns. Four
+  // or more repeats of a word run become two (Indian languages reduplicate
+  // on purpose - "بار بار" is "repeatedly"), a syllable repeated four or more
+  // times becomes one. \p{Nd} rather than \d: Python's \d covers every
+  // script's digits, and "१००००" must stay ten thousand.
+  const LOOP_WORDS = /(^|\s)(\S+(?:\s+\S+){0,5}?)(?:\s+\2){3,}(?=\s|$)/gu;
+  const LOOP_CHARS = /([^\s\p{Nd}]{1,6}?)\1{3,}/gu;
+
+  function collapseLoops(text) {
+    return text.replace(LOOP_CHARS, "$1").replace(LOOP_WORDS, "$1$2 $2").trim();
+  }
+
+  const api = { TermProtector, collapseLoops };
   root.SahaayTerms = api;
   if (typeof module === "object" && module.exports) module.exports = api;
 })(typeof globalThis !== "undefined" ? globalThis : self);

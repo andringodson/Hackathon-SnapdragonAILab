@@ -45,7 +45,7 @@ SECTIONS = [
         "Two models, one set of cores, | and what loses is the thing the student is reading.",
         "On Snapdragon, the Whisper encoder moves to the Hexagon NPU. | "
         "Qualcomm's own device farm measured it: || ~thirteen and a half milliseconds, | "
-        "all 129 layers on the NPU, | and every job link is public.",
+        "all 129 layers on the NPU, | with a job ID for every number.",
     ]),
     ("Built to be checked", [
         "It installs with one script, | degrades instead of failing, | "

@@ -2,8 +2,9 @@
 
 This is how the NPU numbers in docs/AIHUB.md are obtained without owning a
 Snapdragon PC. AI Hub provisions physical devices - Snapdragon X Elite and
-X2 Elite among them - and returns on-device latency plus a **public job URL**
-anyone can open. Measured numbers with a link beat claimed numbers without one.
+X2 Elite among them - and returns on-device latency plus a job URL (the page
+opens after signing in with a Qualcomm ID). Measured numbers with a job ID beat
+claimed numbers without one.
 
 Two stages, not one. ``submit_profile_job`` needs a model already compiled
 for the target, so each graph goes through ``submit_compile_job`` first. That
@@ -265,8 +266,8 @@ def render_markdown(rows: list[dict]) -> str:
         "",
         f"Submitted {now} with `scripts/aihub_profile.py`. Every row is a real",
         "measurement on physical Snapdragon hardware provisioned by Qualcomm, not an",
-        "estimate and not a datasheet figure. **Each job link is public — open one",
-        "and check the number yourself.**",
+        "estimate and not a datasheet figure. **Each row carries its AI Hub job ID**;",
+        "the job pages open after signing in with a Qualcomm ID.",
         "",
         "| Model | Device | On-device inference | Peak memory | Layers on NPU | Job |",
         "|---|---|---:|---:|---:|---|",

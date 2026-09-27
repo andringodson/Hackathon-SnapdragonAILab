@@ -75,7 +75,7 @@ This project was built on an x86 machine. Three things made that workable, and n
 
 1. **The QNN wheel installs on x64.** The registration path, the provider options and the fallback logic are all exercised locally — just bound to CPU rather than HTP.
 2. **`SAHAAY_PROVIDER` forces a provider**, so the CPU column of the benchmark table is reproducible anywhere.
-3. **The Qualcomm AI Hub device farm provides real hardware, free.** `scripts/aihub_profile.py` submits the graphs to a physical Snapdragon X Elite and returns latency plus a public job URL. Those are genuine on-device measurements that a reviewer can independently open.
+3. **The Qualcomm AI Hub device farm provides real hardware, free.** `scripts/aihub_profile.py` submits the graphs to a physical Snapdragon X Elite and returns latency plus a job URL. Those are genuine on-device measurements; the job pages open after signing in with a Qualcomm ID.
 
 What is *not* claimed: end-to-end wall-clock numbers of the full three-model pipeline on an X Elite. Those need the device. `docs/BENCHMARKS.md` states which machine produced every row.
 

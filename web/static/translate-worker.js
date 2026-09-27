@@ -65,16 +65,21 @@ async function drain() {
       const job = queue.shift();
       const t0 = performance.now();
       const [text, mapping] = protector.protect(job.text);
+      // A loop runs to the token limit and holds up every caption behind it
+      // (41-50 s each, measured). No real translation needed more than 2.5x
+      // the input's tokens, so cap at 3x + 16, as the desktop does.
+      const inputTokens = translator.tokenizer(text).input_ids.dims.at(-1);
       const out = await translator(text, {
         src_lang: "eng_Latn",
         tgt_lang: job.nllb,
-        max_new_tokens: 256,
+        max_new_tokens: Math.min(256, 3 * inputTokens + 16),
       });
+      const restored = self.SahaayTerms.TermProtector.restore(out[0].translation_text, mapping);
       postMessage({
         type: "translation",
         id: job.id,
         code: job.code,
-        text: self.SahaayTerms.TermProtector.restore(out[0].translation_text, mapping),
+        text: self.SahaayTerms.collapseLoops(restored),
         ms: Math.round(performance.now() - t0),
         terms: Object.values(mapping),
       });

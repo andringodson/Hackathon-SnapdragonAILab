@@ -193,3 +193,16 @@ class TestNumericUnits:
         text = "It takes 2.5 ms and 40 TOPS at 3.14 kg."
         protected, mapping = p.protect(text)
         assert p.restore(protected, mapping) == text
+
+
+class TestLoopGuard:
+    """NLLB loops cost 41-50 s each before these guards; see translate.py."""
+
+    def test_six_repeats_of_a_unit_is_a_loop(self):
+        from sahaay.translate import looping
+
+        assert looping([5, 9] * 6)
+        assert looping([7] * 6)
+        assert not looping([5, 9] * 5)
+        # Assamese said "slowly" four times and then finished the sentence.
+        assert not looping([1, 2, 3] + [4] * 4 + [8, 9])

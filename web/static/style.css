@@ -68,6 +68,9 @@ h1, h2 { margin: 0; font-weight: 600; letter-spacing: -0.01em; }
   z-index: -1;
   pointer-events: none;
 }
+/* It starts once the page is idle, and fades in rather than popping. */
+.matrix-bg { opacity: 0; transition: opacity 0.8s ease; }
+.matrix-bg.on { opacity: 1; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px;

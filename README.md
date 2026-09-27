@@ -1,16 +1,40 @@
-<img src="sahaay/ui/logo.svg" width="72" alt="Sahaay logo">
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/img/logo-lockup-dark.svg">
+    <img src="docs/img/logo-lockup-light.svg" width="560" alt="Sahaay (सहाय) - offline lecture companion">
+  </picture>
+</p>
 
-# Sahaay
+<h3 align="center">Live lecture captions, translation into 22 Indian languages, and a jargon glossary —<br>running entirely on a Snapdragon PC, with the network switched off.</h3>
 
-**Live lecture captions, Indian-language translation and a jargon glossary — running entirely on a Snapdragon-powered HP PC, with the network off.**
+<p align="center">
+  <a href="https://sahaay-offline.vercel.app/live/"><b>Try it in your browser</b></a> &nbsp;·&nbsp;
+  <a href="https://sahaay-offline.vercel.app/demo/?play=1">Watch a recorded session</a> &nbsp;·&nbsp;
+  <a href="https://sahaay-offline.vercel.app">Measured results</a> &nbsp;·&nbsp;
+  <a href="docs/SUBMISSION.md">Submission kit</a>
+</p>
 
-Submitted to the Snapdragon® AI Lab Build & Present Challenge 2026.
+<p align="center"><sub>Snapdragon® AI Lab Build &amp; Present Challenge 2026 &nbsp;·&nbsp; A Hackathon Project by AndrinGodson</sub></p>
 
-**[sahaay-offline.vercel.app](https://sahaay-offline.vercel.app)** — the measured results, and
-the real interface [replaying a real session](https://sahaay-offline.vercel.app/demo/?play=1).
-The application itself is not hosted there and cannot be: there is no NPU in a
-datacenter and no audio to capture, and the whole claim is that none of this
-leaves your machine. [Why, in full](docs/WEB.md).
+---
+
+## About
+
+**Sahaay** (सहाय, "help") listens to any lecture on a laptop — a Zoom call, a
+YouTube video, a professor in the room — and does three things live: it
+captions the speech, translates each line into the student's own language
+with the technical terms kept intact, and explains the jargon as it is spoken.
+Whisper transcribes, NLLB-200 translates and Llama 3.2 explains, all on the
+device, with the speech model on the Snapdragon Hexagon NPU. No audio, no text
+and no account ever leaves the machine.
+
+**[sahaay-offline.vercel.app](https://sahaay-offline.vercel.app)** runs Whisper
+and the translation model in your own browser, so anyone can try it without
+installing anything, and carries every measurement with its source. The full
+desktop pipeline — the NPU, all-system audio capture, the language-model
+glossary — is not hosted and cannot be: there is no NPU in a datacenter, and
+the whole claim is that the lecture never leaves your machine.
+[Why, in full](docs/WEB.md).
 
 ---
 
@@ -275,8 +299,9 @@ app picks between them by hardware (see below).
 ## Performance on real Snapdragon silicon
 
 These are measurements on physical Snapdragon hardware from Qualcomm's own
-device farm — not datasheet figures, not estimates. **Every job link is
-public; open one and check the number.**
+device farm — not datasheet figures, not estimates. **Every number has its
+AI Hub job ID.** The job pages open after signing in with a Qualcomm ID; the
+full profiles are in [docs/AIHUB.md](docs/AIHUB.md).
 
 | Whisper encoder | On-device | Peak memory | Layers on NPU |
 |---|---:|---:|---:|
@@ -328,7 +353,7 @@ $ pytest tests/test_offline.py
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 -Dev
-.\.venv\Scripts\python.exe -m pytest        # 400 tests, no weights required
+.\.venv\Scripts\python.exe -m pytest        # 400+ tests, no weights required
 ```
 
 ```

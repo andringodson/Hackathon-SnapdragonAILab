@@ -2,8 +2,8 @@
 
 Submitted 20 Sep 2026 with `scripts/aihub_profile.py`. Every row is a real
 measurement on physical Snapdragon hardware provisioned by Qualcomm, not an
-estimate and not a datasheet figure. **Each job link is public — open one
-and check the number yourself.**
+estimate and not a datasheet figure. **Each row carries its AI Hub job ID**;
+the job pages open after signing in with a Qualcomm ID.
 
 | Model | Device | On-device inference | Peak memory | Layers on NPU | Job |
 |---|---|---:|---:|---:|---|

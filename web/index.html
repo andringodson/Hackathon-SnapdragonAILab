@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sahaay — offline lecture captioning for Snapdragon PCs</title>
-<meta name="description" content="Live lecture captions, Indian-language translation and a jargon glossary, running entirely on a Snapdragon PC. No audio leaves the device.">
+<meta name="description" content="Sahaay captions any lecture live, translates it into 22 Indian languages with technical terms kept intact, and explains the jargon - all on the device, on a Snapdragon PC. Try it in your browser; no audio leaves it.">
 <meta property="og:title" content="Sahaay — offline lecture captioning for Snapdragon PCs">
-<meta property="og:description" content="Whisper, NLLB and Llama running side by side on-device. On a CPU the glossary pushes captions past real time — which is the argument for the NPU.">
+<meta property="og:description" content="Live captions, translation into 22 Indian languages and a jargon glossary, running on the device. On a CPU the glossary pushes captions past real time; on the Snapdragon NPU it does not.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="static/site.css">
 <link rel="icon" href="static/logo.svg" type="image/svg+xml">
@@ -43,9 +43,9 @@
       </div>
 
       <p class="lede">
-        Live captions, Indian-language translation and a jargon glossary for
-        any lecture playing on your screen — all of it running <em>on the machine</em>,
-        with the network switched off.
+        Live captions, translation into 22 Indian languages and a jargon
+        glossary for any lecture on your screen — all of it running
+        <em>on the machine</em>, with the network switched off.
       </p>
 
       <div class="cta">
@@ -66,14 +66,24 @@
 
     <figure class="shot">
       <div class="shot-frame">
-        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Sahaay · recorded session · Hindi</span></div>
+        <div class="shot-bar">
+          <div class="lights" role="group" aria-label="Window controls">
+            <button class="light light-close" type="button" aria-label="Close the preview"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M3 3l4 4M7 3l-4 4"/></svg></button>
+            <button class="light light-min" type="button" aria-label="Minimise the preview" aria-pressed="false"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2.5 5h5"/></svg></button>
+            <button class="light light-zoom" type="button" aria-label="Enlarge the preview" aria-pressed="false"><svg viewBox="0 0 10 10" aria-hidden="true"><path class="grow" d="M3 7V4.2L5.8 7zM7 3v2.8L4.2 3z"/><path class="shrink" d="M5 5V2.2L2.2 5zM5 5v2.8L7.8 5z"/></svg></button>
+          </div>
+          <span class="shot-title">Sahaay · recorded session · Hindi</span>
+        </div>
+        <div class="shot-body"><div>
         <img src="static/hero.webp" width="1600" height="1000" fetchpriority="high" decoding="async"
              alt="The Sahaay app mid-lecture: English captions, each translated into Hindi with technical terms such as eigenvalue kept in English, and a jargon panel explaining eigenvector and eigenvalue.">
+        </div></div>
       </div>
       <span class="chip chip-a"><b>हिन्दी</b> translated on the device</span>
       <span class="chip chip-b"><b>eigenvalue</b> stays eigenvalue</span>
       <span class="chip chip-c"><b>0</b> bytes of audio leave it</span>
       <figcaption>The real desktop interface, replaying a session it recorded.</figcaption>
+      <button class="shot-reopen" type="button" hidden>Show the app preview</button>
     </figure>
   </div>
 </header>
@@ -208,8 +218,9 @@
     <p>
       Sahaay was developed without a Snapdragon PC on the desk. Rather than
       claim NPU performance that could not be verified, the graphs went to
-      Qualcomm's own device farm. <strong>Every job link below is public — open
-      one and check the number.</strong>
+      Qualcomm's own device farm. <strong>Every number has its AI Hub job
+      ID</strong> — the job pages open after signing in with a Qualcomm ID, and
+      the full profiles are in <code>docs/AIHUB.md</code>.
     </p>
 
     <table>
@@ -305,7 +316,7 @@
       <div class="stat"><b>+0.01 MB</b><span>memory growth per simulated minute, over 60</span></div>
       <div class="stat"><b>4 → 4</b><span>threads, start to finish — nothing leaks</span></div>
       <div class="stat"><b>0</b><span>segment-queue backlog at the end</span></div>
-      <div class="stat"><b>400</b><span>tests, green on x86, ARM64 and Linux</span></div>
+      <div class="stat"><b>400+</b><span>tests, green on x86, ARM64 and Linux</span></div>
     </div>
     <p>
       Every other test in the repo runs for seconds. The failure modes of an

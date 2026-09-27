@@ -309,7 +309,7 @@ slide("proof", f"""
       <th style="width:38%; text-align:left; font-size:24px; color:{ON_L_DIM}; font-weight:600; padding:14px">WHISPER ENCODER</th>
       <th style="width:20%; text-align:right; font-size:24px; color:{ON_L_DIM}; font-weight:600">ON-DEVICE</th>
       <th style="width:20%; text-align:right; font-size:24px; color:{ON_L_DIM}; font-weight:600">LAYERS ON NPU</th>
-      <th style="width:22%; text-align:right; font-size:24px; color:{ON_L_DIM}; font-weight:600">PUBLIC JOB</th>
+      <th style="width:22%; text-align:right; font-size:24px; color:{ON_L_DIM}; font-weight:600">AI HUB JOB</th>
     </tr>
     <tr>
       <td style="text-align:left"><b>Snapdragon X2 Elite CRD</b></td>
@@ -334,8 +334,8 @@ slide("proof", f"""
     {card_l(f'<h3 style="font-family:{HEAD}; font-size:34px; font-weight:600; line-height:1.18; color:{NPU_L}">129 of 129 layers</h3><p style="font-size:27px; line-height:1.4; color:{ON_L_DIM}">Not &ldquo;targeted the NPU&rdquo;. Qualcomm&rsquo;s own profiler reports zero CPU fallback for the whole graph.</p>', pad=34, flex=True)}
     {card_l(f'<h3 style="font-family:{HEAD}; font-size:34px; font-weight:600; line-height:1.18; color:{ACCENT_L}">The tool says &ldquo;no&rdquo;</h3><p style="font-size:27px; line-height:1.4; color:{ON_L_DIM}">On x86, <b>--device</b> prints <b>Hexagon NPU active: no</b>. A tool that only ever reports success is not evidence.</p>', pad=34, flex=True)}
   </div>
-  {footer('Every job link is public &#183; docs/AIHUB.md', ON_L_DIM)}
-  <aside>Have docs/AIHUB.md open in a tab with the URLs visible. Offer to open one. The credibility beat is the second card: show --device reporting "no" on the laptop you are presenting from.</aside>
+  {footer('Job IDs on Qualcomm AI Hub (Qualcomm ID sign-in) &#183; docs/AIHUB.md', ON_L_DIM)}
+  <aside>Have one job open in a tab, signed in with your Qualcomm ID - the pages are not public - and docs/AIHUB.md beside it with the job IDs visible. The credibility beat is the second card: show --device reporting "no" on the laptop you are presenting from.</aside>
 </section>
 """)
 
@@ -359,7 +359,7 @@ slide("deployment", f"""
   <div style="display:flex; gap:36px; align-items:stretch">
     <div style="flex:1; display:flex; flex-direction:column; gap:24px">
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">install.ps1</b>, then <b style="color:{ON_L}">run.bat</b>. No Node, no build step, no Docker. Every stage degrades rather than failing, and <b style="color:{ON_L}">--mock</b> runs the whole pipeline with nothing downloaded.</p>
-      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">400 tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
+      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">400+ tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}">Resizable captions, live regions, reduced motion, full keyboard control. Binds to 127.0.0.1. No telemetry, no account, audio never written to disk.</p>
     </div>
     <div style="flex:1; background:{CARD_L}; border:2px solid {ACCENT_L}; border-radius:20px; padding:40px; display:flex; flex-direction:column; gap:16px; box-shadow:0 4px 24px rgba(15,23,32,0.06)">

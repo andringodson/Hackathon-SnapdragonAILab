@@ -103,8 +103,9 @@ Say the two things that matter:
 
 1. **129 out of 129 layers ran on the Hexagon NPU.** Not "targeted the NPU" —
    Qualcomm's own profiler reports zero CPU fallback for the entire graph.
-2. **These are public job links.** Anyone can open them and check. Have
-   `docs/AIHUB.md` on screen with the URLs visible.
+2. **Every number has its AI Hub job ID.** The job pages open after signing
+   in with a Qualcomm ID, so have one open in a signed-in tab, and
+   `docs/AIHUB.md` on screen with the IDs visible.
 
 Then the credibility beat: **the tool reports "no" when the answer is no.**
 Show `--device` on the x86 machine printing `Hexagon NPU active : no`. A tool
@@ -134,7 +135,7 @@ works.
   datacenter, no audio to capture, and shipping a student's lecture to a
   server would contradict the entire premise ([docs/WEB.md](WEB.md))
 - Degrades on every stage rather than failing; `--mock` runs with nothing downloaded
-- 400 tests, CI on Windows (x86 and ARM64) and Linux, no weights or audio device needed
+- 400+ tests, CI on Windows (x86 and ARM64) and Linux, no weights or audio device needed
 - Accessibility: resizable captions, `aria-live`, reduced-motion, full keyboard control
 - Privacy: binds to `127.0.0.1`, no telemetry, no accounts, audio never written to disk
 
@@ -203,8 +204,8 @@ student keeps it."
 
 **2:35 – 3:00 — the proof**
 Cut to a terminal. `run.bat --device` showing *Hexagon NPU active : yes*.
-Then `docs/BENCHMARKS.md` and an AI Hub job link. Close on: "measured, with
-links anyone can open."
+Then `docs/BENCHMARKS.md` and an AI Hub job page, signed in. Close on:
+"measured on Qualcomm's own hardware, with a job ID for every number."
 
 ---
 

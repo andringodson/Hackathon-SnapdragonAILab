@@ -72,6 +72,12 @@ BANNER_CSS = """
   border-bottom: 1px solid var(--line);
 }
 .replay-banner a { color: var(--accent); white-space: nowrap; }
+/* The banner learns more after load ("Recorded on CPU...", the live status)
+   and grew a line, shifting the whole app down 21 px. Reserve the two lines
+   it ends up with on any screen wide enough to show the full text. */
+@media (min-width: 40rem) {
+  .replay-banner { min-height: calc(3em + 1.2rem); }
+}
 .replay-controls {
   display: flex;
   align-items: center;
