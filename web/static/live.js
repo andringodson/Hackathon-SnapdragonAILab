@@ -33,7 +33,6 @@
 
   // Pinned rather than floating: a major version of the runtime landing
   // overnight must not be able to break a page someone is presenting from.
-  const TRANSFORMERS = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.5";
   const MODEL = "onnx-community/whisper-base";
 
   const RATE = 16000;
@@ -291,9 +290,16 @@
         L.target = "en";
       }
     };
-    // Whisper keeps most of the cores; the English caption is what is read live.
+    // Half the cores, at most six. Measured on 12 cores over 80 s of lecture
+    // into Hindi (median / p90 translation, Whisper RTF): 2 threads 5.1 s /
+    // 7.1 s / 0.45, 4 threads 4.7 / 6.9 / 0.48, 6 threads 3.8 / 5.9 / 0.45,
+    // 8 threads 3.9 / 6.0 / 0.43, 11 threads 5.3 / 7.7 / 0.71. Past half the
+    // cores the two workers fight and both slow down; taking threads from
+    // Whisper instead made the captions - what is read live - slower.
     const cores = navigator.hardwareConcurrency || 4;
-    worker.postMessage({ type: "load", threads: Math.max(1, Math.min(4, Math.floor(cores / 3))) });
+    // ?tt=N overrides, for scripts/check_live.py tuning runs.
+    const tt = Number(new URLSearchParams(location.search).get("tt"));
+    worker.postMessage({ type: "load", threads: tt > 0 ? tt : Math.max(1, Math.min(6, Math.floor(cores / 2))) });
   }
 
   function translate(index, text) {
@@ -535,15 +541,6 @@
 
   /* ---------- lifecycle ---------- */
 
-  async function webgpuAvailable() {
-    if (!navigator.gpu) return false;
-    try {
-      return Boolean(await navigator.gpu.requestAdapter());
-    } catch (_) {
-      return false;
-    }
-  }
-
   // One load, shared. The page starts it the moment it opens, so the minute
   // a first-time visitor used to wait after pressing Start - measured at
   // 55 s cold - is spent while they read the banner instead. Start then
@@ -559,76 +556,58 @@
     return modelPromise;
   }
 
+  // Whisper runs in web/static/whisper-worker.js. On this thread it froze
+  // the page for up to 2 s per caption (19 s across a 63 s lecture), because
+  // ONNX Runtime's WebAssembly backend computes synchronously. L.transcriber
+  // keeps its old shape - an async function of audio - so everything that
+  // calls it is unchanged; it now posts to the worker and awaits the reply.
   async function loadModelOnce() {
     if (L.transcriber) return;
 
     status("fetching Whisper (about 80 MB, cached after this)…");
     const progress = document.getElementById("live-bar");
+    const wt = Number(new URLSearchParams(location.search).get("wt"));   // ?wt=N, for tuning runs
+    const threads = wt > 0 ? wt : Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1));
+    const worker = new Worker("../static/whisper-worker.js", { type: "module" });
+    const pending = new Map();
+    const files = {};
+    let nextId = 0;
 
-    const { pipeline, env } = await import(/* @vite-ignore */ TRANSFORMERS);
-    env.allowLocalModels = false;
+    await new Promise((resolve, reject) => {
+      worker.onmessage = (e) => {
+        const m = e.data;
+        if (m.type === "progress") {
+          files[m.file] = m;
+          const all = Object.values(files);
+          const loaded = all.reduce((a, f) => a + f.loaded, 0);
+          const total = all.reduce((a, f) => a + f.total, 0);
+          if (progress && total) progress.style.width = Math.round((loaded / total) * 100) + "%";
+        } else if (m.type === "ready") {
+          if (progress) progress.style.width = "100%";
+          L.backend = m.backend;
+          METRICS.threads = m.threads;
+          METRICS.loadTimings = m.timings;
+          resolve();
+        } else if (m.type === "warm") {
+          METRICS.loadTimings = m.timings;
+        } else if (m.type === "error") {
+          reject(new Error(m.message));
+        } else if (m.type === "result") {
+          const job = pending.get(m.id);
+          pending.delete(m.id);
+          if (job) (m.error ? job.reject(new Error(m.error)) : job.resolve({ text: m.text }));
+        }
+      };
+      worker.onerror = (e) => reject(new Error(e.message || "Whisper worker failed"));
+      worker.postMessage({ type: "load", threads });
+    });
 
-    // Threads. WebAssembly is single-threaded unless the page is
-    // cross-origin isolated, which vercel.json now makes it. With isolation
-    // ONNX Runtime can spread one inference across cores; without it, it
-    // uses one and the rest of the CPU sits idle while captions fall behind.
-    const wasm = env.backends && env.backends.onnx && env.backends.onnx.wasm;
-    if (wasm && self.crossOriginIsolated) {
-      wasm.numThreads = Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1));
-    }
-    METRICS.threads = (wasm && wasm.numThreads) || 1;
-
-    const onProgress = (p) => {
-      if (progress && p && p.status === "progress" && p.total) {
-        progress.style.width = Math.round((p.loaded / p.total) * 100) + "%";
-      }
-    };
-
-    // WebGPU where it exists, WASM where it does not. The badge says which,
-    // because a demo that hides what it ran on is the thing this project
-    // keeps arguing against.
-    //
-    // Decide by asking for an adapter, not by try/catch around pipeline().
-    // `navigator.gpu` is present in plenty of browsers that then fail to
-    // return an adapter - headless Chromium is one - and by the time that
-    // surfaces the runtime has already fixed its backend list, so the
-    // "fallback" asks for WASM and is told "no available backend found
-    // ERR: [webgpu]". Probing first means one decision, made correctly.
-    L.backend = (await webgpuAvailable()) ? "webgpu" : "wasm";
-
-    // Precision per backend, chosen by measurement (scripts/bench_live.py,
-    // the full lecture, same machine):
-    //
-    //   WebGPU, q4 everywhere           RTF 0.78   WER 3.4%
-    //   WebGPU, fp32 encoder + q4 dec   RTF 0.46   WER 1.1%   <- used
-    //   WASM x8, q8                     RTF 0.48   WER 2.2-2.8%   <- used
-    //   WASM x8, fp32 encoder + q8 dec  RTF 0.52   WER 3.9%
-    //
-    // A 4-bit encoder is slow on the GPU as well as lossy - dequantising it
-    // costs more than it saves - while on the CPU int8 is the fast path and
-    // fp32 only adds download. The WER spread across all four is two to
-    // five words in 180, so the speed column is the one to trust; none of
-    // them lost a technical term. q8 is the safe floor if a split fails.
-    const dtypes = L.backend === "webgpu"
-      ? [{ encoder_model: "fp32", decoder_model_merged: "q4" }, "q8"]
-      : ["q8", "fp32"];
-    let failure = null;
-    for (const dtype of dtypes) {
-      try {
-        L.transcriber = await pipeline("automatic-speech-recognition", MODEL, {
-          device: L.backend, dtype, progress_callback: onProgress,
-        });
-        break;
-      } catch (err) {
-        failure = err;
-        console.warn(`${L.backend}/${dtype} did not load`, err);
-      }
-    }
-    if (!L.transcriber) throw failure || new Error("Whisper would not load");
-
-    if (progress) progress.style.width = "100%";
-    status("warming up…");
-    await L.transcriber(new Float32Array(RATE));   // pay graph setup before the lecture
+    L.transcriber = (audio) => new Promise((resolve, reject) => {
+      const id = nextId++;
+      pending.set(id, { resolve, reject });
+      // Copied, not transferred: callers read audio.length afterwards.
+      worker.postMessage({ type: "run", id, audio, threads });
+    });
     if (!L.running) status("ready — press Start");
   }
 

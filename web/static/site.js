@@ -172,6 +172,31 @@
     });
   })();
 
+  /* ---------- prefetch /live on intent ---------- */
+  // A pointer over, or focus on, a link to /live is a strong hint of a click.
+  // Fetch its small files then, so the page opens from cache. Never the model:
+  // that is 80 MB and stays the visitor's choice.
+  (function prefetchLive() {
+    const links = document.querySelectorAll('a[href="live/"]');
+    let done = false;
+    const go = () => {
+      if (done) return;
+      done = true;
+      for (const href of ["live/", "static/live.js", "static/app.js", "static/style.css",
+                          "static/replay.css", "static/whisper-worker.js", "static/languages.json"]) {
+        const l = document.createElement("link");
+        l.rel = "prefetch";
+        l.href = href;
+        document.head.append(l);
+      }
+    };
+    links.forEach((a) => {
+      a.addEventListener("pointerenter", go, { once: true, passive: true });
+      a.addEventListener("focus", go, { once: true });
+      a.addEventListener("touchstart", go, { once: true, passive: true });
+    });
+  })();
+
   if (reduced) return;
 
   /* ---------- click ripple on buttons ---------- */

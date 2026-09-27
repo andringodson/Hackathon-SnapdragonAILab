@@ -126,6 +126,46 @@ does not see it. Note that WER landed at 3.9 % on both paths here, against
 1.1–2.8 % locally - the same few words either way, which is the noise the
 precision table above warns about.
 
+### Second pass, 27 Sep 2026: the page itself
+
+The first pass made the models fast. This one made the page stay fast
+around them. Same laptop (12 logical cores, WASM).
+
+| | before | after |
+|---|---:|---:|
+| Main thread blocked while captioning, per 60 s | **19.2 s** (16 freezes, longest 2.0 s) | **0.1 s** (one task) |
+| Returning visit: page open → Start ready | 5.8 s | **3.1 s** |
+| Returning visit: Start → first caption | - | **4.5 s** |
+| Translation, caption → translated line (median / p90) | 4.7 s / 6.9 s | **3.8 s / 5.9 s** |
+| A translation loop (worst case) | 41–50 s | **1.9–5.4 s** |
+| Landing, 4× CPU throttle: first paint / blocked | 3.18 s / 1431 ms | **1.5 s / 56 ms** |
+
+- **Whisper runs in a worker** (`web/static/whisper-worker.js`). ONNX
+  Runtime's WebAssembly backend computes synchronously, so on the main
+  thread every caption froze the page for its whole inference; clicks, the
+  caption list, the level meter and the incoming audio frames all waited.
+- **Warm-up runs after "ready", not before.** It pays graph setup
+  (2.1–2.3 s) and used to hold Start back. It is first in the worker's
+  queue, so it still finishes before the first sentence can end.
+- **Translator threads: half the cores, at most six.** Measured over 80 s of
+  lecture into Hindi: 2 threads 5.1 s median, 4 → 4.7 s, **6 → 3.8 s**,
+  8 → 3.9 s, 11 → 5.3 s with Whisper's RTF rising from 0.45 to 0.71. Past
+  half the cores the two workers fight; taking threads from Whisper instead
+  slowed the captions, which are what is read live.
+- **Loops are capped and collapsed** in both translators; see
+  `collapse_loops` in `sahaay/translate.py`.
+- **The background matrix repaints only the cells that change**, and starts
+  once the page is idle. It used to re-blit the whole canvas every frame.
+- **`/live` preconnects** to jsDelivr and Hugging Face, and the landing
+  page prefetches `/live`'s small files when a visitor points at its link.
+
+A note for anyone re-measuring: Playwright's bundled Chromium, launched with
+a persistent profile on this machine, fails every Cache API write
+(`InvalidAccessError: Entry already exists`), so it re-downloads the models
+on every visit and makes loads look 2-3 times slower than they are. Edge
+(`channel="msedge"`) and ordinary contexts cache correctly; measure
+returning visits there.
+
 ## The desktop pipeline
 
 Measured by `scripts/bench_e2e.py`: the same 104 s lecture played through

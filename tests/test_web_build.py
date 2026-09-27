@@ -191,18 +191,30 @@ class TestLiveBuild:
         assert "not" in landing and "NPU" in landing
         assert "translate" in landing.lower() or "translation" in landing.lower()
 
-    def test_live_js_pins_its_runtime(self):
-        """A floating major version can break a page mid-presentation."""
-        js = (WEB / "static" / "live.js").read_text(encoding="utf-8")
-        assert re.search(r"transformers@\d+\.\d+\.\d+", js), (
-            "pin the transformers.js version rather than tracking latest"
-        )
+    BROWSER_JS = ("live.js", "whisper-worker.js", "translate-worker.js")
 
-    def test_live_js_never_uploads_audio(self):
+    def test_the_runtime_is_pinned_wherever_it_is_loaded(self):
+        """A floating major version can break a page mid-presentation."""
+        loaders = 0
+        for name in self.BROWSER_JS:
+            js = (WEB / "static" / name).read_text(encoding="utf-8")
+            for ref in re.findall(r"@huggingface/transformers[^\"'\s]*", js):
+                loaders += 1
+                assert re.fullmatch(r"@huggingface/transformers@\d+\.\d+\.\d+", ref), f"{name}: {ref}"
+        assert loaders >= 2, "the workers no longer load a pinned runtime"
+
+    def test_the_browser_never_uploads_audio(self):
         """The whole claim. Nothing may POST audio anywhere."""
+        for name in self.BROWSER_JS:
+            js = (WEB / "static" / name).read_text(encoding="utf-8")
+            for pattern in ("FormData", "uploadAudio", "audio/wav"):
+                assert pattern not in js, f"{name} references {pattern}"
+
+    def test_whisper_runs_off_the_main_thread(self):
+        """On the main thread it froze the page up to 2 s per caption."""
         js = (WEB / "static" / "live.js").read_text(encoding="utf-8")
-        for pattern in ("FormData", "uploadAudio", "audio/wav"):
-            assert pattern not in js, f"live.js references {pattern}"
+        assert 'new Worker("../static/whisper-worker.js"' in js
+        assert "pipeline(" not in js, "live.js runs a model on the main thread again"
 
 
 class TestLivePerformance:

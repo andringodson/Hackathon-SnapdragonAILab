@@ -173,6 +173,8 @@ def main() -> int:
     ap.add_argument("--base", help="check a deployment instead of the local web/")
     ap.add_argument("--wav", type=Path, default=DEFAULT_WAV, help="audio to speak into the page")
     ap.add_argument("--headed", action="store_true")
+    ap.add_argument("--profile", type=Path, help="reuse this browser profile, keeping downloaded models")
+    ap.add_argument("--query", default="", help="query string for /live/, e.g. ?wt=6&tt=6 for thread tuning")
     ap.add_argument("--timeout", type=int, default=300, help="seconds to wait for a caption")
     ap.add_argument("--translate", metavar="CODE",
                     help="after the first caption, pick these languages in turn (e.g. hi,ur,or) and check "
@@ -196,22 +198,30 @@ def main() -> int:
         print(f"  checking {base}/live/")
         print(f"  speaking {args.wav.name} into the page\n")
 
-        browser = pw.chromium.launch(
-            headless=not args.headed,
-            args=[
-                "--use-fake-ui-for-media-stream",      # grant the mic without a prompt
-                "--use-fake-device-for-media-stream",
-                f"--use-file-for-fake-audio-capture={args.wav}",
-                "--autoplay-policy=no-user-gesture-required",
-            ],
-        )
-        page = browser.new_page(viewport={"width": 1440, "height": 900})
+        launch_args = [
+            "--use-fake-ui-for-media-stream",      # grant the mic without a prompt
+            "--use-fake-device-for-media-stream",
+            f"--use-file-for-fake-audio-capture={args.wav}",
+            "--autoplay-policy=no-user-gesture-required",
+        ]
+        if args.profile:
+            # A kept profile keeps the browser's model cache: the ~900 MB
+            # translation model downloads once, and later runs measure what a
+            # returning visitor gets.
+            browser = pw.chromium.launch_persistent_context(
+                str(args.profile), headless=not args.headed, args=launch_args,
+                viewport={"width": 1440, "height": 900},
+            )
+            page = browser.new_page()
+        else:
+            browser = pw.chromium.launch(headless=not args.headed, args=launch_args)
+            page = browser.new_page(viewport={"width": 1440, "height": 900})
 
         console: list[str] = []
         page.on("console", lambda m: console.append(f"{m.type}: {m.text}") if m.type == "error" else None)
         page.on("pageerror", lambda e: console.append(f"pageerror: {e}"))
 
-        page.goto(f"{base}/live/", wait_until="networkidle")
+        page.goto(f"{base}/live/{args.query}", wait_until="networkidle")
         page.wait_for_selector("#toggle:not([disabled])", timeout=30_000)
         page.click("#toggle")
 

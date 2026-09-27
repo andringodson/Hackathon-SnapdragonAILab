@@ -180,8 +180,16 @@ def expected_files() -> dict[Path, str]:
     files[DEMO_DIR / "index.html"] = build_page(
         ui, script="replay.js", banner=BANNER, title="Sahaay — recorded session"
     )
-    files[LIVE_DIR / "index.html"] = build_page(
-        ui, script="live.js", banner=LIVE_BANNER, title="Sahaay — live in your browser"
+    live = build_page(ui, script="live.js", banner=LIVE_BANNER, title="Sahaay — live in your browser")
+    # The runtime comes from jsDelivr and the models from Hugging Face; open
+    # both connections while the page parses, so the first request to each
+    # does not also pay for DNS and TLS.
+    files[LIVE_DIR / "index.html"] = live.replace(
+        '<meta name="theme-color" content="#000000">',
+        '<meta name="theme-color" content="#000000">\n'
+        '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>\n'
+        '<link rel="preconnect" href="https://huggingface.co" crossorigin>',
+        1,
     )
     files[STATIC_DIR / "replay.css"] = BANNER_CSS + "\n"
     files[STATIC_DIR / "glossary.json"] = glossary_json()

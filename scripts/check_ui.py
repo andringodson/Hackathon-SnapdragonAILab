@@ -53,15 +53,22 @@ def watch(page, errors: list[str]) -> None:
     page.on("console", lambda m: errors.append(f"console: {m.text}") if m.type == "error" else None)
 
 
-def http_status(url: str) -> int:
-    req = urllib.request.Request(url, method="GET", headers={"User-Agent": "sahaay-check-ui"})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            return r.status
-    except urllib.error.HTTPError as e:
-        return e.code
-    except Exception:  # noqa: BLE001
-        return 0
+def http_status(url: str, attempts: int = 3) -> int:
+    """Status of a GET, retrying transient answers (5xx, 429, no connection)."""
+    code = 0
+    for n in range(attempts):
+        req = urllib.request.Request(url, method="GET", headers={"User-Agent": "sahaay-check-ui"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return r.status
+        except urllib.error.HTTPError as e:
+            code = e.code
+        except Exception:  # noqa: BLE001
+            code = 0
+        if code and code < 500 and code != 429:
+            return code
+        time.sleep(1.5 * (n + 1))
+    return code
 
 
 def landing(browser, base: str) -> None:
