@@ -121,6 +121,14 @@
    "duration_s": 126.575
   },
   {
+   "code": "mag",
+   "name": "मगही (Magahi)",
+   "file": "session.mag.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 126.455
+  },
+  {
    "code": "lus",
    "name": "Mizo ṭawng (Mizo)",
    "file": "session.lus.json",
