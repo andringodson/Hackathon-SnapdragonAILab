@@ -3,15 +3,15 @@
  "mode": "real",
  "audio_file": "lecture_long.wav",
  "target_language": "sd",
- "duration_s": 213.507,
+ "duration_s": 133.481,
  "event_counts": {
   "status": 8,
-  "level": 473,
-  "partial": 13,
-  "caption": 13,
-  "metric": 13,
+  "level": 479,
+  "partial": 18,
+  "caption": 18,
+  "metric": 18,
+  "translation": 18,
   "gloss": 4,
-  "translation": 13,
   "notes": 1
  },
  "events": [
@@ -41,7 +41,7 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 0.6,
+    "uptime_s": 0.2,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -51,7 +51,7 @@
   },
   {
    "kind": "status",
-   "t": 6.922,
+   "t": 4.331,
    "stage": "loading",
    "detail": "translation",
    "running": false,
@@ -75,7 +75,7 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 7.5,
+    "uptime_s": 4.6,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -85,7 +85,7 @@
   },
   {
    "kind": "status",
-   "t": 28.861,
+   "t": 16.763,
    "stage": "loading",
    "detail": "language model",
    "running": false,
@@ -109,7 +109,7 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 29.4,
+    "uptime_s": 17.0,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -119,7 +119,7 @@
   },
   {
    "kind": "status",
-   "t": 28.865,
+   "t": 16.764,
    "stage": "warming",
    "running": false,
    "device": {
@@ -142,7 +142,7 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 29.5,
+    "uptime_s": 17.0,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -152,7 +152,7 @@
   },
   {
    "kind": "status",
-   "t": 40.493,
+   "t": 21.045,
    "stage": "ready",
    "running": false,
    "device": {
@@ -175,7 +175,7 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 41.1,
+    "uptime_s": 21.3,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -185,12 +185,12 @@
   },
   {
    "kind": "level",
-   "t": 40.898,
+   "t": 21.158,
    "rms": 0.0
   },
   {
    "kind": "status",
-   "t": 40.906,
+   "t": 21.16,
    "running": true,
    "device": {
     "provider": "CPUExecutionProvider",
@@ -212,2072 +212,503 @@
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 0.4,
-    "audio_seconds": 0.1,
+    "uptime_s": 0.1,
+    "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
     "realtime_factor": 0.0,
-    "stages": [
-     {
-      "stage": "vad",
-      "count": 1,
-      "mean_ms": 4.5,
-      "p50_ms": 4.5,
-      "p95_ms": 4.5,
-      "min_ms": 4.5,
-      "max_ms": 4.5
-     }
-    ]
+    "stages": []
    }
   },
   {
    "kind": "level",
-   "t": 41.098,
-   "rms": 0.23201
+   "t": 21.368,
+   "rms": 0.16214
   },
   {
    "kind": "level",
-   "t": 41.324,
-   "rms": 0.119
+   "t": 21.583,
+   "rms": 0.19669
   },
   {
    "kind": "level",
-   "t": 41.524,
-   "rms": 0.14153
+   "t": 21.783,
+   "rms": 0.14511
   },
   {
    "kind": "level",
-   "t": 41.736,
-   "rms": 0.11215
+   "t": 21.999,
+   "rms": 0.12407
   },
   {
    "kind": "level",
-   "t": 41.969,
-   "rms": 0.07983
+   "t": 22.235,
+   "rms": 0.14046
   },
   {
    "kind": "level",
-   "t": 42.174,
+   "t": 22.459,
+   "rms": 0.11911
+  },
+  {
+   "kind": "level",
+   "t": 22.668,
    "rms": 0.00112
   },
   {
    "kind": "level",
-   "t": 42.383,
+   "t": 22.896,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 42.603,
+   "t": 23.121,
    "rms": 0.0
   },
   {
    "kind": "partial",
-   "t": 42.77,
+   "t": 23.283,
    "text": "...",
    "index": 0
   },
   {
    "kind": "level",
-   "t": 42.805,
+   "t": 23.351,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 43.017,
+   "t": 23.566,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 43.262,
+   "t": 23.767,
    "rms": 0.01315
   },
   {
    "kind": "level",
-   "t": 43.471,
+   "t": 23.996,
    "rms": 0.14722
   },
   {
    "kind": "level",
-   "t": 43.691,
+   "t": 24.231,
    "rms": 0.08039
   },
   {
    "kind": "level",
-   "t": 43.898,
-   "rms": 0.11227
+   "t": 24.435,
+   "rms": 0.15726
   },
   {
    "kind": "level",
-   "t": 44.115,
-   "rms": 0.02037
+   "t": 24.656,
+   "rms": 0.00775
   },
   {
    "kind": "level",
-   "t": 44.342,
-   "rms": 0.13539
+   "t": 24.888,
+   "rms": 0.06135
   },
   {
    "kind": "level",
-   "t": 44.561,
-   "rms": 0.05056
+   "t": 25.108,
+   "rms": 0.00466
   },
   {
    "kind": "level",
-   "t": 44.793,
+   "t": 25.314,
    "rms": 0.15786
   },
   {
    "kind": "level",
-   "t": 45.014,
+   "t": 25.524,
    "rms": 0.11241
   },
   {
    "kind": "level",
-   "t": 45.228,
-   "rms": 0.20873
+   "t": 25.729,
+   "rms": 0.17907
   },
   {
    "kind": "level",
-   "t": 45.464,
-   "rms": 0.14985
+   "t": 25.948,
+   "rms": 0.09711
   },
   {
    "kind": "level",
-   "t": 45.695,
-   "rms": 0.00755
+   "t": 26.158,
+   "rms": 0.00925
   },
   {
    "kind": "level",
-   "t": 45.914,
-   "rms": 0.14496
+   "t": 26.36,
+   "rms": 0.07384
   },
   {
    "kind": "level",
-   "t": 46.134,
-   "rms": 0.07809
+   "t": 26.582,
+   "rms": 0.07999
   },
   {
    "kind": "level",
-   "t": 46.357,
-   "rms": 0.12847
+   "t": 26.781,
+   "rms": 0.05937
   },
   {
    "kind": "level",
-   "t": 46.592,
-   "rms": 0.0672
+   "t": 26.992,
+   "rms": 0.01265
   },
   {
    "kind": "level",
-   "t": 46.818,
-   "rms": 0.04157
-  },
-  {
-   "kind": "level",
-   "t": 47.023,
-   "rms": 5e-05
-  },
-  {
-   "kind": "level",
-   "t": 47.249,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 47.475,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 47.697,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 47.922,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 48.147,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 48.376,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 48.569,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 48.778,
-   "rms": 0.00126
-  },
-  {
-   "kind": "level",
-   "t": 48.982,
-   "rms": 0.13544
-  },
-  {
-   "kind": "level",
-   "t": 49.206,
-   "rms": 0.02366
-  },
-  {
-   "kind": "level",
-   "t": 49.422,
-   "rms": 0.13689
-  },
-  {
-   "kind": "level",
-   "t": 49.747,
-   "rms": 0.04214
-  },
-  {
-   "kind": "level",
-   "t": 50.054,
-   "rms": 0.13485
-  },
-  {
-   "kind": "level",
-   "t": 50.264,
-   "rms": 0.07842
-  },
-  {
-   "kind": "level",
-   "t": 50.55,
-   "rms": 0.08897
-  },
-  {
-   "kind": "level",
-   "t": 50.715,
-   "rms": 0.20283
-  },
-  {
-   "kind": "level",
-   "t": 50.947,
-   "rms": 0.01514
-  },
-  {
-   "kind": "level",
-   "t": 51.169,
-   "rms": 0.08733
-  },
-  {
-   "kind": "level",
-   "t": 51.37,
-   "rms": 0.14603
-  },
-  {
-   "kind": "level",
-   "t": 51.582,
-   "rms": 0.04168
-  },
-  {
-   "kind": "level",
-   "t": 51.794,
-   "rms": 0.06227
-  },
-  {
-   "kind": "level",
-   "t": 52.045,
-   "rms": 0.02232
-  },
-  {
-   "kind": "level",
-   "t": 52.247,
-   "rms": 0.0493
-  },
-  {
-   "kind": "level",
-   "t": 52.464,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 52.693,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 52.943,
-   "rms": 0.10564
-  },
-  {
-   "kind": "level",
-   "t": 53.181,
-   "rms": 0.09097
-  },
-  {
-   "kind": "level",
-   "t": 53.395,
-   "rms": 0.028
-  },
-  {
-   "kind": "level",
-   "t": 53.612,
-   "rms": 0.14204
-  },
-  {
-   "kind": "level",
-   "t": 53.817,
-   "rms": 0.022
-  },
-  {
-   "kind": "level",
-   "t": 54.031,
-   "rms": 0.12594
-  },
-  {
-   "kind": "level",
-   "t": 54.236,
-   "rms": 0.0805
-  },
-  {
-   "kind": "level",
-   "t": 54.446,
-   "rms": 0.21943
-  },
-  {
-   "kind": "level",
-   "t": 54.675,
-   "rms": 0.03822
-  },
-  {
-   "kind": "level",
-   "t": 54.909,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.114,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.344,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.569,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.807,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 56.018,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 56.221,
-   "rms": 0.0
+   "t": 27.226,
+   "rms": 0.05255
   },
   {
    "kind": "caption",
-   "t": 56.42,
+   "t": 27.356,
    "index": 0,
    "text": "Good morning everyone.",
    "language": "en",
    "start_s": 0.0,
-   "latency_ms": 13647.1,
-   "rtf": 6.272,
+   "latency_ms": 4073.1,
+   "rtf": 1.872,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 56.421,
-   "uptime_s": 15.9,
-   "audio_seconds": 15.8,
-   "input_level": 0.0,
+   "t": 27.357,
+   "uptime_s": 6.3,
+   "audio_seconds": 6.3,
+   "input_level": 0.05255,
    "merged_segments": 0,
-   "realtime_factor": 0.862,
+   "realtime_factor": 0.649,
    "stages": [
     {
      "stage": "vad",
-     "count": 494,
-     "mean_ms": 5.5,
-     "p50_ms": 2.3,
-     "p95_ms": 20.4,
-     "min_ms": 0.7,
-     "max_ms": 183.5
+     "count": 196,
+     "mean_ms": 2.4,
+     "p50_ms": 1.6,
+     "p95_ms": 6.0,
+     "min_ms": 0.6,
+     "max_ms": 36.5
     },
     {
      "stage": "asr",
      "count": 1,
-     "mean_ms": 13648.3,
-     "p50_ms": 13648.3,
-     "p95_ms": 13648.3,
-     "min_ms": 13648.3,
-     "max_ms": 13648.3
+     "mean_ms": 4073.2,
+     "p50_ms": 4073.2,
+     "p95_ms": 4073.2,
+     "min_ms": 4073.2,
+     "max_ms": 4073.2
     }
    ]
   },
   {
    "kind": "level",
-   "t": 56.452,
+   "t": 27.441,
+   "rms": 0.00842
+  },
+  {
+   "kind": "level",
+   "t": 27.642,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 27.862,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 28.078,
    "rms": 0.0
   },
   {
    "kind": "partial",
-   "t": 56.454,
+   "t": 28.147,
    "text": "...",
    "index": 1
   },
   {
    "kind": "level",
-   "t": 56.662,
-   "rms": 0.12975
-  },
-  {
-   "kind": "level",
-   "t": 56.879,
-   "rms": 0.18769
-  },
-  {
-   "kind": "level",
-   "t": 57.11,
-   "rms": 0.14911
-  },
-  {
-   "kind": "level",
-   "t": 57.317,
-   "rms": 0.09437
-  },
-  {
-   "kind": "level",
-   "t": 57.529,
-   "rms": 0.09761
-  },
-  {
-   "kind": "level",
-   "t": 57.742,
-   "rms": 0.16402
-  },
-  {
-   "kind": "level",
-   "t": 57.969,
-   "rms": 0.12605
-  },
-  {
-   "kind": "level",
-   "t": 58.233,
-   "rms": 0.06974
-  },
-  {
-   "kind": "level",
-   "t": 58.455,
-   "rms": 0.03868
-  },
-  {
-   "kind": "level",
-   "t": 58.669,
-   "rms": 0.10585
-  },
-  {
-   "kind": "level",
-   "t": 58.917,
-   "rms": 0.13546
-  },
-  {
-   "kind": "level",
-   "t": 59.131,
-   "rms": 0.04391
-  },
-  {
-   "kind": "level",
-   "t": 59.351,
+   "t": 28.313,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 59.636,
+   "t": 28.526,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 59.86,
+   "t": 28.736,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 60.093,
+   "t": 28.949,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 60.303,
-   "rms": 0.00011
-  },
-  {
-   "kind": "level",
-   "t": 60.527,
-   "rms": 0.10059
-  },
-  {
-   "kind": "level",
-   "t": 60.735,
-   "rms": 0.17208
-  },
-  {
-   "kind": "level",
-   "t": 60.968,
-   "rms": 0.05133
-  },
-  {
-   "kind": "level",
-   "t": 61.205,
-   "rms": 0.02766
-  },
-  {
-   "kind": "level",
-   "t": 61.42,
-   "rms": 0.05868
-  },
-  {
-   "kind": "level",
-   "t": 61.624,
-   "rms": 0.02837
-  },
-  {
-   "kind": "level",
-   "t": 61.845,
-   "rms": 0.07286
-  },
-  {
-   "kind": "level",
-   "t": 62.065,
-   "rms": 0.04129
-  },
-  {
-   "kind": "level",
-   "t": 62.282,
-   "rms": 0.01586
-  },
-  {
-   "kind": "level",
-   "t": 62.528,
-   "rms": 0.08952
-  },
-  {
-   "kind": "level",
-   "t": 62.742,
-   "rms": 0.18561
-  },
-  {
-   "kind": "level",
-   "t": 62.962,
-   "rms": 0.10562
-  },
-  {
-   "kind": "level",
-   "t": 63.19,
-   "rms": 0.11455
-  },
-  {
-   "kind": "level",
-   "t": 63.414,
-   "rms": 0.04638
-  },
-  {
-   "kind": "level",
-   "t": 63.634,
-   "rms": 4e-05
-  },
-  {
-   "kind": "level",
-   "t": 63.858,
+   "t": 29.187,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 64.085,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 64.287,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 64.52,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 64.737,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 64.94,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 65.148,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 65.349,
-   "rms": 3e-05
-  },
-  {
-   "kind": "level",
-   "t": 65.555,
-   "rms": 0.24828
-  },
-  {
-   "kind": "level",
-   "t": 65.78,
-   "rms": 0.21081
-  },
-  {
-   "kind": "level",
-   "t": 66.033,
-   "rms": 0.00598
-  },
-  {
-   "kind": "level",
-   "t": 66.263,
-   "rms": 0.00076
-  },
-  {
-   "kind": "level",
-   "t": 66.494,
-   "rms": 0.06331
-  },
-  {
-   "kind": "level",
-   "t": 66.698,
-   "rms": 0.00216
-  },
-  {
-   "kind": "level",
-   "t": 66.93,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 67.159,
-   "rms": 0.00657
-  },
-  {
-   "kind": "level",
-   "t": 67.369,
-   "rms": 0.01244
-  },
-  {
-   "kind": "level",
-   "t": 67.595,
-   "rms": 0.14718
-  },
-  {
-   "kind": "level",
-   "t": 67.803,
-   "rms": 0.07901
-  },
-  {
-   "kind": "caption",
-   "t": 67.804,
-   "index": 1,
-   "text": "Today we will start with eigenvalues and eigenvectors. These two ideas sit at the center of linear algebra, so it is worth going slowly.",
-   "language": "en",
-   "start_s": 2.55,
-   "latency_ms": 11349.5,
-   "rtf": 0.989,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 67.804,
-   "uptime_s": 27.3,
-   "audio_seconds": 27.2,
-   "input_level": 0.07901,
-   "merged_segments": 1,
-   "realtime_factor": 0.92,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 848,
-     "mean_ms": 4.5,
-     "p50_ms": 2.2,
-     "p95_ms": 13.9,
-     "min_ms": 0.8,
-     "max_ms": 58.8
-    },
-    {
-     "stage": "asr",
-     "count": 2,
-     "mean_ms": 12499.0,
-     "p50_ms": 13648.3,
-     "p95_ms": 13648.3,
-     "min_ms": 11349.7,
-     "max_ms": 13648.3
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 67.813,
-   "text": "...",
-   "index": 3
-  },
-  {
-   "kind": "level",
-   "t": 68.03,
-   "rms": 0.10151
-  },
-  {
-   "kind": "level",
-   "t": 68.252,
-   "rms": 0.08664
-  },
-  {
-   "kind": "level",
-   "t": 68.479,
-   "rms": 0.04644
-  },
-  {
-   "kind": "level",
-   "t": 68.746,
-   "rms": 0.08383
-  },
-  {
-   "kind": "level",
-   "t": 68.96,
-   "rms": 0.03747
-  },
-  {
-   "kind": "level",
-   "t": 69.172,
-   "rms": 0.11854
-  },
-  {
-   "kind": "level",
-   "t": 69.394,
-   "rms": 0.10004
-  },
-  {
-   "kind": "level",
-   "t": 69.619,
-   "rms": 0.11281
-  },
-  {
-   "kind": "level",
-   "t": 69.848,
-   "rms": 0.11782
-  },
-  {
-   "kind": "level",
-   "t": 70.069,
-   "rms": 0.11094
-  },
-  {
-   "kind": "level",
-   "t": 70.288,
-   "rms": 0.14395
-  },
-  {
-   "kind": "level",
-   "t": 70.508,
-   "rms": 0.02772
-  },
-  {
-   "kind": "level",
-   "t": 70.738,
-   "rms": 6e-05
-  },
-  {
-   "kind": "level",
-   "t": 70.978,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 71.196,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 71.402,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 71.609,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 71.829,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.036,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.24,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.457,
-   "rms": 2e-05
-  },
-  {
-   "kind": "level",
-   "t": 72.689,
-   "rms": 0.21182
-  },
-  {
-   "kind": "level",
-   "t": 72.926,
-   "rms": 0.00334
-  },
-  {
-   "kind": "level",
-   "t": 73.191,
-   "rms": 0.09412
-  },
-  {
-   "kind": "level",
-   "t": 73.395,
-   "rms": 0.21892
-  },
-  {
-   "kind": "level",
-   "t": 73.611,
-   "rms": 0.17306
-  },
-  {
-   "kind": "level",
-   "t": 73.852,
-   "rms": 0.15844
-  },
-  {
-   "kind": "level",
-   "t": 74.076,
-   "rms": 0.14863
-  },
-  {
-   "kind": "level",
-   "t": 74.286,
-   "rms": 0.05633
-  },
-  {
-   "kind": "level",
-   "t": 74.488,
-   "rms": 0.12185
-  },
-  {
-   "kind": "level",
-   "t": 74.717,
-   "rms": 0.09851
-  },
-  {
-   "kind": "level",
-   "t": 74.925,
-   "rms": 0.13937
-  },
-  {
-   "kind": "level",
-   "t": 75.182,
-   "rms": 0.08246
-  },
-  {
-   "kind": "level",
-   "t": 75.412,
-   "rms": 0.02806
-  },
-  {
-   "kind": "level",
-   "t": 75.64,
-   "rms": 0.00021
-  },
-  {
-   "kind": "caption",
-   "t": 75.717,
-   "index": 2,
-   "text": "A matrix is a linear transformation. It stretches, rotates and cheers space.",
-   "language": "en",
-   "start_s": 15.86,
-   "latency_ms": 7903.0,
-   "rtf": 1.03,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 75.718,
-   "uptime_s": 35.2,
-   "audio_seconds": 35.1,
-   "input_level": 0.00021,
-   "merged_segments": 2,
-   "realtime_factor": 0.936,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 1097,
-     "mean_ms": 3.9,
-     "p50_ms": 2.2,
-     "p95_ms": 12.3,
-     "min_ms": 1.0,
-     "max_ms": 60.5
-    },
-    {
-     "stage": "asr",
-     "count": 3,
-     "mean_ms": 10967.1,
-     "p50_ms": 11349.7,
-     "p95_ms": 13648.3,
-     "min_ms": 7903.2,
-     "max_ms": 13648.3
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 75.718,
-   "text": "...",
-   "index": 5
-  },
-  {
-   "kind": "gloss",
-   "t": 75.737,
-   "term": "eigenvalue",
-   "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
-   "language": "sd",
-   "source_line": "A matrix is a linear transformation. It stretches, rotates and cheers space.",
-   "latency_ms": 9.7,
-   "backend": "heuristic"
-  },
-  {
-   "kind": "gloss",
-   "t": 75.737,
-   "term": "eigenvector",
-   "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
-   "language": "sd",
-   "source_line": "A matrix is a linear transformation. It stretches, rotates and cheers space.",
-   "latency_ms": 9.7,
-   "backend": "heuristic"
-  },
-  {
-   "kind": "level",
-   "t": 75.857,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 76.092,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 76.314,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 76.535,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 76.745,
-   "rms": 0.01648
-  },
-  {
-   "kind": "level",
-   "t": 76.976,
-   "rms": 0.0987
-  },
-  {
-   "kind": "level",
-   "t": 77.201,
-   "rms": 0.1664
-  },
-  {
-   "kind": "level",
-   "t": 77.432,
-   "rms": 0.16193
-  },
-  {
-   "kind": "level",
-   "t": 77.642,
-   "rms": 0.08658
-  },
-  {
-   "kind": "level",
-   "t": 77.856,
-   "rms": 0.1041
-  },
-  {
-   "kind": "level",
-   "t": 78.066,
-   "rms": 0.1733
-  },
-  {
-   "kind": "level",
-   "t": 78.297,
-   "rms": 0.03661
-  },
-  {
-   "kind": "level",
-   "t": 78.516,
-   "rms": 0.00019
-  },
-  {
-   "kind": "level",
-   "t": 78.736,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 78.969,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 79.186,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 79.415,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 79.638,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 79.873,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 80.073,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 80.28,
-   "rms": 4e-05
-  },
-  {
-   "kind": "level",
-   "t": 80.5,
-   "rms": 0.18086
-  },
-  {
-   "kind": "level",
-   "t": 80.735,
-   "rms": 0.07931
-  },
-  {
-   "kind": "level",
-   "t": 80.955,
-   "rms": 0.02983
-  },
-  {
-   "kind": "level",
-   "t": 81.179,
-   "rms": 0.06144
-  },
-  {
-   "kind": "level",
-   "t": 81.398,
-   "rms": 0.08494
-  },
-  {
-   "kind": "level",
-   "t": 81.616,
-   "rms": 0.13127
-  },
-  {
-   "kind": "level",
-   "t": 81.838,
-   "rms": 0.1035
-  },
-  {
-   "kind": "level",
-   "t": 82.044,
-   "rms": 0.06624
-  },
-  {
-   "kind": "level",
-   "t": 82.253,
-   "rms": 0.02401
-  },
-  {
-   "kind": "level",
-   "t": 82.459,
-   "rms": 0.05522
-  },
-  {
-   "kind": "caption",
-   "t": 82.51,
-   "index": 3,
-   "text": "For most vectors, applying the matrix changes both direction and length.",
-   "language": "en",
-   "start_s": 24.76,
-   "latency_ms": 6792.3,
-   "rtf": 1.141,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 82.511,
-   "uptime_s": 42.0,
-   "audio_seconds": 42.0,
-   "input_level": 0.05522,
-   "merged_segments": 2,
-   "realtime_factor": 0.946,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 1310,
-     "mean_ms": 4.0,
-     "p50_ms": 2.2,
-     "p95_ms": 12.1,
-     "min_ms": 1.0,
-     "max_ms": 60.5
-    },
-    {
-     "stage": "asr",
-     "count": 4,
-     "mean_ms": 9923.4,
-     "p50_ms": 11349.7,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 82.511,
-   "text": "...",
-   "index": 6
-  },
-  {
-   "kind": "level",
-   "t": 82.666,
-   "rms": 0.00216
-  },
-  {
-   "kind": "level",
-   "t": 82.876,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 83.088,
-   "rms": 0.00023
-  },
-  {
-   "kind": "level",
-   "t": 83.288,
-   "rms": 0.10235
-  },
-  {
-   "kind": "level",
-   "t": 83.531,
-   "rms": 0.02906
-  },
-  {
-   "kind": "level",
-   "t": 83.749,
-   "rms": 0.00083
-  },
-  {
-   "kind": "level",
-   "t": 83.958,
-   "rms": 0.03467
-  },
-  {
-   "kind": "level",
-   "t": 84.169,
-   "rms": 0.1075
-  },
-  {
-   "kind": "level",
-   "t": 84.407,
-   "rms": 0.20341
-  },
-  {
-   "kind": "level",
-   "t": 84.625,
-   "rms": 0.00299
-  },
-  {
-   "kind": "level",
-   "t": 84.826,
-   "rms": 0.09736
-  },
-  {
-   "kind": "level",
-   "t": 85.04,
-   "rms": 0.00666
-  },
-  {
-   "kind": "level",
-   "t": 85.261,
-   "rms": 0.15866
-  },
-  {
-   "kind": "level",
-   "t": 85.531,
-   "rms": 0.13929
-  },
-  {
-   "kind": "level",
-   "t": 85.731,
-   "rms": 0.13208
-  },
-  {
-   "kind": "level",
-   "t": 85.934,
-   "rms": 0.08637
-  },
-  {
-   "kind": "level",
-   "t": 86.177,
-   "rms": 0.03507
-  },
-  {
-   "kind": "level",
-   "t": 86.399,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 86.613,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 86.836,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 87.061,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 87.286,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 87.506,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 87.784,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 88.001,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 88.244,
-   "rms": 0.07436
-  },
-  {
-   "kind": "level",
-   "t": 88.462,
-   "rms": 0.21822
-  },
-  {
-   "kind": "level",
-   "t": 88.688,
-   "rms": 0.13441
-  },
-  {
-   "kind": "level",
-   "t": 88.899,
-   "rms": 0.14226
-  },
-  {
-   "kind": "level",
-   "t": 89.115,
-   "rms": 0.08386
-  },
-  {
-   "kind": "level",
-   "t": 89.333,
-   "rms": 0.13708
-  },
-  {
-   "kind": "level",
-   "t": 89.537,
-   "rms": 0.08296
-  },
-  {
-   "kind": "level",
-   "t": 89.757,
-   "rms": 0.21522
-  },
-  {
-   "kind": "level",
-   "t": 89.967,
-   "rms": 0.00085
-  },
-  {
-   "kind": "caption",
-   "t": 90.086,
-   "index": 4,
-   "text": "but a few special vectors only change length. Their direction is preserved.",
-   "language": "en",
-   "start_s": 31.86,
-   "latency_ms": 7574.4,
-   "rtf": 1.168,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 90.086,
-   "uptime_s": 49.6,
-   "audio_seconds": 49.5,
-   "input_level": 0.00085,
-   "merged_segments": 3,
-   "realtime_factor": 0.955,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 1547,
-     "mean_ms": 4.1,
-     "p50_ms": 2.3,
-     "p95_ms": 12.6,
-     "min_ms": 0.9,
-     "max_ms": 60.5
-    },
-    {
-     "stage": "asr",
-     "count": 5,
-     "mean_ms": 9453.6,
-     "p50_ms": 7903.2,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 90.087,
-   "text": "...",
-   "index": 8
-  },
-  {
-   "kind": "level",
-   "t": 90.167,
-   "rms": 0.16924
-  },
-  {
-   "kind": "level",
-   "t": 90.407,
-   "rms": 0.04988
-  },
-  {
-   "kind": "level",
-   "t": 90.682,
-   "rms": 0.04633
+   "t": 29.395,
+   "rms": 0.16754
   },
   {
    "kind": "translation",
-   "t": 90.684,
+   "t": 29.608,
    "index": 0,
    "text": "سڀئي کي صبح جو سلام.",
    "target_language": "sd",
-   "latency_ms": 34259.8,
+   "latency_ms": 2251.2,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 90.923,
-   "rms": 0.09496
+   "t": 29.614,
+   "rms": 0.00927
   },
   {
    "kind": "level",
-   "t": 91.151,
-   "rms": 0.09961
+   "t": 29.845,
+   "rms": 0.13867
   },
   {
    "kind": "level",
-   "t": 91.449,
-   "rms": 0.14447
+   "t": 30.066,
+   "rms": 0.04214
   },
   {
    "kind": "level",
-   "t": 91.598,
-   "rms": 0.12108
+   "t": 30.295,
+   "rms": 0.13485
   },
   {
    "kind": "level",
-   "t": 91.841,
-   "rms": 0.09412
+   "t": 30.513,
+   "rms": 0.09794
   },
   {
    "kind": "level",
-   "t": 92.077,
-   "rms": 0.06882
+   "t": 30.714,
+   "rms": 0.05681
   },
   {
    "kind": "level",
-   "t": 92.301,
-   "rms": 0.0
+   "t": 30.939,
+   "rms": 0.07419
   },
   {
    "kind": "level",
-   "t": 92.503,
-   "rms": 0.0
+   "t": 31.163,
+   "rms": 0.20283
   },
   {
    "kind": "level",
-   "t": 92.716,
-   "rms": 0.0
+   "t": 31.376,
+   "rms": 0.13798
   },
   {
    "kind": "level",
-   "t": 92.948,
-   "rms": 0.0
+   "t": 31.599,
+   "rms": 0.04327
   },
   {
    "kind": "level",
-   "t": 93.15,
-   "rms": 0.0
+   "t": 31.828,
+   "rms": 0.17972
   },
   {
    "kind": "level",
-   "t": 93.36,
-   "rms": 0.0
+   "t": 32.051,
+   "rms": 0.10776
   },
   {
    "kind": "level",
-   "t": 93.608,
-   "rms": 0.0
+   "t": 32.284,
+   "rms": 0.14927
   },
   {
    "kind": "level",
-   "t": 93.812,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 94.039,
-   "rms": 0.04069
-  },
-  {
-   "kind": "level",
-   "t": 94.26,
-   "rms": 0.08693
-  },
-  {
-   "kind": "level",
-   "t": 94.475,
-   "rms": 0.22947
-  },
-  {
-   "kind": "level",
-   "t": 94.674,
-   "rms": 0.12822
-  },
-  {
-   "kind": "level",
-   "t": 94.876,
-   "rms": 0.01304
-  },
-  {
-   "kind": "level",
-   "t": 95.092,
-   "rms": 0.12721
-  },
-  {
-   "kind": "level",
-   "t": 95.311,
-   "rms": 0.16401
-  },
-  {
-   "kind": "level",
-   "t": 95.526,
-   "rms": 0.09134
-  },
-  {
-   "kind": "level",
-   "t": 95.731,
-   "rms": 0.16051
-  },
-  {
-   "kind": "level",
-   "t": 95.939,
-   "rms": 0.08353
-  },
-  {
-   "kind": "level",
-   "t": 96.143,
-   "rms": 0.03856
-  },
-  {
-   "kind": "level",
-   "t": 96.394,
-   "rms": 0.11791
-  },
-  {
-   "kind": "level",
-   "t": 96.606,
-   "rms": 0.01777
-  },
-  {
-   "kind": "level",
-   "t": 96.815,
-   "rms": 0.17127
-  },
-  {
-   "kind": "level",
-   "t": 97.034,
-   "rms": 0.16559
-  },
-  {
-   "kind": "level",
-   "t": 97.265,
-   "rms": 0.06596
-  },
-  {
-   "kind": "level",
-   "t": 97.487,
-   "rms": 0.09713
-  },
-  {
-   "kind": "level",
-   "t": 97.695,
-   "rms": 0.02442
-  },
-  {
-   "kind": "level",
-   "t": 97.902,
-   "rms": 0.0055
-  },
-  {
-   "kind": "level",
-   "t": 98.146,
-   "rms": 0.09177
-  },
-  {
-   "kind": "level",
-   "t": 98.362,
-   "rms": 0.14347
-  },
-  {
-   "kind": "level",
-   "t": 98.577,
-   "rms": 0.07524
-  },
-  {
-   "kind": "level",
-   "t": 98.81,
-   "rms": 5e-05
-  },
-  {
-   "kind": "level",
-   "t": 99.018,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 99.245,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 99.471,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 99.695,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 99.921,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 100.132,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 100.367,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 100.57,
-   "rms": 0.02656
-  },
-  {
-   "kind": "level",
-   "t": 100.791,
-   "rms": 0.09571
-  },
-  {
-   "kind": "level",
-   "t": 101.01,
-   "rms": 0.21068
-  },
-  {
-   "kind": "level",
-   "t": 101.252,
-   "rms": 0.14407
-  },
-  {
-   "kind": "level",
-   "t": 101.492,
-   "rms": 0.10117
-  },
-  {
-   "kind": "level",
-   "t": 101.711,
-   "rms": 0.1081
+   "t": 32.502,
+   "rms": 0.05885
   },
   {
    "kind": "caption",
-   "t": 101.745,
-   "index": 5,
-   "text": "Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.",
+   "t": 32.627,
+   "index": 1,
+   "text": "Today we will start with eigenvalues and eigenvectors.",
    "language": "en",
-   "start_s": 39.61,
-   "latency_ms": 11657.9,
-   "rtf": 1.727,
+   "start_s": 2.55,
+   "latency_ms": 4479.6,
+   "rtf": 1.0,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 101.747,
-   "uptime_s": 61.3,
-   "audio_seconds": 61.2,
-   "input_level": 0.1081,
-   "merged_segments": 3,
-   "realtime_factor": 0.964,
+   "t": 32.628,
+   "uptime_s": 11.6,
+   "audio_seconds": 11.5,
+   "input_level": 0.05885,
+   "merged_segments": 0,
+   "realtime_factor": 0.742,
    "stages": [
     {
      "stage": "vad",
-     "count": 1911,
-     "mean_ms": 5.1,
-     "p50_ms": 2.6,
-     "p95_ms": 16.5,
-     "min_ms": 0.9,
-     "max_ms": 240.3
+     "count": 360,
+     "mean_ms": 2.6,
+     "p50_ms": 1.7,
+     "p95_ms": 6.9,
+     "min_ms": 0.6,
+     "max_ms": 36.5
     },
     {
      "stage": "asr",
-     "count": 6,
-     "mean_ms": 9821.1,
-     "p50_ms": 11349.7,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
+     "count": 2,
+     "mean_ms": 4276.5,
+     "p50_ms": 4479.8,
+     "p95_ms": 4479.8,
+     "min_ms": 4073.2,
+     "max_ms": 4479.8
     },
     {
      "stage": "translate",
      "count": 1,
-     "mean_ms": 34260.0,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 34260.0,
-     "max_ms": 34260.0
+     "mean_ms": 2251.3,
+     "p50_ms": 2251.3,
+     "p95_ms": 2251.3,
+     "min_ms": 2251.3,
+     "max_ms": 2251.3
     }
    ]
   },
   {
-   "kind": "partial",
-   "t": 101.757,
-   "text": "...",
-   "index": 9
+   "kind": "level",
+   "t": 32.722,
+   "rms": 0.05923
   },
   {
    "kind": "level",
-   "t": 101.936,
-   "rms": 0.13008
+   "t": 32.956,
+   "rms": 0.0005
   },
   {
    "kind": "level",
-   "t": 102.163,
-   "rms": 0.08298
-  },
-  {
-   "kind": "level",
-   "t": 102.379,
-   "rms": 0.0542
-  },
-  {
-   "kind": "level",
-   "t": 102.609,
-   "rms": 0.10341
-  },
-  {
-   "kind": "level",
-   "t": 102.836,
-   "rms": 0.03494
-  },
-  {
-   "kind": "level",
-   "t": 103.06,
-   "rms": 0.13049
-  },
-  {
-   "kind": "level",
-   "t": 103.279,
-   "rms": 0.13175
-  },
-  {
-   "kind": "level",
-   "t": 103.503,
-   "rms": 0.12641
-  },
-  {
-   "kind": "level",
-   "t": 103.732,
-   "rms": 0.07416
-  },
-  {
-   "kind": "level",
-   "t": 103.949,
-   "rms": 0.17993
-  },
-  {
-   "kind": "level",
-   "t": 104.152,
-   "rms": 0.07837
-  },
-  {
-   "kind": "level",
-   "t": 104.375,
-   "rms": 0.11417
-  },
-  {
-   "kind": "level",
-   "t": 104.603,
-   "rms": 0.14923
-  },
-  {
-   "kind": "level",
-   "t": 104.82,
-   "rms": 0.0728
-  },
-  {
-   "kind": "level",
-   "t": 105.048,
-   "rms": 0.09541
-  },
-  {
-   "kind": "level",
-   "t": 105.275,
-   "rms": 0.16084
-  },
-  {
-   "kind": "level",
-   "t": 105.488,
-   "rms": 0.0059
-  },
-  {
-   "kind": "level",
-   "t": 105.707,
-   "rms": 0.17353
-  },
-  {
-   "kind": "level",
-   "t": 105.932,
-   "rms": 0.00122
-  },
-  {
-   "kind": "level",
-   "t": 106.155,
+   "t": 33.169,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 106.384,
+   "t": 33.401,
+   "rms": 0.06724
+  },
+  {
+   "kind": "level",
+   "t": 33.617,
+   "rms": 0.06374
+  },
+  {
+   "kind": "level",
+   "t": 33.851,
+   "rms": 0.07174
+  },
+  {
+   "kind": "level",
+   "t": 34.056,
+   "rms": 0.16782
+  },
+  {
+   "kind": "level",
+   "t": 34.259,
+   "rms": 0.00193
+  },
+  {
+   "kind": "level",
+   "t": 34.491,
+   "rms": 0.15614
+  },
+  {
+   "kind": "level",
+   "t": 34.709,
+   "rms": 0.08112
+  },
+  {
+   "kind": "level",
+   "t": 34.936,
+   "rms": 0.22623
+  },
+  {
+   "kind": "level",
+   "t": 35.156,
+   "rms": 0.05697
+  },
+  {
+   "kind": "level",
+   "t": 35.389,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 35.608,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 106.625,
+   "t": 35.832,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 106.834,
+   "t": 36.054,
    "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 107.055,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 107.276,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 107.521,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 107.726,
-   "rms": 4e-05
-  },
-  {
-   "kind": "level",
-   "t": 107.959,
-   "rms": 0.08815
-  },
-  {
-   "kind": "level",
-   "t": 108.179,
-   "rms": 0.07136
-  },
-  {
-   "kind": "level",
-   "t": 108.409,
-   "rms": 0.13608
-  },
-  {
-   "kind": "level",
-   "t": 108.625,
-   "rms": 0.09338
-  },
-  {
-   "kind": "level",
-   "t": 108.845,
-   "rms": 0.00066
-  },
-  {
-   "kind": "level",
-   "t": 109.092,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 109.293,
-   "rms": 0.00032
-  },
-  {
-   "kind": "level",
-   "t": 109.52,
-   "rms": 0.09095
-  },
-  {
-   "kind": "caption",
-   "t": 109.637,
-   "index": 6,
-   "text": "To find them we solve the characteristic equation of the matrix. The determinant of a minus lambda times the identity must equal zero.",
-   "language": "en",
-   "start_s": 47.35,
-   "latency_ms": 7879.9,
-   "rtf": 0.742,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 109.637,
-   "uptime_s": 69.1,
-   "audio_seconds": 69.1,
-   "input_level": 0.09095,
-   "merged_segments": 4,
-   "realtime_factor": 0.967,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 2158,
-     "mean_ms": 4.0,
-     "p50_ms": 2.5,
-     "p95_ms": 13.4,
-     "min_ms": 1.0,
-     "max_ms": 51.8
-    },
-    {
-     "stage": "asr",
-     "count": 7,
-     "mean_ms": 9543.8,
-     "p50_ms": 7903.2,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
-    },
-    {
-     "stage": "translate",
-     "count": 1,
-     "mean_ms": 34260.0,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 34260.0,
-     "max_ms": 34260.0
-    }
-   ]
   },
   {
    "kind": "partial",
-   "t": 109.638,
+   "t": 36.055,
    "text": "...",
-   "index": 11
+   "index": 2
   },
   {
    "kind": "level",
-   "t": 109.75,
-   "rms": 0.14885
-  },
-  {
-   "kind": "level",
-   "t": 109.963,
-   "rms": 0.24713
-  },
-  {
-   "kind": "level",
-   "t": 110.197,
-   "rms": 0.07326
-  },
-  {
-   "kind": "level",
-   "t": 110.439,
-   "rms": 0.02871
-  },
-  {
-   "kind": "level",
-   "t": 110.645,
-   "rms": 0.12639
-  },
-  {
-   "kind": "level",
-   "t": 110.861,
-   "rms": 0.12089
-  },
-  {
-   "kind": "level",
-   "t": 111.12,
-   "rms": 0.08773
-  },
-  {
-   "kind": "level",
-   "t": 111.322,
-   "rms": 0.07759
-  },
-  {
-   "kind": "level",
-   "t": 111.537,
-   "rms": 0.0002
-  },
-  {
-   "kind": "level",
-   "t": 111.757,
+   "t": 36.291,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 111.989,
-   "rms": 0.11891
-  },
-  {
-   "kind": "level",
-   "t": 112.203,
-   "rms": 0.15765
-  },
-  {
-   "kind": "level",
-   "t": 112.407,
-   "rms": 0.10735
-  },
-  {
-   "kind": "level",
-   "t": 112.625,
-   "rms": 0.09167
-  },
-  {
-   "kind": "level",
-   "t": 112.843,
-   "rms": 0.22411
-  },
-  {
-   "kind": "level",
-   "t": 113.046,
-   "rms": 0.05605
-  },
-  {
-   "kind": "level",
-   "t": 113.269,
-   "rms": 0.07525
-  },
-  {
-   "kind": "level",
-   "t": 113.486,
-   "rms": 0.06446
-  },
-  {
-   "kind": "level",
-   "t": 113.724,
-   "rms": 0.09665
-  },
-  {
-   "kind": "level",
-   "t": 113.936,
-   "rms": 0.11747
-  },
-  {
-   "kind": "level",
-   "t": 114.161,
-   "rms": 0.00055
-  },
-  {
-   "kind": "level",
-   "t": 114.379,
+   "t": 36.502,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 114.579,
+   "t": 36.734,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 114.875,
+   "t": 36.956,
    "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 37.183,
+   "rms": 0.12975
   },
   {
    "kind": "translation",
-   "t": 114.888,
+   "t": 37.254,
    "index": 1,
-   "text": "اڄ اسان eigenvalues ۽ eigenvectors سان شروع ڪنداسين. اهي ٻه خيال سڌي الجبرا جي مرڪز ۾ آهن، تنهنڪري اهو سست هلڻ جي قابل آهي.",
+   "text": "اڄ اسان eigenvalues ۽ eigenvectors سان شروع ڪنداسين.",
    "target_language": "sd",
-   "latency_ms": 24202.6,
+   "latency_ms": 4625.9,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -2286,1080 +717,1386 @@
   },
   {
    "kind": "level",
-   "t": 115.085,
+   "t": 37.404,
+   "rms": 0.18769
+  },
+  {
+   "kind": "level",
+   "t": 37.619,
+   "rms": 0.14911
+  },
+  {
+   "kind": "level",
+   "t": 37.842,
+   "rms": 0.02639
+  },
+  {
+   "kind": "level",
+   "t": 38.062,
+   "rms": 0.06309
+  },
+  {
+   "kind": "level",
+   "t": 38.296,
+   "rms": 0.1254
+  },
+  {
+   "kind": "level",
+   "t": 38.517,
+   "rms": 0.13685
+  },
+  {
+   "kind": "level",
+   "t": 38.731,
+   "rms": 0.06466
+  },
+  {
+   "kind": "level",
+   "t": 38.962,
+   "rms": 0.03868
+  },
+  {
+   "kind": "level",
+   "t": 39.192,
+   "rms": 0.10585
+  },
+  {
+   "kind": "level",
+   "t": 39.41,
+   "rms": 0.07423
+  },
+  {
+   "kind": "level",
+   "t": 39.644,
+   "rms": 0.04391
+  },
+  {
+   "kind": "level",
+   "t": 39.866,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 115.313,
+   "t": 40.085,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 115.538,
+   "t": 40.313,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 115.756,
+   "t": 40.525,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 115.983,
-   "rms": 0.00875
+   "t": 40.754,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 116.209,
-   "rms": 0.12391
+   "t": 40.98,
+   "rms": 0.02348
   },
   {
    "kind": "level",
-   "t": 116.413,
-   "rms": 0.04402
+   "t": 41.18,
+   "rms": 0.01532
   },
   {
    "kind": "caption",
-   "t": 116.574,
-   "index": 7,
-   "text": "The determinant is a single number that tells you whether the matrix squashes space flat.",
+   "t": 41.188,
+   "index": 2,
+   "text": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
    "language": "en",
-   "start_s": 59.8,
-   "latency_ms": 6935.4,
-   "rtf": 1.123,
+   "start_s": 8.09,
+   "latency_ms": 5133.0,
+   "rtf": 0.75,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 116.574,
-   "uptime_s": 76.1,
-   "audio_seconds": 76.0,
-   "input_level": 0.04402,
-   "merged_segments": 4,
-   "realtime_factor": 0.971,
+   "t": 41.189,
+   "uptime_s": 20.1,
+   "audio_seconds": 20.1,
+   "input_level": 0.01532,
+   "merged_segments": 0,
+   "realtime_factor": 0.681,
    "stages": [
     {
      "stage": "vad",
-     "count": 2374,
-     "mean_ms": 3.9,
-     "p50_ms": 2.4,
-     "p95_ms": 9.7,
+     "count": 627,
+     "mean_ms": 3.1,
+     "p50_ms": 2.0,
+     "p95_ms": 8.3,
      "min_ms": 0.9,
-     "max_ms": 101.9
+     "max_ms": 30.7
+    },
+    {
+     "stage": "asr",
+     "count": 3,
+     "mean_ms": 4562.0,
+     "p50_ms": 4479.8,
+     "p95_ms": 5133.1,
+     "min_ms": 4073.2,
+     "max_ms": 5133.1
+    },
+    {
+     "stage": "translate",
+     "count": 2,
+     "mean_ms": 3438.6,
+     "p50_ms": 4625.9,
+     "p95_ms": 4625.9,
+     "min_ms": 2251.3,
+     "max_ms": 4625.9
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 41.189,
+   "text": "...",
+   "index": 3
+  },
+  {
+   "kind": "gloss",
+   "t": 41.193,
+   "term": "eigenvalue",
+   "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
+   "language": "sd",
+   "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+   "latency_ms": 1.7,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "gloss",
+   "t": 41.193,
+   "term": "eigenvector",
+   "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
+   "language": "sd",
+   "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+   "latency_ms": 1.7,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "level",
+   "t": 41.396,
+   "rms": 0.027
+  },
+  {
+   "kind": "level",
+   "t": 41.624,
+   "rms": 0.04332
+  },
+  {
+   "kind": "level",
+   "t": 41.847,
+   "rms": 0.00012
+  },
+  {
+   "kind": "level",
+   "t": 42.067,
+   "rms": 0.14894
+  },
+  {
+   "kind": "level",
+   "t": 42.267,
+   "rms": 0.13036
+  },
+  {
+   "kind": "level",
+   "t": 42.482,
+   "rms": 0.03562
+  },
+  {
+   "kind": "level",
+   "t": 42.708,
+   "rms": 0.00033
+  },
+  {
+   "kind": "level",
+   "t": 42.932,
+   "rms": 0.10962
+  },
+  {
+   "kind": "level",
+   "t": 43.151,
+   "rms": 0.07946
+  },
+  {
+   "kind": "level",
+   "t": 43.381,
+   "rms": 0.07117
+  },
+  {
+   "kind": "level",
+   "t": 43.611,
+   "rms": 0.03796
+  },
+  {
+   "kind": "level",
+   "t": 43.844,
+   "rms": 0.02982
+  },
+  {
+   "kind": "level",
+   "t": 44.064,
+   "rms": 0.02125
+  },
+  {
+   "kind": "level",
+   "t": 44.274,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 44.5,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 44.719,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 44.974,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 45.201,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 45.403,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 45.626,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 45.846,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 46.07,
+   "rms": 0.24828
+  },
+  {
+   "kind": "level",
+   "t": 46.287,
+   "rms": 0.21081
+  },
+  {
+   "kind": "level",
+   "t": 46.488,
+   "rms": 0.00759
+  },
+  {
+   "kind": "caption",
+   "t": 46.679,
+   "index": 3,
+   "text": "A matrix is a linear transformation.",
+   "language": "en",
+   "start_s": 15.86,
+   "latency_ms": 5490.2,
+   "rtf": 1.603,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 46.68,
+   "uptime_s": 25.6,
+   "audio_seconds": 25.6,
+   "input_level": 0.00759,
+   "merged_segments": 0,
+   "realtime_factor": 0.749,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 799,
+     "mean_ms": 3.5,
+     "p50_ms": 2.3,
+     "p95_ms": 10.1,
+     "min_ms": 0.9,
+     "max_ms": 30.7
+    },
+    {
+     "stage": "asr",
+     "count": 4,
+     "mean_ms": 4794.1,
+     "p50_ms": 5133.1,
+     "p95_ms": 5490.4,
+     "min_ms": 4073.2,
+     "max_ms": 5490.4
+    },
+    {
+     "stage": "translate",
+     "count": 2,
+     "mean_ms": 3438.6,
+     "p50_ms": 4625.9,
+     "p95_ms": 4625.9,
+     "min_ms": 2251.3,
+     "max_ms": 4625.9
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 46.68,
+   "text": "...",
+   "index": 4
+  },
+  {
+   "kind": "level",
+   "t": 46.714,
+   "rms": 0.09175
+  },
+  {
+   "kind": "level",
+   "t": 46.946,
+   "rms": 0.10426
+  },
+  {
+   "kind": "level",
+   "t": 47.155,
+   "rms": 0.00116
+  },
+  {
+   "kind": "level",
+   "t": 47.37,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 47.572,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 47.772,
+   "rms": 0.05268
+  },
+  {
+   "kind": "level",
+   "t": 47.99,
+   "rms": 0.24064
+  },
+  {
+   "kind": "level",
+   "t": 48.21,
+   "rms": 0.12558
+  },
+  {
+   "kind": "level",
+   "t": 48.442,
+   "rms": 0.17847
+  },
+  {
+   "kind": "level",
+   "t": 48.648,
+   "rms": 0.01836
+  },
+  {
+   "kind": "level",
+   "t": 48.868,
+   "rms": 0.09946
+  },
+  {
+   "kind": "level",
+   "t": 49.082,
+   "rms": 0.1895
+  },
+  {
+   "kind": "level",
+   "t": 49.285,
+   "rms": 0.05978
+  },
+  {
+   "kind": "level",
+   "t": 49.497,
+   "rms": 0.00977
+  },
+  {
+   "kind": "level",
+   "t": 49.715,
+   "rms": 0.08298
+  },
+  {
+   "kind": "level",
+   "t": 50.0,
+   "rms": 0.13295
+  },
+  {
+   "kind": "level",
+   "t": 50.2,
+   "rms": 0.02271
+  },
+  {
+   "kind": "translation",
+   "t": 50.397,
+   "index": 2,
+   "text": "اهي ٻه خيال لائينر الجبرا جي مرڪز ۾ آهن، تنهنڪري اهو سست رفتار سان هلڻ جي قابل آهي.",
+   "target_language": "sd",
+   "latency_ms": 9208.1,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 50.42,
+   "rms": 0.0834
+  },
+  {
+   "kind": "level",
+   "t": 50.646,
+   "rms": 0.10193
+  },
+  {
+   "kind": "level",
+   "t": 50.866,
+   "rms": 0.13331
+  },
+  {
+   "kind": "level",
+   "t": 51.095,
+   "rms": 0.00315
+  },
+  {
+   "kind": "level",
+   "t": 51.309,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 51.517,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 51.728,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 51.928,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 52.147,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 52.38,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 52.458,
+   "index": 4,
+   "text": "It stretches, rotates and shears space.",
+   "language": "en",
+   "start_s": 19.58,
+   "latency_ms": 5778.3,
+   "rtf": 1.411,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 52.459,
+   "uptime_s": 31.4,
+   "audio_seconds": 31.3,
+   "input_level": 0.0,
+   "merged_segments": 0,
+   "realtime_factor": 0.797,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 978,
+     "mean_ms": 3.8,
+     "p50_ms": 2.5,
+     "p95_ms": 10.7,
+     "min_ms": 0.9,
+     "max_ms": 28.4
+    },
+    {
+     "stage": "asr",
+     "count": 5,
+     "mean_ms": 4990.9,
+     "p50_ms": 5133.1,
+     "p95_ms": 5778.4,
+     "min_ms": 4073.2,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 3,
+     "mean_ms": 5361.8,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 2251.3,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 52.459,
+   "text": "...",
+   "index": 5
+  },
+  {
+   "kind": "level",
+   "t": 52.623,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 52.813,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 53.017,
+   "rms": 0.00015
+  },
+  {
+   "kind": "level",
+   "t": 53.231,
+   "rms": 0.09675
+  },
+  {
+   "kind": "level",
+   "t": 53.449,
+   "rms": 0.00334
+  },
+  {
+   "kind": "level",
+   "t": 53.65,
+   "rms": 0.09412
+  },
+  {
+   "kind": "level",
+   "t": 53.854,
+   "rms": 0.09594
+  },
+  {
+   "kind": "level",
+   "t": 54.076,
+   "rms": 0.06752
+  },
+  {
+   "kind": "level",
+   "t": 54.285,
+   "rms": 0.13637
+  },
+  {
+   "kind": "translation",
+   "t": 54.449,
+   "index": 3,
+   "text": "هڪ ميٽرڪس هڪ لائينر تبديلي آهي.",
+   "target_language": "sd",
+   "latency_ms": 4051.5,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 54.488,
+   "rms": 0.00943
+  },
+  {
+   "kind": "level",
+   "t": 54.704,
+   "rms": 0.07198
+  },
+  {
+   "kind": "level",
+   "t": 54.904,
+   "rms": 0.21938
+  },
+  {
+   "kind": "level",
+   "t": 55.125,
+   "rms": 0.09358
+  },
+  {
+   "kind": "level",
+   "t": 55.355,
+   "rms": 0.20679
+  },
+  {
+   "kind": "level",
+   "t": 55.574,
+   "rms": 0.08895
+  },
+  {
+   "kind": "level",
+   "t": 55.796,
+   "rms": 0.14259
+  },
+  {
+   "kind": "level",
+   "t": 56.001,
+   "rms": 0.00165
+  },
+  {
+   "kind": "level",
+   "t": 56.207,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 56.438,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 56.656,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 56.859,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 57.069,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 57.271,
+   "rms": 0.09543
+  },
+  {
+   "kind": "level",
+   "t": 57.488,
+   "rms": 0.0987
+  },
+  {
+   "kind": "level",
+   "t": 57.721,
+   "rms": 0.1664
+  },
+  {
+   "kind": "caption",
+   "t": 57.846,
+   "index": 5,
+   "text": "For most vectors, applying the matrix changes both direction and length.",
+   "language": "en",
+   "start_s": 24.76,
+   "latency_ms": 5386.6,
+   "rtf": 0.905,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 57.846,
+   "uptime_s": 36.8,
+   "audio_seconds": 36.7,
+   "input_level": 0.1664,
+   "merged_segments": 0,
+   "realtime_factor": 0.826,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1148,
+     "mean_ms": 3.7,
+     "p50_ms": 2.5,
+     "p95_ms": 9.7,
+     "min_ms": 1.0,
+     "max_ms": 34.0
+    },
+    {
+     "stage": "asr",
+     "count": 6,
+     "mean_ms": 5056.9,
+     "p50_ms": 5386.7,
+     "p95_ms": 5778.4,
+     "min_ms": 4073.2,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 4,
+     "mean_ms": 5034.2,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 2251.3,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 57.846,
+   "text": "...",
+   "index": 6
+  },
+  {
+   "kind": "level",
+   "t": 57.951,
+   "rms": 0.16193
+  },
+  {
+   "kind": "level",
+   "t": 58.172,
+   "rms": 0.08658
+  },
+  {
+   "kind": "level",
+   "t": 58.387,
+   "rms": 0.13861
+  },
+  {
+   "kind": "level",
+   "t": 58.588,
+   "rms": 0.1733
+  },
+  {
+   "kind": "level",
+   "t": 58.805,
+   "rms": 0.03661
+  },
+  {
+   "kind": "level",
+   "t": 59.03,
+   "rms": 0.00019
+  },
+  {
+   "kind": "level",
+   "t": 59.25,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 59.473,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 59.593,
+   "index": 4,
+   "text": "اهو وڌي ٿو، ڦرندو آهي ۽ جڳهه کي ڇڪيندو آهي.",
+   "target_language": "sd",
+   "latency_ms": 5143.3,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 59.708,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 59.924,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 60.148,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 60.374,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 60.593,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 60.823,
+   "rms": 0.00064
+  },
+  {
+   "kind": "level",
+   "t": 61.045,
+   "rms": 0.14271
+  },
+  {
+   "kind": "level",
+   "t": 61.273,
+   "rms": 0.19241
+  },
+  {
+   "kind": "level",
+   "t": 61.491,
+   "rms": 0.11938
+  },
+  {
+   "kind": "level",
+   "t": 61.712,
+   "rms": 0.0157
+  },
+  {
+   "kind": "level",
+   "t": 61.915,
+   "rms": 0.08494
+  },
+  {
+   "kind": "caption",
+   "t": 62.091,
+   "index": 6,
+   "text": "But a few special vectors only change length.",
+   "language": "en",
+   "start_s": 31.86,
+   "latency_ms": 4244.3,
+   "rtf": 1.124,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 62.091,
+   "uptime_s": 41.0,
+   "audio_seconds": 41.0,
+   "input_level": 0.08494,
+   "merged_segments": 0,
+   "realtime_factor": 0.844,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1281,
+     "mean_ms": 3.1,
+     "p50_ms": 2.2,
+     "p95_ms": 7.8,
+     "min_ms": 0.9,
+     "max_ms": 34.0
+    },
+    {
+     "stage": "asr",
+     "count": 7,
+     "mean_ms": 4940.8,
+     "p50_ms": 5133.1,
+     "p95_ms": 5778.4,
+     "min_ms": 4073.2,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 5,
+     "mean_ms": 5056.0,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 2251.3,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 62.091,
+   "text": "...",
+   "index": 7
+  },
+  {
+   "kind": "level",
+   "t": 62.127,
+   "rms": 0.13127
+  },
+  {
+   "kind": "level",
+   "t": 62.36,
+   "rms": 0.1035
+  },
+  {
+   "kind": "level",
+   "t": 62.578,
+   "rms": 0.16116
+  },
+  {
+   "kind": "level",
+   "t": 62.811,
+   "rms": 0.07865
+  },
+  {
+   "kind": "level",
+   "t": 63.03,
+   "rms": 0.0819
+  },
+  {
+   "kind": "level",
+   "t": 63.25,
+   "rms": 0.00018
+  },
+  {
+   "kind": "level",
+   "t": 63.487,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 63.702,
+   "rms": 0.13708
+  },
+  {
+   "kind": "level",
+   "t": 63.924,
+   "rms": 0.03616
+  },
+  {
+   "kind": "level",
+   "t": 64.15,
+   "rms": 0.17929
+  },
+  {
+   "kind": "level",
+   "t": 64.369,
+   "rms": 0.16276
+  },
+  {
+   "kind": "level",
+   "t": 64.598,
+   "rms": 0.12692
+  },
+  {
+   "kind": "level",
+   "t": 64.815,
+   "rms": 0.03308
+  },
+  {
+   "kind": "level",
+   "t": 65.017,
+   "rms": 0.01077
+  },
+  {
+   "kind": "level",
+   "t": 65.23,
+   "rms": 0.22717
+  },
+  {
+   "kind": "level",
+   "t": 65.431,
+   "rms": 0.11604
+  },
+  {
+   "kind": "level",
+   "t": 65.654,
+   "rms": 0.12401
+  },
+  {
+   "kind": "level",
+   "t": 65.872,
+   "rms": 0.13208
+  },
+  {
+   "kind": "caption",
+   "t": 66.015,
+   "index": 7,
+   "text": "Their direction is preserved.",
+   "language": "en",
+   "start_s": 35.99,
+   "latency_ms": 3924.2,
+   "rtf": 1.533,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 66.016,
+   "uptime_s": 45.0,
+   "audio_seconds": 44.9,
+   "input_level": 0.13208,
+   "merged_segments": 0,
+   "realtime_factor": 0.857,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1404,
+     "mean_ms": 2.8,
+     "p50_ms": 2.1,
+     "p95_ms": 6.6,
+     "min_ms": 0.9,
+     "max_ms": 34.0
     },
     {
      "stage": "asr",
      "count": 8,
-     "mean_ms": 9217.8,
-     "p50_ms": 7903.2,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
+     "mean_ms": 4813.8,
+     "p50_ms": 5133.1,
+     "p95_ms": 5778.4,
+     "min_ms": 3924.3,
+     "max_ms": 5778.4
     },
     {
      "stage": "translate",
-     "count": 2,
-     "mean_ms": 29231.4,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 24202.8,
-     "max_ms": 34260.0
+     "count": 5,
+     "mean_ms": 5056.0,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 2251.3,
+     "max_ms": 9208.2
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 66.1,
+   "rms": 0.0797
+  },
+  {
+   "kind": "level",
+   "t": 66.317,
+   "rms": 0.18781
+  },
+  {
+   "kind": "level",
+   "t": 66.545,
+   "rms": 0.08224
+  },
+  {
+   "kind": "level",
+   "t": 66.765,
+   "rms": 0.00263
+  },
+  {
+   "kind": "level",
+   "t": 66.966,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 67.032,
+   "index": 5,
+   "text": "گهڻن ويڪٽرز لاءِ ، ميٽرڪس لاڳو ڪرڻ سان هدايت ۽ ڊيگهه ٻنهي ۾ تبديلي ٿيندي آهي.",
+   "target_language": "sd",
+   "latency_ms": 7439.7,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 67.185,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 67.419,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 116.575,
+   "t": 67.482,
    "text": "...",
-   "index": 12
+   "index": 8
   },
   {
    "kind": "level",
-   "t": 116.633,
-   "rms": 0.00621
-  },
-  {
-   "kind": "level",
-   "t": 116.864,
-   "rms": 0.05385
-  },
-  {
-   "kind": "level",
-   "t": 117.066,
-   "rms": 0.06255
-  },
-  {
-   "kind": "level",
-   "t": 117.298,
-   "rms": 0.09264
-  },
-  {
-   "kind": "level",
-   "t": 117.515,
-   "rms": 0.21394
-  },
-  {
-   "kind": "level",
-   "t": 117.748,
-   "rms": 0.14694
-  },
-  {
-   "kind": "level",
-   "t": 117.965,
-   "rms": 0.05212
-  },
-  {
-   "kind": "level",
-   "t": 118.193,
-   "rms": 0.06022
-  },
-  {
-   "kind": "level",
-   "t": 118.427,
-   "rms": 0.1395
-  },
-  {
-   "kind": "level",
-   "t": 118.643,
-   "rms": 0.12916
-  },
-  {
-   "kind": "level",
-   "t": 118.869,
-   "rms": 0.04235
-  },
-  {
-   "kind": "level",
-   "t": 119.093,
-   "rms": 0.13634
-  },
-  {
-   "kind": "level",
-   "t": 119.329,
-   "rms": 0.09605
-  },
-  {
-   "kind": "level",
-   "t": 119.541,
-   "rms": 0.0441
-  },
-  {
-   "kind": "level",
-   "t": 119.761,
+   "t": 67.637,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 120.002,
+   "t": 67.867,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 120.21,
+   "t": 68.086,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 120.429,
+   "t": 68.303,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 120.637,
-   "rms": 3e-05
+   "t": 68.539,
+   "rms": 1e-05
   },
   {
    "kind": "level",
-   "t": 120.845,
-   "rms": 0.15477
+   "t": 68.756,
+   "rms": 0.015
   },
   {
    "kind": "level",
-   "t": 121.07,
-   "rms": 0.07835
+   "t": 68.993,
+   "rms": 0.21822
   },
   {
    "kind": "level",
-   "t": 121.295,
-   "rms": 0.13352
+   "t": 69.203,
+   "rms": 0.13441
   },
   {
    "kind": "level",
-   "t": 121.523,
-   "rms": 0.05401
+   "t": 69.405,
+   "rms": 0.14226
   },
   {
    "kind": "level",
-   "t": 121.747,
-   "rms": 0.0392
+   "t": 69.622,
+   "rms": 0.08386
   },
   {
    "kind": "level",
-   "t": 121.975,
-   "rms": 0.18642
+   "t": 69.842,
+   "rms": 0.13708
+  },
+  {
+   "kind": "translation",
+   "t": 69.889,
+   "index": 6,
+   "text": "پر ڪجهه خاص vectors رڳو ڊيگهه تبديل.",
+   "target_language": "sd",
+   "latency_ms": 2856.6,
+   "passthrough": false,
+   "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 122.197,
-   "rms": 0.039
+   "t": 70.062,
+   "rms": 0.03226
   },
   {
    "kind": "level",
-   "t": 122.414,
-   "rms": 0.00936
+   "t": 70.292,
+   "rms": 0.20349
   },
   {
    "kind": "level",
-   "t": 122.633,
-   "rms": 0.0
+   "t": 70.494,
+   "rms": 0.00085
   },
   {
    "kind": "level",
-   "t": 122.865,
-   "rms": 0.0
+   "t": 70.711,
+   "rms": 0.16947
   },
   {
    "kind": "level",
-   "t": 123.083,
-   "rms": 0.0
+   "t": 70.927,
+   "rms": 0.1319
   },
   {
    "kind": "level",
-   "t": 123.283,
-   "rms": 0.0
+   "t": 71.16,
+   "rms": 0.01015
   },
   {
    "kind": "level",
-   "t": 123.511,
-   "rms": 0.0
+   "t": 71.375,
+   "rms": 0.15186
+  },
+  {
+   "kind": "translation",
+   "t": 71.477,
+   "index": 7,
+   "text": "سندن هدايت محفوظ آهي.",
+   "target_language": "sd",
+   "latency_ms": 1587.8,
+   "passthrough": false,
+   "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 123.723,
-   "rms": 0.0
+   "t": 71.58,
+   "rms": 0.14171
   },
   {
    "kind": "level",
-   "t": 123.926,
-   "rms": 0.0
+   "t": 71.793,
+   "rms": 0.02554
   },
   {
    "kind": "caption",
-   "t": 123.975,
+   "t": 71.962,
    "index": 8,
-   "text": "If it is zero, there is a non-trivial solution, and that is exactly what we want.",
+   "text": "Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.",
    "language": "en",
-   "start_s": 67.03,
-   "latency_ms": 7400.1,
-   "rtf": 1.032,
+   "start_s": 39.61,
+   "latency_ms": 4479.5,
+   "rtf": 0.663,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 123.976,
-   "uptime_s": 83.5,
-   "audio_seconds": 83.4,
-   "input_level": 0.0,
-   "merged_segments": 4,
-   "realtime_factor": 0.973,
+   "t": 71.962,
+   "uptime_s": 50.9,
+   "audio_seconds": 50.9,
+   "input_level": 0.02554,
+   "merged_segments": 0,
+   "realtime_factor": 0.845,
    "stages": [
     {
      "stage": "vad",
-     "count": 2606,
-     "mean_ms": 3.6,
-     "p50_ms": 2.4,
-     "p95_ms": 8.5,
+     "count": 1590,
+     "mean_ms": 2.4,
+     "p50_ms": 1.9,
+     "p95_ms": 5.7,
      "min_ms": 0.9,
-     "max_ms": 101.9
+     "max_ms": 15.3
     },
     {
      "stage": "asr",
      "count": 9,
-     "mean_ms": 9015.9,
-     "p50_ms": 7880.1,
-     "p95_ms": 13648.3,
-     "min_ms": 6792.4,
-     "max_ms": 13648.3
+     "mean_ms": 4776.6,
+     "p50_ms": 4479.8,
+     "p95_ms": 5778.4,
+     "min_ms": 3924.3,
+     "max_ms": 5778.4
     },
     {
      "stage": "translate",
-     "count": 2,
-     "mean_ms": 29231.4,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 24202.8,
-     "max_ms": 34260.0
-    }
-   ]
-  },
-  {
-   "kind": "gloss",
-   "t": 123.98,
-   "term": "determinant",
-   "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
-   "language": "sd",
-   "source_line": "If it is zero, there is a non-trivial solution, and that is exactly what we want.",
-   "latency_ms": 2.0,
-   "backend": "heuristic"
-  },
-  {
-   "kind": "partial",
-   "t": 123.981,
-   "text": "...",
-   "index": 13
-  },
-  {
-   "kind": "level",
-   "t": 124.15,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 124.364,
-   "rms": 0.06251
-  },
-  {
-   "kind": "level",
-   "t": 124.582,
-   "rms": 0.07386
-  },
-  {
-   "kind": "level",
-   "t": 124.785,
-   "rms": 0.10987
-  },
-  {
-   "kind": "level",
-   "t": 125.015,
-   "rms": 0.0269
-  },
-  {
-   "kind": "level",
-   "t": 125.247,
-   "rms": 0.05095
-  },
-  {
-   "kind": "level",
-   "t": 125.453,
-   "rms": 0.08817
-  },
-  {
-   "kind": "level",
-   "t": 125.685,
-   "rms": 0.03233
-  },
-  {
-   "kind": "level",
-   "t": 125.922,
-   "rms": 0.17775
-  },
-  {
-   "kind": "level",
-   "t": 126.129,
-   "rms": 0.12286
-  },
-  {
-   "kind": "level",
-   "t": 126.354,
-   "rms": 0.18979
-  },
-  {
-   "kind": "level",
-   "t": 126.571,
-   "rms": 0.13549
-  },
-  {
-   "kind": "level",
-   "t": 126.777,
-   "rms": 0.07828
-  },
-  {
-   "kind": "level",
-   "t": 126.997,
-   "rms": 0.00027
-  },
-  {
-   "kind": "level",
-   "t": 127.215,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 127.437,
-   "rms": 0.11575
-  },
-  {
-   "kind": "level",
-   "t": 127.64,
-   "rms": 0.04348
-  },
-  {
-   "kind": "level",
-   "t": 127.86,
-   "rms": 0.1539
-  },
-  {
-   "kind": "level",
-   "t": 128.073,
-   "rms": 0.15516
-  },
-  {
-   "kind": "level",
-   "t": 128.316,
-   "rms": 0.12694
-  },
-  {
-   "kind": "level",
-   "t": 128.522,
-   "rms": 0.12339
-  },
-  {
-   "kind": "level",
-   "t": 128.729,
-   "rms": 0.00527
-  },
-  {
-   "kind": "level",
-   "t": 128.949,
-   "rms": 0.14511
-  },
-  {
-   "kind": "level",
-   "t": 129.176,
-   "rms": 0.06436
-  },
-  {
-   "kind": "level",
-   "t": 129.392,
-   "rms": 0.00616
-  },
-  {
-   "kind": "level",
-   "t": 129.623,
-   "rms": 0.00088
-  },
-  {
-   "kind": "caption",
-   "t": 129.702,
-   "index": 9,
-   "text": "Symmetric matrices always have real eigenvalues. That is a useful guarantee.",
-   "language": "en",
-   "start_s": 75.32,
-   "latency_ms": 5720.8,
-   "rtf": 0.796,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 129.702,
-   "uptime_s": 89.2,
-   "audio_seconds": 89.1,
-   "input_level": 0.00088,
-   "merged_segments": 5,
-   "realtime_factor": 0.975,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 2785,
-     "mean_ms": 3.5,
-     "p50_ms": 2.3,
-     "p95_ms": 7.9,
-     "min_ms": 0.9,
-     "max_ms": 101.9
-    },
-    {
-     "stage": "asr",
-     "count": 10,
-     "mean_ms": 8686.4,
-     "p50_ms": 7880.1,
-     "p95_ms": 13648.3,
-     "min_ms": 5720.9,
-     "max_ms": 13648.3
-    },
-    {
-     "stage": "translate",
-     "count": 2,
-     "mean_ms": 29231.4,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 24202.8,
-     "max_ms": 34260.0
+     "count": 8,
+     "mean_ms": 4645.5,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
     }
    ]
   },
   {
    "kind": "level",
-   "t": 129.848,
+   "t": 72.015,
+   "rms": 0.14974
+  },
+  {
+   "kind": "level",
+   "t": 72.216,
+   "rms": 0.06138
+  },
+  {
+   "kind": "level",
+   "t": 72.429,
+   "rms": 0.00484
+  },
+  {
+   "kind": "level",
+   "t": 72.659,
+   "rms": 0.03327
+  },
+  {
+   "kind": "level",
+   "t": 72.886,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 130.071,
+   "t": 73.113,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 130.296,
+   "t": 73.329,
    "rms": 0.0
   },
   {
    "kind": "partial",
-   "t": 130.324,
+   "t": 73.393,
    "text": "...",
-   "index": 15
+   "index": 9
   },
   {
    "kind": "level",
-   "t": 130.512,
+   "t": 73.552,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 130.716,
+   "t": 73.757,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 130.926,
+   "t": 73.966,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 131.149,
+   "t": 74.194,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 131.392,
-   "rms": 3e-05
-  },
-  {
-   "kind": "level",
-   "t": 131.593,
-   "rms": 0.1978
-  },
-  {
-   "kind": "level",
-   "t": 131.83,
-   "rms": 0.03811
-  },
-  {
-   "kind": "level",
-   "t": 132.044,
-   "rms": 0.11201
-  },
-  {
-   "kind": "level",
-   "t": 132.273,
-   "rms": 0.1003
-  },
-  {
-   "kind": "level",
-   "t": 132.495,
-   "rms": 0.08523
-  },
-  {
-   "kind": "level",
-   "t": 132.697,
-   "rms": 0.01592
-  },
-  {
-   "kind": "level",
-   "t": 132.927,
-   "rms": 0.16772
-  },
-  {
-   "kind": "level",
-   "t": 133.145,
-   "rms": 0.10191
-  },
-  {
-   "kind": "level",
-   "t": 133.349,
-   "rms": 0.26741
-  },
-  {
-   "kind": "level",
-   "t": 133.602,
-   "rms": 0.08408
-  },
-  {
-   "kind": "level",
-   "t": 133.815,
-   "rms": 0.05028
-  },
-  {
-   "kind": "level",
-   "t": 134.073,
-   "rms": 0.06106
-  },
-  {
-   "kind": "level",
-   "t": 134.289,
-   "rms": 0.15351
-  },
-  {
-   "kind": "level",
-   "t": 134.489,
-   "rms": 0.1039
-  },
-  {
-   "kind": "level",
-   "t": 134.71,
-   "rms": 0.00676
-  },
-  {
-   "kind": "level",
-   "t": 134.934,
-   "rms": 0.09668
-  },
-  {
-   "kind": "level",
-   "t": 135.162,
-   "rms": 0.10494
-  },
-  {
-   "kind": "level",
-   "t": 135.387,
-   "rms": 0.03044
-  },
-  {
-   "kind": "level",
-   "t": 135.599,
-   "rms": 0.10073
-  },
-  {
-   "kind": "level",
-   "t": 135.8,
-   "rms": 0.07439
-  },
-  {
-   "kind": "level",
-   "t": 136.005,
-   "rms": 0.03673
-  },
-  {
-   "kind": "level",
-   "t": 136.202,
-   "rms": 0.09528
-  },
-  {
-   "kind": "level",
-   "t": 136.402,
-   "rms": 0.02676
-  },
-  {
-   "kind": "level",
-   "t": 136.631,
+   "t": 74.415,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 136.848,
-   "rms": 0.0
+   "t": 74.636,
+   "rms": 0.05544
   },
   {
    "kind": "level",
-   "t": 137.08,
-   "rms": 0.0
-  },
-  {
-   "kind": "caption",
-   "t": 137.279,
-   "index": 10,
-   "text": "Once we have a full set of eigenvectors, we can diagonalize the matrix.",
-   "language": "en",
-   "start_s": 83.61,
-   "latency_ms": 6954.8,
-   "rtf": 1.138,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 137.28,
-   "uptime_s": 96.8,
-   "audio_seconds": 96.7,
-   "input_level": 0.0,
-   "merged_segments": 5,
-   "realtime_factor": 0.97,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 3021,
-     "mean_ms": 3.7,
-     "p50_ms": 2.5,
-     "p95_ms": 8.8,
-     "min_ms": 1.2,
-     "max_ms": 38.8
-    },
-    {
-     "stage": "asr",
-     "count": 11,
-     "mean_ms": 8529.0,
-     "p50_ms": 7574.5,
-     "p95_ms": 13648.3,
-     "min_ms": 5720.9,
-     "max_ms": 13648.3
-    },
-    {
-     "stage": "translate",
-     "count": 2,
-     "mean_ms": 29231.4,
-     "p50_ms": 34260.0,
-     "p95_ms": 34260.0,
-     "min_ms": 24202.8,
-     "max_ms": 34260.0
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 137.28,
-   "text": "...",
-   "index": 16
+   "t": 74.864,
+   "rms": 0.05385
   },
   {
    "kind": "level",
-   "t": 137.303,
-   "rms": 0.0
+   "t": 75.093,
+   "rms": 0.16196
   },
   {
    "kind": "level",
-   "t": 137.558,
-   "rms": 0.0
+   "t": 75.318,
+   "rms": 0.04987
   },
   {
    "kind": "level",
-   "t": 137.781,
-   "rms": 0.0
+   "t": 75.548,
+   "rms": 0.07292
   },
   {
    "kind": "level",
-   "t": 138.005,
-   "rms": 0.0
+   "t": 75.758,
+   "rms": 0.25338
   },
   {
    "kind": "level",
-   "t": 138.264,
-   "rms": 0.0
+   "t": 75.997,
+   "rms": 0.10846
   },
   {
    "kind": "level",
-   "t": 138.456,
-   "rms": 0.16033
+   "t": 76.209,
+   "rms": 0.17358
   },
   {
    "kind": "level",
-   "t": 138.677,
-   "rms": 0.13773
+   "t": 76.43,
+   "rms": 0.08353
   },
   {
    "kind": "level",
-   "t": 138.909,
-   "rms": 0.17449
+   "t": 76.634,
+   "rms": 0.06171
+  },
+  {
+   "kind": "level",
+   "t": 76.85,
+   "rms": 0.15893
+  },
+  {
+   "kind": "level",
+   "t": 77.05,
+   "rms": 0.05567
   },
   {
    "kind": "translation",
-   "t": 139.01,
-   "index": 2,
-   "text": "هڪ ميٽرڪس هڪ لائينر تبديلي آهي. اهو وڌي ٿو، ڦرندو آهي ۽ خلا کي خوش ڪري ٿو.",
-   "target_language": "sd",
-   "latency_ms": 24120.8,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "level",
-   "t": 139.118,
-   "rms": 0.15077
-  },
-  {
-   "kind": "level",
-   "t": 139.366,
-   "rms": 0.08065
-  },
-  {
-   "kind": "level",
-   "t": 139.568,
-   "rms": 0.06397
-  },
-  {
-   "kind": "level",
-   "t": 139.803,
-   "rms": 0.14631
-  },
-  {
-   "kind": "level",
-   "t": 140.033,
-   "rms": 0.09082
-  },
-  {
-   "kind": "level",
-   "t": 140.241,
-   "rms": 0.05782
-  },
-  {
-   "kind": "level",
-   "t": 140.476,
-   "rms": 0.16511
-  },
-  {
-   "kind": "level",
-   "t": 140.693,
-   "rms": 0.08115
-  },
-  {
-   "kind": "level",
-   "t": 140.906,
-   "rms": 0.17674
-  },
-  {
-   "kind": "level",
-   "t": 141.15,
-   "rms": 0.05776
-  },
-  {
-   "kind": "level",
-   "t": 141.366,
-   "rms": 0.04485
-  },
-  {
-   "kind": "level",
-   "t": 141.582,
-   "rms": 0.04629
-  },
-  {
-   "kind": "level",
-   "t": 141.792,
-   "rms": 0.15757
-  },
-  {
-   "kind": "level",
-   "t": 142.008,
-   "rms": 0.02672
-  },
-  {
-   "kind": "level",
-   "t": 142.232,
-   "rms": 0.15101
-  },
-  {
-   "kind": "level",
-   "t": 142.46,
-   "rms": 0.08054
-  },
-  {
-   "kind": "level",
-   "t": 142.672,
-   "rms": 0.01662
-  },
-  {
-   "kind": "level",
-   "t": 142.915,
-   "rms": 0.00026
-  },
-  {
-   "kind": "level",
-   "t": 143.152,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 143.372,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 143.608,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 143.835,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 144.043,
-   "rms": 0.0
-  },
-  {
-   "kind": "caption",
-   "t": 144.068,
-   "index": 11,
-   "text": "Diagonalization turns a hard repeated multiplication into a simple one.",
-   "language": "en",
-   "start_s": 90.71,
-   "latency_ms": 6787.6,
-   "rtf": 1.159,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 144.068,
-   "uptime_s": 103.6,
-   "audio_seconds": 103.5,
-   "input_level": 0.0,
-   "merged_segments": 5,
-   "realtime_factor": 0.972,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 3234,
-     "mean_ms": 4.4,
-     "p50_ms": 2.8,
-     "p95_ms": 11.0,
-     "min_ms": 1.1,
-     "max_ms": 90.9
-    },
-    {
-     "stage": "asr",
-     "count": 12,
-     "mean_ms": 8383.9,
-     "p50_ms": 7574.5,
-     "p95_ms": 13648.3,
-     "min_ms": 5720.9,
-     "max_ms": 13648.3
-    },
-    {
-     "stage": "translate",
-     "count": 3,
-     "mean_ms": 27527.9,
-     "p50_ms": 24202.8,
-     "p95_ms": 34260.0,
-     "min_ms": 24120.9,
-     "max_ms": 34260.0
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 144.068,
-   "text": "...",
-   "index": 17
-  },
-  {
-   "kind": "gloss",
-   "t": 144.07,
-   "term": "diagonalize",
-   "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
-   "language": "sd",
-   "source_line": "Diagonalization turns a hard repeated multiplication into a simple one.",
-   "latency_ms": 0.4,
-   "backend": "heuristic"
-  },
-  {
-   "kind": "level",
-   "t": 144.284,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 144.5,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 144.718,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 144.949,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 145.167,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 145.415,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 145.618,
-   "rms": 0.0
-  },
-  {
-   "kind": "caption",
-   "t": 150.656,
-   "index": 12,
-   "text": "We will use this next week when we look at principal component analysis.",
-   "language": "en",
-   "start_s": 97.62,
-   "latency_ms": 6587.7,
-   "rtf": 1.233,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 150.657,
-   "uptime_s": 110.2,
-   "audio_seconds": 105.2,
-   "input_level": 0.0,
-   "merged_segments": 5,
-   "realtime_factor": 1.019,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 3288,
-     "mean_ms": 4.3,
-     "p50_ms": 2.8,
-     "p95_ms": 11.0,
-     "min_ms": 1.1,
-     "max_ms": 90.9
-    },
-    {
-     "stage": "asr",
-     "count": 13,
-     "mean_ms": 8245.7,
-     "p50_ms": 7400.2,
-     "p95_ms": 13648.3,
-     "min_ms": 5720.9,
-     "max_ms": 13648.3
-    },
-    {
-     "stage": "translate",
-     "count": 3,
-     "mean_ms": 27527.9,
-     "p50_ms": 24202.8,
-     "p95_ms": 34260.0,
-     "min_ms": 24120.9,
-     "max_ms": 34260.0
-    }
-   ]
-  },
-  {
-   "kind": "translation",
-   "t": 153.097,
-   "index": 3,
-   "text": "گهڻن ويڪٽرز لاءِ ، ميٽرڪس لاڳو ڪرڻ سان هدايت ۽ ڊيگهه ٻنهي ۾ تبديلي ٿيندي آهي.",
-   "target_language": "sd",
-   "latency_ms": 14086.2,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "translation",
-   "t": 158.325,
-   "index": 4,
-   "text": "پر ڪجهه خاص vectors صرف ڊيگهه تبديل. سندن رخ محفوظ آهي.",
-   "target_language": "sd",
-   "latency_ms": 5228.4,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "translation",
-   "t": 164.789,
-   "index": 5,
+   "t": 77.111,
+   "index": 8,
    "text": "اهي vectors آهن eigenvectors، ۽ عنصر اهي eigenvalue جي ذريعي stretch آهن.",
    "target_language": "sd",
-   "latency_ms": 6463.5,
+   "latency_ms": 5149.0,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -3367,58 +2104,1398 @@
    ]
   },
   {
-   "kind": "translation",
-   "t": 171.254,
-   "index": 6,
-   "text": "انهن کي ڳولڻ لاءِ اسان ميٽرڪس جي خاصيت مساوات کي حل ڪيو آهي.",
-   "target_language": "sd",
-   "latency_ms": 6464.5,
-   "passthrough": false,
-   "protected_terms": [
-    "determinant"
+   "kind": "level",
+   "t": 77.276,
+   "rms": 0.10108
+  },
+  {
+   "kind": "caption",
+   "t": 77.407,
+   "index": 9,
+   "text": "To find them we solve the characteristic equation of the matrix.",
+   "language": "en",
+   "start_s": 47.35,
+   "latency_ms": 4013.5,
+   "rtf": 0.814,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 77.407,
+   "uptime_s": 56.4,
+   "audio_seconds": 56.3,
+   "input_level": 0.10108,
+   "merged_segments": 0,
+   "realtime_factor": 0.835,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1760,
+     "mean_ms": 2.2,
+     "p50_ms": 1.7,
+     "p95_ms": 5.3,
+     "min_ms": 0.7,
+     "max_ms": 15.2
+    },
+    {
+     "stage": "asr",
+     "count": 10,
+     "mean_ms": 4700.3,
+     "p50_ms": 4479.8,
+     "p95_ms": 5778.4,
+     "min_ms": 3924.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 9,
+     "mean_ms": 4701.5,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
    ]
   },
   {
-   "kind": "translation",
-   "t": 180.172,
-   "index": 7,
-   "text": "determinant هڪ واحد نمبر آهي جيڪو توهان کي ٻڌائي ٿو ته ڇا ميٽرڪس جڳهه کي فليٽ ڪري ٿو.",
-   "target_language": "sd",
-   "latency_ms": 8918.2,
-   "passthrough": false,
-   "protected_terms": [
-    "determinant"
-   ]
+   "kind": "level",
+   "t": 77.491,
+   "rms": 0.0665
+  },
+  {
+   "kind": "level",
+   "t": 77.717,
+   "rms": 0.08783
+  },
+  {
+   "kind": "level",
+   "t": 77.941,
+   "rms": 0.10809
+  },
+  {
+   "kind": "level",
+   "t": 78.163,
+   "rms": 0.06593
+  },
+  {
+   "kind": "level",
+   "t": 78.39,
+   "rms": 0.06263
+  },
+  {
+   "kind": "level",
+   "t": 78.609,
+   "rms": 0.14984
+  },
+  {
+   "kind": "level",
+   "t": 78.831,
+   "rms": 0.14244
+  },
+  {
+   "kind": "level",
+   "t": 79.053,
+   "rms": 0.08233
+  },
+  {
+   "kind": "level",
+   "t": 79.304,
+   "rms": 0.00014
+  },
+  {
+   "kind": "level",
+   "t": 79.535,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 79.735,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 79.92,
+   "text": "...",
+   "index": 10
+  },
+  {
+   "kind": "level",
+   "t": 79.953,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 80.173,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 80.4,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 80.622,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 80.822,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 81.043,
+   "rms": 0.00087
+  },
+  {
+   "kind": "level",
+   "t": 81.266,
+   "rms": 0.13149
+  },
+  {
+   "kind": "level",
+   "t": 81.468,
+   "rms": 0.10384
+  },
+  {
+   "kind": "level",
+   "t": 81.669,
+   "rms": 0.17467
   },
   {
    "kind": "translation",
-   "t": 187.137,
-   "index": 8,
-   "text": "جيڪڏهن اهو صفر آهي، اتي هڪ غير معمولي حل آهي، ۽ اهو ئي اسان چاهيون ٿا.",
+   "t": 81.689,
+   "index": 9,
+   "text": "انهن کي ڳولڻ لاءِ اسان ميٽرڪس جي خاصيت وارو مساوين کي حل ڪيو.",
    "target_language": "sd",
-   "latency_ms": 6964.5,
+   "latency_ms": 4282.0,
    "passthrough": false,
    "protected_terms": []
   },
   {
+   "kind": "level",
+   "t": 81.874,
+   "rms": 0.0167
+  },
+  {
+   "kind": "level",
+   "t": 82.097,
+   "rms": 0.06991
+  },
+  {
+   "kind": "level",
+   "t": 82.318,
+   "rms": 0.06146
+  },
+  {
+   "kind": "level",
+   "t": 82.519,
+   "rms": 0.04981
+  },
+  {
+   "kind": "level",
+   "t": 82.74,
+   "rms": 0.16191
+  },
+  {
+   "kind": "level",
+   "t": 82.958,
+   "rms": 0.1228
+  },
+  {
+   "kind": "caption",
+   "t": 83.131,
+   "index": 10,
+   "text": "The determinant of a minus lambda times the identity must equal zero.",
+   "language": "en",
+   "start_s": 53.27,
+   "latency_ms": 3210.6,
+   "rtf": 0.58,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 83.131,
+   "uptime_s": 62.1,
+   "audio_seconds": 62.0,
+   "input_level": 0.1228,
+   "merged_segments": 0,
+   "realtime_factor": 0.809,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1939,
+     "mean_ms": 1.9,
+     "p50_ms": 1.5,
+     "p95_ms": 4.5,
+     "min_ms": 0.7,
+     "max_ms": 32.8
+    },
+    {
+     "stage": "asr",
+     "count": 11,
+     "mean_ms": 4564.9,
+     "p50_ms": 4479.6,
+     "p95_ms": 5778.4,
+     "min_ms": 3210.6,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 10,
+     "mean_ms": 4659.5,
+     "p50_ms": 4625.9,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 83.198,
+   "rms": 0.15764
+  },
+  {
+   "kind": "level",
+   "t": 83.418,
+   "rms": 0.12574
+  },
+  {
+   "kind": "level",
+   "t": 83.629,
+   "rms": 0.06921
+  },
+  {
+   "kind": "level",
+   "t": 83.852,
+   "rms": 0.05904
+  },
+  {
+   "kind": "level",
+   "t": 84.08,
+   "rms": 0.10247
+  },
+  {
+   "kind": "level",
+   "t": 84.307,
+   "rms": 0.11845
+  },
+  {
+   "kind": "level",
+   "t": 84.527,
+   "rms": 0.04134
+  },
+  {
+   "kind": "level",
+   "t": 84.752,
+   "rms": 0.07322
+  },
+  {
+   "kind": "level",
+   "t": 84.977,
+   "rms": 0.01215
+  },
+  {
+   "kind": "level",
+   "t": 85.205,
+   "rms": 0.14064
+  },
+  {
+   "kind": "level",
+   "t": 85.426,
+   "rms": 0.09382
+  },
+  {
+   "kind": "level",
+   "t": 85.628,
+   "rms": 0.00937
+  },
+  {
+   "kind": "level",
+   "t": 85.85,
+   "rms": 0.0738
+  },
+  {
+   "kind": "level",
+   "t": 86.072,
+   "rms": 0.08407
+  },
+  {
+   "kind": "level",
+   "t": 86.293,
+   "rms": 0.11532
+  },
+  {
    "kind": "translation",
-   "t": 191.082,
-   "index": 9,
-   "text": "symmetric matrices هميشه حقيقي eigenvalues آهن.",
+   "t": 86.435,
+   "index": 10,
+   "text": "هڪ منسلڪ lambda جي determinant جي سڃاڻپ صفر برابر هجڻ گهرجي.",
    "target_language": "sd",
-   "latency_ms": 3944.1,
+   "latency_ms": 3303.9,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 86.513,
+   "rms": 5e-05
+  },
+  {
+   "kind": "level",
+   "t": 86.748,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 86.952,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 87.09,
+   "text": "...",
+   "index": 11
+  },
+  {
+   "kind": "level",
+   "t": 87.163,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 87.388,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 87.611,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 87.827,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 88.049,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 88.282,
+   "rms": 0.00613
+  },
+  {
+   "kind": "level",
+   "t": 88.504,
+   "rms": 0.1344
+  },
+  {
+   "kind": "level",
+   "t": 88.725,
+   "rms": 0.09673
+  },
+  {
+   "kind": "level",
+   "t": 88.942,
+   "rms": 0.13273
+  },
+  {
+   "kind": "level",
+   "t": 89.147,
+   "rms": 0.09338
+  },
+  {
+   "kind": "level",
+   "t": 89.362,
+   "rms": 0.00066
+  },
+  {
+   "kind": "level",
+   "t": 89.584,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 89.809,
+   "rms": 0.00032
+  },
+  {
+   "kind": "caption",
+   "t": 90.02,
+   "index": 11,
+   "text": "The determinant is a single number that tells you whether the matrix squashes space flat.",
+   "language": "en",
+   "start_s": 59.8,
+   "latency_ms": 2929.2,
+   "rtf": 0.474,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 90.02,
+   "uptime_s": 69.0,
+   "audio_seconds": 68.9,
+   "input_level": 0.00032,
+   "merged_segments": 0,
+   "realtime_factor": 0.771,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2154,
+     "mean_ms": 1.6,
+     "p50_ms": 1.3,
+     "p95_ms": 3.6,
+     "min_ms": 0.7,
+     "max_ms": 32.8
+    },
+    {
+     "stage": "asr",
+     "count": 12,
+     "mean_ms": 4428.6,
+     "p50_ms": 4479.6,
+     "p95_ms": 5778.4,
+     "min_ms": 2929.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 11,
+     "mean_ms": 4536.3,
+     "p50_ms": 4282.0,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "gloss",
+   "t": 90.021,
+   "term": "determinant",
+   "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
+   "language": "sd",
+   "source_line": "The determinant is a single number that tells you whether the matrix squashes space flat.",
+   "latency_ms": 0.1,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "level",
+   "t": 90.036,
+   "rms": 0.09095
+  },
+  {
+   "kind": "level",
+   "t": 90.253,
+   "rms": 0.14885
+  },
+  {
+   "kind": "level",
+   "t": 90.487,
+   "rms": 0.24713
+  },
+  {
+   "kind": "level",
+   "t": 90.712,
+   "rms": 0.07326
+  },
+  {
+   "kind": "level",
+   "t": 90.933,
+   "rms": 0.02871
+  },
+  {
+   "kind": "level",
+   "t": 91.154,
+   "rms": 0.12639
+  },
+  {
+   "kind": "level",
+   "t": 91.387,
+   "rms": 0.12089
+  },
+  {
+   "kind": "level",
+   "t": 91.604,
+   "rms": 0.08773
+  },
+  {
+   "kind": "level",
+   "t": 91.836,
+   "rms": 0.07759
+  },
+  {
+   "kind": "level",
+   "t": 92.057,
+   "rms": 0.0002
+  },
+  {
+   "kind": "level",
+   "t": 92.271,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 92.498,
+   "rms": 0.11891
+  },
+  {
+   "kind": "level",
+   "t": 92.722,
+   "rms": 0.15765
+  },
+  {
+   "kind": "level",
+   "t": 92.941,
+   "rms": 0.09619
+  },
+  {
+   "kind": "level",
+   "t": 93.181,
+   "rms": 0.03918
+  },
+  {
+   "kind": "level",
+   "t": 93.398,
+   "rms": 0.15582
+  },
+  {
+   "kind": "level",
+   "t": 93.629,
+   "rms": 0.1296
+  },
+  {
+   "kind": "level",
+   "t": 93.841,
+   "rms": 0.20756
+  },
+  {
+   "kind": "level",
+   "t": 94.041,
+   "rms": 0.14294
+  },
+  {
+   "kind": "level",
+   "t": 94.269,
+   "rms": 0.14995
+  },
+  {
+   "kind": "level",
+   "t": 94.481,
+   "rms": 0.06937
+  },
+  {
+   "kind": "translation",
+   "t": 94.627,
+   "index": 11,
+   "text": "determinant هڪ واحد نمبر آهي جيڪو توهان کي ٻڌائي ٿو ته ڇا ميٽرڪس جڳهه کي فليٽ ڪري ٿو.",
+   "target_language": "sd",
+   "latency_ms": 4607.1,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 94.715,
+   "rms": 8e-05
+  },
+  {
+   "kind": "level",
+   "t": 94.928,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 95.158,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 95.314,
+   "text": "...",
+   "index": 12
+  },
+  {
+   "kind": "level",
+   "t": 95.408,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 95.611,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 95.82,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 96.046,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 96.274,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 96.495,
+   "rms": 0.00875
+  },
+  {
+   "kind": "level",
+   "t": 96.725,
+   "rms": 0.12391
+  },
+  {
+   "kind": "level",
+   "t": 96.944,
+   "rms": 0.06022
+  },
+  {
+   "kind": "level",
+   "t": 97.146,
+   "rms": 0.00621
+  },
+  {
+   "kind": "level",
+   "t": 97.358,
+   "rms": 0.05385
+  },
+  {
+   "kind": "level",
+   "t": 97.583,
+   "rms": 0.06255
+  },
+  {
+   "kind": "level",
+   "t": 97.787,
+   "rms": 0.11739
+  },
+  {
+   "kind": "level",
+   "t": 97.998,
+   "rms": 0.15328
+  },
+  {
+   "kind": "level",
+   "t": 98.232,
+   "rms": 0.12167
+  },
+  {
+   "kind": "level",
+   "t": 98.447,
+   "rms": 0.02883
+  },
+  {
+   "kind": "caption",
+   "t": 98.48,
+   "index": 12,
+   "text": "If it is zero, there is a non-trivial solution, and that is exactly what we want.",
+   "language": "en",
+   "start_s": 67.03,
+   "latency_ms": 3165.5,
+   "rtf": 0.442,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 98.48,
+   "uptime_s": 77.4,
+   "audio_seconds": 77.4,
+   "input_level": 0.02883,
+   "merged_segments": 0,
+   "realtime_factor": 0.728,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2418,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 2.9,
+     "min_ms": 0.4,
+     "max_ms": 6.9
+    },
+    {
+     "stage": "asr",
+     "count": 13,
+     "mean_ms": 4331.4,
+     "p50_ms": 4244.4,
+     "p95_ms": 5778.4,
+     "min_ms": 2929.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 12,
+     "mean_ms": 4542.2,
+     "p50_ms": 4607.1,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 98.648,
+   "rms": 0.03121
+  },
+  {
+   "kind": "level",
+   "t": 98.891,
+   "rms": 0.13368
+  },
+  {
+   "kind": "level",
+   "t": 99.117,
+   "rms": 0.10633
+  },
+  {
+   "kind": "level",
+   "t": 99.348,
+   "rms": 0.0855
+  },
+  {
+   "kind": "level",
+   "t": 99.567,
+   "rms": 0.19172
+  },
+  {
+   "kind": "level",
+   "t": 99.8,
+   "rms": 0.12252
+  },
+  {
+   "kind": "level",
+   "t": 100.017,
+   "rms": 0.05193
+  },
+  {
+   "kind": "level",
+   "t": 100.251,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 100.48,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 100.691,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 100.818,
+   "text": "...",
+   "index": 13
+  },
+  {
+   "kind": "level",
+   "t": 100.912,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 101.135,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 101.336,
+   "rms": 0.19925
+  },
+  {
+   "kind": "level",
+   "t": 101.551,
+   "rms": 0.10242
+  },
+  {
+   "kind": "level",
+   "t": 101.753,
+   "rms": 0.08522
+  },
+  {
+   "kind": "level",
+   "t": 101.97,
+   "rms": 0.0858
+  },
+  {
+   "kind": "level",
+   "t": 102.189,
+   "rms": 0.16399
+  },
+  {
+   "kind": "level",
+   "t": 102.415,
+   "rms": 0.19115
+  },
+  {
+   "kind": "translation",
+   "t": 102.52,
+   "index": 12,
+   "text": "جيڪڏهن اهو صفر آهي، اتي هڪ غير معمولي حل آهي، ۽ اهو ئي اسان چاهيون ٿا.",
+   "target_language": "sd",
+   "latency_ms": 4040.1,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 102.644,
+   "rms": 0.08149
+  },
+  {
+   "kind": "level",
+   "t": 102.863,
+   "rms": 0.0627
+  },
+  {
+   "kind": "level",
+   "t": 103.088,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 103.289,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 103.504,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 103.708,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 103.923,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 104.085,
+   "index": 13,
+   "text": "Symmetric matrices always have real eigenvalues.",
+   "language": "en",
+   "start_s": 75.32,
+   "latency_ms": 3267.3,
+   "rtf": 0.745,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 104.085,
+   "uptime_s": 83.0,
+   "audio_seconds": 83.0,
+   "input_level": 0.0,
+   "merged_segments": 0,
+   "realtime_factor": 0.718,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2593,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.7,
+     "min_ms": 0.4,
+     "max_ms": 6.6
+    },
+    {
+     "stage": "asr",
+     "count": 14,
+     "mean_ms": 4255.4,
+     "p50_ms": 4244.4,
+     "p95_ms": 5778.4,
+     "min_ms": 2929.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 13,
+     "mean_ms": 4503.6,
+     "p50_ms": 4282.0,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 104.085,
+   "text": "...",
+   "index": 14
+  },
+  {
+   "kind": "level",
+   "t": 104.167,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 104.373,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 104.591,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 104.824,
+   "rms": 0.02091
+  },
+  {
+   "kind": "level",
+   "t": 105.043,
+   "rms": 0.09637
+  },
+  {
+   "kind": "level",
+   "t": 105.274,
+   "rms": 0.14342
+  },
+  {
+   "kind": "level",
+   "t": 105.487,
+   "rms": 0.05358
+  },
+  {
+   "kind": "level",
+   "t": 105.711,
+   "rms": 0.00708
+  },
+  {
+   "kind": "level",
+   "t": 105.943,
+   "rms": 0.05975
+  },
+  {
+   "kind": "level",
+   "t": 106.16,
+   "rms": 0.14674
+  },
+  {
+   "kind": "level",
+   "t": 106.36,
+   "rms": 0.0423
+  },
+  {
+   "kind": "level",
+   "t": 106.571,
+   "rms": 0.09123
+  },
+  {
+   "kind": "level",
+   "t": 106.775,
+   "rms": 0.02796
+  },
+  {
+   "kind": "level",
+   "t": 106.999,
+   "rms": 0.00092
+  },
+  {
+   "kind": "level",
+   "t": 107.228,
+   "rms": 0.07216
+  },
+  {
+   "kind": "level",
+   "t": 107.438,
+   "rms": 0.00232
+  },
+  {
+   "kind": "translation",
+   "t": 107.452,
+   "index": 13,
+   "text": "متضاد ميٽرڪس هميشه حقيقي eigenvalues آهن.",
+   "target_language": "sd",
+   "latency_ms": 3365.9,
    "passthrough": false,
    "protected_terms": [
     "eigenvalues"
    ]
   },
   {
+   "kind": "caption",
+   "t": 107.569,
+   "index": 14,
+   "text": "That is a useful guarantee.",
+   "language": "en",
+   "start_s": 79.93,
+   "latency_ms": 3483.4,
+   "rtf": 1.312,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 107.569,
+   "uptime_s": 86.5,
+   "audio_seconds": 86.5,
+   "input_level": 0.00232,
+   "merged_segments": 0,
+   "realtime_factor": 0.729,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2702,
+     "mean_ms": 1.6,
+     "p50_ms": 1.3,
+     "p95_ms": 3.9,
+     "min_ms": 0.4,
+     "max_ms": 6.6
+    },
+    {
+     "stage": "asr",
+     "count": 15,
+     "mean_ms": 4204.0,
+     "p50_ms": 4073.2,
+     "p95_ms": 5778.4,
+     "min_ms": 2929.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 14,
+     "mean_ms": 4422.3,
+     "p50_ms": 4282.0,
+     "p95_ms": 9208.2,
+     "min_ms": 1587.9,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 107.641,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 107.852,
+   "rms": 0.00011
+  },
+  {
+   "kind": "level",
+   "t": 108.078,
+   "rms": 0.03273
+  },
+  {
+   "kind": "level",
+   "t": 108.313,
+   "rms": 0.04
+  },
+  {
+   "kind": "level",
+   "t": 108.531,
+   "rms": 0.13177
+  },
+  {
+   "kind": "level",
+   "t": 108.767,
+   "rms": 0.11405
+  },
+  {
    "kind": "translation",
-   "t": 198.104,
-   "index": 10,
+   "t": 108.942,
+   "index": 14,
+   "text": "اها هڪ فائديمند ضمانت آهي.",
+   "target_language": "sd",
+   "latency_ms": 1372.6,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 108.978,
+   "rms": 0.16497
+  },
+  {
+   "kind": "level",
+   "t": 109.18,
+   "rms": 0.06366
+  },
+  {
+   "kind": "level",
+   "t": 109.398,
+   "rms": 0.09685
+  },
+  {
+   "kind": "level",
+   "t": 109.614,
+   "rms": 0.0409
+  },
+  {
+   "kind": "level",
+   "t": 109.847,
+   "rms": 0.02901
+  },
+  {
+   "kind": "level",
+   "t": 110.067,
+   "rms": 0.04166
+  },
+  {
+   "kind": "level",
+   "t": 110.299,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 110.515,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 110.715,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 110.834,
+   "text": "...",
+   "index": 15
+  },
+  {
+   "kind": "level",
+   "t": 110.928,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 111.132,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 111.342,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 111.568,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 111.8,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 112.019,
+   "rms": 0.12386
+  },
+  {
+   "kind": "level",
+   "t": 112.24,
+   "rms": 0.15689
+  },
+  {
+   "kind": "level",
+   "t": 112.441,
+   "rms": 0.11981
+  },
+  {
+   "kind": "level",
+   "t": 112.655,
+   "rms": 0.1172
+  },
+  {
+   "kind": "level",
+   "t": 112.886,
+   "rms": 0.14672
+  },
+  {
+   "kind": "level",
+   "t": 113.102,
+   "rms": 0.12014
+  },
+  {
+   "kind": "level",
+   "t": 113.335,
+   "rms": 0.1981
+  },
+  {
+   "kind": "level",
+   "t": 113.555,
+   "rms": 0.07406
+  },
+  {
+   "kind": "level",
+   "t": 113.784,
+   "rms": 0.09117
+  },
+  {
+   "kind": "caption",
+   "t": 113.843,
+   "index": 15,
+   "text": "Once we have a full set of eigenvectors, we can diagonalize the matrix.",
+   "language": "en",
+   "start_s": 83.61,
+   "latency_ms": 3008.5,
+   "rtf": 0.492,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 113.843,
+   "uptime_s": 92.8,
+   "audio_seconds": 92.8,
+   "input_level": 0.09117,
+   "merged_segments": 0,
+   "realtime_factor": 0.712,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2899,
+     "mean_ms": 1.5,
+     "p50_ms": 1.3,
+     "p95_ms": 3.6,
+     "min_ms": 0.6,
+     "max_ms": 6.1
+    },
+    {
+     "stage": "asr",
+     "count": 16,
+     "mean_ms": 4129.3,
+     "p50_ms": 4073.2,
+     "p95_ms": 5778.4,
+     "min_ms": 2929.3,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 15,
+     "mean_ms": 4219.0,
+     "p50_ms": 4051.5,
+     "p95_ms": 9208.2,
+     "min_ms": 1372.6,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 114.005,
+   "rms": 0.04901
+  },
+  {
+   "kind": "level",
+   "t": 114.206,
+   "rms": 0.06685
+  },
+  {
+   "kind": "level",
+   "t": 114.418,
+   "rms": 0.12628
+  },
+  {
+   "kind": "level",
+   "t": 114.64,
+   "rms": 0.06683
+  },
+  {
+   "kind": "level",
+   "t": 114.871,
+   "rms": 0.01324
+  },
+  {
+   "kind": "level",
+   "t": 115.088,
+   "rms": 0.06622
+  },
+  {
+   "kind": "level",
+   "t": 115.315,
+   "rms": 0.12126
+  },
+  {
+   "kind": "level",
+   "t": 115.541,
+   "rms": 0.06614
+  },
+  {
+   "kind": "level",
+   "t": 115.758,
+   "rms": 0.12777
+  },
+  {
+   "kind": "level",
+   "t": 115.986,
+   "rms": 0.11047
+  },
+  {
+   "kind": "level",
+   "t": 116.209,
+   "rms": 0.08777
+  },
+  {
+   "kind": "level",
+   "t": 116.431,
+   "rms": 0.06016
+  },
+  {
+   "kind": "level",
+   "t": 116.633,
+   "rms": 0.07847
+  },
+  {
+   "kind": "level",
+   "t": 116.857,
+   "rms": 0.06871
+  },
+  {
+   "kind": "level",
+   "t": 117.075,
+   "rms": 8e-05
+  },
+  {
+   "kind": "level",
+   "t": 117.294,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 117.517,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 117.687,
+   "text": "...",
+   "index": 16
+  },
+  {
+   "kind": "level",
+   "t": 117.733,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 117.785,
+   "index": 15,
    "text": "هڪ ڀيرو اسان کي eigenvectors جي مڪمل سيٽ آهي، اسان کي diagonalize ڪري سگهو ٿا.",
    "target_language": "sd",
-   "latency_ms": 7022.3,
+   "latency_ms": 3942.3,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -3426,30 +3503,334 @@
    ]
   },
   {
+   "kind": "level",
+   "t": 117.936,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.161,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.384,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.612,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.845,
+   "rms": 4e-05
+  },
+  {
+   "kind": "level",
+   "t": 119.067,
+   "rms": 0.08471
+  },
+  {
+   "kind": "level",
+   "t": 119.278,
+   "rms": 0.09948
+  },
+  {
+   "kind": "level",
+   "t": 119.513,
+   "rms": 0.07094
+  },
+  {
+   "kind": "level",
+   "t": 119.727,
+   "rms": 0.08178
+  },
+  {
+   "kind": "level",
+   "t": 119.93,
+   "rms": 0.17083
+  },
+  {
+   "kind": "level",
+   "t": 120.142,
+   "rms": 0.00813
+  },
+  {
+   "kind": "level",
+   "t": 120.346,
+   "rms": 0.12936
+  },
+  {
+   "kind": "level",
+   "t": 120.568,
+   "rms": 0.15018
+  },
+  {
+   "kind": "caption",
+   "t": 120.569,
+   "index": 16,
+   "text": "Diagonalization turns a hard repeated multiplication into a simple one.",
+   "language": "en",
+   "start_s": 90.71,
+   "latency_ms": 2882.8,
+   "rtf": 0.492,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 120.57,
+   "uptime_s": 99.5,
+   "audio_seconds": 99.5,
+   "input_level": 0.15018,
+   "merged_segments": 0,
+   "realtime_factor": 0.693,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3108,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.5,
+     "min_ms": 0.6,
+     "max_ms": 7.2
+    },
+    {
+     "stage": "asr",
+     "count": 17,
+     "mean_ms": 4055.9,
+     "p50_ms": 4013.6,
+     "p95_ms": 5778.4,
+     "min_ms": 2882.8,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 16,
+     "mean_ms": 4201.7,
+     "p50_ms": 4051.5,
+     "p95_ms": 9208.2,
+     "min_ms": 1372.6,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 120.797,
+   "rms": 0.12163
+  },
+  {
+   "kind": "level",
+   "t": 121.01,
+   "rms": 0.16089
+  },
+  {
+   "kind": "level",
+   "t": 121.211,
+   "rms": 0.08115
+  },
+  {
+   "kind": "level",
+   "t": 121.43,
+   "rms": 0.17674
+  },
+  {
+   "kind": "level",
+   "t": 121.65,
+   "rms": 0.05776
+  },
+  {
+   "kind": "level",
+   "t": 121.883,
+   "rms": 0.04485
+  },
+  {
+   "kind": "level",
+   "t": 122.1,
+   "rms": 0.04629
+  },
+  {
+   "kind": "level",
+   "t": 122.325,
+   "rms": 0.11973
+  },
+  {
+   "kind": "level",
+   "t": 122.55,
+   "rms": 0.09258
+  },
+  {
+   "kind": "level",
+   "t": 122.774,
+   "rms": 0.17255
+  },
+  {
+   "kind": "level",
+   "t": 122.992,
+   "rms": 0.09638
+  },
+  {
+   "kind": "level",
+   "t": 123.219,
+   "rms": 0.05754
+  },
+  {
+   "kind": "level",
+   "t": 123.444,
+   "rms": 7e-05
+  },
+  {
+   "kind": "level",
+   "t": 123.671,
+   "rms": 0.0
+  },
+  {
    "kind": "translation",
-   "t": 204.061,
-   "index": 11,
+   "t": 123.71,
+   "index": 16,
    "text": "Diagonalization هڪ سخت بار بار بار ضرب کي هڪ سادي ۾ بدلجي ٿو.",
    "target_language": "sd",
-   "latency_ms": 5956.4,
+   "latency_ms": 3140.2,
    "passthrough": false,
    "protected_terms": [
     "Diagonalization"
    ]
   },
   {
+   "kind": "level",
+   "t": 123.887,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 124.088,
+   "text": "...",
+   "index": 17
+  },
+  {
+   "kind": "level",
+   "t": 124.14,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 124.372,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 124.593,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 124.796,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 125.02,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 125.237,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 125.467,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 125.685,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 125.912,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 126.138,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 126.86,
+   "index": 17,
+   "text": "We will use this next week when we look at principal component analysis.",
+   "language": "en",
+   "start_s": 97.62,
+   "latency_ms": 2771.9,
+   "rtf": 0.519,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 126.86,
+   "uptime_s": 105.8,
+   "audio_seconds": 105.2,
+   "input_level": 0.0,
+   "merged_segments": 0,
+   "realtime_factor": 0.682,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3288,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 3.0,
+     "min_ms": 0.1,
+     "max_ms": 8.5
+    },
+    {
+     "stage": "asr",
+     "count": 18,
+     "mean_ms": 3984.6,
+     "p50_ms": 4013.6,
+     "p95_ms": 5778.4,
+     "min_ms": 2772.0,
+     "max_ms": 5778.4
+    },
+    {
+     "stage": "translate",
+     "count": 17,
+     "mean_ms": 4139.3,
+     "p50_ms": 4040.1,
+     "p95_ms": 9208.2,
+     "min_ms": 1372.6,
+     "max_ms": 9208.2
+    }
+   ]
+  },
+  {
+   "kind": "gloss",
+   "t": 126.861,
+   "term": "diagonalize",
+   "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
+   "language": "sd",
+   "source_line": "We will use this next week when we look at principal component analysis.",
+   "latency_ms": 0.1,
+   "backend": "heuristic"
+  },
+  {
    "kind": "translation",
-   "t": 210.857,
-   "index": 12,
+   "t": 130.536,
+   "index": 17,
    "text": "اسان ايندڙ هفتي هن کي استعمال ڪنداسين جڏهن اسان بنيادي جزو تجزيو تي نظر وجهون ٿا.",
    "target_language": "sd",
-   "latency_ms": 6796.2,
+   "latency_ms": 3675.6,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "status",
-   "t": 213.373,
+   "t": 133.475,
    "stage": "summarising",
    "running": false,
    "device": {
@@ -3467,94 +3848,94 @@
     "fallback_reason": "QNN not installed; Dml not installed",
     "qnn_hardware": null
    },
-   "captions": 13,
+   "captions": 18,
    "glossary": 4,
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 172.9,
+    "uptime_s": 112.4,
     "audio_seconds": 105.2,
     "input_level": 0.0,
-    "merged_segments": 5,
-    "realtime_factor": 1.019,
+    "merged_segments": 0,
+    "realtime_factor": 0.682,
     "stages": [
      {
       "stage": "vad",
       "count": 3288,
-      "mean_ms": 4.3,
-      "p50_ms": 2.8,
-      "p95_ms": 11.0,
-      "min_ms": 1.1,
-      "max_ms": 90.9
+      "mean_ms": 1.4,
+      "p50_ms": 1.2,
+      "p95_ms": 3.0,
+      "min_ms": 0.1,
+      "max_ms": 8.5
      },
      {
       "stage": "asr",
-      "count": 13,
-      "mean_ms": 8245.7,
-      "p50_ms": 7400.2,
-      "p95_ms": 13648.3,
-      "min_ms": 5720.9,
-      "max_ms": 13648.3
+      "count": 18,
+      "mean_ms": 3984.6,
+      "p50_ms": 4013.6,
+      "p95_ms": 5778.4,
+      "min_ms": 2772.0,
+      "max_ms": 5778.4
      },
      {
       "stage": "translate",
-      "count": 13,
-      "mean_ms": 11879.1,
-      "p50_ms": 6964.6,
-      "p95_ms": 34260.0,
-      "min_ms": 3944.1,
-      "max_ms": 34260.0
+      "count": 18,
+      "mean_ms": 4113.5,
+      "p50_ms": 4040.1,
+      "p95_ms": 9208.2,
+      "min_ms": 1372.6,
+      "max_ms": 9208.2
      }
     ]
    }
   },
   {
    "kind": "notes",
-   "t": 213.507,
-   "title": "Good morning everyone. - 2026-09-27 14:51",
-   "path": "sessions/20260927-1451-good-morning-everyone-2026-09-27-14-51.md",
-   "markdown": "# Good morning everyone. - 2026-09-27 14:51\n\n**Date** 27 Sep 2026, 14:51 · **Duration** 3 min · **Captions** 13\n\n_Processed entirely on-device: CPU_\n\n## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- Today we will start with eigenvalues and eigenvectors. These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- A matrix is a linear transformation. It stretches, rotates and cheers space.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- To find them we solve the characteristic equation of the matrix. The determinant of a minus lambda times the identity must equal zero.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._\n\n## Glossary\n\n_Explanations in سنڌي (Sindhi)._\n\n- **eigenvalue** — A scalar showing how much a matrix stretches a special direction (its eigenvector).\n- **eigenvector** — A direction that a matrix only stretches or shrinks, without rotating it.\n- **determinant** — A single number from a square matrix; zero means the matrix squashes space flat.\n- **diagonalize** — Rewriting a matrix in a basis where it becomes a simple diagonal scaling.\n\n## Transcript\n\n**[00:00]** Good morning everyone.\n> سڀئي کي صبح جو سلام.\n\n**[00:02]** Today we will start with eigenvalues and eigenvectors. These two ideas sit at the center of linear algebra, so it is worth going slowly.\n> اڄ اسان eigenvalues ۽ eigenvectors سان شروع ڪنداسين. اهي ٻه خيال سڌي الجبرا جي مرڪز ۾ آهن، تنهنڪري اهو سست هلڻ جي قابل آهي.\n\n**[00:15]** A matrix is a linear transformation. It stretches, rotates and cheers space.\n> هڪ ميٽرڪس هڪ لائينر تبديلي آهي. اهو وڌي ٿو، ڦرندو آهي ۽ خلا کي خوش ڪري ٿو.\n\n**[00:24]** For most vectors, applying the matrix changes both direction and length.\n> گهڻن ويڪٽرز لاءِ ، ميٽرڪس لاڳو ڪرڻ سان هدايت ۽ ڊيگهه ٻنهي ۾ تبديلي ٿيندي آهي.\n\n**[00:31]** but a few special vectors only change length. Their direction is preserved.\n> پر ڪجهه خاص vectors صرف ڊيگهه تبديل. سندن رخ محفوظ آهي.\n\n**[00:39]** Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n> اهي vectors آهن eigenvectors، ۽ عنصر اهي eigenvalue جي ذريعي stretch آهن.\n\n**[00:47]** To find them we solve the characteristic equation of the matrix. The determinant of a minus lambda times the identity must equal zero.\n> انهن کي ڳولڻ لاءِ اسان ميٽرڪس جي خاصيت مساوات کي حل ڪيو آهي.\n\n**[00:59]** The determinant is a single number that tells you whether the matrix squashes space flat.\n> determinant هڪ واحد نمبر آهي جيڪو توهان کي ٻڌائي ٿو ته ڇا ميٽرڪس جڳهه کي فليٽ ڪري ٿو.\n\n**[01:07]** If it is zero, there is a non-trivial solution, and that is exactly what we want.\n> جيڪڏهن اهو صفر آهي، اتي هڪ غير معمولي حل آهي، ۽ اهو ئي اسان چاهيون ٿا.\n\n**[01:15]** Symmetric matrices always have real eigenvalues. That is a useful guarantee.\n> symmetric matrices هميشه حقيقي eigenvalues آهن.\n\n**[01:23]** Once we have a full set of eigenvectors, we can diagonalize the matrix.\n> هڪ ڀيرو اسان کي eigenvectors جي مڪمل سيٽ آهي، اسان کي diagonalize ڪري سگهو ٿا.\n\n**[01:30]** Diagonalization turns a hard repeated multiplication into a simple one.\n> Diagonalization هڪ سخت بار بار بار ضرب کي هڪ سادي ۾ بدلجي ٿو.\n\n**[01:37]** We will use this next week when we look at principal component analysis.\n> اسان ايندڙ هفتي هن کي استعمال ڪنداسين جڏهن اسان بنيادي جزو تجزيو تي نظر وجهون ٿا.\n\n## Performance\n\n```json\n{\n  \"uptime_s\": 172.9,\n  \"audio_seconds\": 105.2,\n  \"input_level\": 0.0,\n  \"merged_segments\": 5,\n  \"realtime_factor\": 1.019,\n  \"stages\": [\n    {\n      \"stage\": \"vad\",\n      \"count\": 3288,\n      \"mean_ms\": 4.3,\n      \"p50_ms\": 2.8,\n      \"p95_ms\": 11.0,\n      \"min_ms\": 1.1,\n      \"max_ms\": 90.9\n    },\n    {\n      \"stage\": \"asr\",\n      \"count\": 13,\n      \"mean_ms\": 8245.7,\n      \"p50_ms\": 7400.2,\n      \"p95_ms\": 13648.3,\n      \"min_ms\": 5720.9,\n      \"max_ms\": 13648.3\n    },\n    {\n      \"stage\": \"translate\",\n      \"count\": 13,\n      \"mean_ms\": 11879.1,\n      \"p50_ms\": 6964.6,\n      \"p95_ms\": 34260.0,\n      \"min_ms\": 3944.1,\n      \"max_ms\": 34260.0\n    }\n  ]\n}\n```\n",
-   "summary": "## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- Today we will start with eigenvalues and eigenvectors. These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- A matrix is a linear transformation. It stretches, rotates and cheers space.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- To find them we solve the characteristic equation of the matrix. The determinant of a minus lambda times the identity must equal zero.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._",
+   "t": 133.481,
+   "title": "Good morning everyone. - 2026-09-27 16:09",
+   "path": "sessions/20260927-1609-good-morning-everyone-2026-09-27-16-09.md",
+   "markdown": "# Good morning everyone. - 2026-09-27 16:09\n\n**Date** 27 Sep 2026, 16:09 · **Duration** 2 min · **Captions** 18\n\n_Processed entirely on-device: CPU_\n\n## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- For most vectors, applying the matrix changes both direction and length.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n- We will use this next week when we look at principal component analysis.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._\n\n## Glossary\n\n_Explanations in سنڌي (Sindhi)._\n\n- **eigenvalue** — A scalar showing how much a matrix stretches a special direction (its eigenvector).\n- **eigenvector** — A direction that a matrix only stretches or shrinks, without rotating it.\n- **determinant** — A single number from a square matrix; zero means the matrix squashes space flat.\n- **diagonalize** — Rewriting a matrix in a basis where it becomes a simple diagonal scaling.\n\n## Transcript\n\n**[00:00]** Good morning everyone.\n> سڀئي کي صبح جو سلام.\n\n**[00:02]** Today we will start with eigenvalues and eigenvectors.\n> اڄ اسان eigenvalues ۽ eigenvectors سان شروع ڪنداسين.\n\n**[00:08]** These two ideas sit at the center of linear algebra, so it is worth going slowly.\n> اهي ٻه خيال لائينر الجبرا جي مرڪز ۾ آهن، تنهنڪري اهو سست رفتار سان هلڻ جي قابل آهي.\n\n**[00:15]** A matrix is a linear transformation.\n> هڪ ميٽرڪس هڪ لائينر تبديلي آهي.\n\n**[00:19]** It stretches, rotates and shears space.\n> اهو وڌي ٿو، ڦرندو آهي ۽ جڳهه کي ڇڪيندو آهي.\n\n**[00:24]** For most vectors, applying the matrix changes both direction and length.\n> گهڻن ويڪٽرز لاءِ ، ميٽرڪس لاڳو ڪرڻ سان هدايت ۽ ڊيگهه ٻنهي ۾ تبديلي ٿيندي آهي.\n\n**[00:31]** But a few special vectors only change length.\n> پر ڪجهه خاص vectors رڳو ڊيگهه تبديل.\n\n**[00:35]** Their direction is preserved.\n> سندن هدايت محفوظ آهي.\n\n**[00:39]** Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n> اهي vectors آهن eigenvectors، ۽ عنصر اهي eigenvalue جي ذريعي stretch آهن.\n\n**[00:47]** To find them we solve the characteristic equation of the matrix.\n> انهن کي ڳولڻ لاءِ اسان ميٽرڪس جي خاصيت وارو مساوين کي حل ڪيو.\n\n**[00:53]** The determinant of a minus lambda times the identity must equal zero.\n> هڪ منسلڪ lambda جي determinant جي سڃاڻپ صفر برابر هجڻ گهرجي.\n\n**[00:59]** The determinant is a single number that tells you whether the matrix squashes space flat.\n> determinant هڪ واحد نمبر آهي جيڪو توهان کي ٻڌائي ٿو ته ڇا ميٽرڪس جڳهه کي فليٽ ڪري ٿو.\n\n**[01:07]** If it is zero, there is a non-trivial solution, and that is exactly what we want.\n> جيڪڏهن اهو صفر آهي، اتي هڪ غير معمولي حل آهي، ۽ اهو ئي اسان چاهيون ٿا.\n\n**[01:15]** Symmetric matrices always have real eigenvalues.\n> متضاد ميٽرڪس هميشه حقيقي eigenvalues آهن.\n\n**[01:19]** That is a useful guarantee.\n> اها هڪ فائديمند ضمانت آهي.\n\n**[01:23]** Once we have a full set of eigenvectors, we can diagonalize the matrix.\n> هڪ ڀيرو اسان کي eigenvectors جي مڪمل سيٽ آهي، اسان کي diagonalize ڪري سگهو ٿا.\n\n**[01:30]** Diagonalization turns a hard repeated multiplication into a simple one.\n> Diagonalization هڪ سخت بار بار بار ضرب کي هڪ سادي ۾ بدلجي ٿو.\n\n**[01:37]** We will use this next week when we look at principal component analysis.\n> اسان ايندڙ هفتي هن کي استعمال ڪنداسين جڏهن اسان بنيادي جزو تجزيو تي نظر وجهون ٿا.\n\n## Performance\n\n```json\n{\n  \"uptime_s\": 112.4,\n  \"audio_seconds\": 105.2,\n  \"input_level\": 0.0,\n  \"merged_segments\": 0,\n  \"realtime_factor\": 0.682,\n  \"stages\": [\n    {\n      \"stage\": \"vad\",\n      \"count\": 3288,\n      \"mean_ms\": 1.4,\n      \"p50_ms\": 1.2,\n      \"p95_ms\": 3.0,\n      \"min_ms\": 0.1,\n      \"max_ms\": 8.5\n    },\n    {\n      \"stage\": \"asr\",\n      \"count\": 18,\n      \"mean_ms\": 3984.6,\n      \"p50_ms\": 4013.6,\n      \"p95_ms\": 5778.4,\n      \"min_ms\": 2772.0,\n      \"max_ms\": 5778.4\n    },\n    {\n      \"stage\": \"translate\",\n      \"count\": 18,\n      \"mean_ms\": 4113.5,\n      \"p50_ms\": 4040.1,\n      \"p95_ms\": 9208.2,\n      \"min_ms\": 1372.6,\n      \"max_ms\": 9208.2\n    }\n  ]\n}\n```\n",
+   "summary": "## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- For most vectors, applying the matrix changes both direction and length.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n- We will use this next week when we look at principal component analysis.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._",
    "quiz": [],
    "glossary": [
     {
      "term": "eigenvalue",
      "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
      "language": "sd",
-     "source_line": "A matrix is a linear transformation. It stretches, rotates and cheers space.",
-     "latency_ms": 9.7,
+     "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+     "latency_ms": 1.7,
      "backend": "heuristic"
     },
     {
      "term": "eigenvector",
      "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
      "language": "sd",
-     "source_line": "A matrix is a linear transformation. It stretches, rotates and cheers space.",
-     "latency_ms": 9.7,
+     "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+     "latency_ms": 1.7,
      "backend": "heuristic"
     },
     {
      "term": "determinant",
      "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
      "language": "sd",
-     "source_line": "If it is zero, there is a non-trivial solution, and that is exactly what we want.",
-     "latency_ms": 2.0,
+     "source_line": "The determinant is a single number that tells you whether the matrix squashes space flat.",
+     "latency_ms": 0.1,
      "backend": "heuristic"
     },
     {
      "term": "diagonalize",
      "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
      "language": "sd",
-     "source_line": "Diagonalization turns a hard repeated multiplication into a simple one.",
-     "latency_ms": 0.4,
+     "source_line": "We will use this next week when we look at principal component analysis.",
+     "latency_ms": 0.1,
      "backend": "heuristic"
     }
    ],
-   "duration_minutes": 2.9
+   "duration_minutes": 1.9
   },
   {
    "kind": "status",
-   "t": 213.507,
+   "t": 133.481,
    "running": false,
    "device": {
     "provider": "CPUExecutionProvider",
@@ -3571,43 +3952,43 @@
     "fallback_reason": "QNN not installed; Dml not installed",
     "qnn_hardware": null
    },
-   "captions": 13,
+   "captions": 18,
    "glossary": 4,
    "target_language": "sd",
    "mock": false,
    "metrics": {
-    "uptime_s": 173.0,
+    "uptime_s": 112.4,
     "audio_seconds": 105.2,
     "input_level": 0.0,
-    "merged_segments": 5,
-    "realtime_factor": 1.019,
+    "merged_segments": 0,
+    "realtime_factor": 0.682,
     "stages": [
      {
       "stage": "vad",
       "count": 3288,
-      "mean_ms": 4.3,
-      "p50_ms": 2.8,
-      "p95_ms": 11.0,
-      "min_ms": 1.1,
-      "max_ms": 90.9
+      "mean_ms": 1.4,
+      "p50_ms": 1.2,
+      "p95_ms": 3.0,
+      "min_ms": 0.1,
+      "max_ms": 8.5
      },
      {
       "stage": "asr",
-      "count": 13,
-      "mean_ms": 8245.7,
-      "p50_ms": 7400.2,
-      "p95_ms": 13648.3,
-      "min_ms": 5720.9,
-      "max_ms": 13648.3
+      "count": 18,
+      "mean_ms": 3984.6,
+      "p50_ms": 4013.6,
+      "p95_ms": 5778.4,
+      "min_ms": 2772.0,
+      "max_ms": 5778.4
      },
      {
       "stage": "translate",
-      "count": 13,
-      "mean_ms": 11879.1,
-      "p50_ms": 6964.6,
-      "p95_ms": 34260.0,
-      "min_ms": 3944.1,
-      "max_ms": 34260.0
+      "count": 18,
+      "mean_ms": 4113.5,
+      "p50_ms": 4040.1,
+      "p95_ms": 9208.2,
+      "min_ms": 1372.6,
+      "max_ms": 9208.2
      }
     ]
    }

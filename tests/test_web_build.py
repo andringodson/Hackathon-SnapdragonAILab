@@ -137,6 +137,24 @@ def test_recording_is_translated_into_its_own_language(path: Path):
         assert share >= 0.8, f"line {e['index']} is not in {script}: {e['text'][:60]}"
 
 
+@pytest.mark.parametrize("path", sorted(WEB.glob("session.*.json")), ids=lambda p: p.name)
+def test_recording_is_paced_like_a_lecture(path: Path):
+    """No two-minute blank screen at the start, or silence in the middle.
+
+    Recorded two at a time on a 13 GB laptop, the machine swapped: Nepali's
+    first caption came 286 s in and Maithili sat silent for 239 s. Those were
+    real runs, but of an overloaded recorder, not of the product - and a
+    visitor would assume the demo was broken.
+    """
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("mode") != "real":
+        pytest.skip("mock recording")
+    caps = [e["t"] for e in data["events"] if e["kind"] == "caption"]
+    assert caps[0] <= 40, f"first caption {caps[0]:.0f} s in"
+    assert max(b - a for a, b in zip(caps, caps[1:], strict=False)) <= 30, "a silent stretch over 30 s"
+    assert data["duration_s"] - caps[-1] <= 45, "the replay idles long after the lecture ends"
+
+
 class TestLiveBuild:
     """The browser build is the product's UI with inference underneath.
 
