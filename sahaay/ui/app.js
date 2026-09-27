@@ -80,6 +80,9 @@ function ensureCaption(index) {
   const tr = document.createElement("p");
   tr.className = "cap-tr";
   tr.hidden = true;
+  // Urdu, Kashmiri and Sindhi run right to left; let each line find its own
+  // direction rather than inheriting the English one.
+  tr.dir = "auto";
 
   const foot = document.createElement("div");
   foot.className = "cap-foot";
@@ -135,6 +138,9 @@ function onTranslation(msg) {
   } else {
     entry.trEl.textContent = msg.text;
     entry.trEl.style.opacity = "";
+    // The language tag lets the browser pick the right font and shaping:
+    // Sindhi and Urdu share a script but not all their letter forms.
+    if (msg.target_language) entry.trEl.lang = msg.target_language;
   }
   entry.trEl.hidden = false;
 }

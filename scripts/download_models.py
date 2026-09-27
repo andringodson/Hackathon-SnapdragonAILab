@@ -101,7 +101,7 @@ MODELS: list[ModelSpec] = [
         target_dir="nllb_200_distilled_600m_int8",
         repo_id="Xenova/nllb-200-distilled-600M",
         description="NLLB-200 distilled 600M, INT8 - 200 languages",
-        approx_mb=650,
+        approx_mb=1930,   # int8 encoder 415 MB + merged decoder 1516 MB
         allow_patterns=[
             "onnx/encoder_model_int8.onnx",
             "onnx/decoder_model_merged_int8.onnx",
@@ -109,7 +109,7 @@ MODELS: list[ModelSpec] = [
             "*.model",
         ],
         tier="both",
-        note="Covers all eight Indian target languages in one model.",
+        note="Covers every caption language in one model (see config.SUPPORTED_LANGUAGES).",
     ),
     ModelSpec(
         key="llm",

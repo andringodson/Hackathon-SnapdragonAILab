@@ -17,10 +17,13 @@
  * What arrives here is produced by real inference a few centimetres away
  * instead of by a recording.
  *
- * What it is NOT: the desktop pipeline. There is no NPU in a browser, no
- * system-audio loopback without the visitor sharing a tab, and the 650 MB
- * translation model is not something to push down a phone connection. The
- * banner says so rather than letting the page imply otherwise.
+ * Translation into Indian languages is here too, with the model the desktop
+ * app ships (NLLB-200, in translate-worker.js). It is about 900 MB, so it is
+ * fetched only when a visitor picks a language, never on page load.
+ *
+ * What it is NOT: the desktop pipeline. There is no NPU in a browser, and no
+ * system-audio loopback without the visitor sharing a tab. The banner says so
+ * rather than letting the page imply otherwise.
  */
 
 (function () {
@@ -70,13 +73,23 @@
     busy: false,
     levelSentAt: 0,
     pre: [],
+    // Translation
+    target: "en",
+    languages: [],
+    worker: null,
+    workerReady: false,
+    trFiles: {},
+    lastCaption: null,
   };
 
   // Read-only timings, for scripts/bench_live.py and for anyone opening the
   // console. Changing nothing; measuring everything the visitor feels:
   // how long Start takes to become "listening", how long each caption took,
   // and how many segments were dropped because inference fell behind.
-  const METRICS = { clickAt: 0, readyAt: 0, captions: [], dropped: 0, merged: 0, threads: 0 };
+  const METRICS = {
+    clickAt: 0, readyAt: 0, captions: [], dropped: 0, merged: 0, threads: 0,
+    translations: [], translationsDropped: 0, translatorThreads: 0,
+  };
   window.sahaayLive = METRICS;
 
   // Inference alone, on a clip the caller supplies, N times. The full-lecture
@@ -123,6 +136,13 @@
     }
   }
 
+  // Exported from sahaay/config.py by scripts/build_web.py, so the browser
+  // offers exactly the languages the desktop app does.
+  const languagesReady = realFetch("../static/languages.json")
+    .then((r) => r.json())
+    .then((list) => { L.languages = list; })
+    .catch((err) => console.warn("no language list; captions only", err));
+
   function device() {
     // Honest about what is executing. The desktop badge names an ONNX
     // Runtime execution provider; this one names the browser backend, and
@@ -137,8 +157,7 @@
       processor: navigator.userAgent.slice(0, 60),
       is_arm64: /arm|aarch64/i.test(navigator.userAgent),
       npu_active: false,
-      fallback_reason:
-        "Running in a browser: no Hexagon NPU, and translation needs the desktop app.",
+      fallback_reason: "Running in a browser: no Hexagon NPU.",
       qnn_hardware: null,
     };
   }
@@ -150,15 +169,17 @@
     if (!url.startsWith("/api/")) return realFetch(input, init);
 
     if (url === "/api/status") {
+      await languagesReady;
       return json({
         running: L.running,
         mock: false,
         device: device(),
-        target_language: "en",
-        // Only English: translation is a 650 MB model, and offering
-        // languages that quietly do nothing would be worse than offering
-        // none. The desktop app does the other eight.
-        languages: [{ code: "en", name: "English (captions only)" }],
+        target_language: L.target,
+        // English first and selected: the translation model is only
+        // downloaded when someone asks for a language.
+        languages: [{ code: "en", name: "English (captions only)" }].concat(
+          L.languages.map((l) => ({ code: l.code, name: l.name }))
+        ),
       });
     }
     if (url === "/api/start") {
@@ -174,7 +195,11 @@
       await stop();
       return json({ ok: true, running: false, saved: false });
     }
-    if (url.startsWith("/api/language/")) return json({ ok: true });
+    if (url.startsWith("/api/language/")) {
+      const code = decodeURIComponent(url.split("/").pop());
+      setLanguage(code);
+      return json({ ok: true, target_language: L.target });
+    }
     return json({ ok: false, error: "not available in the browser build" });
   };
 
@@ -196,6 +221,87 @@
     }
   }
   window.WebSocket = LiveSocket;
+
+  /* ---------- translation, in a worker ---------- */
+
+  function languageName(code) {
+    const l = L.languages.find((x) => x.code === code);
+    return l ? l.name : code;
+  }
+
+  function setLanguage(code) {
+    if (code === "en" || !L.languages.some((l) => l.code === code)) {
+      L.target = "en";
+      // Switching back while the model is still downloading cancels it.
+      if (L.worker && !L.workerReady) {
+        L.worker.terminate();
+        L.worker = null;
+        status("");
+      }
+      return;
+    }
+    L.target = code;
+    startTranslator();
+    // Show the switch on the line already on screen, not only the next one.
+    if (L.lastCaption) translate(L.lastCaption.index, L.lastCaption.text);
+  }
+
+  function startTranslator() {
+    if (L.worker) return;
+    L.workerReady = false;
+    L.trFiles = {};
+    const worker = new Worker("../static/translate-worker.js", { type: "module" });
+    L.worker = worker;
+    const bar = document.getElementById("live-bar");
+    status("downloading the translation model (NLLB-200, about 900 MB, once)…");
+
+    worker.onmessage = (e) => {
+      const m = e.data;
+      if (m.type === "progress") {
+        L.trFiles[m.file] = m;
+        const files = Object.values(L.trFiles);
+        const loaded = files.reduce((a, f) => a + f.loaded, 0);
+        const total = files.reduce((a, f) => a + f.total, 0);
+        const pct = total ? Math.round((loaded / total) * 100) : 0;
+        if (bar) bar.style.width = pct + "%";
+        status(`downloading the translation model (NLLB-200, ${Math.round(total / 1e6)} MB, once) ${pct}%`);
+      } else if (m.type === "ready") {
+        L.workerReady = true;
+        METRICS.translatorThreads = m.threads;
+        if (bar) bar.style.width = "100%";
+        status(L.running ? "listening" : "translation ready");
+      } else if (m.type === "translation") {
+        METRICS.translations.push({ index: m.id, code: m.code, ms: m.ms, at: performance.now() });
+        emit({
+          kind: "translation",
+          index: m.id,
+          text: m.text,
+          target_language: m.code,
+          latency_ms: m.ms,
+          passthrough: false,
+          protected_terms: m.terms,
+        });
+      } else if (m.type === "dropped") {
+        METRICS.translationsDropped++;
+      } else if (m.type === "error") {
+        emit({ kind: "error", message: "Translation could not run here: " + m.message });
+        status("");
+        worker.terminate();
+        L.worker = null;
+        L.target = "en";
+      }
+    };
+    // Whisper keeps most of the cores; the English caption is what is read live.
+    const cores = navigator.hardwareConcurrency || 4;
+    worker.postMessage({ type: "load", threads: Math.max(1, Math.min(4, Math.floor(cores / 3))) });
+  }
+
+  function translate(index, text) {
+    if (!L.worker) startTranslator();
+    const l = L.languages.find((x) => x.code === L.target);
+    if (!l) return;
+    L.worker.postMessage({ type: "translate", id: index, text, code: l.code, nllb: l.nllb });
+  }
 
   /* ---------- the glossary, same vocabulary as the desktop fallback ---------- */
 
@@ -407,6 +513,8 @@
           rtf: Number((ms / 1000 / seconds).toFixed(3)),
           provider: device().provider,
         });
+        L.lastCaption = { index, text };
+        if (L.target !== "en") translate(index, text);
         emit({
           kind: "metric",
           uptime_s: 0,
@@ -627,7 +735,8 @@
       empty.innerHTML =
         "Press <kbd>Start</kbd> and talk, or pick <b>A browser tab</b> and share a " +
         "tab playing a lecture. The first run downloads Whisper (about 80 MB) and " +
-        "then runs it here &mdash; your audio never leaves this tab.";
+        "then runs it here &mdash; your audio never leaves this tab. Pick a language " +
+        "to translate the captions into it, on this device too.";
     }
   });
 })();

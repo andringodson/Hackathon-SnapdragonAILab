@@ -25,9 +25,24 @@ FRAME_MS = 32  # Silero VAD consumes 512-sample frames at 16 kHz.
 FRAME_SAMPLES = SAMPLE_RATE * FRAME_MS // 1000
 
 
-# Languages we can translate captions into. Codes are (display, NLLB code,
-# Whisper hint). Whisper's own language id is used for the *source* side.
-SUPPORTED_LANGUAGES: dict[str, dict[str, str]] = {
+# Languages we can translate captions into: the Indian languages NLLB-200
+# covers that passed scripts/check_languages.py against the real model -
+# right script, technical terms intact, and a back-translation that still
+# means the lecture sentence. That is 17 of the 22 in the Eighth Schedule and
+# five widely spoken ones outside it.
+#
+# Not here, and why: Bodo, Dogri and Konkani are not in NLLB-200. Sanskrit
+# and Santali are, but were tested and dropped - the model transliterates the
+# placeholders that protect technical terms ("Qx0z" came back as Devanagari
+# and Ol Chiki), so "eigenvalue" did not survive, which is the one thing this
+# stage promises. Re-run the check before adding either back.
+#
+# "whisper" is the code Whisper uses if a lecturer might *speak* the
+# language, and must then be in asr.WHISPER_LANGUAGES. None means the
+# language is a translation target only: detection is left alone, because
+# widening it (to Sanskrit, say) would let a Hindi lecture be mistaken for it.
+# The first eight keep their order - the demo and the defaults open on Hindi.
+SUPPORTED_LANGUAGES: dict[str, dict[str, str | None]] = {
     "hi": {"name": "हिन्दी (Hindi)", "nllb": "hin_Deva", "whisper": "hi"},
     "ta": {"name": "தமிழ் (Tamil)", "nllb": "tam_Taml", "whisper": "ta"},
     "te": {"name": "తెలుగు (Telugu)", "nllb": "tel_Telu", "whisper": "te"},
@@ -36,6 +51,20 @@ SUPPORTED_LANGUAGES: dict[str, dict[str, str]] = {
     "bn": {"name": "বাংলা (Bengali)", "nllb": "ben_Beng", "whisper": "bn"},
     "mr": {"name": "मराठी (Marathi)", "nllb": "mar_Deva", "whisper": "mr"},
     "gu": {"name": "ગુજરાતી (Gujarati)", "nllb": "guj_Gujr", "whisper": "gu"},
+    "pa": {"name": "ਪੰਜਾਬੀ (Punjabi)", "nllb": "pan_Guru", "whisper": "pa"},
+    "or": {"name": "ଓଡ଼ିଆ (Odia)", "nllb": "ory_Orya", "whisper": None},
+    "ur": {"name": "اردو (Urdu)", "nllb": "urd_Arab", "whisper": "ur"},
+    "as": {"name": "অসমীয়া (Assamese)", "nllb": "asm_Beng", "whisper": None},
+    "mai": {"name": "मैथिली (Maithili)", "nllb": "mai_Deva", "whisper": None},
+    "ne": {"name": "नेपाली (Nepali)", "nllb": "npi_Deva", "whisper": "ne"},
+    "ks": {"name": "کٲشُر (Kashmiri)", "nllb": "kas_Arab", "whisper": None},
+    "sd": {"name": "سنڌي (Sindhi)", "nllb": "snd_Arab", "whisper": None},
+    "mni": {"name": "মৈতৈলোন্ (Manipuri)", "nllb": "mni_Beng", "whisper": None},
+    "bho": {"name": "भोजपुरी (Bhojpuri)", "nllb": "bho_Deva", "whisper": None},
+    "awa": {"name": "अवधी (Awadhi)", "nllb": "awa_Deva", "whisper": None},
+    "hne": {"name": "छत्तीसगढ़ी (Chhattisgarhi)", "nllb": "hne_Deva", "whisper": None},
+    "mag": {"name": "मगही (Magahi)", "nllb": "mag_Deva", "whisper": None},
+    "lus": {"name": "Mizo ṭawng (Mizo)", "nllb": "lus_Latn", "whisper": None},
     "en": {"name": "English", "nllb": "eng_Latn", "whisper": "en"},
 }
 

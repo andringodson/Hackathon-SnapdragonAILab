@@ -18,11 +18,30 @@ from sahaay.asr import WHISPER_LANGUAGES
 
 
 class TestLanguageTable:
-    def test_covers_the_eight_target_languages(self):
+    def test_spoken_languages_are_detectable(self):
+        # A language with a Whisper code is one a lecturer might speak, so
+        # detection has to be able to return it. Translation-only targets
+        # (Odia, Santali, Bhojpuri...) carry None and leave detection alone.
         from sahaay.config import SUPPORTED_LANGUAGES
 
-        for code in SUPPORTED_LANGUAGES:
-            assert code in WHISPER_LANGUAGES, f"{code} is a target language but not detectable"
+        for code, lang in SUPPORTED_LANGUAGES.items():
+            if lang["whisper"] is not None:
+                assert lang["whisper"] in WHISPER_LANGUAGES, f"{code} is spoken but not detectable"
+
+    def test_every_target_names_an_nllb_language(self):
+        import re
+
+        from sahaay.config import SUPPORTED_LANGUAGES
+
+        for code, lang in SUPPORTED_LANGUAGES.items():
+            assert re.fullmatch(r"[a-z]{3}_[A-Z][a-z]{3}", lang["nllb"]), f"{code}: {lang['nllb']}"
+            assert lang["name"].strip(), code
+
+    def test_the_original_eight_still_come_first(self):
+        # The demo, the defaults and every recording open on these.
+        from sahaay.config import SUPPORTED_LANGUAGES
+
+        assert list(SUPPORTED_LANGUAGES)[:8] == ["hi", "ta", "te", "kn", "ml", "bn", "mr", "gu"]
 
     def test_indian_languages_present(self):
         for code in ("hi", "ta", "te", "kn", "ml", "bn", "mr", "gu"):

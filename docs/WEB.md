@@ -42,14 +42,45 @@ public URL while the pipeline itself does not.
 `/api/status`, opens a socket, and renders what arrives. What arrives is
 produced by real inference a few centimetres away.
 
+### Translation, in the browser too
+
+Pick a language and the captions are translated into it, on the visitor's
+machine, into any of the 22 Indian languages the desktop app offers. It is the
+same model the desktop ships, NLLB-200 distilled 600M, at the smallest
+quantisation transformers.js publishes (q8: 419 MB encoder + 475 MB decoder),
+running in `web/static/translate-worker.js`:
+
+- **Downloaded only when a language is picked**, never on page load, and
+  cached by the browser after that. Switching back to English while it is
+  still downloading cancels it.
+- **In a worker, with four threads at most**, so the page stays responsive and
+  Whisper keeps most of the CPU. The English caption is what is read live;
+  the translation catches up at the next pause, as on the desktop.
+- **Technical terms are protected** by `web/static/terms.js`, a port of the
+  desktop's `TermProtector`. `tests/test_terms_js.py` runs it under Node
+  against the Python original, so the two cannot drift.
+- **The oldest waiting caption is dropped under pressure**, the desktop rule:
+  a translation a minute late is worse than none.
+
+Measured with `python scripts/check_live.py --translate hi,ur,or,as` on the
+laptop the rest of this page was tuned on (WASM, 12 logical cores): a median
+of **6.2 s** from caption to translation, and Whisper's real-time factor went
+from **0.56 to 0.66** while translating, so the captions kept up. Urdu came
+back right to left, Odia in Odia script, Assamese in Assamese.
+
+The language list is exported from `sahaay/config.py` to
+`web/static/languages.json` by `build_web.py`, like the glossary, so the
+browser cannot offer a language the desktop does not. Every language on it
+passed `scripts/check_languages.py` against the real model first.
+
 The jargon sidebar uses the same seeded vocabulary the desktop app falls back
 to when no language model is installed. `build_web.py` exports it to
 `web/static/glossary.json` from `sahaay.llm.SEED_GLOSSARY`, and a test asserts
 the two match, so they cannot drift.
 
 **What it is not.** Whisper Base rather than Small; a shared browser tab
-rather than all system audio; no translation, because NLLB-200 is 650 MB and
-that is not something to push down a phone connection; and no NPU, so it
+rather than all system audio; translation that shares the CPU with Whisper
+and so lands about six seconds behind each caption; and no NPU, so it
 cannot show the measurement the project is actually about. The page says all
 of this in its own banner rather than letting a visitor infer otherwise.
 

@@ -29,7 +29,7 @@ Cloud captioning handles this badly and costs money per minute. It also needs co
 Three things, live, while the lecture is happening:
 
 1. **Captions** the lecturer — capturing both the microphone and whatever is playing through the speakers, so an in-person class and a Zoom lecture both work with no setup.
-2. **Translates** each line into one of eight Indian languages, while *protecting* the technical terms so "eigenvalue" stays "eigenvalue" instead of becoming a transliterated guess.
+2. **Translates** each line into one of 22 Indian languages, while *protecting* the technical terms so "eigenvalue" stays "eigenvalue" instead of becoming a transliterated guess.
 3. **Explains the jargon** as it is spoken. When the lecturer says "eigenvalue", a one-line explanation appears in the student's language, in the sidebar, without them leaving the lecture to search for it.
 
 When the session ends it writes structured notes, a glossary and a five-question self-test to a Markdown file.
@@ -67,8 +67,10 @@ playing a lecture. Your audio never leaves the tab. Watch the RTF badge: after
 tuning it holds about 0.5 on a laptop CPU ([docs/TUNING.md](docs/TUNING.md)),
 because the browser runs one model. The measurement this project is about is
 what happens when a second model shares those cores
-([docs/CONCURRENCY.md](docs/CONCURRENCY.md)). Captions and the jargon sidebar only; the NPU, system-audio
-capture and Indian-language translation need the desktop build below.
+([docs/CONCURRENCY.md](docs/CONCURRENCY.md)). Pick a language and it translates too, into any of
+the 22 Indian languages the desktop app offers, with the same model (NLLB-200,
+about 900 MB, downloaded only when you pick one). The NPU and system-audio
+capture need the desktop build below.
 
 No models, no audio device, no Snapdragon hardware:
 

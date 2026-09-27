@@ -26,6 +26,15 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent
+
+# The language count comes from the app's own table, so the deck cannot go on
+# saying "eight" after the app offers more.
+import sys  # noqa: E402
+
+sys.path.insert(0, str(ROOT.parent))
+from sahaay.config import SUPPORTED_LANGUAGES  # noqa: E402
+
+N_LANGS = len([c for c in SUPPORTED_LANGUAGES if c != "en"])
 SLIDES = ROOT / "project" / "slides"
 SLIDES.mkdir(parents=True, exist_ok=True)
 
@@ -266,7 +275,7 @@ for tag, tag_col, chip, name, body in [
     ("CPU", ON_L_DIM, "#EDF1F6", "Loopback capture", "Whatever is playing. No virtual cable, no driver."),
     ("CPU", ON_L_DIM, "#EDF1F6", "Silero VAD", "Splits on pauses, so captions break where sentences do."),
     ("NPU", NPU_L, "#DFF3EA", "Whisper Small", "Transcription and per-segment language detection."),
-    ("NPU TARGET", WARN_L, "#FBF0DC", "NLLB-200", "Eight Indian languages, technical terms protected."),
+    ("NPU TARGET", WARN_L, "#FBF0DC", "NLLB-200", f"{N_LANGS} Indian languages, technical terms protected."),
     ("NPU TARGET", WARN_L, "#FBF0DC", "Llama 3.2", "Glossary live; notes and a self-test at the end."),
 ]:
     _stages.append(f"""

@@ -36,7 +36,7 @@ running entirely on a Snapdragon PC with the network switched off.
 ## Short description (about 100 words)
 
 Sahaay listens to any lecture playing on a laptop and shows live captions,
-translates them into eight Indian languages, and explains technical terms as
+translates them into 22 Indian languages, and explains technical terms as
 they are spoken. Everything runs on the device: Whisper for speech, NLLB-200
 for translation, Llama 3.2 for the glossary. No audio leaves the machine.
 The case for Snapdragon is measured, not asserted: on a CPU, running the

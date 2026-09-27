@@ -43,6 +43,12 @@ class TestTermProtector:
         _, mapping = p.protect("Find the eigenvector first.")
         assert "eigenvector" in mapping.values()
 
+    def test_noun_form_of_a_seeded_verb_is_protected(self):
+        # Odia turned an unprotected "Diagonalization" into sugarcane.
+        p = TermProtector(extra_terms=["diagonalize"])
+        _, mapping = p.protect("Diagonalization turns it into a simple one.")
+        assert "Diagonalization" in mapping.values()
+
     def test_ordinary_words_are_left_alone(self):
         _, mapping = TermProtector().protect("today we will start the class")
         assert mapping == {}

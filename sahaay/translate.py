@@ -1,8 +1,9 @@
 """Caption translation into Indian languages.
 
 NLLB-200-distilled-600M, INT8-quantised. 600M is the sweet spot: it covers
-all eight target languages in one model, and at INT8 it is small enough to
-sit on the NPU next to Whisper and the 3B LLM without thrashing.
+every Indian language in config.SUPPORTED_LANGUAGES in one model - 22 of
+them, each checked by scripts/check_languages.py - and at INT8 it is small
+enough to sit on the NPU next to Whisper and the 3B LLM without thrashing.
 
 A note on what this stage is *not* doing. Indian lecture speech is heavily
 code-mixed - English technical terms inside a Hindi or Tamil sentence. Naive
@@ -93,6 +94,12 @@ class TermProtector:
             # the silent e before -ing/-ed, so put it back before matching.
             if stem in self.extra or stem + "e" in self.extra:
                 return True
+        # "diagonalization" -> "diagonalize". Unprotected, Odia rendered the
+        # lecture's "Diagonalization turns a hard multiplication..." as
+        # sugarcane. Observed in scripts/check_live.py --translate or.
+        for suffix in ("ization", "isation", "izations", "isations"):
+            if w.endswith(suffix) and w[: -len(suffix)] + "ize" in self.extra:
+                return True
         # "matrices" -> "matrix", "indices" -> "index"
         return w.endswith("ices") and w[:-4] + "ix" in self.extra
 
@@ -170,14 +177,12 @@ class NllbTranslator:
             raise ValueError(f"NLLB language token not in vocabulary: {lang_code}")
         return tid
 
-    def translate(self, text: str, target_language: str) -> TranslationResult:
-        t0 = time.perf_counter()
-        lang = SUPPORTED_LANGUAGES.get(target_language)
-        if lang is None:
-            raise ValueError(f"Unsupported target language: {target_language}")
+    def generate(self, enc_ids: list[int], nllb_code: str) -> str:
+        """Greedy-decode ``enc_ids`` (source-language token first) into ``nllb_code``.
 
-        protected, mapping = self.protector.protect(text)
-        enc_ids = self.tokenizer.encode(protected).ids
+        Split out of translate() so scripts/check_languages.py can back-translate
+        with a different source token; translate() is the only product caller.
+        """
         input_ids = np.array([enc_ids], dtype=np.int64)
         attention = np.ones_like(input_ids)
 
@@ -190,7 +195,7 @@ class NllbTranslator:
         # wrong language, which is worse than an error because it looks fine.
         eos = self.tokenizer.token_to_id("</s>")
         eos = 2 if eos is None else eos
-        decoded: list[int] = [eos, self._lang_token(lang["nllb"])]
+        decoded: list[int] = [eos, self._lang_token(nllb_code)]
 
         past: dict[str, np.ndarray] = {}
 
@@ -224,7 +229,16 @@ class NllbTranslator:
                 break
             decoded.append(nxt)
 
-        out = self.tokenizer.decode(decoded[2:], skip_special_tokens=True).strip()
+        return self.tokenizer.decode(decoded[2:], skip_special_tokens=True).strip()
+
+    def translate(self, text: str, target_language: str) -> TranslationResult:
+        t0 = time.perf_counter()
+        lang = SUPPORTED_LANGUAGES.get(target_language)
+        if lang is None:
+            raise ValueError(f"Unsupported target language: {target_language}")
+
+        protected, mapping = self.protector.protect(text)
+        out = self.generate(self.tokenizer.encode(protected).ids, lang["nllb"])
         out = self.protector.restore(out, mapping)
 
         return TranslationResult(

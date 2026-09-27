@@ -1,0 +1,112 @@
+[
+ {
+  "code": "hi",
+  "name": "हिन्दी (Hindi)",
+  "nllb": "hin_Deva"
+ },
+ {
+  "code": "ta",
+  "name": "தமிழ் (Tamil)",
+  "nllb": "tam_Taml"
+ },
+ {
+  "code": "te",
+  "name": "తెలుగు (Telugu)",
+  "nllb": "tel_Telu"
+ },
+ {
+  "code": "kn",
+  "name": "ಕನ್ನಡ (Kannada)",
+  "nllb": "kan_Knda"
+ },
+ {
+  "code": "ml",
+  "name": "മലയാളം (Malayalam)",
+  "nllb": "mal_Mlym"
+ },
+ {
+  "code": "bn",
+  "name": "বাংলা (Bengali)",
+  "nllb": "ben_Beng"
+ },
+ {
+  "code": "mr",
+  "name": "मराठी (Marathi)",
+  "nllb": "mar_Deva"
+ },
+ {
+  "code": "gu",
+  "name": "ગુજરાતી (Gujarati)",
+  "nllb": "guj_Gujr"
+ },
+ {
+  "code": "pa",
+  "name": "ਪੰਜਾਬੀ (Punjabi)",
+  "nllb": "pan_Guru"
+ },
+ {
+  "code": "or",
+  "name": "ଓଡ଼ିଆ (Odia)",
+  "nllb": "ory_Orya"
+ },
+ {
+  "code": "ur",
+  "name": "اردو (Urdu)",
+  "nllb": "urd_Arab"
+ },
+ {
+  "code": "as",
+  "name": "অসমীয়া (Assamese)",
+  "nllb": "asm_Beng"
+ },
+ {
+  "code": "mai",
+  "name": "मैथिली (Maithili)",
+  "nllb": "mai_Deva"
+ },
+ {
+  "code": "ne",
+  "name": "नेपाली (Nepali)",
+  "nllb": "npi_Deva"
+ },
+ {
+  "code": "ks",
+  "name": "کٲشُر (Kashmiri)",
+  "nllb": "kas_Arab"
+ },
+ {
+  "code": "sd",
+  "name": "سنڌي (Sindhi)",
+  "nllb": "snd_Arab"
+ },
+ {
+  "code": "mni",
+  "name": "মৈতৈলোন্ (Manipuri)",
+  "nllb": "mni_Beng"
+ },
+ {
+  "code": "bho",
+  "name": "भोजपुरी (Bhojpuri)",
+  "nllb": "bho_Deva"
+ },
+ {
+  "code": "awa",
+  "name": "अवधी (Awadhi)",
+  "nllb": "awa_Deva"
+ },
+ {
+  "code": "hne",
+  "name": "छत्तीसगढ़ी (Chhattisgarhi)",
+  "nllb": "hne_Deva"
+ },
+ {
+  "code": "mag",
+  "name": "मगही (Magahi)",
+  "nllb": "mag_Deva"
+ },
+ {
+  "code": "lus",
+  "name": "Mizo ṭawng (Mizo)",
+  "nllb": "lus_Latn"
+ }
+]

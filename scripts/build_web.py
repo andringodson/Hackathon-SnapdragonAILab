@@ -179,6 +179,7 @@ def expected_files() -> dict[Path, str]:
     )
     files[STATIC_DIR / "replay.css"] = BANNER_CSS + "\n"
     files[STATIC_DIR / "glossary.json"] = glossary_json()
+    files[STATIC_DIR / "languages.json"] = languages_json()
     return files
 
 
@@ -193,6 +194,23 @@ def glossary_json() -> str:
     from sahaay.llm import SEED_GLOSSARY
 
     return json.dumps(SEED_GLOSSARY, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+
+
+def languages_json() -> str:
+    """The caption languages, from sahaay/config.py, for /live's picker.
+
+    Same reasoning as glossary_json(): exported rather than retyped, so the
+    browser offers exactly what the desktop app does, and the drift test
+    fails if SUPPORTED_LANGUAGES changes without a rebuild.
+    """
+    from sahaay.config import SUPPORTED_LANGUAGES
+
+    langs = [
+        {"code": code, "name": lang["name"], "nllb": lang["nllb"]}
+        for code, lang in SUPPORTED_LANGUAGES.items()
+        if code != "en"
+    ]
+    return json.dumps(langs, ensure_ascii=False, indent=1) + "\n"
 
 
 def sessions_index() -> dict:
