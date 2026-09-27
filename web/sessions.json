@@ -113,6 +113,14 @@
    "duration_s": 127.394
   },
   {
+   "code": "ks",
+   "name": "کٲشُر (Kashmiri)",
+   "file": "session.ks.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 165.133
+  },
+  {
    "code": "sd",
    "name": "سنڌي (Sindhi)",
    "file": "session.sd.json",
