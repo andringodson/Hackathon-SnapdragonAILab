@@ -81,6 +81,14 @@
    "duration_s": 126.417
   },
   {
+   "code": "ur",
+   "name": "اردو (Urdu)",
+   "file": "session.ur.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 161.52
+  },
+  {
    "code": "as",
    "name": "অসমীয়া (Assamese)",
    "file": "session.as.json",
