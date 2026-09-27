@@ -105,6 +105,14 @@
    "duration_s": 142.567
   },
   {
+   "code": "bho",
+   "name": "भोजपुरी (Bhojpuri)",
+   "file": "session.bho.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 126.155
+  },
+  {
    "code": "awa",
    "name": "अवधी (Awadhi)",
    "file": "session.awa.json",

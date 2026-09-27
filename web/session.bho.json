@@ -3,10 +3,10 @@
  "mode": "real",
  "audio_file": "lecture_long.wav",
  "target_language": "bho",
- "duration_s": 164.216,
+ "duration_s": 126.155,
  "event_counts": {
   "status": 8,
-  "level": 482,
+  "level": 480,
   "partial": 18,
   "caption": 18,
   "metric": 18,
@@ -41,7 +41,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 0.5,
+    "uptime_s": 0.2,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -51,7 +51,7 @@
   },
   {
    "kind": "status",
-   "t": 9.275,
+   "t": 3.13,
    "stage": "loading",
    "detail": "translation",
    "running": false,
@@ -75,7 +75,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 9.8,
+    "uptime_s": 3.3,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -85,7 +85,7 @@
   },
   {
    "kind": "status",
-   "t": 30.299,
+   "t": 11.676,
    "stage": "loading",
    "detail": "language model",
    "running": false,
@@ -109,7 +109,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 30.8,
+    "uptime_s": 11.9,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -119,7 +119,7 @@
   },
   {
    "kind": "status",
-   "t": 30.301,
+   "t": 11.677,
    "stage": "warming",
    "running": false,
    "device": {
@@ -142,7 +142,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 30.8,
+    "uptime_s": 11.9,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -152,7 +152,7 @@
   },
   {
    "kind": "status",
-   "t": 36.468,
+   "t": 15.479,
    "stage": "ready",
    "running": false,
    "device": {
@@ -175,7 +175,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 37.0,
+    "uptime_s": 15.7,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -185,12 +185,12 @@
   },
   {
    "kind": "level",
-   "t": 36.636,
+   "t": 15.54,
    "rms": 0.0
   },
   {
    "kind": "status",
-   "t": 36.639,
+   "t": 15.541,
    "running": true,
    "device": {
     "provider": "CPUExecutionProvider",
@@ -212,7 +212,7 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 0.2,
+    "uptime_s": 0.1,
     "audio_seconds": 0.0,
     "input_level": 0.0,
     "merged_segments": 0,
@@ -222,523 +222,397 @@
   },
   {
    "kind": "level",
-   "t": 36.839,
-   "rms": 0.12575
+   "t": 15.758,
+   "rms": 0.16307
   },
   {
    "kind": "level",
-   "t": 37.06,
-   "rms": 0.23201
+   "t": 15.98,
+   "rms": 0.16373
   },
   {
    "kind": "level",
-   "t": 37.26,
-   "rms": 0.10917
+   "t": 16.211,
+   "rms": 0.14511
   },
   {
    "kind": "level",
-   "t": 37.483,
-   "rms": 0.14153
+   "t": 16.432,
+   "rms": 0.12407
   },
   {
    "kind": "level",
-   "t": 37.693,
-   "rms": 0.11215
+   "t": 16.648,
+   "rms": 0.14046
   },
   {
    "kind": "level",
-   "t": 37.923,
-   "rms": 0.07983
+   "t": 16.872,
+   "rms": 0.11911
   },
   {
    "kind": "level",
-   "t": 38.145,
-   "rms": 0.00025
+   "t": 17.096,
+   "rms": 0.00112
   },
   {
    "kind": "level",
-   "t": 38.347,
+   "t": 17.327,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 38.568,
+   "t": 17.549,
    "rms": 0.0
   },
   {
    "kind": "partial",
-   "t": 38.728,
+   "t": 17.703,
    "text": "...",
    "index": 0
   },
   {
    "kind": "level",
-   "t": 38.792,
+   "t": 17.764,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 39.034,
+   "t": 17.972,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 39.269,
-   "rms": 0.03921
+   "t": 18.183,
+   "rms": 0.01315
   },
   {
    "kind": "level",
-   "t": 39.475,
-   "rms": 0.1442
+   "t": 18.409,
+   "rms": 0.14722
   },
   {
    "kind": "level",
-   "t": 39.685,
-   "rms": 0.15374
+   "t": 18.63,
+   "rms": 0.08039
   },
   {
    "kind": "level",
-   "t": 39.888,
-   "rms": 0.15726
+   "t": 18.833,
+   "rms": 0.11227
   },
   {
    "kind": "level",
-   "t": 40.113,
-   "rms": 0.00775
+   "t": 19.054,
+   "rms": 0.02037
   },
   {
    "kind": "level",
-   "t": 40.345,
-   "rms": 0.06135
+   "t": 19.272,
+   "rms": 0.13539
   },
   {
    "kind": "level",
-   "t": 40.557,
-   "rms": 0.00466
+   "t": 19.493,
+   "rms": 0.05056
   },
   {
    "kind": "level",
-   "t": 40.774,
-   "rms": 0.16297
+   "t": 19.699,
+   "rms": 0.19662
   },
   {
    "kind": "level",
-   "t": 41.006,
-   "rms": 0.06531
-  },
-  {
-   "kind": "level",
-   "t": 41.213,
-   "rms": 0.20873
-  },
-  {
-   "kind": "level",
-   "t": 41.42,
-   "rms": 0.14985
-  },
-  {
-   "kind": "level",
-   "t": 41.65,
-   "rms": 0.00755
-  },
-  {
-   "kind": "level",
-   "t": 41.873,
-   "rms": 0.14496
-  },
-  {
-   "kind": "level",
-   "t": 42.086,
-   "rms": 0.07809
-  },
-  {
-   "kind": "level",
-   "t": 42.307,
-   "rms": 0.12847
-  },
-  {
-   "kind": "level",
-   "t": 42.538,
-   "rms": 0.0672
-  },
-  {
-   "kind": "level",
-   "t": 42.758,
-   "rms": 0.04157
-  },
-  {
-   "kind": "level",
-   "t": 42.975,
-   "rms": 5e-05
-  },
-  {
-   "kind": "level",
-   "t": 43.2,
-   "rms": 0.0
+   "t": 19.919,
+   "rms": 0.12437
   },
   {
    "kind": "caption",
-   "t": 43.296,
+   "t": 20.096,
    "index": 0,
    "text": "Good morning everyone.",
    "language": "en",
    "start_s": 0.0,
-   "latency_ms": 4566.9,
-   "rtf": 2.099,
+   "latency_ms": 2392.4,
+   "rtf": 1.099,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 43.298,
-   "uptime_s": 6.8,
-   "audio_seconds": 6.8,
-   "input_level": 0.0,
+   "t": 20.096,
+   "uptime_s": 4.6,
+   "audio_seconds": 4.6,
+   "input_level": 0.12437,
    "merged_segments": 0,
-   "realtime_factor": 0.676,
+   "realtime_factor": 0.523,
    "stages": [
     {
      "stage": "vad",
-     "count": 211,
-     "mean_ms": 2.2,
-     "p50_ms": 1.5,
-     "p95_ms": 6.4,
-     "min_ms": 0.6,
-     "max_ms": 29.0
+     "count": 143,
+     "mean_ms": 1.1,
+     "p50_ms": 0.9,
+     "p95_ms": 1.8,
+     "min_ms": 0.5,
+     "max_ms": 9.9
     },
     {
      "stage": "asr",
      "count": 1,
-     "mean_ms": 4567.2,
-     "p50_ms": 4567.2,
-     "p95_ms": 4567.2,
-     "min_ms": 4567.2,
-     "max_ms": 4567.2
+     "mean_ms": 2392.5,
+     "p50_ms": 2392.5,
+     "p95_ms": 2392.5,
+     "min_ms": 2392.5,
+     "max_ms": 2392.5
     }
    ]
   },
   {
    "kind": "level",
-   "t": 43.422,
-   "rms": 0.0
-  },
-  {
-   "kind": "partial",
-   "t": 43.598,
-   "text": "...",
-   "index": 1
+   "t": 20.14,
+   "rms": 0.17907
   },
   {
    "kind": "level",
-   "t": 43.627,
-   "rms": 0.0
+   "t": 20.357,
+   "rms": 0.09711
   },
   {
    "kind": "level",
-   "t": 43.841,
-   "rms": 0.0
+   "t": 20.562,
+   "rms": 0.05811
   },
   {
    "kind": "level",
-   "t": 44.049,
-   "rms": 0.0
+   "t": 20.785,
+   "rms": 0.07384
   },
   {
    "kind": "level",
-   "t": 44.256,
-   "rms": 0.0
+   "t": 21.0,
+   "rms": 0.07999
   },
   {
    "kind": "level",
-   "t": 44.459,
-   "rms": 0.0
+   "t": 21.222,
+   "rms": 0.02507
   },
   {
    "kind": "level",
-   "t": 44.701,
-   "rms": 3e-05
-  },
-  {
-   "kind": "level",
-   "t": 44.921,
-   "rms": 0.17988
-  },
-  {
-   "kind": "level",
-   "t": 45.144,
-   "rms": 0.02325
-  },
-  {
-   "kind": "level",
-   "t": 45.345,
-   "rms": 0.13689
-  },
-  {
-   "kind": "level",
-   "t": 45.547,
-   "rms": 0.01347
-  },
-  {
-   "kind": "level",
-   "t": 45.785,
-   "rms": 0.09861
-  },
-  {
-   "kind": "level",
-   "t": 46.014,
-   "rms": 0.14404
-  },
-  {
-   "kind": "level",
-   "t": 46.223,
-   "rms": 0.10405
-  },
-  {
-   "kind": "level",
-   "t": 46.424,
-   "rms": 0.07952
-  },
-  {
-   "kind": "level",
-   "t": 46.645,
-   "rms": 0.14003
-  },
-  {
-   "kind": "level",
-   "t": 46.856,
-   "rms": 0.10069
+   "t": 21.424,
+   "rms": 0.01265
   },
   {
    "kind": "translation",
-   "t": 46.987,
+   "t": 21.524,
    "index": 0,
    "text": "सब लोगन के सुप्रभात।",
    "target_language": "bho",
-   "latency_ms": 3688.7,
+   "latency_ms": 1427.8,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 47.081,
-   "rms": 0.06252
+   "t": 21.646,
+   "rms": 0.05255
   },
   {
    "kind": "level",
-   "t": 47.299,
-   "rms": 0.17383
+   "t": 21.868,
+   "rms": 0.00842
   },
   {
    "kind": "level",
-   "t": 47.501,
-   "rms": 0.10776
-  },
-  {
-   "kind": "level",
-   "t": 47.721,
-   "rms": 0.14927
-  },
-  {
-   "kind": "level",
-   "t": 47.941,
-   "rms": 0.05885
-  },
-  {
-   "kind": "level",
-   "t": 48.161,
-   "rms": 0.05923
-  },
-  {
-   "kind": "level",
-   "t": 48.364,
-   "rms": 0.00143
-  },
-  {
-   "kind": "level",
-   "t": 48.589,
+   "t": 22.086,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 48.807,
-   "rms": 0.05345
+   "t": 22.31,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 22.54,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 22.573,
+   "text": "...",
+   "index": 1
+  },
+  {
+   "kind": "level",
+   "t": 22.761,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 22.992,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 23.213,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 23.435,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 23.657,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 23.878,
+   "rms": 0.17988
+  },
+  {
+   "kind": "level",
+   "t": 24.108,
+   "rms": 0.02325
+  },
+  {
+   "kind": "level",
+   "t": 24.31,
+   "rms": 0.10694
+  },
+  {
+   "kind": "level",
+   "t": 24.52,
+   "rms": 0.01347
+  },
+  {
+   "kind": "level",
+   "t": 24.722,
+   "rms": 0.13485
+  },
+  {
+   "kind": "level",
+   "t": 24.943,
+   "rms": 0.09794
+  },
+  {
+   "kind": "level",
+   "t": 25.161,
+   "rms": 0.10405
   },
   {
    "kind": "caption",
-   "t": 48.839,
+   "t": 25.259,
    "index": 1,
    "text": "Today we will start with eigenvalues and eigenvectors.",
    "language": "en",
    "start_s": 2.55,
-   "latency_ms": 5241.2,
-   "rtf": 1.17,
+   "latency_ms": 2685.9,
+   "rtf": 0.6,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 48.839,
-   "uptime_s": 12.4,
-   "audio_seconds": 12.3,
-   "input_level": 0.05345,
+   "t": 25.259,
+   "uptime_s": 9.8,
+   "audio_seconds": 9.8,
+   "input_level": 0.10405,
    "merged_segments": 0,
-   "realtime_factor": 0.796,
+   "realtime_factor": 0.52,
    "stages": [
     {
      "stage": "vad",
-     "count": 384,
-     "mean_ms": 3.0,
-     "p50_ms": 1.6,
-     "p95_ms": 11.3,
-     "min_ms": 0.6,
-     "max_ms": 52.6
+     "count": 305,
+     "mean_ms": 1.1,
+     "p50_ms": 1.0,
+     "p95_ms": 2.0,
+     "min_ms": 0.4,
+     "max_ms": 9.9
     },
     {
      "stage": "asr",
      "count": 2,
-     "mean_ms": 4904.2,
-     "p50_ms": 5241.3,
-     "p95_ms": 5241.3,
-     "min_ms": 4567.2,
-     "max_ms": 5241.3
+     "mean_ms": 2539.2,
+     "p50_ms": 2686.0,
+     "p95_ms": 2686.0,
+     "min_ms": 2392.5,
+     "max_ms": 2686.0
     },
     {
      "stage": "translate",
      "count": 1,
-     "mean_ms": 3688.7,
-     "p50_ms": 3688.7,
-     "p95_ms": 3688.7,
-     "min_ms": 3688.7,
-     "max_ms": 3688.7
+     "mean_ms": 1427.8,
+     "p50_ms": 1427.8,
+     "p95_ms": 1427.8,
+     "min_ms": 1427.8,
+     "max_ms": 1427.8
     }
    ]
   },
   {
    "kind": "level",
-   "t": 49.026,
-   "rms": 0.08646
+   "t": 25.384,
+   "rms": 0.07952
   },
   {
    "kind": "level",
-   "t": 49.229,
-   "rms": 0.11499
+   "t": 25.605,
+   "rms": 0.14003
   },
   {
    "kind": "level",
-   "t": 49.446,
-   "rms": 0.12854
+   "t": 25.806,
+   "rms": 0.13798
   },
   {
    "kind": "level",
-   "t": 49.672,
-   "rms": 0.00699
+   "t": 26.029,
+   "rms": 0.04327
   },
   {
    "kind": "level",
-   "t": 49.888,
-   "rms": 0.16733
+   "t": 26.247,
+   "rms": 0.17972
   },
   {
    "kind": "level",
-   "t": 50.138,
-   "rms": 0.0509
+   "t": 26.452,
+   "rms": 0.13556
   },
   {
    "kind": "level",
-   "t": 50.372,
-   "rms": 0.22623
+   "t": 26.659,
+   "rms": 0.19849
   },
   {
    "kind": "level",
-   "t": 50.594,
-   "rms": 0.05697
+   "t": 26.89,
+   "rms": 0.12753
   },
   {
    "kind": "level",
-   "t": 50.814,
-   "rms": 3e-05
+   "t": 27.112,
+   "rms": 0.09814
   },
   {
    "kind": "level",
-   "t": 51.032,
+   "t": 27.313,
+   "rms": 0.00183
+  },
+  {
+   "kind": "level",
+   "t": 27.534,
    "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 51.243,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 51.465,
-   "rms": 0.0
-  },
-  {
-   "kind": "partial",
-   "t": 51.494,
-   "text": "...",
-   "index": 2
-  },
-  {
-   "kind": "level",
-   "t": 51.671,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 51.883,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 52.101,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 52.32,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 52.545,
-   "rms": 5e-05
-  },
-  {
-   "kind": "level",
-   "t": 52.749,
-   "rms": 0.10902
-  },
-  {
-   "kind": "level",
-   "t": 52.964,
-   "rms": 0.02575
-  },
-  {
-   "kind": "level",
-   "t": 53.197,
-   "rms": 0.0293
-  },
-  {
-   "kind": "level",
-   "t": 53.406,
-   "rms": 0.08733
-  },
-  {
-   "kind": "level",
-   "t": 53.609,
-   "rms": 0.08513
-  },
-  {
-   "kind": "level",
-   "t": 53.823,
-   "rms": 0.1751
   },
   {
    "kind": "translation",
-   "t": 53.988,
+   "t": 27.747,
    "index": 1,
    "text": "आज हम eigenvalues अउरी eigenvectors से शुरू करब.",
    "target_language": "bho",
-   "latency_ms": 5148.5,
+   "latency_ms": 2487.9,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -747,1636 +621,1437 @@
   },
   {
    "kind": "level",
-   "t": 54.052,
+   "t": 27.758,
+   "rms": 0.0131
+  },
+  {
+   "kind": "level",
+   "t": 27.973,
+   "rms": 0.15309
+  },
+  {
+   "kind": "level",
+   "t": 28.179,
+   "rms": 0.12369
+  },
+  {
+   "kind": "level",
+   "t": 28.397,
+   "rms": 0.04919
+  },
+  {
+   "kind": "level",
+   "t": 28.619,
+   "rms": 0.01736
+  },
+  {
+   "kind": "level",
+   "t": 28.851,
+   "rms": 0.16271
+  },
+  {
+   "kind": "level",
+   "t": 29.073,
+   "rms": 0.08661
+  },
+  {
+   "kind": "level",
+   "t": 29.295,
+   "rms": 0.10966
+  },
+  {
+   "kind": "level",
+   "t": 29.512,
+   "rms": 0.07537
+  },
+  {
+   "kind": "level",
+   "t": 29.738,
+   "rms": 0.00045
+  },
+  {
+   "kind": "level",
+   "t": 29.965,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 30.188,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 30.422,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 30.471,
+   "text": "...",
+   "index": 2
+  },
+  {
+   "kind": "level",
+   "t": 30.642,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 30.864,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 31.081,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 31.303,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 31.504,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 31.724,
+   "rms": 0.10902
+  },
+  {
+   "kind": "level",
+   "t": 31.945,
+   "rms": 0.02575
+  },
+  {
+   "kind": "level",
+   "t": 32.165,
+   "rms": 0.0293
+  },
+  {
+   "kind": "level",
+   "t": 32.37,
+   "rms": 0.09353
+  },
+  {
+   "kind": "level",
+   "t": 32.589,
+   "rms": 0.08513
+  },
+  {
+   "kind": "level",
+   "t": 32.811,
+   "rms": 0.1751
+  },
+  {
+   "kind": "level",
+   "t": 33.033,
    "rms": 0.00889
   },
   {
    "kind": "level",
-   "t": 54.273,
+   "t": 33.263,
    "rms": 0.19804
   },
   {
-   "kind": "level",
-   "t": 54.495,
-   "rms": 0.00487
-  },
-  {
-   "kind": "level",
-   "t": 54.723,
-   "rms": 0.13452
-  },
-  {
-   "kind": "level",
-   "t": 54.947,
-   "rms": 0.0629
-  },
-  {
-   "kind": "level",
-   "t": 55.147,
-   "rms": 0.00885
-  },
-  {
-   "kind": "level",
-   "t": 55.367,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.588,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 55.822,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 56.043,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 56.26,
-   "rms": 0.00011
-  },
-  {
-   "kind": "level",
-   "t": 56.484,
-   "rms": 0.10059
-  },
-  {
    "kind": "caption",
-   "t": 56.619,
+   "t": 33.327,
    "index": 2,
    "text": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
    "language": "en",
    "start_s": 8.09,
-   "latency_ms": 5125.5,
-   "rtf": 0.748,
+   "latency_ms": 2855.9,
+   "rtf": 0.417,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 56.62,
-   "uptime_s": 20.2,
-   "audio_seconds": 20.1,
-   "input_level": 0.10059,
+   "t": 33.327,
+   "uptime_s": 17.8,
+   "audio_seconds": 17.8,
+   "input_level": 0.19804,
    "merged_segments": 0,
-   "realtime_factor": 0.744,
+   "realtime_factor": 0.445,
    "stages": [
     {
      "stage": "vad",
-     "count": 627,
-     "mean_ms": 3.4,
-     "p50_ms": 1.8,
-     "p95_ms": 11.7,
-     "min_ms": 0.8,
-     "max_ms": 56.6
+     "count": 556,
+     "mean_ms": 1.2,
+     "p50_ms": 1.1,
+     "p95_ms": 2.4,
+     "min_ms": 0.4,
+     "max_ms": 9.9
     },
     {
      "stage": "asr",
      "count": 3,
-     "mean_ms": 4978.0,
-     "p50_ms": 5125.6,
-     "p95_ms": 5241.3,
-     "min_ms": 4567.2,
-     "max_ms": 5241.3
+     "mean_ms": 2644.8,
+     "p50_ms": 2686.0,
+     "p95_ms": 2855.9,
+     "min_ms": 2392.5,
+     "max_ms": 2855.9
     },
     {
      "stage": "translate",
      "count": 2,
-     "mean_ms": 4418.6,
-     "p50_ms": 5148.5,
-     "p95_ms": 5148.5,
-     "min_ms": 3688.7,
-     "max_ms": 5148.5
+     "mean_ms": 1957.8,
+     "p50_ms": 2487.9,
+     "p95_ms": 2487.9,
+     "min_ms": 1427.8,
+     "max_ms": 2487.9
     }
    ]
   },
   {
-   "kind": "partial",
-   "t": 56.62,
-   "text": "...",
-   "index": 3
-  },
-  {
    "kind": "gloss",
-   "t": 56.627,
+   "t": 33.328,
    "term": "eigenvalue",
    "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
    "language": "bho",
    "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
-   "latency_ms": 2.5,
+   "latency_ms": 0.3,
    "backend": "heuristic"
   },
   {
    "kind": "gloss",
-   "t": 56.627,
+   "t": 33.328,
    "term": "eigenvector",
    "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
    "language": "bho",
    "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
-   "latency_ms": 2.5,
+   "latency_ms": 0.3,
    "backend": "heuristic"
   },
   {
    "kind": "level",
-   "t": 56.709,
-   "rms": 0.24849
+   "t": 33.484,
+   "rms": 0.00487
   },
   {
    "kind": "level",
-   "t": 56.925,
-   "rms": 0.05133
+   "t": 33.706,
+   "rms": 0.13452
   },
   {
    "kind": "level",
-   "t": 57.159,
-   "rms": 0.02766
+   "t": 33.928,
+   "rms": 0.0629
   },
   {
    "kind": "level",
-   "t": 57.389,
+   "t": 34.159,
+   "rms": 0.00176
+  },
+  {
+   "kind": "level",
+   "t": 34.38,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.602,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.835,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 34.837,
+   "text": "...",
+   "index": 3
+  },
+  {
+   "kind": "level",
+   "t": 35.056,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 35.274,
+   "rms": 0.01436
+  },
+  {
+   "kind": "level",
+   "t": 35.496,
+   "rms": 0.11015
+  },
+  {
+   "kind": "level",
+   "t": 35.735,
+   "rms": 0.20454
+  },
+  {
+   "kind": "level",
+   "t": 35.951,
+   "rms": 0.09433
+  },
+  {
+   "kind": "level",
+   "t": 36.17,
+   "rms": 0.00157
+  },
+  {
+   "kind": "level",
+   "t": 36.373,
    "rms": 0.05868
   },
   {
    "kind": "level",
-   "t": 57.639,
+   "t": 36.593,
    "rms": 0.03129
   },
   {
    "kind": "level",
-   "t": 57.841,
+   "t": 36.812,
    "rms": 0.06499
   },
   {
    "kind": "level",
-   "t": 58.046,
-   "rms": 0.04129
+   "t": 37.034,
+   "rms": 0.00511
   },
   {
    "kind": "level",
-   "t": 58.267,
-   "rms": 0.01586
+   "t": 37.256,
+   "rms": 0.11303
   },
   {
    "kind": "level",
-   "t": 58.485,
+   "t": 37.457,
    "rms": 0.08952
   },
   {
    "kind": "level",
-   "t": 58.687,
-   "rms": 0.14997
+   "t": 37.684,
+   "rms": 0.18561
   },
   {
    "kind": "level",
-   "t": 58.89,
-   "rms": 0.11375
+   "t": 37.895,
+   "rms": 0.10562
   },
   {
    "kind": "level",
-   "t": 59.113,
+   "t": 38.098,
    "rms": 0.12383
   },
   {
-   "kind": "level",
-   "t": 59.33,
-   "rms": 0.04638
-  },
-  {
-   "kind": "level",
-   "t": 59.532,
-   "rms": 0.00125
-  },
-  {
-   "kind": "level",
-   "t": 59.74,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 59.958,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 60.16,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 60.377,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 60.601,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 60.831,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 61.032,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 61.252,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 61.446,
-   "rms": 0.1778
-  },
-  {
-   "kind": "level",
-   "t": 61.671,
-   "rms": 0.17675
-  },
-  {
-   "kind": "level",
-   "t": 61.872,
-   "rms": 0.07454
-  },
-  {
    "kind": "caption",
-   "t": 61.944,
+   "t": 38.295,
    "index": 3,
    "text": "A matrix is a linear transformation.",
    "language": "en",
    "start_s": 15.86,
-   "latency_ms": 5323.9,
-   "rtf": 1.555,
+   "latency_ms": 3458.4,
+   "rtf": 1.01,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 61.944,
-   "uptime_s": 25.5,
-   "audio_seconds": 25.4,
-   "input_level": 0.07454,
+   "t": 38.295,
+   "uptime_s": 22.8,
+   "audio_seconds": 22.8,
+   "input_level": 0.12383,
    "merged_segments": 0,
-   "realtime_factor": 0.798,
+   "realtime_factor": 0.5,
    "stages": [
     {
      "stage": "vad",
-     "count": 793,
-     "mean_ms": 3.5,
-     "p50_ms": 1.8,
-     "p95_ms": 11.7,
-     "min_ms": 0.8,
-     "max_ms": 56.6
+     "count": 712,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 3.0,
+     "min_ms": 0.4,
+     "max_ms": 10.2
     },
     {
      "stage": "asr",
      "count": 4,
-     "mean_ms": 5064.5,
-     "p50_ms": 5241.3,
-     "p95_ms": 5324.0,
-     "min_ms": 4567.2,
-     "max_ms": 5324.0
+     "mean_ms": 2848.2,
+     "p50_ms": 2855.9,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
      "count": 2,
-     "mean_ms": 4418.6,
-     "p50_ms": 5148.5,
-     "p95_ms": 5148.5,
-     "min_ms": 3688.7,
-     "max_ms": 5148.5
+     "mean_ms": 1957.8,
+     "p50_ms": 2487.9,
+     "p95_ms": 2487.9,
+     "min_ms": 1427.8,
+     "max_ms": 2487.9
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 38.319,
+   "rms": 0.04638
+  },
+  {
+   "kind": "level",
+   "t": 38.543,
+   "rms": 8e-05
+  },
+  {
+   "kind": "translation",
+   "t": 38.559,
+   "index": 2,
+   "text": "इ दुगो विचार रैखिक बीजगणित के केंद्र में बाटे, एही से ई धीरे-धीरे करे के लायक बा.",
+   "target_language": "bho",
+   "latency_ms": 5232.0,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 38.764,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 38.996,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 39.242,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 61.944,
+   "t": 39.243,
    "text": "...",
    "index": 4
   },
   {
    "kind": "level",
-   "t": 62.093,
-   "rms": 0.00961
-  },
-  {
-   "kind": "level",
-   "t": 62.323,
-   "rms": 0.13824
-  },
-  {
-   "kind": "level",
-   "t": 62.536,
-   "rms": 0.07289
-  },
-  {
-   "kind": "level",
-   "t": 62.74,
+   "t": 39.466,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 62.956,
+   "t": 39.688,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 63.157,
-   "rms": 0.08991
+   "t": 39.91,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 63.362,
-   "rms": 0.15002
+   "t": 40.141,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 63.583,
-   "rms": 0.13166
+   "t": 40.362,
+   "rms": 0.00907
   },
   {
    "kind": "level",
-   "t": 63.785,
-   "rms": 0.10243
-  },
-  {
-   "kind": "level",
-   "t": 64.012,
-   "rms": 0.02672
-  },
-  {
-   "kind": "level",
-   "t": 64.239,
-   "rms": 0.01343
-  },
-  {
-   "kind": "level",
-   "t": 64.449,
-   "rms": 0.10239
-  },
-  {
-   "kind": "level",
-   "t": 64.652,
-   "rms": 0.08383
-  },
-  {
-   "kind": "level",
-   "t": 64.869,
-   "rms": 0.07832
-  },
-  {
-   "kind": "level",
-   "t": 65.087,
-   "rms": 0.16658
-  },
-  {
-   "kind": "level",
-   "t": 65.294,
-   "rms": 0.0041
-  },
-  {
-   "kind": "level",
-   "t": 65.512,
-   "rms": 0.21099
-  },
-  {
-   "kind": "level",
-   "t": 65.741,
-   "rms": 0.07458
+   "t": 40.565,
+   "rms": 0.1428
   },
   {
    "kind": "translation",
-   "t": 65.931,
-   "index": 2,
-   "text": "इ दुगो विचार रैखिक बीजगणित के केंद्र में बाटे, एही से ई धीरे-धीरे करे के लायक बा.",
+   "t": 40.644,
+   "index": 3,
+   "text": "मैट्रिक्स एगो रैखिक परिवर्तन बाटे.",
    "target_language": "bho",
-   "latency_ms": 9303.4,
+   "latency_ms": 2084.4,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 65.942,
-   "rms": 0.05716
+   "t": 40.787,
+   "rms": 0.10715
   },
   {
    "kind": "level",
-   "t": 66.158,
-   "rms": 0.11624
+   "t": 41.003,
+   "rms": 0.03892
   },
   {
    "kind": "level",
-   "t": 66.374,
-   "rms": 0.06048
+   "t": 41.224,
+   "rms": 0.01622
   },
   {
    "kind": "level",
-   "t": 66.595,
-   "rms": 0.00219
+   "t": 41.445,
+   "rms": 0.05401
   },
   {
    "kind": "level",
-   "t": 66.806,
+   "t": 41.647,
+   "rms": 0.00216
+  },
+  {
+   "kind": "level",
+   "t": 41.869,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 67.014,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 67.244,
-   "rms": 0.0
+   "t": 42.088,
+   "rms": 0.00657
   },
   {
    "kind": "caption",
-   "t": 67.335,
+   "t": 42.208,
    "index": 4,
    "text": "It stretches, rotates and shears space.",
    "language": "en",
    "start_s": 19.58,
-   "latency_ms": 5390.7,
-   "rtf": 1.316,
+   "latency_ms": 2965.1,
+   "rtf": 0.724,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 67.336,
-   "uptime_s": 30.9,
-   "audio_seconds": 30.8,
-   "input_level": 0.0,
+   "t": 42.208,
+   "uptime_s": 26.7,
+   "audio_seconds": 26.7,
+   "input_level": 0.00657,
    "merged_segments": 0,
-   "realtime_factor": 0.834,
+   "realtime_factor": 0.538,
    "stages": [
     {
      "stage": "vad",
-     "count": 960,
-     "mean_ms": 3.1,
-     "p50_ms": 1.8,
-     "p95_ms": 11.2,
+     "count": 834,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.3,
      "min_ms": 0.6,
-     "max_ms": 46.6
+     "max_ms": 10.7
     },
     {
      "stage": "asr",
      "count": 5,
-     "mean_ms": 5129.8,
-     "p50_ms": 5241.3,
-     "p95_ms": 5390.8,
-     "min_ms": 4567.2,
-     "max_ms": 5390.8
+     "mean_ms": 2871.6,
+     "p50_ms": 2855.9,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 3,
-     "mean_ms": 6046.9,
-     "p50_ms": 5148.5,
-     "p95_ms": 9303.4,
-     "min_ms": 3688.7,
-     "max_ms": 9303.4
+     "count": 4,
+     "mean_ms": 2808.0,
+     "p50_ms": 2487.9,
+     "p95_ms": 5232.0,
+     "min_ms": 1427.8,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 42.292,
+   "rms": 0.01244
+  },
+  {
+   "kind": "level",
+   "t": 42.514,
+   "rms": 0.16009
+  },
+  {
+   "kind": "level",
+   "t": 42.735,
+   "rms": 0.11223
+  },
+  {
+   "kind": "level",
+   "t": 42.956,
+   "rms": 0.10151
+  },
+  {
+   "kind": "level",
+   "t": 43.156,
+   "rms": 0.15668
+  },
+  {
+   "kind": "level",
+   "t": 43.378,
+   "rms": 0.01873
+  },
+  {
+   "kind": "level",
+   "t": 43.6,
+   "rms": 0.1317
+  },
+  {
+   "kind": "level",
+   "t": 43.816,
+   "rms": 0.04846
+  },
+  {
+   "kind": "level",
+   "t": 44.04,
+   "rms": 0.1819
+  },
+  {
+   "kind": "level",
+   "t": 44.27,
+   "rms": 0.0041
+  },
+  {
+   "kind": "level",
+   "t": 44.493,
+   "rms": 0.21099
+  },
+  {
+   "kind": "translation",
+   "t": 44.644,
+   "index": 4,
+   "text": "इ खिंचल, घुमावल आउर जगह के काटत बा.",
+   "target_language": "bho",
+   "latency_ms": 2435.7,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 44.709,
+   "rms": 0.07458
+  },
+  {
+   "kind": "level",
+   "t": 44.933,
+   "rms": 0.10329
+  },
+  {
+   "kind": "level",
+   "t": 45.172,
+   "rms": 0.1243
+  },
+  {
+   "kind": "level",
+   "t": 45.386,
+   "rms": 0.0609
+  },
+  {
+   "kind": "level",
+   "t": 45.609,
+   "rms": 0.00089
+  },
+  {
+   "kind": "level",
+   "t": 45.81,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 46.032,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 46.256,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 67.338,
+   "t": 46.257,
    "text": "...",
    "index": 5
   },
   {
    "kind": "level",
-   "t": 67.459,
+   "t": 46.469,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 67.662,
+   "t": 46.675,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 67.893,
+   "t": 46.894,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 68.113,
+   "t": 47.116,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 68.345,
+   "t": 47.339,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 68.551,
-   "rms": 0.0015
+   "t": 47.569,
+   "rms": 0.08747
   },
   {
    "kind": "level",
-   "t": 68.779,
-   "rms": 0.10191
+   "t": 47.79,
+   "rms": 0.02253
   },
   {
    "kind": "level",
-   "t": 69.009,
-   "rms": 0.19374
+   "t": 48.009,
+   "rms": 0.19763
   },
   {
    "kind": "level",
-   "t": 69.222,
-   "rms": 0.00859
+   "t": 48.23,
+   "rms": 0.00103
   },
   {
    "kind": "level",
-   "t": 69.429,
-   "rms": 0.08324
+   "t": 48.43,
+   "rms": 0.0764
   },
   {
    "kind": "level",
-   "t": 69.636,
-   "rms": 0.04883
-  },
-  {
-   "kind": "translation",
-   "t": 69.821,
-   "index": 3,
-   "text": "मैट्रिक्स एगो रैखिक परिवर्तन बाटे.",
-   "target_language": "bho",
-   "latency_ms": 3889.6,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "level",
-   "t": 69.852,
-   "rms": 0.12398
-  },
-  {
-   "kind": "level",
-   "t": 70.056,
-   "rms": 0.11001
-  },
-  {
-   "kind": "level",
-   "t": 70.271,
-   "rms": 0.13943
-  },
-  {
-   "kind": "level",
-   "t": 70.486,
-   "rms": 0.14844
-  },
-  {
-   "kind": "level",
-   "t": 70.695,
-   "rms": 0.09851
-  },
-  {
-   "kind": "level",
-   "t": 70.912,
-   "rms": 0.13937
-  },
-  {
-   "kind": "level",
-   "t": 71.114,
-   "rms": 0.08246
-  },
-  {
-   "kind": "level",
-   "t": 71.342,
-   "rms": 0.06759
-  },
-  {
-   "kind": "level",
-   "t": 71.556,
-   "rms": 0.00108
-  },
-  {
-   "kind": "level",
-   "t": 71.783,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.024,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.231,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.462,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 72.671,
-   "rms": 0.01648
-  },
-  {
-   "kind": "level",
-   "t": 72.895,
-   "rms": 0.02953
-  },
-  {
-   "kind": "level",
-   "t": 73.1,
-   "rms": 0.21589
-  },
-  {
-   "kind": "level",
-   "t": 73.314,
-   "rms": 0.08053
-  },
-  {
-   "kind": "level",
-   "t": 73.536,
-   "rms": 0.10845
-  },
-  {
-   "kind": "level",
-   "t": 73.738,
-   "rms": 0.0065
-  },
-  {
-   "kind": "level",
-   "t": 73.957,
-   "rms": 0.05343
+   "t": 48.653,
+   "rms": 0.02101
   },
   {
    "kind": "caption",
-   "t": 74.159,
+   "t": 48.866,
    "index": 5,
    "text": "For most vectors, applying the matrix changes both direction and length.",
    "language": "en",
    "start_s": 24.76,
-   "latency_ms": 6821.3,
-   "rtf": 1.146,
+   "latency_ms": 2608.6,
+   "rtf": 0.438,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 74.16,
-   "uptime_s": 37.7,
-   "audio_seconds": 37.6,
-   "input_level": 0.05343,
+   "t": 48.866,
+   "uptime_s": 33.4,
+   "audio_seconds": 33.3,
+   "input_level": 0.02101,
    "merged_segments": 0,
-   "realtime_factor": 0.863,
+   "realtime_factor": 0.509,
    "stages": [
     {
      "stage": "vad",
-     "count": 1176,
-     "mean_ms": 3.2,
-     "p50_ms": 2.0,
-     "p95_ms": 11.2,
+     "count": 1042,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.8,
      "min_ms": 0.6,
-     "max_ms": 46.6
+     "max_ms": 10.7
     },
     {
      "stage": "asr",
      "count": 6,
-     "mean_ms": 5411.7,
-     "p50_ms": 5324.0,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2827.8,
+     "p50_ms": 2855.9,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 4,
-     "mean_ms": 5507.6,
-     "p50_ms": 5148.5,
-     "p95_ms": 9303.4,
-     "min_ms": 3688.7,
-     "max_ms": 9303.4
+     "count": 5,
+     "mean_ms": 2733.6,
+     "p50_ms": 2435.7,
+     "p95_ms": 5232.0,
+     "min_ms": 1427.8,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 48.875,
+   "rms": 0.00072
+  },
+  {
+   "kind": "level",
+   "t": 49.093,
+   "rms": 0.07285
+  },
+  {
+   "kind": "level",
+   "t": 49.297,
+   "rms": 0.2067
+  },
+  {
+   "kind": "level",
+   "t": 49.517,
+   "rms": 0.11986
+  },
+  {
+   "kind": "level",
+   "t": 49.737,
+   "rms": 0.17479
+  },
+  {
+   "kind": "level",
+   "t": 49.959,
+   "rms": 0.04239
+  },
+  {
+   "kind": "level",
+   "t": 50.162,
+   "rms": 0.1612
+  },
+  {
+   "kind": "level",
+   "t": 50.385,
+   "rms": 0.01016
+  },
+  {
+   "kind": "level",
+   "t": 50.599,
+   "rms": 0.00013
+  },
+  {
+   "kind": "level",
+   "t": 50.822,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 51.059,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 74.16,
+   "t": 51.183,
    "text": "...",
    "index": 6
   },
   {
    "kind": "level",
-   "t": 74.178,
-   "rms": 0.094
-  },
-  {
-   "kind": "level",
-   "t": 74.398,
-   "rms": 0.00427
-  },
-  {
-   "kind": "level",
-   "t": 74.606,
+   "t": 51.277,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 74.827,
+   "t": 51.505,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 75.041,
-   "rms": 0.0
+   "t": 51.705,
+   "rms": 0.09543
   },
   {
    "kind": "level",
-   "t": 75.269,
-   "rms": 0.0
+   "t": 51.923,
+   "rms": 0.0987
   },
   {
    "kind": "level",
-   "t": 75.499,
-   "rms": 0.0
+   "t": 52.136,
+   "rms": 0.1664
+  },
+  {
+   "kind": "level",
+   "t": 52.358,
+   "rms": 0.16193
+  },
+  {
+   "kind": "level",
+   "t": 52.563,
+   "rms": 0.08673
+  },
+  {
+   "kind": "level",
+   "t": 52.781,
+   "rms": 0.1041
+  },
+  {
+   "kind": "level",
+   "t": 53.002,
+   "rms": 0.1733
   },
   {
    "kind": "translation",
-   "t": 75.527,
-   "index": 4,
-   "text": "इ खिंचल, घुमावल आउर जगह के काटत बा.",
+   "t": 53.169,
+   "index": 5,
+   "text": "जादातर वेक्टर खातिर, मैट्रिक्स के लागू करे से दिशा आउर लंबाई दुनों में बदलाव आवेला.",
    "target_language": "bho",
-   "latency_ms": 5705.7,
+   "latency_ms": 4303.1,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 75.728,
+   "t": 53.222,
+   "rms": 0.03661
+  },
+  {
+   "kind": "level",
+   "t": 53.426,
+   "rms": 0.00146
+  },
+  {
+   "kind": "level",
+   "t": 53.645,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 75.937,
+   "t": 53.867,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 76.142,
+   "t": 54.089,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 76.356,
-   "rms": 0.06018
-  },
-  {
-   "kind": "level",
-   "t": 76.556,
-   "rms": 0.08268
-  },
-  {
-   "kind": "level",
-   "t": 76.771,
-   "rms": 0.16681
-  },
-  {
-   "kind": "level",
-   "t": 76.972,
-   "rms": 0.15671
-  },
-  {
-   "kind": "level",
-   "t": 77.192,
-   "rms": 0.03695
-  },
-  {
-   "kind": "level",
-   "t": 77.413,
-   "rms": 0.07225
-  },
-  {
-   "kind": "level",
-   "t": 77.633,
-   "rms": 0.17601
-  },
-  {
-   "kind": "level",
-   "t": 77.837,
-   "rms": 0.14382
-  },
-  {
-   "kind": "level",
-   "t": 78.048,
-   "rms": 0.18718
-  },
-  {
-   "kind": "level",
-   "t": 78.278,
-   "rms": 0.14328
-  },
-  {
-   "kind": "level",
-   "t": 78.499,
-   "rms": 0.05919
-  },
-  {
-   "kind": "level",
-   "t": 78.719,
+   "t": 54.289,
    "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 78.925,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 79.141,
-   "rms": 0.13708
   },
   {
    "kind": "caption",
-   "t": 79.361,
+   "t": 54.317,
    "index": 6,
    "text": "But a few special vectors only change length.",
    "language": "en",
    "start_s": 31.86,
-   "latency_ms": 5200.5,
-   "rtf": 1.377,
+   "latency_ms": 3134.0,
+   "rtf": 0.83,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 79.361,
-   "uptime_s": 42.9,
-   "audio_seconds": 42.8,
-   "input_level": 0.13708,
+   "t": 54.317,
+   "uptime_s": 38.8,
+   "audio_seconds": 38.8,
+   "input_level": 0.0,
    "merged_segments": 0,
-   "realtime_factor": 0.88,
+   "realtime_factor": 0.518,
    "stages": [
     {
      "stage": "vad",
-     "count": 1338,
-     "mean_ms": 3.1,
-     "p50_ms": 2.1,
-     "p95_ms": 8.2,
-     "min_ms": 0.8,
-     "max_ms": 37.8
+     "count": 1212,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 3.1,
+     "min_ms": 0.6,
+     "max_ms": 10.7
     },
     {
      "stage": "asr",
      "count": 7,
-     "mean_ms": 5381.6,
-     "p50_ms": 5241.3,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2871.5,
+     "p50_ms": 2855.9,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 5,
-     "mean_ms": 5547.2,
-     "p50_ms": 5148.5,
-     "p95_ms": 9303.4,
-     "min_ms": 3688.7,
-     "max_ms": 9303.4
+     "count": 6,
+     "mean_ms": 2995.2,
+     "p50_ms": 2487.9,
+     "p95_ms": 5232.0,
+     "min_ms": 1427.8,
+     "max_ms": 5232.0
     }
    ]
   },
   {
    "kind": "partial",
-   "t": 79.361,
+   "t": 54.317,
    "text": "...",
    "index": 7
   },
   {
    "kind": "level",
-   "t": 79.363,
-   "rms": 0.03616
-  },
-  {
-   "kind": "level",
-   "t": 79.573,
-   "rms": 0.23288
-  },
-  {
-   "kind": "level",
-   "t": 79.788,
-   "rms": 0.14743
-  },
-  {
-   "kind": "level",
-   "t": 79.99,
-   "rms": 0.13595
-  },
-  {
-   "kind": "level",
-   "t": 80.192,
-   "rms": 0.01151
-  },
-  {
-   "kind": "level",
-   "t": 80.396,
-   "rms": 0.1636
-  },
-  {
-   "kind": "level",
-   "t": 80.63,
-   "rms": 0.03105
-  },
-  {
-   "kind": "level",
-   "t": 80.834,
-   "rms": 0.07308
-  },
-  {
-   "kind": "level",
-   "t": 81.043,
-   "rms": 0.05996
-  },
-  {
-   "kind": "level",
-   "t": 81.251,
-   "rms": 0.1846
-  },
-  {
-   "kind": "level",
-   "t": 81.472,
-   "rms": 0.07118
-  },
-  {
-   "kind": "level",
-   "t": 81.683,
-   "rms": 0.13208
-  },
-  {
-   "kind": "level",
-   "t": 81.895,
-   "rms": 0.08637
-  },
-  {
-   "kind": "level",
-   "t": 82.146,
-   "rms": 0.03507
-  },
-  {
-   "kind": "level",
-   "t": 82.386,
+   "t": 54.51,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 82.605,
+   "t": 54.732,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 82.83,
+   "t": 54.964,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 83.034,
+   "t": 55.186,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 83.254,
-   "rms": 0.0
+   "t": 55.404,
+   "rms": 0.18086
   },
   {
    "kind": "level",
-   "t": 83.459,
-   "rms": 0.0
+   "t": 55.625,
+   "rms": 0.01807
+  },
+  {
+   "kind": "level",
+   "t": 55.832,
+   "rms": 0.00226
+  },
+  {
+   "kind": "level",
+   "t": 56.067,
+   "rms": 0.08633
+  },
+  {
+   "kind": "level",
+   "t": 56.27,
+   "rms": 0.1444
+  },
+  {
+   "kind": "level",
+   "t": 56.488,
+   "rms": 0.09348
+  },
+  {
+   "kind": "level",
+   "t": 56.708,
+   "rms": 0.05412
+  },
+  {
+   "kind": "level",
+   "t": 56.91,
+   "rms": 0.05928
   },
   {
    "kind": "translation",
-   "t": 83.643,
-   "index": 5,
-   "text": "जादातर वेक्टर खातिर, मैट्रिक्स के लागू करे से दिशा आउर लंबाई दुनों में बदलाव आवेला.",
+   "t": 56.999,
+   "index": 6,
+   "text": "लेकिन कुछ विशेष वेक्टर केवल लंबाई में बदलाव करेला.",
    "target_language": "bho",
-   "latency_ms": 8115.8,
+   "latency_ms": 2682.1,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 83.706,
-   "rms": 0.0
+   "t": 57.132,
+   "rms": 0.00411
   },
   {
    "kind": "level",
-   "t": 83.92,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 84.142,
-   "rms": 0.12827
-  },
-  {
-   "kind": "level",
-   "t": 84.352,
-   "rms": 0.26919
-  },
-  {
-   "kind": "level",
-   "t": 84.564,
-   "rms": 0.08877
+   "t": 57.354,
+   "rms": 0.08479
   },
   {
    "kind": "caption",
-   "t": 84.788,
+   "t": 57.511,
    "index": 7,
    "text": "Their direction is preserved.",
    "language": "en",
    "start_s": 35.99,
-   "latency_ms": 5426.4,
-   "rtf": 2.12,
+   "latency_ms": 3194.4,
+   "rtf": 1.248,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 84.794,
-   "uptime_s": 48.3,
-   "audio_seconds": 48.2,
-   "input_level": 0.08877,
+   "t": 57.512,
+   "uptime_s": 42.0,
+   "audio_seconds": 42.0,
+   "input_level": 0.08479,
    "merged_segments": 0,
-   "realtime_factor": 0.894,
+   "realtime_factor": 0.554,
    "stages": [
     {
      "stage": "vad",
-     "count": 1506,
-     "mean_ms": 3.8,
-     "p50_ms": 2.2,
-     "p95_ms": 10.4,
-     "min_ms": 0.8,
-     "max_ms": 83.9
+     "count": 1313,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.4,
+     "min_ms": 0.6,
+     "max_ms": 21.0
     },
     {
      "stage": "asr",
      "count": 8,
-     "mean_ms": 5387.2,
-     "p50_ms": 5324.0,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2911.9,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 6,
-     "mean_ms": 5975.3,
-     "p50_ms": 5705.7,
-     "p95_ms": 9303.4,
-     "min_ms": 3688.7,
-     "max_ms": 9303.4
+     "count": 7,
+     "mean_ms": 2950.4,
+     "p50_ms": 2487.9,
+     "p95_ms": 5232.0,
+     "min_ms": 1427.8,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 57.587,
+   "rms": 0.00216
+  },
+  {
+   "kind": "level",
+   "t": 57.809,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 58.03,
+   "rms": 0.00023
+  },
+  {
+   "kind": "level",
+   "t": 58.248,
+   "rms": 0.07908
+  },
+  {
+   "kind": "translation",
+   "t": 58.382,
+   "index": 7,
+   "text": "उनकर दिशा बरकरार बा.",
+   "target_language": "bho",
+   "latency_ms": 870.6,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 58.472,
+   "rms": 0.16743
+  },
+  {
+   "kind": "level",
+   "t": 58.672,
+   "rms": 0.00083
+  },
+  {
+   "kind": "level",
+   "t": 58.894,
+   "rms": 0.03467
+  },
+  {
+   "kind": "level",
+   "t": 59.11,
+   "rms": 0.09447
+  },
+  {
+   "kind": "level",
+   "t": 59.348,
+   "rms": 0.20341
+  },
+  {
+   "kind": "level",
+   "t": 59.563,
+   "rms": 0.00299
+  },
+  {
+   "kind": "level",
+   "t": 59.786,
+   "rms": 0.07055
+  },
+  {
+   "kind": "level",
+   "t": 60.009,
+   "rms": 0.05996
+  },
+  {
+   "kind": "level",
+   "t": 60.209,
+   "rms": 0.15866
+  },
+  {
+   "kind": "level",
+   "t": 60.431,
+   "rms": 0.13929
+  },
+  {
+   "kind": "level",
+   "t": 60.649,
+   "rms": 0.13208
+  },
+  {
+   "kind": "level",
+   "t": 60.87,
+   "rms": 0.08637
+  },
+  {
+   "kind": "level",
+   "t": 61.107,
+   "rms": 0.03507
+  },
+  {
+   "kind": "level",
+   "t": 61.326,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 61.547,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 61.748,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 84.797,
+   "t": 61.892,
    "text": "...",
    "index": 8
   },
   {
    "kind": "level",
-   "t": 84.802,
+   "t": 61.972,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 62.186,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 62.407,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 62.645,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 62.864,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 63.083,
+   "rms": 0.08669
+  },
+  {
+   "kind": "level",
+   "t": 63.302,
+   "rms": 0.24273
+  },
+  {
+   "kind": "level",
+   "t": 63.524,
+   "rms": 0.08877
+  },
+  {
+   "kind": "level",
+   "t": 63.729,
    "rms": 0.08011
   },
   {
    "kind": "level",
-   "t": 85.032,
-   "rms": 0.09274
+   "t": 63.946,
+   "rms": 0.06749
   },
   {
    "kind": "level",
-   "t": 85.246,
-   "rms": 0.2311
+   "t": 64.167,
+   "rms": 0.25511
   },
   {
    "kind": "level",
-   "t": 85.458,
-   "rms": 0.12552
+   "t": 64.402,
+   "rms": 0.0389
   },
   {
    "kind": "level",
-   "t": 85.674,
-   "rms": 0.1631
+   "t": 64.625,
+   "rms": 0.09935
   },
   {
    "kind": "level",
-   "t": 85.896,
-   "rms": 0.00163
+   "t": 64.839,
+   "rms": 0.05881
   },
   {
    "kind": "level",
-   "t": 86.116,
-   "rms": 0.16924
-  },
-  {
-   "kind": "level",
-   "t": 86.344,
-   "rms": 0.04988
-  },
-  {
-   "kind": "level",
-   "t": 86.608,
-   "rms": 0.06355
-  },
-  {
-   "kind": "level",
-   "t": 86.821,
-   "rms": 0.15186
-  },
-  {
-   "kind": "level",
-   "t": 87.076,
-   "rms": 0.11708
-  },
-  {
-   "kind": "level",
-   "t": 87.285,
-   "rms": 0.01946
-  },
-  {
-   "kind": "level",
-   "t": 87.486,
-   "rms": 0.14799
-  },
-  {
-   "kind": "level",
-   "t": 87.691,
-   "rms": 0.04196
-  },
-  {
-   "kind": "level",
-   "t": 87.917,
-   "rms": 0.00364
-  },
-  {
-   "kind": "level",
-   "t": 88.136,
-   "rms": 0.00413
-  },
-  {
-   "kind": "level",
-   "t": 88.362,
-   "rms": 0.0
-  },
-  {
-   "kind": "translation",
-   "t": 88.395,
-   "index": 6,
-   "text": "लेकिन कुछ विशेष वेक्टर केवल लंबाई में बदलाव करेला.",
-   "target_language": "bho",
-   "latency_ms": 4752.2,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "level",
-   "t": 88.593,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 88.824,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 89.031,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 89.264,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 89.475,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 89.682,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 89.899,
-   "rms": 2e-05
-  },
-  {
-   "kind": "level",
-   "t": 90.122,
-   "rms": 0.02816
-  },
-  {
-   "kind": "level",
-   "t": 90.342,
-   "rms": 0.02275
-  },
-  {
-   "kind": "level",
-   "t": 90.564,
-   "rms": 0.17657
-  },
-  {
-   "kind": "level",
-   "t": 90.792,
-   "rms": 0.00945
-  },
-  {
-   "kind": "level",
-   "t": 91.014,
-   "rms": 0.11478
-  },
-  {
-   "kind": "translation",
-   "t": 91.127,
-   "index": 7,
-   "text": "उनकर दिशा बरकरार बा.",
-   "target_language": "bho",
-   "latency_ms": 2731.9,
-   "passthrough": false,
-   "protected_terms": []
-  },
-  {
-   "kind": "level",
-   "t": 91.235,
-   "rms": 0.19721
+   "t": 65.062,
+   "rms": 0.12075
   },
   {
    "kind": "caption",
-   "t": 91.346,
+   "t": 65.109,
    "index": 8,
    "text": "Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.",
    "language": "en",
    "start_s": 39.61,
-   "latency_ms": 6546.5,
-   "rtf": 0.97,
+   "latency_ms": 3216.9,
+   "rtf": 0.476,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 91.346,
-   "uptime_s": 54.9,
-   "audio_seconds": 54.8,
-   "input_level": 0.19721,
+   "t": 65.109,
+   "uptime_s": 49.6,
+   "audio_seconds": 49.6,
+   "input_level": 0.12075,
    "merged_segments": 0,
-   "realtime_factor": 0.906,
+   "realtime_factor": 0.535,
    "stages": [
     {
      "stage": "vad",
-     "count": 1712,
-     "mean_ms": 3.6,
-     "p50_ms": 2.1,
-     "p95_ms": 10.2,
-     "min_ms": 0.8,
-     "max_ms": 83.9
+     "count": 1550,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.1,
+     "min_ms": 0.4,
+     "max_ms": 21.0
     },
     {
      "stage": "asr",
      "count": 9,
-     "mean_ms": 5516.2,
-     "p50_ms": 5324.0,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2945.8,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
      "count": 8,
-     "mean_ms": 5417.0,
-     "p50_ms": 5148.5,
-     "p95_ms": 9303.4,
-     "min_ms": 2732.0,
-     "max_ms": 9303.4
+     "mean_ms": 2690.5,
+     "p50_ms": 2487.9,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 65.284,
+   "rms": 0.00572
+  },
+  {
+   "kind": "level",
+   "t": 65.486,
+   "rms": 0.04633
+  },
+  {
+   "kind": "level",
+   "t": 65.707,
+   "rms": 0.15206
+  },
+  {
+   "kind": "level",
+   "t": 65.94,
+   "rms": 0.10097
+  },
+  {
+   "kind": "level",
+   "t": 66.161,
+   "rms": 0.12268
+  },
+  {
+   "kind": "level",
+   "t": 66.384,
+   "rms": 0.10068
+  },
+  {
+   "kind": "level",
+   "t": 66.607,
+   "rms": 0.01752
+  },
+  {
+   "kind": "level",
+   "t": 66.824,
+   "rms": 0.05519
+  },
+  {
+   "kind": "level",
+   "t": 67.056,
+   "rms": 0.05063
+  },
+  {
+   "kind": "level",
+   "t": 67.278,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 67.493,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 67.731,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 91.346,
+   "t": 67.828,
    "text": "...",
    "index": 9
   },
   {
    "kind": "level",
-   "t": 91.458,
-   "rms": 0.09134
-  },
-  {
-   "kind": "level",
-   "t": 91.669,
-   "rms": 0.17358
-  },
-  {
-   "kind": "level",
-   "t": 91.882,
-   "rms": 0.08353
-  },
-  {
-   "kind": "level",
-   "t": 92.093,
-   "rms": 0.06171
-  },
-  {
-   "kind": "level",
-   "t": 92.298,
-   "rms": 0.15893
-  },
-  {
-   "kind": "level",
-   "t": 92.513,
-   "rms": 0.00509
-  },
-  {
-   "kind": "level",
-   "t": 92.735,
-   "rms": 0.13968
-  },
-  {
-   "kind": "level",
-   "t": 92.962,
-   "rms": 0.16559
-  },
-  {
-   "kind": "level",
-   "t": 93.188,
-   "rms": 0.11598
-  },
-  {
-   "kind": "level",
-   "t": 93.414,
-   "rms": 0.10809
-  },
-  {
-   "kind": "level",
-   "t": 93.634,
-   "rms": 0.02442
-  },
-  {
-   "kind": "level",
-   "t": 93.875,
-   "rms": 0.0055
-  },
-  {
-   "kind": "level",
-   "t": 94.081,
-   "rms": 0.09177
-  },
-  {
-   "kind": "level",
-   "t": 94.285,
-   "rms": 0.14244
-  },
-  {
-   "kind": "level",
-   "t": 94.503,
-   "rms": 0.08233
-  },
-  {
-   "kind": "level",
-   "t": 94.719,
-   "rms": 0.00014
-  },
-  {
-   "kind": "level",
-   "t": 94.951,
+   "t": 67.953,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 95.179,
+   "t": 68.172,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 95.392,
+   "t": 68.392,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 95.596,
+   "t": 68.593,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 95.82,
+   "t": 68.814,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 96.035,
-   "rms": 0.0
+   "t": 69.036,
+   "rms": 0.16044
   },
   {
    "kind": "level",
-   "t": 96.257,
-   "rms": 0.0
+   "t": 69.254,
+   "rms": 0.03418
   },
   {
    "kind": "level",
-   "t": 96.458,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 96.684,
-   "rms": 0.06659
-  },
-  {
-   "kind": "level",
-   "t": 96.905,
-   "rms": 0.10384
-  },
-  {
-   "kind": "level",
-   "t": 97.12,
-   "rms": 0.1446
-  },
-  {
-   "kind": "level",
-   "t": 97.342,
-   "rms": 0.03372
-  },
-  {
-   "kind": "level",
-   "t": 97.579,
-   "rms": 0.09464
-  },
-  {
-   "kind": "level",
-   "t": 97.796,
-   "rms": 0.13129
-  },
-  {
-   "kind": "caption",
-   "t": 97.952,
-   "index": 9,
-   "text": "To find them we solve the characteristic equation of the matrix.",
-   "language": "en",
-   "start_s": 47.35,
-   "latency_ms": 6605.2,
-   "rtf": 1.34,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 97.952,
-   "uptime_s": 61.5,
-   "audio_seconds": 61.4,
-   "input_level": 0.13129,
-   "merged_segments": 0,
-   "realtime_factor": 0.916,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 1919,
-     "mean_ms": 3.5,
-     "p50_ms": 2.1,
-     "p95_ms": 10.9,
-     "min_ms": 0.8,
-     "max_ms": 62.4
-    },
-    {
-     "stage": "asr",
-     "count": 10,
-     "mean_ms": 5625.1,
-     "p50_ms": 5390.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
-    },
-    {
-     "stage": "translate",
-     "count": 8,
-     "mean_ms": 5417.0,
-     "p50_ms": 5148.5,
-     "p95_ms": 9303.4,
-     "min_ms": 2732.0,
-     "max_ms": 9303.4
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 97.953,
-   "text": "...",
-   "index": 10
-  },
-  {
-   "kind": "level",
-   "t": 98.039,
-   "rms": 0.171
-  },
-  {
-   "kind": "level",
-   "t": 98.252,
-   "rms": 0.16906
-  },
-  {
-   "kind": "level",
-   "t": 98.517,
-   "rms": 0.11938
-  },
-  {
-   "kind": "level",
-   "t": 98.725,
-   "rms": 0.00082
-  },
-  {
-   "kind": "level",
-   "t": 98.947,
-   "rms": 0.19652
-  },
-  {
-   "kind": "level",
-   "t": 99.151,
-   "rms": 0.03365
-  },
-  {
-   "kind": "level",
-   "t": 99.366,
-   "rms": 0.11827
-  },
-  {
-   "kind": "level",
-   "t": 99.584,
-   "rms": 0.10871
-  },
-  {
-   "kind": "level",
-   "t": 99.798,
-   "rms": 0.10533
-  },
-  {
-   "kind": "level",
-   "t": 100.016,
-   "rms": 0.01592
-  },
-  {
-   "kind": "level",
-   "t": 100.238,
-   "rms": 0.00944
-  },
-  {
-   "kind": "level",
-   "t": 100.483,
-   "rms": 0.01044
-  },
-  {
-   "kind": "level",
-   "t": 100.703,
-   "rms": 0.08814
-  },
-  {
-   "kind": "level",
-   "t": 100.904,
-   "rms": 0.07137
-  },
-  {
-   "kind": "level",
-   "t": 101.126,
-   "rms": 0.0847
-  },
-  {
-   "kind": "level",
-   "t": 101.344,
-   "rms": 0.08448
-  },
-  {
-   "kind": "level",
-   "t": 101.58,
-   "rms": 0.14422
-  },
-  {
-   "kind": "level",
-   "t": 101.803,
-   "rms": 0.01006
-  },
-  {
-   "kind": "level",
-   "t": 102.025,
-   "rms": 0.0
+   "t": 69.462,
+   "rms": 0.14543
   },
   {
    "kind": "translation",
-   "t": 102.088,
+   "t": 69.674,
    "index": 8,
    "text": "ऊ वेक्टर eigenvectors बा, आउर उ कारक जवन द्वारा उ खींचल जाला eigenvalue बा.",
    "target_language": "bho",
-   "latency_ms": 10740.3,
+   "latency_ms": 4564.1,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -2385,1436 +2060,1436 @@
   },
   {
    "kind": "level",
-   "t": 102.245,
-   "rms": 0.0
+   "t": 69.677,
+   "rms": 0.11241
   },
   {
    "kind": "level",
-   "t": 102.474,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 102.7,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 102.912,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 103.135,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 103.34,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 103.557,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 103.779,
-   "rms": 0.15878
-  },
-  {
-   "kind": "level",
-   "t": 103.981,
+   "t": 69.899,
    "rms": 0.08256
   },
   {
+   "kind": "level",
+   "t": 70.12,
+   "rms": 0.17299
+  },
+  {
+   "kind": "level",
+   "t": 70.322,
+   "rms": 0.13856
+  },
+  {
+   "kind": "level",
+   "t": 70.544,
+   "rms": 0.05545
+  },
+  {
+   "kind": "level",
+   "t": 70.762,
+   "rms": 0.10768
+  },
+  {
+   "kind": "level",
+   "t": 70.984,
+   "rms": 0.04048
+  },
+  {
    "kind": "caption",
-   "t": 104.133,
-   "index": 10,
-   "text": "The determinant of a minus lambda times the identity must equal zero.",
+   "t": 71.147,
+   "index": 9,
+   "text": "To find them we solve the characteristic equation of the matrix.",
    "language": "en",
-   "start_s": 53.27,
-   "latency_ms": 6180.1,
-   "rtf": 1.116,
+   "start_s": 47.35,
+   "latency_ms": 3319.0,
+   "rtf": 0.673,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 104.134,
-   "uptime_s": 67.7,
-   "audio_seconds": 67.6,
-   "input_level": 0.08256,
+   "t": 71.147,
+   "uptime_s": 55.7,
+   "audio_seconds": 55.6,
+   "input_level": 0.04048,
    "merged_segments": 0,
-   "realtime_factor": 0.924,
+   "realtime_factor": 0.536,
    "stages": [
     {
      "stage": "vad",
-     "count": 2112,
-     "mean_ms": 3.3,
-     "p50_ms": 2.2,
-     "p95_ms": 9.8,
-     "min_ms": 0.8,
-     "max_ms": 34.7
+     "count": 1739,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.3,
+     "min_ms": 0.4,
+     "max_ms": 18.4
     },
     {
      "stage": "asr",
-     "count": 11,
-     "mean_ms": 5675.6,
-     "p50_ms": 5390.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "count": 10,
+     "mean_ms": 2983.1,
+     "p50_ms": 3134.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
      "count": 9,
-     "mean_ms": 6008.5,
-     "p50_ms": 5148.5,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
+     "mean_ms": 2898.7,
+     "p50_ms": 2487.9,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 71.207,
+   "rms": 0.17759
+  },
+  {
+   "kind": "level",
+   "t": 71.437,
+   "rms": 0.06545
+  },
+  {
+   "kind": "level",
+   "t": 71.66,
+   "rms": 0.10733
+  },
+  {
+   "kind": "level",
+   "t": 71.878,
+   "rms": 0.01576
+  },
+  {
+   "kind": "level",
+   "t": 72.084,
+   "rms": 0.0243
+  },
+  {
+   "kind": "level",
+   "t": 72.299,
+   "rms": 0.12335
+  },
+  {
+   "kind": "level",
+   "t": 72.521,
+   "rms": 0.12488
+  },
+  {
+   "kind": "level",
+   "t": 72.743,
+   "rms": 0.11598
+  },
+  {
+   "kind": "level",
+   "t": 72.944,
+   "rms": 0.11843
+  },
+  {
+   "kind": "level",
+   "t": 73.167,
+   "rms": 0.09446
+  },
+  {
+   "kind": "level",
+   "t": 73.386,
+   "rms": 0.14463
+  },
+  {
+   "kind": "level",
+   "t": 73.607,
+   "rms": 0.00846
+  },
+  {
+   "kind": "level",
+   "t": 73.829,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 73.996,
+   "index": 9,
+   "text": "उनका के खोजे खातिर हम मैट्रिक्स के विशेषता समीकरण के हल करीं.",
+   "target_language": "bho",
+   "latency_ms": 2848.8,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 74.029,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 74.25,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 104.134,
+   "t": 74.345,
+   "text": "...",
+   "index": 10
+  },
+  {
+   "kind": "level",
+   "t": 74.451,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 74.673,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 74.895,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 75.11,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 75.314,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 75.535,
+   "rms": 0.10354
+  },
+  {
+   "kind": "level",
+   "t": 75.757,
+   "rms": 0.06611
+  },
+  {
+   "kind": "level",
+   "t": 75.988,
+   "rms": 0.15605
+  },
+  {
+   "kind": "level",
+   "t": 76.209,
+   "rms": 0.12627
+  },
+  {
+   "kind": "level",
+   "t": 76.429,
+   "rms": 0.10117
+  },
+  {
+   "kind": "level",
+   "t": 76.649,
+   "rms": 0.1081
+  },
+  {
+   "kind": "level",
+   "t": 76.871,
+   "rms": 0.13008
+  },
+  {
+   "kind": "level",
+   "t": 77.072,
+   "rms": 0.11111
+  },
+  {
+   "kind": "caption",
+   "t": 77.199,
+   "index": 10,
+   "text": "The determinant of a minus lambda times the identity must equal zero.",
+   "language": "en",
+   "start_s": 53.27,
+   "latency_ms": 2853.7,
+   "rtf": 0.515,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 77.199,
+   "uptime_s": 61.7,
+   "audio_seconds": 61.7,
+   "input_level": 0.11111,
+   "merged_segments": 0,
+   "realtime_factor": 0.53,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1927,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 3.1,
+     "min_ms": 0.4,
+     "max_ms": 18.4
+    },
+    {
+     "stage": "asr",
+     "count": 11,
+     "mean_ms": 2971.3,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
+    },
+    {
+     "stage": "translate",
+     "count": 10,
+     "mean_ms": 2893.7,
+     "p50_ms": 2682.2,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 77.294,
+   "rms": 0.08259
+  },
+  {
+   "kind": "level",
+   "t": 77.517,
+   "rms": 0.02764
+  },
+  {
+   "kind": "level",
+   "t": 77.735,
+   "rms": 0.02683
+  },
+  {
+   "kind": "level",
+   "t": 77.941,
+   "rms": 0.19652
+  },
+  {
+   "kind": "level",
+   "t": 78.158,
+   "rms": 0.09446
+  },
+  {
+   "kind": "level",
+   "t": 78.379,
+   "rms": 0.17006
+  },
+  {
+   "kind": "level",
+   "t": 78.601,
+   "rms": 0.09384
+  },
+  {
+   "kind": "level",
+   "t": 78.801,
+   "rms": 0.10784
+  },
+  {
+   "kind": "level",
+   "t": 79.025,
+   "rms": 0.04211
+  },
+  {
+   "kind": "level",
+   "t": 79.241,
+   "rms": 0.04427
+  },
+  {
+   "kind": "level",
+   "t": 79.464,
+   "rms": 0.01583
+  },
+  {
+   "kind": "level",
+   "t": 79.692,
+   "rms": 0.08814
+  },
+  {
+   "kind": "level",
+   "t": 79.916,
+   "rms": 0.09843
+  },
+  {
+   "kind": "level",
+   "t": 80.147,
+   "rms": 0.15402
+  },
+  {
+   "kind": "level",
+   "t": 80.372,
+   "rms": 0.04167
+  },
+  {
+   "kind": "translation",
+   "t": 80.472,
+   "index": 10,
+   "text": "एगो -लंबादा के determinant गुण पहचान शून्य के बराबर होखे के चाहि.",
+   "target_language": "bho",
+   "latency_ms": 3272.3,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 80.593,
+   "rms": 0.16643
+  },
+  {
+   "kind": "level",
+   "t": 80.81,
+   "rms": 0.00463
+  },
+  {
+   "kind": "level",
+   "t": 81.031,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 81.254,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 81.455,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 81.52,
    "text": "...",
    "index": 11
   },
   {
    "kind": "level",
-   "t": 104.201,
-   "rms": 0.09673
-  },
-  {
-   "kind": "level",
-   "t": 104.428,
-   "rms": 0.14242
-  },
-  {
-   "kind": "level",
-   "t": 104.642,
-   "rms": 0.10898
-  },
-  {
-   "kind": "level",
-   "t": 104.869,
-   "rms": 0.00019
-  },
-  {
-   "kind": "level",
-   "t": 105.096,
+   "t": 81.675,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 105.319,
-   "rms": 0.05273
-  },
-  {
-   "kind": "level",
-   "t": 105.544,
-   "rms": 0.10767
-  },
-  {
-   "kind": "level",
-   "t": 105.75,
-   "rms": 0.09717
-  },
-  {
-   "kind": "level",
-   "t": 105.976,
-   "rms": 0.24915
-  },
-  {
-   "kind": "level",
-   "t": 106.183,
-   "rms": 0.07133
-  },
-  {
-   "kind": "level",
-   "t": 106.416,
-   "rms": 0.07174
-  },
-  {
-   "kind": "level",
-   "t": 106.636,
-   "rms": 0.10718
-  },
-  {
-   "kind": "level",
-   "t": 106.858,
-   "rms": 0.07496
-  },
-  {
-   "kind": "level",
-   "t": 107.079,
-   "rms": 0.08773
-  },
-  {
-   "kind": "level",
-   "t": 107.296,
-   "rms": 0.06638
-  },
-  {
-   "kind": "level",
-   "t": 107.519,
+   "t": 81.896,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 107.72,
+   "t": 82.116,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 107.945,
-   "rms": 0.11891
+   "t": 82.347,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 108.163,
-   "rms": 0.15765
-  },
-  {
-   "kind": "translation",
-   "t": 108.175,
-   "index": 9,
-   "text": "उनका के खोजे खातिर हम मैट्रिक्स के विशेषता समीकरण के हल करीं.",
-   "target_language": "bho",
-   "latency_ms": 6086.9,
-   "passthrough": false,
-   "protected_terms": []
+   "t": 82.571,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 108.364,
-   "rms": 0.10735
+   "t": 82.792,
+   "rms": 0.11012
   },
   {
    "kind": "level",
-   "t": 108.591,
-   "rms": 0.02476
+   "t": 82.995,
+   "rms": 0.03188
   },
   {
    "kind": "level",
-   "t": 108.803,
-   "rms": 0.22411
+   "t": 83.215,
+   "rms": 0.05923
   },
   {
    "kind": "level",
-   "t": 109.024,
-   "rms": 0.086
+   "t": 83.431,
+   "rms": 0.14156
   },
   {
    "kind": "level",
-   "t": 109.25,
-   "rms": 0.1666
+   "t": 83.657,
+   "rms": 0.10387
   },
   {
    "kind": "level",
-   "t": 109.478,
-   "rms": 0.14294
+   "t": 83.878,
+   "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 109.699,
-   "rms": 0.14995
-  },
-  {
-   "kind": "level",
-   "t": 109.919,
-   "rms": 0.06937
-  },
-  {
-   "kind": "level",
-   "t": 110.127,
-   "rms": 0.00055
-  },
-  {
-   "kind": "level",
-   "t": 110.349,
+   "t": 84.111,
    "rms": 0.0
   },
   {
    "kind": "caption",
-   "t": 110.364,
+   "t": 84.148,
    "index": 11,
    "text": "The determinant is a single number that tells you whether the matrix squashes space flat.",
    "language": "en",
    "start_s": 59.8,
-   "latency_ms": 6229.7,
-   "rtf": 1.009,
+   "latency_ms": 2628.1,
+   "rtf": 0.426,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 110.364,
-   "uptime_s": 73.9,
-   "audio_seconds": 73.8,
+   "t": 84.148,
+   "uptime_s": 68.7,
+   "audio_seconds": 68.6,
    "input_level": 0.0,
    "merged_segments": 0,
-   "realtime_factor": 0.93,
+   "realtime_factor": 0.514,
    "stages": [
     {
      "stage": "vad",
-     "count": 2306,
-     "mean_ms": 3.3,
-     "p50_ms": 2.3,
-     "p95_ms": 8.8,
-     "min_ms": 0.8,
-     "max_ms": 38.4
+     "count": 2145,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 2.6,
+     "min_ms": 0.5,
+     "max_ms": 18.4
     },
     {
      "stage": "asr",
      "count": 12,
-     "mean_ms": 5721.8,
-     "p50_ms": 5426.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2942.7,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 10,
-     "mean_ms": 6016.3,
-     "p50_ms": 5705.7,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
+     "count": 11,
+     "mean_ms": 2928.1,
+     "p50_ms": 2682.2,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
    "kind": "gloss",
-   "t": 110.365,
+   "t": 84.149,
    "term": "determinant",
    "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
    "language": "bho",
    "source_line": "The determinant is a single number that tells you whether the matrix squashes space flat.",
-   "latency_ms": 0.3,
+   "latency_ms": 0.1,
    "backend": "heuristic"
   },
   {
    "kind": "level",
-   "t": 110.562,
+   "t": 84.332,
+   "rms": 0.14872
+  },
+  {
+   "kind": "level",
+   "t": 84.548,
+   "rms": 0.0911
+  },
+  {
+   "kind": "level",
+   "t": 84.751,
+   "rms": 0.10291
+  },
+  {
+   "kind": "level",
+   "t": 84.977,
+   "rms": 0.23207
+  },
+  {
+   "kind": "level",
+   "t": 85.193,
+   "rms": 0.04694
+  },
+  {
+   "kind": "level",
+   "t": 85.414,
+   "rms": 0.13896
+  },
+  {
+   "kind": "level",
+   "t": 85.617,
+   "rms": 0.10718
+  },
+  {
+   "kind": "level",
+   "t": 85.839,
+   "rms": 0.07496
+  },
+  {
+   "kind": "level",
+   "t": 86.072,
+   "rms": 0.11239
+  },
+  {
+   "kind": "level",
+   "t": 86.278,
+   "rms": 0.06638
+  },
+  {
+   "kind": "level",
+   "t": 86.5,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 86.73,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 86.954,
+   "rms": 0.14368
+  },
+  {
+   "kind": "level",
+   "t": 87.187,
+   "rms": 0.15536
+  },
+  {
+   "kind": "level",
+   "t": 87.407,
+   "rms": 0.08873
+  },
+  {
+   "kind": "level",
+   "t": 87.623,
+   "rms": 0.07187
+  },
+  {
+   "kind": "level",
+   "t": 87.847,
+   "rms": 0.07642
+  },
+  {
+   "kind": "level",
+   "t": 88.069,
+   "rms": 0.13299
+  },
+  {
+   "kind": "level",
+   "t": 88.303,
+   "rms": 0.11678
+  },
+  {
+   "kind": "translation",
+   "t": 88.309,
+   "index": 11,
+   "text": "determinant एगो एकल संख्या बा जवन बतावेला कि मैट्रिक्स अंतरिक्ष के सपाट करेला कि ना.",
+   "target_language": "bho",
+   "latency_ms": 4160.7,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 88.523,
+   "rms": 0.12142
+  },
+  {
+   "kind": "level",
+   "t": 88.724,
+   "rms": 0.23766
+  },
+  {
+   "kind": "level",
+   "t": 88.946,
+   "rms": 0.00858
+  },
+  {
+   "kind": "level",
+   "t": 89.169,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 89.386,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 89.611,
    "rms": 0.0
   },
   {
    "kind": "partial",
-   "t": 110.77,
+   "t": 89.739,
    "text": "...",
    "index": 12
   },
   {
    "kind": "level",
-   "t": 110.783,
+   "t": 89.84,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 110.989,
+   "t": 90.061,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 111.216,
+   "t": 90.28,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 111.423,
+   "t": 90.501,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 111.633,
+   "t": 90.704,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 111.873,
-   "rms": 0.0
+   "t": 90.923,
+   "rms": 0.00875
   },
   {
    "kind": "level",
-   "t": 112.099,
-   "rms": 0.16315
+   "t": 91.144,
+   "rms": 0.12391
   },
   {
    "kind": "level",
-   "t": 112.322,
-   "rms": 0.00847
+   "t": 91.377,
+   "rms": 0.06022
   },
   {
    "kind": "level",
-   "t": 112.527,
-   "rms": 0.02615
+   "t": 91.599,
+   "rms": 0.06052
   },
   {
    "kind": "level",
-   "t": 112.747,
-   "rms": 0.18134
+   "t": 91.822,
+   "rms": 0.0116
   },
   {
    "kind": "level",
-   "t": 112.962,
-   "rms": 0.12759
+   "t": 92.039,
+   "rms": 0.06171
   },
   {
    "kind": "level",
-   "t": 113.195,
-   "rms": 0.12953
+   "t": 92.244,
+   "rms": 0.09264
   },
   {
    "kind": "level",
-   "t": 113.423,
-   "rms": 0.07433
+   "t": 92.455,
+   "rms": 0.21394
   },
   {
    "kind": "level",
-   "t": 113.639,
-   "rms": 0.06291
-  },
-  {
-   "kind": "level",
-   "t": 113.867,
-   "rms": 0.08486
-  },
-  {
-   "kind": "level",
-   "t": 114.092,
-   "rms": 0.03121
-  },
-  {
-   "kind": "level",
-   "t": 114.315,
-   "rms": 0.13368
-  },
-  {
-   "kind": "level",
-   "t": 114.539,
-   "rms": 0.17087
-  },
-  {
-   "kind": "translation",
-   "t": 114.554,
-   "index": 10,
-   "text": "एगो -लंबादा के determinant गुण पहचान शून्य के बराबर होखे के चाहि.",
-   "target_language": "bho",
-   "latency_ms": 6379.3,
-   "passthrough": false,
-   "protected_terms": [
-    "determinant"
-   ]
-  },
-  {
-   "kind": "level",
-   "t": 114.752,
-   "rms": 0.10756
-  },
-  {
-   "kind": "level",
-   "t": 114.956,
-   "rms": 0.14267
-  },
-  {
-   "kind": "level",
-   "t": 115.181,
-   "rms": 0.08352
-  },
-  {
-   "kind": "level",
-   "t": 115.417,
-   "rms": 0.0328
-  },
-  {
-   "kind": "level",
-   "t": 115.619,
-   "rms": 7e-05
-  },
-  {
-   "kind": "level",
-   "t": 115.838,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 116.044,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 116.261,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 116.484,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 116.692,
-   "rms": 0.04087
-  },
-  {
-   "kind": "level",
-   "t": 116.906,
-   "rms": 0.08799
-  },
-  {
-   "kind": "level",
-   "t": 117.128,
-   "rms": 0.10977
+   "t": 92.684,
+   "rms": 0.14694
   },
   {
    "kind": "caption",
-   "t": 117.184,
+   "t": 92.71,
    "index": 12,
    "text": "If it is zero, there is a non-trivial solution, and that is exactly what we want.",
    "language": "en",
    "start_s": 67.03,
-   "latency_ms": 6413.6,
-   "rtf": 0.895,
+   "latency_ms": 2971.2,
+   "rtf": 0.415,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 117.184,
-   "uptime_s": 80.7,
-   "audio_seconds": 80.6,
-   "input_level": 0.10977,
+   "t": 92.711,
+   "uptime_s": 77.2,
+   "audio_seconds": 77.2,
+   "input_level": 0.14694,
    "merged_segments": 0,
-   "realtime_factor": 0.931,
+   "realtime_factor": 0.496,
    "stages": [
     {
      "stage": "vad",
-     "count": 2520,
-     "mean_ms": 3.1,
-     "p50_ms": 2.2,
-     "p95_ms": 7.1,
-     "min_ms": 1.0,
-     "max_ms": 38.4
+     "count": 2412,
+     "mean_ms": 1.3,
+     "p50_ms": 1.2,
+     "p95_ms": 2.8,
+     "min_ms": 0.5,
+     "max_ms": 6.5
     },
     {
      "stage": "asr",
      "count": 13,
-     "mean_ms": 5775.0,
-     "p50_ms": 5426.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "mean_ms": 2944.9,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
-     "count": 11,
-     "mean_ms": 6049.3,
-     "p50_ms": 5705.7,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
+     "count": 12,
+     "mean_ms": 3030.8,
+     "p50_ms": 2848.8,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
+   "kind": "level",
+   "t": 92.906,
+   "rms": 0.05212
+  },
+  {
+   "kind": "level",
+   "t": 93.124,
+   "rms": 0.06022
+  },
+  {
+   "kind": "level",
+   "t": 93.33,
+   "rms": 0.14209
+  },
+  {
+   "kind": "level",
+   "t": 93.546,
+   "rms": 0.10633
+  },
+  {
+   "kind": "level",
+   "t": 93.767,
+   "rms": 0.0855
+  },
+  {
+   "kind": "level",
+   "t": 93.992,
+   "rms": 0.19172
+  },
+  {
+   "kind": "level",
+   "t": 94.223,
+   "rms": 0.12252
+  },
+  {
+   "kind": "level",
+   "t": 94.445,
+   "rms": 0.05193
+  },
+  {
+   "kind": "level",
+   "t": 94.66,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 94.867,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 95.084,
+   "rms": 0.0
+  },
+  {
    "kind": "partial",
-   "t": 117.184,
+   "t": 95.245,
    "text": "...",
    "index": 13
   },
   {
    "kind": "level",
-   "t": 117.347,
-   "rms": 0.16063
-  },
-  {
-   "kind": "level",
-   "t": 117.55,
-   "rms": 0.00635
-  },
-  {
-   "kind": "level",
-   "t": 117.768,
-   "rms": 0.01564
-  },
-  {
-   "kind": "level",
-   "t": 117.991,
-   "rms": 0.14528
-  },
-  {
-   "kind": "level",
-   "t": 118.204,
-   "rms": 0.04987
-  },
-  {
-   "kind": "level",
-   "t": 118.407,
-   "rms": 0.00395
-  },
-  {
-   "kind": "level",
-   "t": 118.634,
+   "t": 95.312,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 118.851,
+   "t": 95.531,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 119.074,
-   "rms": 0.0
+   "t": 95.76,
+   "rms": 0.19925
   },
   {
    "kind": "level",
-   "t": 119.296,
-   "rms": 0.0
+   "t": 95.981,
+   "rms": 0.10242
   },
   {
    "kind": "level",
-   "t": 119.496,
-   "rms": 0.0
+   "t": 96.198,
+   "rms": 0.10082
   },
   {
    "kind": "level",
-   "t": 119.716,
-   "rms": 0.0
+   "t": 96.436,
+   "rms": 0.08836
   },
   {
    "kind": "level",
-   "t": 119.936,
-   "rms": 0.0
+   "t": 96.647,
+   "rms": 0.0898
   },
   {
    "kind": "level",
-   "t": 120.159,
-   "rms": 1e-05
+   "t": 96.876,
+   "rms": 0.18803
   },
   {
    "kind": "level",
-   "t": 120.365,
-   "rms": 0.27107
+   "t": 97.097,
+   "rms": 0.02467
   },
   {
    "kind": "level",
-   "t": 120.58,
-   "rms": 0.01738
-  },
-  {
-   "kind": "level",
-   "t": 120.79,
-   "rms": 0.07909
-  },
-  {
-   "kind": "level",
-   "t": 121.004,
-   "rms": 0.08831
-  },
-  {
-   "kind": "level",
-   "t": 121.224,
-   "rms": 0.16671
-  },
-  {
-   "kind": "level",
-   "t": 121.449,
-   "rms": 0.08132
-  },
-  {
-   "kind": "level",
-   "t": 121.664,
-   "rms": 0.09926
-  },
-  {
-   "kind": "level",
-   "t": 121.869,
-   "rms": 0.17775
-  },
-  {
-   "kind": "level",
-   "t": 122.086,
-   "rms": 0.12286
-  },
-  {
-   "kind": "level",
-   "t": 122.321,
-   "rms": 0.18979
-  },
-  {
-   "kind": "caption",
-   "t": 122.54,
-   "index": 13,
-   "text": "Symmetric matrices always have real eigenvalues.",
-   "language": "en",
-   "start_s": 75.32,
-   "latency_ms": 5355.7,
-   "rtf": 1.222,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 122.541,
-   "uptime_s": 86.1,
-   "audio_seconds": 86.0,
-   "input_level": 0.18979,
-   "merged_segments": 0,
-   "realtime_factor": 0.935,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 2687,
-     "mean_ms": 3.1,
-     "p50_ms": 2.2,
-     "p95_ms": 6.6,
-     "min_ms": 1.0,
-     "max_ms": 38.4
-    },
-    {
-     "stage": "asr",
-     "count": 14,
-     "mean_ms": 5745.1,
-     "p50_ms": 5426.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
-    },
-    {
-     "stage": "translate",
-     "count": 11,
-     "mean_ms": 6049.3,
-     "p50_ms": 5705.7,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 122.541,
-   "text": "...",
-   "index": 14
-  },
-  {
-   "kind": "level",
-   "t": 122.542,
-   "rms": 0.13549
-  },
-  {
-   "kind": "level",
-   "t": 122.763,
-   "rms": 0.09134
-  },
-  {
-   "kind": "level",
-   "t": 122.971,
-   "rms": 0.00027
-  },
-  {
-   "kind": "level",
-   "t": 123.202,
-   "rms": 0.0
+   "t": 97.329,
+   "rms": 0.04053
   },
   {
    "kind": "translation",
-   "t": 123.31,
-   "index": 11,
-   "text": "determinant एगो एकल संख्या बा जवन बतावेला कि मैट्रिक्स अंतरिक्ष के सपाट करेला कि ना.",
-   "target_language": "bho",
-   "latency_ms": 8756.1,
-   "passthrough": false,
-   "protected_terms": [
-    "determinant"
-   ]
-  },
-  {
-   "kind": "level",
-   "t": 123.426,
-   "rms": 0.14178
-  },
-  {
-   "kind": "level",
-   "t": 123.647,
-   "rms": 0.13462
-  },
-  {
-   "kind": "level",
-   "t": 123.863,
-   "rms": 0.19286
-  },
-  {
-   "kind": "level",
-   "t": 124.064,
-   "rms": 0.14103
-  },
-  {
-   "kind": "level",
-   "t": 124.286,
-   "rms": 0.13945
-  },
-  {
-   "kind": "level",
-   "t": 124.493,
-   "rms": 0.12339
-  },
-  {
-   "kind": "level",
-   "t": 124.698,
-   "rms": 0.00527
-  },
-  {
-   "kind": "level",
-   "t": 124.906,
-   "rms": 0.14511
-  },
-  {
-   "kind": "level",
-   "t": 125.123,
-   "rms": 0.06436
-  },
-  {
-   "kind": "level",
-   "t": 125.323,
-   "rms": 0.00079
-  },
-  {
-   "kind": "level",
-   "t": 125.543,
-   "rms": 0.01412
-  },
-  {
-   "kind": "level",
-   "t": 125.762,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 125.987,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 126.188,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 126.407,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 126.631,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 126.83,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 127.052,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 127.264,
-   "rms": 0.0
-  },
-  {
-   "kind": "level",
-   "t": 127.507,
-   "rms": 0.16318
-  },
-  {
-   "kind": "caption",
-   "t": 127.655,
-   "index": 14,
-   "text": "That is a useful guarantee.",
-   "language": "en",
-   "start_s": 79.93,
-   "latency_ms": 5114.3,
-   "rtf": 1.926,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 127.656,
-   "uptime_s": 91.2,
-   "audio_seconds": 91.1,
-   "input_level": 0.16318,
-   "merged_segments": 0,
-   "realtime_factor": 0.939,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 2848,
-     "mean_ms": 2.9,
-     "p50_ms": 2.2,
-     "p95_ms": 5.9,
-     "min_ms": 1.0,
-     "max_ms": 27.8
-    },
-    {
-     "stage": "asr",
-     "count": 15,
-     "mean_ms": 5703.0,
-     "p50_ms": 5390.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
-    },
-    {
-     "stage": "translate",
-     "count": 12,
-     "mean_ms": 6274.9,
-     "p50_ms": 6086.9,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
-    }
-   ]
-  },
-  {
-   "kind": "partial",
-   "t": 127.656,
-   "text": "...",
-   "index": 15
-  },
-  {
-   "kind": "level",
-   "t": 127.712,
-   "rms": 0.15642
-  },
-  {
-   "kind": "level",
-   "t": 127.922,
-   "rms": 0.11234
-  },
-  {
-   "kind": "level",
-   "t": 128.131,
-   "rms": 0.06879
-  },
-  {
-   "kind": "level",
-   "t": 128.351,
-   "rms": 0.11044
-  },
-  {
-   "kind": "level",
-   "t": 128.558,
-   "rms": 0.12014
-  },
-  {
-   "kind": "level",
-   "t": 128.779,
-   "rms": 0.1981
-  },
-  {
-   "kind": "level",
-   "t": 128.995,
-   "rms": 0.07406
-  },
-  {
-   "kind": "level",
-   "t": 129.217,
-   "rms": 0.09117
-  },
-  {
-   "kind": "level",
-   "t": 129.45,
-   "rms": 0.04901
-  },
-  {
-   "kind": "level",
-   "t": 129.669,
-   "rms": 0.01601
-  },
-  {
-   "kind": "level",
-   "t": 129.891,
-   "rms": 0.05989
-  },
-  {
-   "kind": "level",
-   "t": 130.112,
-   "rms": 0.11767
-  },
-  {
-   "kind": "level",
-   "t": 130.317,
-   "rms": 0.01324
-  },
-  {
-   "kind": "level",
-   "t": 130.536,
-   "rms": 0.06622
-  },
-  {
-   "kind": "level",
-   "t": 130.764,
-   "rms": 0.12126
-  },
-  {
-   "kind": "level",
-   "t": 130.989,
-   "rms": 0.06614
-  },
-  {
-   "kind": "level",
-   "t": 131.215,
-   "rms": 0.08324
-  },
-  {
-   "kind": "level",
-   "t": 131.43,
-   "rms": 0.11047
-  },
-  {
-   "kind": "translation",
-   "t": 131.588,
+   "t": 97.479,
    "index": 12,
    "text": "अगर ई शून्य बा, त एगो गैर-नाटकीय समाधान बा, आउर ई उहे बा जवन हमनी के चाहत बा.",
    "target_language": "bho",
-   "latency_ms": 8277.5,
+   "latency_ms": 4767.9,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 131.649,
-   "rms": 0.08777
-  },
-  {
-   "kind": "level",
-   "t": 131.873,
-   "rms": 0.06016
-  },
-  {
-   "kind": "level",
-   "t": 132.105,
-   "rms": 0.03696
-  },
-  {
-   "kind": "level",
-   "t": 132.325,
-   "rms": 0.04565
-  },
-  {
-   "kind": "level",
-   "t": 132.547,
-   "rms": 6e-05
-  },
-  {
-   "kind": "level",
-   "t": 132.748,
+   "t": 97.55,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 132.968,
+   "t": 97.771,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 133.188,
+   "t": 97.99,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 133.411,
+   "t": 98.213,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 98.414,
    "rms": 0.0
   },
   {
    "kind": "caption",
-   "t": 133.48,
-   "index": 15,
-   "text": "Once we have a full set of eigenvectors, we can diagonalize the matrix.",
+   "t": 98.487,
+   "index": 13,
+   "text": "Symmetric matrices always have real eigenvalues.",
    "language": "en",
-   "start_s": 83.61,
-   "latency_ms": 5823.9,
-   "rtf": 0.953,
+   "start_s": 75.32,
+   "latency_ms": 3242.0,
+   "rtf": 0.74,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 133.48,
-   "uptime_s": 97.0,
-   "audio_seconds": 97.0,
+   "t": 98.488,
+   "uptime_s": 83.0,
+   "audio_seconds": 83.0,
    "input_level": 0.0,
    "merged_segments": 0,
-   "realtime_factor": 0.942,
+   "realtime_factor": 0.5,
    "stages": [
     {
      "stage": "vad",
-     "count": 3029,
-     "mean_ms": 2.8,
-     "p50_ms": 2.1,
-     "p95_ms": 5.8,
-     "min_ms": 0.8,
-     "max_ms": 27.8
+     "count": 2593,
+     "mean_ms": 1.5,
+     "p50_ms": 1.2,
+     "p95_ms": 3.7,
+     "min_ms": 0.6,
+     "max_ms": 16.5
     },
     {
      "stage": "asr",
-     "count": 16,
-     "mean_ms": 5710.6,
-     "p50_ms": 5426.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
+     "count": 14,
+     "mean_ms": 2966.2,
+     "p50_ms": 2971.2,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
      "count": 13,
-     "mean_ms": 6429.0,
-     "p50_ms": 6086.9,
-     "p95_ms": 10740.4,
-     "min_ms": 2732.0,
-     "max_ms": 10740.4
+     "mean_ms": 3164.4,
+     "p50_ms": 2848.8,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
    "kind": "partial",
-   "t": 133.481,
+   "t": 98.488,
    "text": "...",
-   "index": 16
+   "index": 14
   },
   {
    "kind": "level",
-   "t": 133.665,
+   "t": 98.634,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 133.866,
+   "t": 98.853,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 134.088,
+   "t": 99.091,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 134.305,
-   "rms": 0.00027
+   "t": 99.307,
+   "rms": 0.13767
   },
   {
    "kind": "level",
-   "t": 134.542,
-   "rms": 0.08154
+   "t": 99.508,
+   "rms": 0.07386
   },
   {
    "kind": "level",
-   "t": 134.76,
-   "rms": 0.15124
+   "t": 99.726,
+   "rms": 0.10987
   },
   {
    "kind": "level",
-   "t": 134.977,
-   "rms": 0.02887
+   "t": 99.953,
+   "rms": 0.0269
   },
   {
    "kind": "level",
-   "t": 135.208,
-   "rms": 0.09113
+   "t": 100.174,
+   "rms": 0.05095
   },
   {
    "kind": "level",
-   "t": 135.438,
-   "rms": 0.12185
+   "t": 100.398,
+   "rms": 0.08817
   },
   {
    "kind": "level",
-   "t": 135.662,
-   "rms": 0.02746
+   "t": 100.618,
+   "rms": 0.03233
   },
   {
    "kind": "level",
-   "t": 135.882,
-   "rms": 0.00788
+   "t": 100.819,
+   "rms": 0.1105
   },
   {
    "kind": "level",
-   "t": 136.097,
-   "rms": 0.10209
+   "t": 101.037,
+   "rms": 0.06868
   },
   {
    "kind": "level",
-   "t": 136.335,
-   "rms": 0.06229
+   "t": 101.257,
+   "rms": 0.12896
   },
   {
    "kind": "level",
-   "t": 136.549,
-   "rms": 0.00489
+   "t": 101.458,
+   "rms": 0.01271
   },
   {
    "kind": "level",
-   "t": 136.771,
-   "rms": 0.01825
+   "t": 101.679,
+   "rms": 0.0432
   },
   {
    "kind": "translation",
-   "t": 136.908,
+   "t": 101.721,
    "index": 13,
    "text": "सममित मैट्रिक्स में हमेशा असली eigenvalues होला.",
    "target_language": "bho",
-   "latency_ms": 5320.1,
+   "latency_ms": 3233.4,
    "passthrough": false,
    "protected_terms": [
     "eigenvalues"
    ]
   },
   {
-   "kind": "level",
-   "t": 136.989,
-   "rms": 0.04549
+   "kind": "caption",
+   "t": 101.88,
+   "index": 14,
+   "text": "That is a useful guarantee.",
+   "language": "en",
+   "start_s": 79.93,
+   "latency_ms": 3391.8,
+   "rtf": 1.277,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 101.88,
+   "uptime_s": 86.4,
+   "audio_seconds": 86.4,
+   "input_level": 0.0432,
+   "merged_segments": 0,
+   "realtime_factor": 0.52,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2699,
+     "mean_ms": 1.6,
+     "p50_ms": 1.3,
+     "p95_ms": 3.9,
+     "min_ms": 0.7,
+     "max_ms": 26.9
+    },
+    {
+     "stage": "asr",
+     "count": 15,
+     "mean_ms": 2994.5,
+     "p50_ms": 2971.2,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
+    },
+    {
+     "stage": "translate",
+     "count": 14,
+     "mean_ms": 3169.4,
+     "p50_ms": 3233.4,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
+    }
+   ]
   },
   {
    "kind": "level",
-   "t": 137.192,
-   "rms": 0.00904
+   "t": 101.902,
+   "rms": 0.0009
   },
   {
    "kind": "level",
-   "t": 137.424,
-   "rms": 0.0339
-  },
-  {
-   "kind": "level",
-   "t": 137.632,
-   "rms": 0.16148
-  },
-  {
-   "kind": "level",
-   "t": 137.857,
-   "rms": 0.0827
-  },
-  {
-   "kind": "level",
-   "t": 138.088,
-   "rms": 0.12417
-  },
-  {
-   "kind": "level",
-   "t": 138.309,
-   "rms": 0.13582
-  },
-  {
-   "kind": "level",
-   "t": 138.544,
-   "rms": 0.08036
-  },
-  {
-   "kind": "level",
-   "t": 138.777,
-   "rms": 0.07254
-  },
-  {
-   "kind": "level",
-   "t": 138.983,
+   "t": 102.122,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 139.209,
-   "rms": 0.0
+   "t": 102.343,
+   "rms": 0.04966
   },
   {
    "kind": "level",
-   "t": 139.458,
-   "rms": 0.0
+   "t": 102.543,
+   "rms": 0.02064
+  },
+  {
+   "kind": "level",
+   "t": 102.766,
+   "rms": 0.10541
   },
   {
    "kind": "translation",
-   "t": 139.496,
+   "t": 102.862,
    "index": 14,
    "text": "ई एगो उपयोगी गारंटी ह।",
    "target_language": "bho",
-   "latency_ms": 2587.5,
+   "latency_ms": 982.6,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "level",
-   "t": 139.677,
+   "t": 102.986,
+   "rms": 0.13415
+  },
+  {
+   "kind": "level",
+   "t": 103.204,
+   "rms": 0.12108
+  },
+  {
+   "kind": "level",
+   "t": 103.409,
+   "rms": 0.16497
+  },
+  {
+   "kind": "level",
+   "t": 103.626,
+   "rms": 0.07124
+  },
+  {
+   "kind": "level",
+   "t": 103.85,
+   "rms": 0.14614
+  },
+  {
+   "kind": "level",
+   "t": 104.078,
+   "rms": 0.05624
+  },
+  {
+   "kind": "level",
+   "t": 104.303,
+   "rms": 0.00079
+  },
+  {
+   "kind": "level",
+   "t": 104.526,
+   "rms": 0.01412
+  },
+  {
+   "kind": "level",
+   "t": 104.741,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 139.91,
+   "t": 104.965,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 140.129,
+   "t": 105.196,
    "rms": 0.0
-  },
-  {
-   "kind": "caption",
-   "t": 140.188,
-   "index": 16,
-   "text": "Diagonalization turns a hard repeated multiplication into a simple one.",
-   "language": "en",
-   "start_s": 90.71,
-   "latency_ms": 6707.4,
-   "rtf": 1.145,
-   "provider": "CPUExecutionProvider"
-  },
-  {
-   "kind": "metric",
-   "t": 140.189,
-   "uptime_s": 103.7,
-   "audio_seconds": 103.6,
-   "input_level": 0.0,
-   "merged_segments": 0,
-   "realtime_factor": 0.946,
-   "stages": [
-    {
-     "stage": "vad",
-     "count": 3239,
-     "mean_ms": 3.1,
-     "p50_ms": 2.1,
-     "p95_ms": 8.5,
-     "min_ms": 0.8,
-     "max_ms": 31.3
-    },
-    {
-     "stage": "asr",
-     "count": 17,
-     "mean_ms": 5769.2,
-     "p50_ms": 5426.8,
-     "p95_ms": 6821.4,
-     "min_ms": 4567.2,
-     "max_ms": 6821.4
-    },
-    {
-     "stage": "translate",
-     "count": 15,
-     "mean_ms": 6098.9,
-     "p50_ms": 5705.7,
-     "p95_ms": 10740.4,
-     "min_ms": 2587.6,
-     "max_ms": 10740.4
-    }
-   ]
   },
   {
    "kind": "partial",
-   "t": 140.189,
+   "t": 105.261,
    "text": "...",
-   "index": 17
+   "index": 15
   },
   {
    "kind": "level",
-   "t": 140.336,
+   "t": 105.418,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 140.592,
+   "t": 105.648,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 140.813,
+   "t": 105.873,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 141.033,
+   "t": 106.095,
    "rms": 0.0
   },
   {
    "kind": "level",
-   "t": 141.249,
-   "rms": 0.0
+   "t": 106.314,
+   "rms": 3e-05
   },
   {
    "kind": "level",
-   "t": 141.474,
-   "rms": 0.0
+   "t": 106.535,
+   "rms": 0.18628
   },
   {
    "kind": "level",
-   "t": 141.676,
-   "rms": 0.0
+   "t": 106.76,
+   "rms": 0.03811
+  },
+  {
+   "kind": "level",
+   "t": 106.987,
+   "rms": 0.11201
+  },
+  {
+   "kind": "level",
+   "t": 107.209,
+   "rms": 0.1003
+  },
+  {
+   "kind": "level",
+   "t": 107.412,
+   "rms": 0.1242
+  },
+  {
+   "kind": "level",
+   "t": 107.634,
+   "rms": 0.01592
+  },
+  {
+   "kind": "level",
+   "t": 107.851,
+   "rms": 0.16772
   },
   {
    "kind": "caption",
-   "t": 147.828,
-   "index": 17,
-   "text": "We will use this next week when we look at principal component analysis.",
+   "t": 108.034,
+   "index": 15,
+   "text": "Once we have a full set of eigenvectors, we can diagonalize the matrix.",
    "language": "en",
-   "start_s": 97.62,
-   "latency_ms": 7638.9,
-   "rtf": 1.429,
+   "start_s": 83.61,
+   "latency_ms": 2772.6,
+   "rtf": 0.454,
    "provider": "CPUExecutionProvider"
   },
   {
    "kind": "metric",
-   "t": 147.829,
-   "uptime_s": 111.4,
-   "audio_seconds": 105.2,
-   "input_level": 0.0,
+   "t": 108.034,
+   "uptime_s": 92.6,
+   "audio_seconds": 92.5,
+   "input_level": 0.16772,
    "merged_segments": 0,
-   "realtime_factor": 1.005,
+   "realtime_factor": 0.516,
    "stages": [
     {
      "stage": "vad",
-     "count": 3288,
-     "mean_ms": 3.1,
-     "p50_ms": 2.1,
-     "p95_ms": 8.9,
-     "min_ms": 0.8,
-     "max_ms": 31.3
+     "count": 2891,
+     "mean_ms": 1.6,
+     "p50_ms": 1.2,
+     "p95_ms": 3.8,
+     "min_ms": 0.3,
+     "max_ms": 26.9
     },
     {
      "stage": "asr",
-     "count": 18,
-     "mean_ms": 5873.1,
-     "p50_ms": 5824.0,
-     "p95_ms": 7639.0,
-     "min_ms": 4567.2,
-     "max_ms": 7639.0
+     "count": 16,
+     "mean_ms": 2980.7,
+     "p50_ms": 2971.2,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
     },
     {
      "stage": "translate",
      "count": 15,
-     "mean_ms": 6098.9,
-     "p50_ms": 5705.7,
-     "p95_ms": 10740.4,
-     "min_ms": 2587.6,
-     "max_ms": 10740.4
+     "mean_ms": 3023.6,
+     "p50_ms": 2848.8,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
     }
    ]
   },
   {
-   "kind": "gloss",
-   "t": 147.834,
-   "term": "diagonalize",
-   "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
-   "language": "bho",
-   "source_line": "We will use this next week when we look at principal component analysis.",
-   "latency_ms": 1.6,
-   "backend": "heuristic"
+   "kind": "level",
+   "t": 108.072,
+   "rms": 0.10191
+  },
+  {
+   "kind": "level",
+   "t": 108.299,
+   "rms": 0.25993
+  },
+  {
+   "kind": "level",
+   "t": 108.527,
+   "rms": 0.08408
+  },
+  {
+   "kind": "level",
+   "t": 108.73,
+   "rms": 0.01958
+  },
+  {
+   "kind": "level",
+   "t": 108.934,
+   "rms": 0.12885
+  },
+  {
+   "kind": "level",
+   "t": 109.138,
+   "rms": 0.21075
+  },
+  {
+   "kind": "level",
+   "t": 109.356,
+   "rms": 0.09174
+  },
+  {
+   "kind": "level",
+   "t": 109.577,
+   "rms": 0.09996
+  },
+  {
+   "kind": "level",
+   "t": 109.799,
+   "rms": 0.17184
+  },
+  {
+   "kind": "level",
+   "t": 110.034,
+   "rms": 0.15371
+  },
+  {
+   "kind": "level",
+   "t": 110.256,
+   "rms": 0.12589
+  },
+  {
+   "kind": "level",
+   "t": 110.473,
+   "rms": 0.10853
+  },
+  {
+   "kind": "level",
+   "t": 110.694,
+   "rms": 0.09555
+  },
+  {
+   "kind": "level",
+   "t": 110.932,
+   "rms": 0.03673
+  },
+  {
+   "kind": "level",
+   "t": 111.15,
+   "rms": 0.09528
+  },
+  {
+   "kind": "level",
+   "t": 111.371,
+   "rms": 0.01555
+  },
+  {
+   "kind": "level",
+   "t": 111.59,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 111.812,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 112.015,
+   "rms": 0.0
   },
   {
    "kind": "translation",
-   "t": 151.277,
+   "t": 112.031,
    "index": 15,
    "text": "जब हमनी के eigenvectors के पूरा सेट होई त हम मैट्रिक्स के diagonalize कर सकीं.",
    "target_language": "bho",
-   "latency_ms": 11780.3,
+   "latency_ms": 3997.1,
    "passthrough": false,
    "protected_terms": [
     "eigenvectors",
@@ -3822,30 +3497,345 @@
    ]
   },
   {
+   "kind": "partial",
+   "t": 112.107,
+   "text": "...",
+   "index": 16
+  },
+  {
+   "kind": "level",
+   "t": 112.234,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 112.468,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 112.687,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 112.908,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 113.128,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 113.333,
+   "rms": 0.05398
+  },
+  {
+   "kind": "level",
+   "t": 113.551,
+   "rms": 0.13363
+  },
+  {
+   "kind": "level",
+   "t": 113.771,
+   "rms": 0.18727
+  },
+  {
+   "kind": "level",
+   "t": 113.993,
+   "rms": 0.01923
+  },
+  {
+   "kind": "level",
+   "t": 114.193,
+   "rms": 0.09113
+  },
+  {
+   "kind": "level",
+   "t": 114.416,
+   "rms": 0.12185
+  },
+  {
+   "kind": "level",
+   "t": 114.639,
+   "rms": 0.02746
+  },
+  {
+   "kind": "caption",
+   "t": 114.734,
+   "index": 16,
+   "text": "Diagonalization turns a hard repeated multiplication into a simple one.",
+   "language": "en",
+   "start_s": 90.71,
+   "latency_ms": 2626.8,
+   "rtf": 0.449,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 114.734,
+   "uptime_s": 99.3,
+   "audio_seconds": 99.2,
+   "input_level": 0.02746,
+   "merged_segments": 0,
+   "realtime_factor": 0.507,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3100,
+     "mean_ms": 1.4,
+     "p50_ms": 1.2,
+     "p95_ms": 3.1,
+     "min_ms": 0.3,
+     "max_ms": 6.9
+    },
+    {
+     "stage": "asr",
+     "count": 17,
+     "mean_ms": 2959.9,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
+    },
+    {
+     "stage": "translate",
+     "count": 16,
+     "mean_ms": 3084.4,
+     "p50_ms": 3233.4,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 114.855,
+   "rms": 0.00788
+  },
+  {
+   "kind": "level",
+   "t": 115.078,
+   "rms": 0.10209
+  },
+  {
+   "kind": "level",
+   "t": 115.31,
+   "rms": 0.06229
+  },
+  {
+   "kind": "level",
+   "t": 115.531,
+   "rms": 0.00489
+  },
+  {
+   "kind": "level",
+   "t": 115.764,
+   "rms": 0.01825
+  },
+  {
+   "kind": "level",
+   "t": 115.984,
+   "rms": 0.04549
+  },
+  {
+   "kind": "level",
+   "t": 116.206,
+   "rms": 0.09832
+  },
+  {
+   "kind": "level",
+   "t": 116.426,
+   "rms": 0.11696
+  },
+  {
+   "kind": "level",
+   "t": 116.647,
+   "rms": 0.18986
+  },
+  {
+   "kind": "level",
+   "t": 116.879,
+   "rms": 0.07104
+  },
+  {
+   "kind": "level",
+   "t": 117.1,
+   "rms": 0.15527
+  },
+  {
+   "kind": "level",
+   "t": 117.318,
+   "rms": 0.07549
+  },
+  {
+   "kind": "level",
+   "t": 117.523,
+   "rms": 0.08036
+  },
+  {
    "kind": "translation",
-   "t": 157.505,
+   "t": 117.631,
    "index": 16,
    "text": "Diagonalization एगो कठिन दोहरावल गुणन के एगो सरल में बदल देला.",
    "target_language": "bho",
-   "latency_ms": 6227.9,
+   "latency_ms": 2896.4,
    "passthrough": false,
    "protected_terms": [
     "Diagonalization"
    ]
   },
   {
+   "kind": "level",
+   "t": 117.745,
+   "rms": 0.07254
+  },
+  {
+   "kind": "level",
+   "t": 117.962,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.183,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.418,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 118.516,
+   "text": "...",
+   "index": 17
+  },
+  {
+   "kind": "level",
+   "t": 118.64,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 118.86,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 119.077,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 119.283,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 119.5,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 119.721,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 119.941,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 120.147,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 120.368,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 120.585,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 121.077,
+   "index": 17,
+   "text": "We will use this next week when we look at principal component analysis.",
+   "language": "en",
+   "start_s": 97.62,
+   "latency_ms": 2560.9,
+   "rtf": 0.479,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 121.077,
+   "uptime_s": 105.6,
+   "audio_seconds": 105.2,
+   "input_level": 0.0,
+   "merged_segments": 0,
+   "realtime_factor": 0.503,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3288,
+     "mean_ms": 1.3,
+     "p50_ms": 1.1,
+     "p95_ms": 2.9,
+     "min_ms": 0.1,
+     "max_ms": 5.6
+    },
+    {
+     "stage": "asr",
+     "count": 18,
+     "mean_ms": 2937.7,
+     "p50_ms": 2965.1,
+     "p95_ms": 3458.5,
+     "min_ms": 2392.5,
+     "max_ms": 3458.5
+    },
+    {
+     "stage": "translate",
+     "count": 17,
+     "mean_ms": 3073.4,
+     "p50_ms": 2896.4,
+     "p95_ms": 5232.0,
+     "min_ms": 870.6,
+     "max_ms": 5232.0
+    }
+   ]
+  },
+  {
+   "kind": "gloss",
+   "t": 121.078,
+   "term": "diagonalize",
+   "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
+   "language": "bho",
+   "source_line": "We will use this next week when we look at principal component analysis.",
+   "latency_ms": 0.1,
+   "backend": "heuristic"
+  },
+  {
    "kind": "translation",
-   "t": 161.654,
+   "t": 123.002,
    "index": 17,
    "text": "हम अगिला हफ्ता एकर उपयोग मुख्य घटक के विश्लेषण में करी.",
    "target_language": "bho",
-   "latency_ms": 4149.3,
+   "latency_ms": 1924.8,
    "passthrough": false,
    "protected_terms": []
   },
   {
    "kind": "status",
-   "t": 164.161,
+   "t": 126.149,
    "stage": "summarising",
    "running": false,
    "device": {
@@ -3868,48 +3858,48 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 127.7,
+    "uptime_s": 110.7,
     "audio_seconds": 105.2,
     "input_level": 0.0,
     "merged_segments": 0,
-    "realtime_factor": 1.005,
+    "realtime_factor": 0.503,
     "stages": [
      {
       "stage": "vad",
       "count": 3288,
-      "mean_ms": 3.1,
-      "p50_ms": 2.1,
-      "p95_ms": 8.9,
-      "min_ms": 0.8,
-      "max_ms": 31.3
+      "mean_ms": 1.3,
+      "p50_ms": 1.1,
+      "p95_ms": 2.9,
+      "min_ms": 0.1,
+      "max_ms": 5.6
      },
      {
       "stage": "asr",
       "count": 18,
-      "mean_ms": 5873.1,
-      "p50_ms": 5824.0,
-      "p95_ms": 7639.0,
-      "min_ms": 4567.2,
-      "max_ms": 7639.0
+      "mean_ms": 2937.7,
+      "p50_ms": 2965.1,
+      "p95_ms": 3458.5,
+      "min_ms": 2392.5,
+      "max_ms": 3458.5
      },
      {
       "stage": "translate",
       "count": 18,
-      "mean_ms": 6313.4,
-      "p50_ms": 6086.9,
-      "p95_ms": 11780.4,
-      "min_ms": 2587.6,
-      "max_ms": 11780.4
+      "mean_ms": 3009.6,
+      "p50_ms": 2896.4,
+      "p95_ms": 5232.0,
+      "min_ms": 870.6,
+      "max_ms": 5232.0
      }
     ]
    }
   },
   {
    "kind": "notes",
-   "t": 164.215,
-   "title": "Good morning everyone. - 2026-09-27 14:55",
-   "path": "sessions/20260927-1455-good-morning-everyone-2026-09-27-14-55.md",
-   "markdown": "# Good morning everyone. - 2026-09-27 14:55\n\n**Date** 27 Sep 2026, 14:55 · **Duration** 2 min · **Captions** 18\n\n_Processed entirely on-device: CPU_\n\n## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- For most vectors, applying the matrix changes both direction and length.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n- We will use this next week when we look at principal component analysis.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._\n\n## Glossary\n\n_Explanations in भोजपुरी (Bhojpuri)._\n\n- **eigenvalue** — A scalar showing how much a matrix stretches a special direction (its eigenvector).\n- **eigenvector** — A direction that a matrix only stretches or shrinks, without rotating it.\n- **determinant** — A single number from a square matrix; zero means the matrix squashes space flat.\n- **diagonalize** — Rewriting a matrix in a basis where it becomes a simple diagonal scaling.\n\n## Transcript\n\n**[00:00]** Good morning everyone.\n> सब लोगन के सुप्रभात।\n\n**[00:02]** Today we will start with eigenvalues and eigenvectors.\n> आज हम eigenvalues अउरी eigenvectors से शुरू करब.\n\n**[00:08]** These two ideas sit at the center of linear algebra, so it is worth going slowly.\n> इ दुगो विचार रैखिक बीजगणित के केंद्र में बाटे, एही से ई धीरे-धीरे करे के लायक बा.\n\n**[00:15]** A matrix is a linear transformation.\n> मैट्रिक्स एगो रैखिक परिवर्तन बाटे.\n\n**[00:19]** It stretches, rotates and shears space.\n> इ खिंचल, घुमावल आउर जगह के काटत बा.\n\n**[00:24]** For most vectors, applying the matrix changes both direction and length.\n> जादातर वेक्टर खातिर, मैट्रिक्स के लागू करे से दिशा आउर लंबाई दुनों में बदलाव आवेला.\n\n**[00:31]** But a few special vectors only change length.\n> लेकिन कुछ विशेष वेक्टर केवल लंबाई में बदलाव करेला.\n\n**[00:35]** Their direction is preserved.\n> उनकर दिशा बरकरार बा.\n\n**[00:39]** Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n> ऊ वेक्टर eigenvectors बा, आउर उ कारक जवन द्वारा उ खींचल जाला eigenvalue बा.\n\n**[00:47]** To find them we solve the characteristic equation of the matrix.\n> उनका के खोजे खातिर हम मैट्रिक्स के विशेषता समीकरण के हल करीं.\n\n**[00:53]** The determinant of a minus lambda times the identity must equal zero.\n> एगो -लंबादा के determinant गुण पहचान शून्य के बराबर होखे के चाहि.\n\n**[00:59]** The determinant is a single number that tells you whether the matrix squashes space flat.\n> determinant एगो एकल संख्या बा जवन बतावेला कि मैट्रिक्स अंतरिक्ष के सपाट करेला कि ना.\n\n**[01:07]** If it is zero, there is a non-trivial solution, and that is exactly what we want.\n> अगर ई शून्य बा, त एगो गैर-नाटकीय समाधान बा, आउर ई उहे बा जवन हमनी के चाहत बा.\n\n**[01:15]** Symmetric matrices always have real eigenvalues.\n> सममित मैट्रिक्स में हमेशा असली eigenvalues होला.\n\n**[01:19]** That is a useful guarantee.\n> ई एगो उपयोगी गारंटी ह।\n\n**[01:23]** Once we have a full set of eigenvectors, we can diagonalize the matrix.\n> जब हमनी के eigenvectors के पूरा सेट होई त हम मैट्रिक्स के diagonalize कर सकीं.\n\n**[01:30]** Diagonalization turns a hard repeated multiplication into a simple one.\n> Diagonalization एगो कठिन दोहरावल गुणन के एगो सरल में बदल देला.\n\n**[01:37]** We will use this next week when we look at principal component analysis.\n> हम अगिला हफ्ता एकर उपयोग मुख्य घटक के विश्लेषण में करी.\n\n## Performance\n\n```json\n{\n  \"uptime_s\": 127.7,\n  \"audio_seconds\": 105.2,\n  \"input_level\": 0.0,\n  \"merged_segments\": 0,\n  \"realtime_factor\": 1.005,\n  \"stages\": [\n    {\n      \"stage\": \"vad\",\n      \"count\": 3288,\n      \"mean_ms\": 3.1,\n      \"p50_ms\": 2.1,\n      \"p95_ms\": 8.9,\n      \"min_ms\": 0.8,\n      \"max_ms\": 31.3\n    },\n    {\n      \"stage\": \"asr\",\n      \"count\": 18,\n      \"mean_ms\": 5873.1,\n      \"p50_ms\": 5824.0,\n      \"p95_ms\": 7639.0,\n      \"min_ms\": 4567.2,\n      \"max_ms\": 7639.0\n    },\n    {\n      \"stage\": \"translate\",\n      \"count\": 18,\n      \"mean_ms\": 6313.4,\n      \"p50_ms\": 6086.9,\n      \"p95_ms\": 11780.4,\n      \"min_ms\": 2587.6,\n      \"max_ms\": 11780.4\n    }\n  ]\n}\n```\n",
+   "t": 126.155,
+   "title": "Good morning everyone. - 2026-09-27 16:18",
+   "path": "sessions/20260927-1618-good-morning-everyone-2026-09-27-16-18.md",
+   "markdown": "# Good morning everyone. - 2026-09-27 16:18\n\n**Date** 27 Sep 2026, 16:18 · **Duration** 2 min · **Captions** 18\n\n_Processed entirely on-device: CPU_\n\n## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- For most vectors, applying the matrix changes both direction and length.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n- We will use this next week when we look at principal component analysis.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._\n\n## Glossary\n\n_Explanations in भोजपुरी (Bhojpuri)._\n\n- **eigenvalue** — A scalar showing how much a matrix stretches a special direction (its eigenvector).\n- **eigenvector** — A direction that a matrix only stretches or shrinks, without rotating it.\n- **determinant** — A single number from a square matrix; zero means the matrix squashes space flat.\n- **diagonalize** — Rewriting a matrix in a basis where it becomes a simple diagonal scaling.\n\n## Transcript\n\n**[00:00]** Good morning everyone.\n> सब लोगन के सुप्रभात।\n\n**[00:02]** Today we will start with eigenvalues and eigenvectors.\n> आज हम eigenvalues अउरी eigenvectors से शुरू करब.\n\n**[00:08]** These two ideas sit at the center of linear algebra, so it is worth going slowly.\n> इ दुगो विचार रैखिक बीजगणित के केंद्र में बाटे, एही से ई धीरे-धीरे करे के लायक बा.\n\n**[00:15]** A matrix is a linear transformation.\n> मैट्रिक्स एगो रैखिक परिवर्तन बाटे.\n\n**[00:19]** It stretches, rotates and shears space.\n> इ खिंचल, घुमावल आउर जगह के काटत बा.\n\n**[00:24]** For most vectors, applying the matrix changes both direction and length.\n> जादातर वेक्टर खातिर, मैट्रिक्स के लागू करे से दिशा आउर लंबाई दुनों में बदलाव आवेला.\n\n**[00:31]** But a few special vectors only change length.\n> लेकिन कुछ विशेष वेक्टर केवल लंबाई में बदलाव करेला.\n\n**[00:35]** Their direction is preserved.\n> उनकर दिशा बरकरार बा.\n\n**[00:39]** Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n> ऊ वेक्टर eigenvectors बा, आउर उ कारक जवन द्वारा उ खींचल जाला eigenvalue बा.\n\n**[00:47]** To find them we solve the characteristic equation of the matrix.\n> उनका के खोजे खातिर हम मैट्रिक्स के विशेषता समीकरण के हल करीं.\n\n**[00:53]** The determinant of a minus lambda times the identity must equal zero.\n> एगो -लंबादा के determinant गुण पहचान शून्य के बराबर होखे के चाहि.\n\n**[00:59]** The determinant is a single number that tells you whether the matrix squashes space flat.\n> determinant एगो एकल संख्या बा जवन बतावेला कि मैट्रिक्स अंतरिक्ष के सपाट करेला कि ना.\n\n**[01:07]** If it is zero, there is a non-trivial solution, and that is exactly what we want.\n> अगर ई शून्य बा, त एगो गैर-नाटकीय समाधान बा, आउर ई उहे बा जवन हमनी के चाहत बा.\n\n**[01:15]** Symmetric matrices always have real eigenvalues.\n> सममित मैट्रिक्स में हमेशा असली eigenvalues होला.\n\n**[01:19]** That is a useful guarantee.\n> ई एगो उपयोगी गारंटी ह।\n\n**[01:23]** Once we have a full set of eigenvectors, we can diagonalize the matrix.\n> जब हमनी के eigenvectors के पूरा सेट होई त हम मैट्रिक्स के diagonalize कर सकीं.\n\n**[01:30]** Diagonalization turns a hard repeated multiplication into a simple one.\n> Diagonalization एगो कठिन दोहरावल गुणन के एगो सरल में बदल देला.\n\n**[01:37]** We will use this next week when we look at principal component analysis.\n> हम अगिला हफ्ता एकर उपयोग मुख्य घटक के विश्लेषण में करी.\n\n## Performance\n\n```json\n{\n  \"uptime_s\": 110.7,\n  \"audio_seconds\": 105.2,\n  \"input_level\": 0.0,\n  \"merged_segments\": 0,\n  \"realtime_factor\": 0.503,\n  \"stages\": [\n    {\n      \"stage\": \"vad\",\n      \"count\": 3288,\n      \"mean_ms\": 1.3,\n      \"p50_ms\": 1.1,\n      \"p95_ms\": 2.9,\n      \"min_ms\": 0.1,\n      \"max_ms\": 5.6\n    },\n    {\n      \"stage\": \"asr\",\n      \"count\": 18,\n      \"mean_ms\": 2937.7,\n      \"p50_ms\": 2965.1,\n      \"p95_ms\": 3458.5,\n      \"min_ms\": 2392.5,\n      \"max_ms\": 3458.5\n    },\n    {\n      \"stage\": \"translate\",\n      \"count\": 18,\n      \"mean_ms\": 3009.6,\n      \"p50_ms\": 2896.4,\n      \"p95_ms\": 5232.0,\n      \"min_ms\": 870.6,\n      \"max_ms\": 5232.0\n    }\n  ]\n}\n```\n",
    "summary": "## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- For most vectors, applying the matrix changes both direction and length.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want.\n- We will use this next week when we look at principal component analysis.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._",
    "quiz": [],
    "glossary": [
@@ -3918,7 +3908,7 @@
      "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
      "language": "bho",
      "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
-     "latency_ms": 2.5,
+     "latency_ms": 0.3,
      "backend": "heuristic"
     },
     {
@@ -3926,7 +3916,7 @@
      "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
      "language": "bho",
      "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
-     "latency_ms": 2.5,
+     "latency_ms": 0.3,
      "backend": "heuristic"
     },
     {
@@ -3934,7 +3924,7 @@
      "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
      "language": "bho",
      "source_line": "The determinant is a single number that tells you whether the matrix squashes space flat.",
-     "latency_ms": 0.3,
+     "latency_ms": 0.1,
      "backend": "heuristic"
     },
     {
@@ -3942,15 +3932,15 @@
      "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
      "language": "bho",
      "source_line": "We will use this next week when we look at principal component analysis.",
-     "latency_ms": 1.6,
+     "latency_ms": 0.1,
      "backend": "heuristic"
     }
    ],
-   "duration_minutes": 2.1
+   "duration_minutes": 1.8
   },
   {
    "kind": "status",
-   "t": 164.216,
+   "t": 126.155,
    "running": false,
    "device": {
     "provider": "CPUExecutionProvider",
@@ -3972,38 +3962,38 @@
    "target_language": "bho",
    "mock": false,
    "metrics": {
-    "uptime_s": 127.7,
+    "uptime_s": 110.7,
     "audio_seconds": 105.2,
     "input_level": 0.0,
     "merged_segments": 0,
-    "realtime_factor": 1.005,
+    "realtime_factor": 0.503,
     "stages": [
      {
       "stage": "vad",
       "count": 3288,
-      "mean_ms": 3.1,
-      "p50_ms": 2.1,
-      "p95_ms": 8.9,
-      "min_ms": 0.8,
-      "max_ms": 31.3
+      "mean_ms": 1.3,
+      "p50_ms": 1.1,
+      "p95_ms": 2.9,
+      "min_ms": 0.1,
+      "max_ms": 5.6
      },
      {
       "stage": "asr",
       "count": 18,
-      "mean_ms": 5873.1,
-      "p50_ms": 5824.0,
-      "p95_ms": 7639.0,
-      "min_ms": 4567.2,
-      "max_ms": 7639.0
+      "mean_ms": 2937.7,
+      "p50_ms": 2965.1,
+      "p95_ms": 3458.5,
+      "min_ms": 2392.5,
+      "max_ms": 3458.5
      },
      {
       "stage": "translate",
       "count": 18,
-      "mean_ms": 6313.4,
-      "p50_ms": 6086.9,
-      "p95_ms": 11780.4,
-      "min_ms": 2587.6,
-      "max_ms": 11780.4
+      "mean_ms": 3009.6,
+      "p50_ms": 2896.4,
+      "p95_ms": 5232.0,
+      "min_ms": 870.6,
+      "max_ms": 5232.0
      }
     ]
    }
