@@ -73,6 +73,14 @@
    "duration_s": 126.417
   },
   {
+   "code": "as",
+   "name": "অসমীয়া (Assamese)",
+   "file": "session.as.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 151.579
+  },
+  {
    "code": "mai",
    "name": "मैथिली (Maithili)",
    "file": "session.mai.json",
