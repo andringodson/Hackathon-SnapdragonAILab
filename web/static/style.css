@@ -140,6 +140,7 @@ select:focus-visible, .btn:focus-visible {
 .btn:hover:not(:disabled) { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
 .btn:active:not(:disabled) { transform: scale(0.97); }
 select:hover { border-color: var(--line-hi); }
+a.btn { text-decoration: none; display: inline-block; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .btn-primary {
@@ -243,6 +244,9 @@ main {
   flex: 1;
   scroll-behavior: smooth;
 }
+/* Until the first caption the list is empty and must not claim the panel,
+   or the "Press Start" hint is pushed to the bottom instead of centred. */
+.captions:empty { flex: 0; padding: 0; }
 
 .cap {
   padding: 0.7rem 0.9rem;
