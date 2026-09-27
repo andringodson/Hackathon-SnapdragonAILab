@@ -134,7 +134,7 @@ works.
   datacenter, no audio to capture, and shipping a student's lecture to a
   server would contradict the entire premise ([docs/WEB.md](WEB.md))
 - Degrades on every stage rather than failing; `--mock` runs with nothing downloaded
-- 378 tests, CI on Windows (x86 and ARM64) and Linux, no weights or audio device needed
+- 400 tests, CI on Windows (x86 and ARM64) and Linux, no weights or audio device needed
 - Accessibility: resizable captions, `aria-live`, reduced-motion, full keyboard control
 - Privacy: binds to `127.0.0.1`, no telemetry, no accounts, audio never written to disk
 

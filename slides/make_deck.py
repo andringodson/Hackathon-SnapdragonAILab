@@ -359,7 +359,7 @@ slide("deployment", f"""
   <div style="display:flex; gap:36px; align-items:stretch">
     <div style="flex:1; display:flex; flex-direction:column; gap:24px">
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">install.ps1</b>, then <b style="color:{ON_L}">run.bat</b>. No Node, no build step, no Docker. Every stage degrades rather than failing, and <b style="color:{ON_L}">--mock</b> runs the whole pipeline with nothing downloaded.</p>
-      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">378 tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
+      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">400 tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}">Resizable captions, live regions, reduced motion, full keyboard control. Binds to 127.0.0.1. No telemetry, no account, audio never written to disk.</p>
     </div>
     <div style="flex:1; background:{CARD_L}; border:2px solid {ACCENT_L}; border-radius:20px; padding:40px; display:flex; flex-direction:column; gap:16px; box-shadow:0 4px 24px rgba(15,23,32,0.06)">

@@ -328,7 +328,7 @@ $ pytest tests/test_offline.py
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 -Dev
-.\.venv\Scripts\python.exe -m pytest        # 378 tests, no weights required
+.\.venv\Scripts\python.exe -m pytest        # 400 tests, no weights required
 ```
 
 ```

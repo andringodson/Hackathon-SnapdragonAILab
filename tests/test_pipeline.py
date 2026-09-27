@@ -136,7 +136,9 @@ class TestPipelineMock:
         p.start()
         assert p.running
 
-        deadline = time.time() + 20
+        # Generous: it returns as soon as three captions exist. 20 s was
+        # flaky on a loaded laptop (1 caption in 20 s, 1 run in 3).
+        deadline = time.time() + 60
         while time.time() < deadline and len(p.captions) < 3:
             time.sleep(0.25)
 
@@ -256,7 +258,9 @@ class TestConcurrentTranslation:
         p.bus.publish = tap
         p.load_models()
         p.start()
-        deadline = time.time() + 20
+        # Generous: it returns as soon as three captions exist. 20 s was
+        # flaky on a loaded laptop (1 caption in 20 s, 1 run in 3).
+        deadline = time.time() + 60
         while time.time() < deadline and len(p.captions) < 3:
             time.sleep(0.25)
         notes = p.stop()
