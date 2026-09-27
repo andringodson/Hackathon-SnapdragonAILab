@@ -75,6 +75,17 @@ def _drained(pipeline, captured: list, timeout_s: float) -> bool:
     seen = len(captured)
     quiet = 0
     while time.time() < deadline:
+        # Translations lag their captions by seconds on a CPU and emit nothing
+        # while they run, so two quiet seconds used to end the recording with
+        # the last few still in flight - Gujarati shipped 12 of 18 lines
+        # translated. Wait until every caption has its translation too.
+        captions = sum(1 for e in captured if getattr(e, "kind", None) == "caption")
+        translated = sum(1 for e in captured if getattr(e, "kind", None) == "translation")
+        if translated < captions and pipeline._translator is not None \
+                and getattr(pipeline._translator, "provider", "") != "mock":
+            quiet = 0
+            time.sleep(1.0)
+            continue
         if pipeline._segments.empty() and len(captured) == seen:
             quiet += 1
             if quiet >= 2:
@@ -150,7 +161,7 @@ def record(
             # on CPU a translation can take seconds, and cutting here would
             # truncate the recording mid-caption.
             exhausted = getattr(pipeline._source, "exhausted", False)
-            if exhausted and _drained(pipeline, captured, timeout_s=60.0):
+            if exhausted and _drained(pipeline, captured, timeout_s=240.0):
                 break
             time.sleep(0.1)
     finally:

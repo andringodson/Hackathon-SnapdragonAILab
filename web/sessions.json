@@ -17,12 +17,84 @@
    "duration_s": 121.991
   },
   {
+   "code": "te",
+   "name": "తెలుగు (Telugu)",
+   "file": "session.te.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 127.765
+  },
+  {
+   "code": "kn",
+   "name": "ಕನ್ನಡ (Kannada)",
+   "file": "session.kn.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 141.017
+  },
+  {
    "code": "bn",
    "name": "বাংলা (Bengali)",
    "file": "session.bn.json",
    "mode": "real",
    "captions": 18,
    "duration_s": 121.447
+  },
+  {
+   "code": "gu",
+   "name": "ગુજરાતી (Gujarati)",
+   "file": "session.gu.json",
+   "mode": "real",
+   "captions": 15,
+   "duration_s": 173.185
+  },
+  {
+   "code": "pa",
+   "name": "ਪੰਜਾਬੀ (Punjabi)",
+   "file": "session.pa.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 131.795
+  },
+  {
+   "code": "or",
+   "name": "ଓଡ଼ିଆ (Odia)",
+   "file": "session.or.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 126.417
+  },
+  {
+   "code": "ur",
+   "name": "اردو (Urdu)",
+   "file": "session.ur.json",
+   "mode": "real",
+   "captions": 16,
+   "duration_s": 172.385
+  },
+  {
+   "code": "as",
+   "name": "অসমীয়া (Assamese)",
+   "file": "session.as.json",
+   "mode": "real",
+   "captions": 15,
+   "duration_s": 230.403
+  },
+  {
+   "code": "mai",
+   "name": "मैथिली (Maithili)",
+   "file": "session.mai.json",
+   "mode": "real",
+   "captions": 13,
+   "duration_s": 400.619
+  },
+  {
+   "code": "ne",
+   "name": "नेपाली (Nepali)",
+   "file": "session.ne.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 392.483
   }
  ]
 }

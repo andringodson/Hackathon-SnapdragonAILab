@@ -104,6 +104,39 @@ def test_recording_carries_no_local_paths(path: Path):
         assert leak not in raw, f"{path.name} leaks a local path ({leak})"
 
 
+@pytest.mark.parametrize("path", sorted(WEB.glob("session.*.json")), ids=lambda p: p.name)
+def test_recording_is_translated_into_its_own_language(path: Path):
+    """A demo recording labelled Odia must show Odia, on every line.
+
+    The picker offers one recording per language, so a recording that is
+    half untranslated, or in the wrong script, is a false claim about the
+    product. Real recordings only: a mock one says so on the page.
+    """
+    from check_languages import SCRIPTS
+
+    from sahaay.config import SUPPORTED_LANGUAGES
+
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("mode") != "real":
+        pytest.skip("mock recording")
+    code = path.name.split(".")[1]
+    assert code in SUPPORTED_LANGUAGES, f"{path.name} is for a language the app does not offer"
+    script = SUPPORTED_LANGUAGES[code]["nllb"].split("_")[1]
+
+    captions = {e["index"] for e in data["events"] if e["kind"] == "caption"}
+    translations = [e for e in data["events"] if e["kind"] == "translation"]
+    assert {e["index"] for e in translations} == captions, "some captions were never translated"
+    assert not any(e.get("passthrough") for e in translations), "recorded without the translation model"
+
+    ranges = SCRIPTS[script]
+    for e in translations:
+        letters = [c for c in e["text"] if c.isalpha() and not c.isascii()]
+        if script == "Latn":
+            continue
+        share = sum(any(lo <= ord(c) <= hi for lo, hi in ranges) for c in letters) / max(1, len(letters))
+        assert share >= 0.8, f"line {e['index']} is not in {script}: {e['text'][:60]}"
+
+
 class TestLiveBuild:
     """The browser build is the product's UI with inference underneath.
 
