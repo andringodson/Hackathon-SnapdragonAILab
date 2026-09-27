@@ -55,7 +55,7 @@ On a Snapdragon PC the Whisper encoder runs on the Hexagon NPU instead: [13.5 ms
 
 A one-hour lecture, every day, for every student, is also precisely the workload that is absurd to send to the cloud — and precisely what a 45 TOPS NPU sitting idle in a laptop is for.
 
-![Sahaay running: live code-mixed captions on the left, jargon glossary and live device report on the right](docs/img/ui.png)
+![Sahaay mid-lecture: English captions, each translated into Hindi on the device with technical terms such as eigenvalue kept intact, and a jargon panel explaining each term as it is spoken](docs/img/demo.png)
 
 *Captions arriving live, the jargon sidebar filling as terms are spoken, and the execution-provider badge reporting what the models are actually running on. Translation shows "not installed" here because this capture ran without the NLLB weights — the UI never claims a capability it does not have.*
 
@@ -63,9 +63,11 @@ A one-hour lecture, every day, for every student, is also precisely the workload
 
 **No install at all:** [sahaay-offline.vercel.app/live](https://sahaay-offline.vercel.app/live/)
 downloads Whisper once and runs it in your own browser — speak, or share a tab
-playing a lecture. Your audio never leaves the tab. Watch the RTF badge: on a
-laptop CPU it sits above 1.0, which is the measurement this project is about,
-happening to you. Captions and the jargon sidebar only; the NPU, system-audio
+playing a lecture. Your audio never leaves the tab. Watch the RTF badge: after
+tuning it holds about 0.5 on a laptop CPU ([docs/TUNING.md](docs/TUNING.md)),
+because the browser runs one model. The measurement this project is about is
+what happens when a second model shares those cores
+([docs/CONCURRENCY.md](docs/CONCURRENCY.md)). Captions and the jargon sidebar only; the NPU, system-audio
 capture and Indian-language translation need the desktop build below.
 
 No models, no audio device, no Snapdragon hardware:
@@ -324,7 +326,7 @@ $ pytest tests/test_offline.py
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 -Dev
-.\.venv\Scripts\python.exe -m pytest        # 259 tests, no weights required
+.\.venv\Scripts\python.exe -m pytest        # 296 tests, no weights required
 ```
 
 ```

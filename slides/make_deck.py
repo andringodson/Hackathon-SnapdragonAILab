@@ -60,7 +60,7 @@ GLOW_BR = f"radial-gradient(ellipse at 78% 88%, #1B4E80 0%, {INK} 62%)"
 HEAD = "'Rubik', Verdana, sans-serif"
 BODY = "'IBM Plex Sans', Verdana, sans-serif"
 
-SHOT = "/_blob/3a9e655f5a0b3cee28c0f67817bc8d83"   # docs/img/demo.png
+SHOT = "/_blob/11543e39bc1ea83d551ba0b2df340614"   # docs/img/demo.png (OLED UI, Hindi session)
 
 dark = (
     f"background:{INK}; color:{ON_D}; font-family:{BODY}; "
@@ -350,18 +350,18 @@ slide("deployment", f"""
   <div style="display:flex; gap:36px; align-items:stretch">
     <div style="flex:1; display:flex; flex-direction:column; gap:24px">
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">install.ps1</b>, then <b style="color:{ON_L}">run.bat</b>. No Node, no build step, no Docker. Every stage degrades rather than failing, and <b style="color:{ON_L}">--mock</b> runs the whole pipeline with nothing downloaded.</p>
-      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">259 tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
+      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}"><b style="color:{ON_L}">296 tests</b>, green on Windows x86, Windows ARM64 and Linux &mdash; with no weights and no audio device.</p>
       <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}">Resizable captions, live regions, reduced motion, full keyboard control. Binds to 127.0.0.1. No telemetry, no account, audio never written to disk.</p>
     </div>
     <div style="flex:1; background:{CARD_L}; border:2px solid {ACCENT_L}; border-radius:20px; padding:40px; display:flex; flex-direction:column; gap:16px; box-shadow:0 4px 24px rgba(15,23,32,0.06)">
       <h3 style="font-family:{HEAD}; font-size:38px; font-weight:600; line-height:1.18; color:{ACCENT_L}">Nothing is hosted. Try it anyway.</h3>
       <p style="font-size:29px; line-height:1.45; color:{ON_L}">The site runs Whisper in <i>your</i> browser &mdash; static files, your own CPU, audio that never leaves the tab. The same claim the desktop app makes, on hardware you already have.</p>
-      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}">Watch the RTF badge climb past 1.0 while it runs. That is this deck&rsquo;s central measurement, happening to you.</p>
+      <p style="font-size:29px; line-height:1.45; color:{ON_L_DIM}">Watch the RTF badge while it runs: about 0.5 with one model. Slide five is what a second model on the same cores does to it.</p>
       <p style="font-size:30px; line-height:1.4; color:{ACCENT_L}">sahaay-offline.vercel.app/live</p>
     </div>
   </div>
   {footer('Deployment and accessibility &#183; docs/WEB.md', ON_L_DIM)}
-  <aside>The right-hand card is the best invitation in the deck: tell them to open it on their phone now. A judge who watches RTF cross 1.0 on their own device has understood slide five without you saying a word. The pipeline still is not hosted - no NPU, no system audio, no translation - and saying that out loud pre-empts the obvious question.</aside>
+  <aside>The right-hand card is the best invitation in the deck: tell them to open it on their phone now. The captions keep up with one model; slide five is what happens when the glossary model joins on the same cores. The pipeline still is not hosted - no NPU, no system audio, no translation - and saying that out loud pre-empts the obvious question.</aside>
 </section>
 """)
 

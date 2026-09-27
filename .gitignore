@@ -27,3 +27,5 @@ testaudio/
 .vercel/
 .env*
 .vercel
+video/work/
+slides/_print.html

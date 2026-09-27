@@ -127,12 +127,12 @@
       source file, so the two cannot drift.
     </p>
     <p>
-      <strong>Watch the RTF badge while it runs.</strong> On most machines it
-      will sit <em>above</em> 1.0 — WebAssembly on a laptop CPU transcribes
-      slower than people speak, so the captions arrive late and keep slipping.
-      That is not a bug in the demo. It is the measurement below, happening to
-      you, in the browser, which is the whole reason this belongs on a
-      Snapdragon PC.
+      <strong>Watch the RTF badge while it runs.</strong> It should hold
+      around 0.5: on the laptop this was tuned on, WebAssembly transcribes the
+      whole test lecture at 0.46–0.50, so the captions keep up. That is
+      <em>one</em> model on the CPU. The measurement below is what happens when
+      a second model, the glossary, runs on the same cores — the part a
+      browser cannot show, and the reason this belongs on a Snapdragon PC.
     </p>
     <p class="caveat">
       <strong>What the browser build is not.</strong> It uses Whisper Base
@@ -296,7 +296,7 @@
       <div class="stat"><b>+0.01 MB</b><span>memory growth per simulated minute, over 60</span></div>
       <div class="stat"><b>4 → 4</b><span>threads, start to finish — nothing leaks</span></div>
       <div class="stat"><b>0</b><span>segment-queue backlog at the end</span></div>
-      <div class="stat"><b>259</b><span>tests, green on x86, ARM64 and Linux</span></div>
+      <div class="stat"><b>296</b><span>tests, green on x86, ARM64 and Linux</span></div>
     </div>
     <p>
       Every other test in the repo runs for seconds. The failure modes of an
