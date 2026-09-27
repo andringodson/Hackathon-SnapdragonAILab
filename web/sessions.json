@@ -57,6 +57,14 @@
    "duration_s": 126.584
   },
   {
+   "code": "gu",
+   "name": "ગુજરાતી (Gujarati)",
+   "file": "session.gu.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 152.401
+  },
+  {
    "code": "pa",
    "name": "ਪੰਜਾਬੀ (Punjabi)",
    "file": "session.pa.json",
