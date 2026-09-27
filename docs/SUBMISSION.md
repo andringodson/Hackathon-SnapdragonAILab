@@ -67,7 +67,7 @@ Snapdragon X2 Elite, 27.56 ms on X Elite, 26.76 ms on X Plus, 129/129 layers
 on the NPU each time; every job link is public.
 
 **Deployment and accessibility.** `install.ps1` then `run.bat`; every stage
-degrades rather than failing, and `--mock` runs with nothing downloaded. 296
+degrades rather than failing, and `--mock` runs with nothing downloaded. 378
 tests run in CI on Windows x86, Windows ARM64 and Linux. Offline is a test,
 not a claim: a full session runs with outbound sockets patched to fail.
 Resizable captions, live regions, reduced motion, keyboard control; binds to

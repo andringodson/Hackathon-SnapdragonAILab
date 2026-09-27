@@ -1,0 +1,3778 @@
+{
+ "recorded_with": "scripts/record_demo.py",
+ "mode": "real",
+ "audio_file": "lecture_long.wav",
+ "target_language": "ml",
+ "duration_s": 164.882,
+ "event_counts": {
+  "status": 8,
+  "level": 476,
+  "partial": 15,
+  "caption": 15,
+  "metric": 15,
+  "translation": 15,
+  "gloss": 4,
+  "notes": 1
+ },
+ "events": [
+  {
+   "kind": "status",
+   "t": 0.0,
+   "stage": "loading",
+   "detail": "speech recognition",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 0.3,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "status",
+   "t": 3.451,
+   "stage": "loading",
+   "detail": "translation",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 3.7,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "status",
+   "t": 13.374,
+   "stage": "loading",
+   "detail": "language model",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 13.7,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "status",
+   "t": 13.375,
+   "stage": "warming",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 13.7,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "status",
+   "t": 19.169,
+   "stage": "ready",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 19.5,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "level",
+   "t": 19.423,
+   "rms": 0.0
+  },
+  {
+   "kind": "status",
+   "t": 19.426,
+   "running": true,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 0,
+   "glossary": 0,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 0.3,
+    "audio_seconds": 0.0,
+    "input_level": 0.0,
+    "merged_segments": 0,
+    "realtime_factor": 0.0,
+    "stages": []
+   }
+  },
+  {
+   "kind": "level",
+   "t": 19.626,
+   "rms": 0.02078
+  },
+  {
+   "kind": "level",
+   "t": 19.838,
+   "rms": 0.20258
+  },
+  {
+   "kind": "level",
+   "t": 20.043,
+   "rms": 0.09595
+  },
+  {
+   "kind": "level",
+   "t": 20.265,
+   "rms": 0.0887
+  },
+  {
+   "kind": "level",
+   "t": 20.483,
+   "rms": 0.07513
+  },
+  {
+   "kind": "level",
+   "t": 20.705,
+   "rms": 0.04172
+  },
+  {
+   "kind": "level",
+   "t": 20.932,
+   "rms": 4e-05
+  },
+  {
+   "kind": "level",
+   "t": 21.159,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 21.379,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 21.446,
+   "text": "...",
+   "index": 0
+  },
+  {
+   "kind": "level",
+   "t": 21.584,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 21.79,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 22.031,
+   "rms": 0.10452
+  },
+  {
+   "kind": "level",
+   "t": 22.243,
+   "rms": 0.16908
+  },
+  {
+   "kind": "level",
+   "t": 22.466,
+   "rms": 0.09756
+  },
+  {
+   "kind": "level",
+   "t": 22.693,
+   "rms": 0.05536
+  },
+  {
+   "kind": "level",
+   "t": 22.915,
+   "rms": 0.21928
+  },
+  {
+   "kind": "level",
+   "t": 23.139,
+   "rms": 0.04649
+  },
+  {
+   "kind": "level",
+   "t": 23.366,
+   "rms": 0.06495
+  },
+  {
+   "kind": "level",
+   "t": 23.576,
+   "rms": 0.02145
+  },
+  {
+   "kind": "level",
+   "t": 23.782,
+   "rms": 0.05051
+  },
+  {
+   "kind": "level",
+   "t": 24.006,
+   "rms": 0.10539
+  },
+  {
+   "kind": "level",
+   "t": 24.229,
+   "rms": 0.07015
+  },
+  {
+   "kind": "level",
+   "t": 24.45,
+   "rms": 0.11093
+  },
+  {
+   "kind": "level",
+   "t": 24.693,
+   "rms": 0.15887
+  },
+  {
+   "kind": "level",
+   "t": 24.897,
+   "rms": 0.10832
+  },
+  {
+   "kind": "level",
+   "t": 25.105,
+   "rms": 0.1657
+  },
+  {
+   "kind": "level",
+   "t": 25.339,
+   "rms": 0.06906
+  },
+  {
+   "kind": "level",
+   "t": 25.544,
+   "rms": 0.05255
+  },
+  {
+   "kind": "level",
+   "t": 25.785,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 26.003,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 26.216,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 26.433,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 26.654,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 26.858,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 27.086,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 27.299,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 27.523,
+   "rms": 0.04206
+  },
+  {
+   "kind": "caption",
+   "t": 27.71,
+   "index": 0,
+   "text": "Good morning everyone.",
+   "language": "en",
+   "start_s": 0.0,
+   "latency_ms": 6261.5,
+   "rtf": 2.878,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 27.754,
+   "uptime_s": 8.5,
+   "audio_seconds": 8.4,
+   "input_level": 0.04206,
+   "merged_segments": 0,
+   "realtime_factor": 0.741,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 263,
+     "mean_ms": 2.5,
+     "p50_ms": 1.5,
+     "p95_ms": 8.0,
+     "min_ms": 0.4,
+     "max_ms": 25.7
+    },
+    {
+     "stage": "asr",
+     "count": 1,
+     "mean_ms": 6261.8,
+     "p50_ms": 6261.8,
+     "p95_ms": 6261.8,
+     "min_ms": 6261.8,
+     "max_ms": 6261.8
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 27.755,
+   "text": "...",
+   "index": 1
+  },
+  {
+   "kind": "level",
+   "t": 27.757,
+   "rms": 0.08225
+  },
+  {
+   "kind": "level",
+   "t": 28.004,
+   "rms": 0.13463
+  },
+  {
+   "kind": "level",
+   "t": 28.243,
+   "rms": 0.04214
+  },
+  {
+   "kind": "level",
+   "t": 28.447,
+   "rms": 0.13485
+  },
+  {
+   "kind": "level",
+   "t": 28.692,
+   "rms": 0.09794
+  },
+  {
+   "kind": "level",
+   "t": 28.898,
+   "rms": 0.10405
+  },
+  {
+   "kind": "level",
+   "t": 29.12,
+   "rms": 0.07952
+  },
+  {
+   "kind": "level",
+   "t": 29.343,
+   "rms": 0.14003
+  },
+  {
+   "kind": "level",
+   "t": 29.543,
+   "rms": 0.13798
+  },
+  {
+   "kind": "level",
+   "t": 29.768,
+   "rms": 0.04327
+  },
+  {
+   "kind": "level",
+   "t": 29.99,
+   "rms": 0.17972
+  },
+  {
+   "kind": "level",
+   "t": 30.219,
+   "rms": 0.10776
+  },
+  {
+   "kind": "level",
+   "t": 30.432,
+   "rms": 0.14927
+  },
+  {
+   "kind": "level",
+   "t": 30.658,
+   "rms": 0.05885
+  },
+  {
+   "kind": "level",
+   "t": 30.88,
+   "rms": 0.05923
+  },
+  {
+   "kind": "level",
+   "t": 31.103,
+   "rms": 0.0005
+  },
+  {
+   "kind": "level",
+   "t": 31.312,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 31.509,
+   "rms": 0.0131
+  },
+  {
+   "kind": "level",
+   "t": 31.714,
+   "rms": 0.15309
+  },
+  {
+   "kind": "level",
+   "t": 31.932,
+   "rms": 0.12369
+  },
+  {
+   "kind": "level",
+   "t": 32.133,
+   "rms": 0.04919
+  },
+  {
+   "kind": "level",
+   "t": 32.354,
+   "rms": 0.01736
+  },
+  {
+   "kind": "level",
+   "t": 32.577,
+   "rms": 0.16271
+  },
+  {
+   "kind": "level",
+   "t": 32.781,
+   "rms": 0.12588
+  },
+  {
+   "kind": "level",
+   "t": 33.008,
+   "rms": 0.05676
+  },
+  {
+   "kind": "level",
+   "t": 33.23,
+   "rms": 0.08906
+  },
+  {
+   "kind": "level",
+   "t": 33.44,
+   "rms": 0.00268
+  },
+  {
+   "kind": "caption",
+   "t": 33.593,
+   "index": 1,
+   "text": "Today we will start with eigenvalues and eigenvectors.",
+   "language": "en",
+   "start_s": 2.55,
+   "latency_ms": 5837.5,
+   "rtf": 1.303,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 33.597,
+   "uptime_s": 14.4,
+   "audio_seconds": 14.3,
+   "input_level": 0.00268,
+   "merged_segments": 0,
+   "realtime_factor": 0.844,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 448,
+     "mean_ms": 2.9,
+     "p50_ms": 1.6,
+     "p95_ms": 9.6,
+     "min_ms": 0.4,
+     "max_ms": 51.3
+    },
+    {
+     "stage": "asr",
+     "count": 2,
+     "mean_ms": 6049.7,
+     "p50_ms": 6261.8,
+     "p95_ms": 6261.8,
+     "min_ms": 5837.6,
+     "max_ms": 6261.8
+    }
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 33.661,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 33.868,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.087,
+   "rms": 0.0
+  },
+  {
+   "kind": "partial",
+   "t": 34.212,
+   "text": "...",
+   "index": 2
+  },
+  {
+   "kind": "level",
+   "t": 34.304,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.525,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.76,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 34.965,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 35.197,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 35.409,
+   "rms": 0.09646
+  },
+  {
+   "kind": "level",
+   "t": 35.625,
+   "rms": 0.09428
+  },
+  {
+   "kind": "level",
+   "t": 35.846,
+   "rms": 0.0969
+  },
+  {
+   "kind": "level",
+   "t": 36.067,
+   "rms": 0.07693
+  },
+  {
+   "kind": "translation",
+   "t": 36.097,
+   "index": 0,
+   "text": "എല്ലാവർക്കും സുപ്രഭാതം.",
+   "target_language": "ml",
+   "latency_ms": 8374.0,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 36.299,
+   "rms": 0.09257
+  },
+  {
+   "kind": "level",
+   "t": 36.54,
+   "rms": 0.17582
+  },
+  {
+   "kind": "level",
+   "t": 36.737,
+   "rms": 0.06312
+  },
+  {
+   "kind": "level",
+   "t": 36.961,
+   "rms": 0.1635
+  },
+  {
+   "kind": "level",
+   "t": 37.159,
+   "rms": 0.06023
+  },
+  {
+   "kind": "level",
+   "t": 37.38,
+   "rms": 0.10147
+  },
+  {
+   "kind": "level",
+   "t": 37.603,
+   "rms": 0.11003
+  },
+  {
+   "kind": "level",
+   "t": 37.826,
+   "rms": 0.01824
+  },
+  {
+   "kind": "level",
+   "t": 38.028,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 38.243,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 38.461,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 38.667,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 38.888,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 39.114,
+   "rms": 0.04682
+  },
+  {
+   "kind": "level",
+   "t": 39.338,
+   "rms": 0.01532
+  },
+  {
+   "kind": "level",
+   "t": 39.563,
+   "rms": 0.027
+  },
+  {
+   "kind": "level",
+   "t": 39.814,
+   "rms": 0.04332
+  },
+  {
+   "kind": "level",
+   "t": 40.032,
+   "rms": 0.00036
+  },
+  {
+   "kind": "caption",
+   "t": 40.165,
+   "index": 2,
+   "text": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+   "language": "en",
+   "start_s": 8.09,
+   "latency_ms": 5952.2,
+   "rtf": 0.869,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 40.167,
+   "uptime_s": 21.0,
+   "audio_seconds": 20.9,
+   "input_level": 0.00036,
+   "merged_segments": 0,
+   "realtime_factor": 0.864,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 653,
+     "mean_ms": 3.4,
+     "p50_ms": 1.9,
+     "p95_ms": 11.5,
+     "min_ms": 0.7,
+     "max_ms": 51.3
+    },
+    {
+     "stage": "asr",
+     "count": 3,
+     "mean_ms": 6017.2,
+     "p50_ms": 5952.3,
+     "p95_ms": 6261.8,
+     "min_ms": 5837.6,
+     "max_ms": 6261.8
+    },
+    {
+     "stage": "translate",
+     "count": 1,
+     "mean_ms": 8374.4,
+     "p50_ms": 8374.4,
+     "p95_ms": 8374.4,
+     "min_ms": 8374.4,
+     "max_ms": 8374.4
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 40.167,
+   "text": "...",
+   "index": 3
+  },
+  {
+   "kind": "gloss",
+   "t": 40.185,
+   "term": "eigenvalue",
+   "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
+   "language": "ml",
+   "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+   "latency_ms": 9.1,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "gloss",
+   "t": 40.185,
+   "term": "eigenvector",
+   "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
+   "language": "ml",
+   "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+   "latency_ms": 9.1,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "level",
+   "t": 40.253,
+   "rms": 0.12822
+  },
+  {
+   "kind": "level",
+   "t": 40.469,
+   "rms": 0.13096
+  },
+  {
+   "kind": "level",
+   "t": 40.678,
+   "rms": 0.09233
+  },
+  {
+   "kind": "level",
+   "t": 40.9,
+   "rms": 9e-05
+  },
+  {
+   "kind": "level",
+   "t": 41.104,
+   "rms": 0.10962
+  },
+  {
+   "kind": "level",
+   "t": 41.322,
+   "rms": 0.07946
+  },
+  {
+   "kind": "level",
+   "t": 41.546,
+   "rms": 0.07117
+  },
+  {
+   "kind": "level",
+   "t": 41.762,
+   "rms": 0.03796
+  },
+  {
+   "kind": "level",
+   "t": 41.984,
+   "rms": 0.02982
+  },
+  {
+   "kind": "level",
+   "t": 42.185,
+   "rms": 0.04278
+  },
+  {
+   "kind": "level",
+   "t": 42.405,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 42.617,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 42.847,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 43.051,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 43.31,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 43.528,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 43.76,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 43.986,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 44.201,
+   "rms": 0.21247
+  },
+  {
+   "kind": "level",
+   "t": 44.419,
+   "rms": 0.20442
+  },
+  {
+   "kind": "translation",
+   "t": 44.602,
+   "index": 1,
+   "text": "ഇന്ന് നാം eigenvalues ഉം eigenvectors ഉം ഉപയോഗിച്ച് തുടങ്ങും.",
+   "target_language": "ml",
+   "latency_ms": 8502.3,
+   "passthrough": false,
+   "protected_terms": [
+    "eigenvectors",
+    "eigenvalues"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 44.678,
+   "rms": 0.07454
+  },
+  {
+   "kind": "level",
+   "t": 44.906,
+   "rms": 0.01566
+  },
+  {
+   "kind": "level",
+   "t": 45.137,
+   "rms": 0.1047
+  },
+  {
+   "kind": "level",
+   "t": 45.347,
+   "rms": 0.00159
+  },
+  {
+   "kind": "level",
+   "t": 45.548,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 45.77,
+   "rms": 7e-05
+  },
+  {
+   "kind": "level",
+   "t": 45.984,
+   "rms": 0.00509
+  },
+  {
+   "kind": "level",
+   "t": 46.209,
+   "rms": 0.17182
+  },
+  {
+   "kind": "level",
+   "t": 46.447,
+   "rms": 0.11994
+  },
+  {
+   "kind": "level",
+   "t": 46.67,
+   "rms": 0.15491
+  },
+  {
+   "kind": "level",
+   "t": 46.894,
+   "rms": 0.15668
+  },
+  {
+   "kind": "caption",
+   "t": 46.894,
+   "index": 3,
+   "text": "A matrix is a linear transformation.",
+   "language": "en",
+   "start_s": 15.86,
+   "latency_ms": 6727.1,
+   "rtf": 1.965,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 46.896,
+   "uptime_s": 27.7,
+   "audio_seconds": 27.6,
+   "input_level": 0.15668,
+   "merged_segments": 0,
+   "realtime_factor": 0.896,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 863,
+     "mean_ms": 3.5,
+     "p50_ms": 1.9,
+     "p95_ms": 10.8,
+     "min_ms": 0.7,
+     "max_ms": 82.1
+    },
+    {
+     "stage": "asr",
+     "count": 4,
+     "mean_ms": 6194.7,
+     "p50_ms": 6261.8,
+     "p95_ms": 6727.2,
+     "min_ms": 5837.6,
+     "max_ms": 6727.2
+    },
+    {
+     "stage": "translate",
+     "count": 2,
+     "mean_ms": 8438.5,
+     "p50_ms": 8502.6,
+     "p95_ms": 8502.6,
+     "min_ms": 8374.4,
+     "max_ms": 8502.6
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 46.896,
+   "text": "...",
+   "index": 4
+  },
+  {
+   "kind": "level",
+   "t": 47.115,
+   "rms": 0.01873
+  },
+  {
+   "kind": "level",
+   "t": 47.315,
+   "rms": 0.14342
+  },
+  {
+   "kind": "level",
+   "t": 47.515,
+   "rms": 0.12381
+  },
+  {
+   "kind": "level",
+   "t": 47.717,
+   "rms": 0.00604
+  },
+  {
+   "kind": "level",
+   "t": 47.941,
+   "rms": 0.02456
+  },
+  {
+   "kind": "level",
+   "t": 48.165,
+   "rms": 0.11481
+  },
+  {
+   "kind": "level",
+   "t": 48.371,
+   "rms": 0.02271
+  },
+  {
+   "kind": "level",
+   "t": 48.578,
+   "rms": 0.0834
+  },
+  {
+   "kind": "level",
+   "t": 48.778,
+   "rms": 0.09181
+  },
+  {
+   "kind": "level",
+   "t": 49.011,
+   "rms": 0.151
+  },
+  {
+   "kind": "level",
+   "t": 49.229,
+   "rms": 0.01025
+  },
+  {
+   "kind": "level",
+   "t": 49.442,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 49.647,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 49.85,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 50.087,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 50.306,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 50.543,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 50.758,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 50.979,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 51.197,
+   "rms": 0.00026
+  },
+  {
+   "kind": "level",
+   "t": 51.422,
+   "rms": 0.09675
+  },
+  {
+   "kind": "level",
+   "t": 51.647,
+   "rms": 0.08397
+  },
+  {
+   "kind": "level",
+   "t": 51.849,
+   "rms": 0.09748
+  },
+  {
+   "kind": "level",
+   "t": 52.064,
+   "rms": 0.21892
+  },
+  {
+   "kind": "level",
+   "t": 52.264,
+   "rms": 0.16889
+  },
+  {
+   "kind": "level",
+   "t": 52.487,
+   "rms": 0.19905
+  },
+  {
+   "kind": "level",
+   "t": 52.702,
+   "rms": 0.11992
+  },
+  {
+   "kind": "level",
+   "t": 52.928,
+   "rms": 0.0463
+  },
+  {
+   "kind": "level",
+   "t": 53.157,
+   "rms": 0.12185
+  },
+  {
+   "kind": "level",
+   "t": 53.386,
+   "rms": 0.09851
+  },
+  {
+   "kind": "level",
+   "t": 53.615,
+   "rms": 0.13937
+  },
+  {
+   "kind": "caption",
+   "t": 53.679,
+   "index": 4,
+   "text": "It stretches, rotates and shears space.",
+   "language": "en",
+   "start_s": 19.58,
+   "latency_ms": 6782.6,
+   "rtf": 1.656,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 53.682,
+   "uptime_s": 34.5,
+   "audio_seconds": 34.4,
+   "input_level": 0.13937,
+   "merged_segments": 0,
+   "realtime_factor": 0.917,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1074,
+     "mean_ms": 3.5,
+     "p50_ms": 2.0,
+     "p95_ms": 9.8,
+     "min_ms": 0.7,
+     "max_ms": 82.1
+    },
+    {
+     "stage": "asr",
+     "count": 5,
+     "mean_ms": 6312.3,
+     "p50_ms": 6261.8,
+     "p95_ms": 6782.7,
+     "min_ms": 5837.6,
+     "max_ms": 6782.7
+    },
+    {
+     "stage": "translate",
+     "count": 2,
+     "mean_ms": 8438.5,
+     "p50_ms": 8502.6,
+     "p95_ms": 8502.6,
+     "min_ms": 8374.4,
+     "max_ms": 8502.6
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 53.682,
+   "text": "...",
+   "index": 5
+  },
+  {
+   "kind": "level",
+   "t": 53.816,
+   "rms": 0.02816
+  },
+  {
+   "kind": "level",
+   "t": 54.08,
+   "rms": 0.06759
+  },
+  {
+   "kind": "level",
+   "t": 54.291,
+   "rms": 0.00108
+  },
+  {
+   "kind": "level",
+   "t": 54.519,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 54.724,
+   "index": 2,
+   "text": "ഈ രണ്ടു ആശയങ്ങളും രേഖീയ അൽഗെബറയുടെ കേന്ദ്രത്തിലാണ്.",
+   "target_language": "ml",
+   "latency_ms": 10121.4,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 54.806,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 55.04,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 55.282,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 55.536,
+   "rms": 0.20332
+  },
+  {
+   "kind": "level",
+   "t": 55.739,
+   "rms": 0.11297
+  },
+  {
+   "kind": "level",
+   "t": 55.97,
+   "rms": 0.00838
+  },
+  {
+   "kind": "level",
+   "t": 56.192,
+   "rms": 0.05222
+  },
+  {
+   "kind": "level",
+   "t": 56.427,
+   "rms": 0.00031
+  },
+  {
+   "kind": "level",
+   "t": 56.661,
+   "rms": 0.087
+  },
+  {
+   "kind": "level",
+   "t": 56.887,
+   "rms": 0.11218
+  },
+  {
+   "kind": "level",
+   "t": 57.089,
+   "rms": 0.00602
+  },
+  {
+   "kind": "level",
+   "t": 57.325,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 57.553,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 57.763,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 57.97,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 58.185,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 58.41,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 58.642,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 58.86,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 59.078,
+   "rms": 0.13677
+  },
+  {
+   "kind": "level",
+   "t": 59.306,
+   "rms": 0.04695
+  },
+  {
+   "kind": "level",
+   "t": 59.524,
+   "rms": 0.04441
+  },
+  {
+   "kind": "level",
+   "t": 59.726,
+   "rms": 0.15072
+  },
+  {
+   "kind": "level",
+   "t": 59.959,
+   "rms": 0.13531
+  },
+  {
+   "kind": "level",
+   "t": 60.162,
+   "rms": 0.12376
+  },
+  {
+   "kind": "level",
+   "t": 60.389,
+   "rms": 0.12428
+  },
+  {
+   "kind": "level",
+   "t": 60.598,
+   "rms": 0.11528
+  },
+  {
+   "kind": "caption",
+   "t": 60.697,
+   "index": 5,
+   "text": "For most vectors, applying the matrix changes both direction and length.",
+   "language": "en",
+   "start_s": 24.76,
+   "latency_ms": 7014.4,
+   "rtf": 1.178,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 60.697,
+   "uptime_s": 41.5,
+   "audio_seconds": 41.4,
+   "input_level": 0.11528,
+   "merged_segments": 0,
+   "realtime_factor": 0.931,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1294,
+     "mean_ms": 4.1,
+     "p50_ms": 2.1,
+     "p95_ms": 11.5,
+     "min_ms": 0.8,
+     "max_ms": 128.5
+    },
+    {
+     "stage": "asr",
+     "count": 6,
+     "mean_ms": 6429.4,
+     "p50_ms": 6727.2,
+     "p95_ms": 7014.5,
+     "min_ms": 5837.6,
+     "max_ms": 7014.5
+    },
+    {
+     "stage": "translate",
+     "count": 3,
+     "mean_ms": 8999.5,
+     "p50_ms": 8502.6,
+     "p95_ms": 10121.5,
+     "min_ms": 8374.4,
+     "max_ms": 10121.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 60.707,
+   "text": "...",
+   "index": 6
+  },
+  {
+   "kind": "level",
+   "t": 60.828,
+   "rms": 0.13024
+  },
+  {
+   "kind": "level",
+   "t": 61.059,
+   "rms": 0.1191
+  },
+  {
+   "kind": "level",
+   "t": 61.302,
+   "rms": 0.00096
+  },
+  {
+   "kind": "translation",
+   "t": 61.401,
+   "index": 3,
+   "text": "ഒരു മാട്രിക്സ് എന്നത് ഒരു ലീനിയർ പരിവർത്തനമാണ്.",
+   "target_language": "ml",
+   "latency_ms": 6653.9,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 61.519,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 61.736,
+   "rms": 6e-05
+  },
+  {
+   "kind": "level",
+   "t": 61.989,
+   "rms": 0.10235
+  },
+  {
+   "kind": "level",
+   "t": 62.219,
+   "rms": 0.16743
+  },
+  {
+   "kind": "level",
+   "t": 62.44,
+   "rms": 0.00668
+  },
+  {
+   "kind": "level",
+   "t": 62.675,
+   "rms": 0.05071
+  },
+  {
+   "kind": "level",
+   "t": 62.904,
+   "rms": 0.05588
+  },
+  {
+   "kind": "level",
+   "t": 63.147,
+   "rms": 0.06662
+  },
+  {
+   "kind": "level",
+   "t": 63.376,
+   "rms": 0.03105
+  },
+  {
+   "kind": "level",
+   "t": 63.59,
+   "rms": 0.11604
+  },
+  {
+   "kind": "level",
+   "t": 63.801,
+   "rms": 0.10943
+  },
+  {
+   "kind": "level",
+   "t": 64.015,
+   "rms": 0.13109
+  },
+  {
+   "kind": "level",
+   "t": 64.227,
+   "rms": 0.12705
+  },
+  {
+   "kind": "level",
+   "t": 64.427,
+   "rms": 0.16955
+  },
+  {
+   "kind": "level",
+   "t": 64.653,
+   "rms": 0.09695
+  },
+  {
+   "kind": "level",
+   "t": 64.864,
+   "rms": 0.01796
+  },
+  {
+   "kind": "level",
+   "t": 65.066,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 65.274,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 65.486,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 65.707,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 65.923,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 66.146,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 66.366,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 66.569,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 66.794,
+   "rms": 0.02531
+  },
+  {
+   "kind": "level",
+   "t": 67.011,
+   "rms": 0.08408
+  },
+  {
+   "kind": "level",
+   "t": 67.231,
+   "rms": 0.14247
+  },
+  {
+   "kind": "level",
+   "t": 67.439,
+   "rms": 0.10625
+  },
+  {
+   "kind": "level",
+   "t": 67.654,
+   "rms": 0.09912
+  },
+  {
+   "kind": "level",
+   "t": 67.879,
+   "rms": 0.2625
+  },
+  {
+   "kind": "translation",
+   "t": 67.907,
+   "index": 4,
+   "text": "അത് നീളുന്നു, തിരിക്കുകയും സ്ഥലം മുറിക്കുകയും ചെയ്യുന്നു.",
+   "target_language": "ml",
+   "latency_ms": 6506.0,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 68.112,
+   "rms": 0.01762
+  },
+  {
+   "kind": "level",
+   "t": 68.33,
+   "rms": 0.02748
+  },
+  {
+   "kind": "caption",
+   "t": 68.437,
+   "index": 6,
+   "text": "but a few special vectors only change length. Their direction is preserved.",
+   "language": "en",
+   "start_s": 31.86,
+   "latency_ms": 7729.7,
+   "rtf": 1.192,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 68.438,
+   "uptime_s": 49.3,
+   "audio_seconds": 49.2,
+   "input_level": 0.02748,
+   "merged_segments": 1,
+   "realtime_factor": 0.941,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1537,
+     "mean_ms": 4.0,
+     "p50_ms": 2.3,
+     "p95_ms": 11.7,
+     "min_ms": 0.8,
+     "max_ms": 128.5
+    },
+    {
+     "stage": "asr",
+     "count": 7,
+     "mean_ms": 6615.1,
+     "p50_ms": 6727.2,
+     "p95_ms": 7729.8,
+     "min_ms": 5837.6,
+     "max_ms": 7729.8
+    },
+    {
+     "stage": "translate",
+     "count": 5,
+     "mean_ms": 8031.7,
+     "p50_ms": 8374.4,
+     "p95_ms": 10121.5,
+     "min_ms": 6506.0,
+     "max_ms": 10121.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 68.438,
+   "text": "...",
+   "index": 8
+  },
+  {
+   "kind": "level",
+   "t": 68.572,
+   "rms": 0.13092
+  },
+  {
+   "kind": "level",
+   "t": 68.801,
+   "rms": 0.12075
+  },
+  {
+   "kind": "level",
+   "t": 69.023,
+   "rms": 0.00572
+  },
+  {
+   "kind": "level",
+   "t": 69.23,
+   "rms": 0.04633
+  },
+  {
+   "kind": "level",
+   "t": 69.474,
+   "rms": 0.15206
+  },
+  {
+   "kind": "level",
+   "t": 69.684,
+   "rms": 0.10097
+  },
+  {
+   "kind": "level",
+   "t": 69.889,
+   "rms": 0.09961
+  },
+  {
+   "kind": "level",
+   "t": 70.103,
+   "rms": 0.12005
+  },
+  {
+   "kind": "level",
+   "t": 70.321,
+   "rms": 0.05691
+  },
+  {
+   "kind": "level",
+   "t": 70.545,
+   "rms": 0.06327
+  },
+  {
+   "kind": "level",
+   "t": 70.765,
+   "rms": 0.07115
+  },
+  {
+   "kind": "level",
+   "t": 71.005,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 71.21,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 71.426,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 71.663,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 71.876,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 72.097,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 72.339,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 72.566,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 72.779,
+   "rms": 0.16044
+  },
+  {
+   "kind": "level",
+   "t": 72.986,
+   "rms": 0.0445
+  },
+  {
+   "kind": "level",
+   "t": 73.222,
+   "rms": 0.13511
+  },
+  {
+   "kind": "level",
+   "t": 73.456,
+   "rms": 0.06711
+  },
+  {
+   "kind": "level",
+   "t": 73.661,
+   "rms": 0.02766
+  },
+  {
+   "kind": "level",
+   "t": 73.87,
+   "rms": 0.17299
+  },
+  {
+   "kind": "level",
+   "t": 74.075,
+   "rms": 0.13856
+  },
+  {
+   "kind": "level",
+   "t": 74.291,
+   "rms": 0.05545
+  },
+  {
+   "kind": "level",
+   "t": 74.502,
+   "rms": 0.10768
+  },
+  {
+   "kind": "level",
+   "t": 74.73,
+   "rms": 0.04048
+  },
+  {
+   "kind": "level",
+   "t": 74.948,
+   "rms": 0.17759
+  },
+  {
+   "kind": "level",
+   "t": 75.147,
+   "rms": 0.07575
+  },
+  {
+   "kind": "level",
+   "t": 75.36,
+   "rms": 0.10537
+  },
+  {
+   "kind": "level",
+   "t": 75.584,
+   "rms": 0.04676
+  },
+  {
+   "kind": "level",
+   "t": 75.821,
+   "rms": 0.0243
+  },
+  {
+   "kind": "level",
+   "t": 76.03,
+   "rms": 0.12335
+  },
+  {
+   "kind": "level",
+   "t": 76.258,
+   "rms": 0.12488
+  },
+  {
+   "kind": "level",
+   "t": 76.48,
+   "rms": 0.11598
+  },
+  {
+   "kind": "level",
+   "t": 76.689,
+   "rms": 0.11843
+  },
+  {
+   "kind": "caption",
+   "t": 76.796,
+   "index": 7,
+   "text": "Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.",
+   "language": "en",
+   "start_s": 39.61,
+   "latency_ms": 8358.1,
+   "rtf": 1.238,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 76.797,
+   "uptime_s": 57.6,
+   "audio_seconds": 57.5,
+   "input_level": 0.11843,
+   "merged_segments": 1,
+   "realtime_factor": 0.95,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 1797,
+     "mean_ms": 3.7,
+     "p50_ms": 2.4,
+     "p95_ms": 11.6,
+     "min_ms": 1.1,
+     "max_ms": 30.1
+    },
+    {
+     "stage": "asr",
+     "count": 8,
+     "mean_ms": 6833.0,
+     "p50_ms": 6782.7,
+     "p95_ms": 8358.2,
+     "min_ms": 5837.6,
+     "max_ms": 8358.2
+    },
+    {
+     "stage": "translate",
+     "count": 5,
+     "mean_ms": 8031.7,
+     "p50_ms": 8374.4,
+     "p95_ms": 10121.5,
+     "min_ms": 6506.0,
+     "max_ms": 10121.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 76.797,
+   "text": "...",
+   "index": 9
+  },
+  {
+   "kind": "level",
+   "t": 76.905,
+   "rms": 0.09446
+  },
+  {
+   "kind": "level",
+   "t": 77.13,
+   "rms": 0.14463
+  },
+  {
+   "kind": "level",
+   "t": 77.347,
+   "rms": 0.03028
+  },
+  {
+   "kind": "level",
+   "t": 77.566,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 77.782,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 78.012,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 78.212,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 78.422,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 78.633,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 78.882,
+   "rms": 0.0
+  },
+  {
+   "kind": "translation",
+   "t": 78.931,
+   "index": 5,
+   "text": "മിക്ക വെക്ടറുകളിലും മാട്രിക്സ് പ്രയോഗിക്കുന്നതിലൂടെ ദിശയും നീളവും മാറുന്നു.",
+   "target_language": "ml",
+   "latency_ms": 11024.4,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 79.127,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 79.346,
+   "rms": 0.09281
+  },
+  {
+   "kind": "level",
+   "t": 79.592,
+   "rms": 0.05637
+  },
+  {
+   "kind": "level",
+   "t": 79.808,
+   "rms": 0.17467
+  },
+  {
+   "kind": "level",
+   "t": 80.03,
+   "rms": 0.05221
+  },
+  {
+   "kind": "level",
+   "t": 80.233,
+   "rms": 0.08881
+  },
+  {
+   "kind": "level",
+   "t": 80.465,
+   "rms": 0.11198
+  },
+  {
+   "kind": "level",
+   "t": 80.698,
+   "rms": 0.13008
+  },
+  {
+   "kind": "level",
+   "t": 80.905,
+   "rms": 0.16191
+  },
+  {
+   "kind": "level",
+   "t": 81.117,
+   "rms": 0.06667
+  },
+  {
+   "kind": "level",
+   "t": 81.345,
+   "rms": 0.15764
+  },
+  {
+   "kind": "level",
+   "t": 81.569,
+   "rms": 0.12574
+  },
+  {
+   "kind": "level",
+   "t": 81.808,
+   "rms": 0.06921
+  },
+  {
+   "kind": "level",
+   "t": 82.026,
+   "rms": 0.05904
+  },
+  {
+   "kind": "level",
+   "t": 82.246,
+   "rms": 0.10247
+  },
+  {
+   "kind": "level",
+   "t": 82.462,
+   "rms": 0.11845
+  },
+  {
+   "kind": "level",
+   "t": 82.669,
+   "rms": 0.12875
+  },
+  {
+   "kind": "level",
+   "t": 82.891,
+   "rms": 0.13184
+  },
+  {
+   "kind": "level",
+   "t": 83.109,
+   "rms": 0.09367
+  },
+  {
+   "kind": "level",
+   "t": 83.328,
+   "rms": 0.27919
+  },
+  {
+   "kind": "level",
+   "t": 83.528,
+   "rms": 0.1008
+  },
+  {
+   "kind": "level",
+   "t": 83.751,
+   "rms": 0.04982
+  },
+  {
+   "kind": "level",
+   "t": 83.974,
+   "rms": 0.13037
+  },
+  {
+   "kind": "level",
+   "t": 84.203,
+   "rms": 0.01885
+  },
+  {
+   "kind": "level",
+   "t": 84.425,
+   "rms": 0.11936
+  },
+  {
+   "kind": "translation",
+   "t": 84.508,
+   "index": 6,
+   "text": "എന്നാൽ ചില പ്രത്യേക വെക്ടറുകൾ നീളം മാറ്റുന്നു.",
+   "target_language": "ml",
+   "latency_ms": 5576.8,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 84.643,
+   "rms": 0.00018
+  },
+  {
+   "kind": "caption",
+   "t": 84.672,
+   "index": 8,
+   "text": "To find them we solve the characteristic equation of the matrix.",
+   "language": "en",
+   "start_s": 47.35,
+   "latency_ms": 7874.4,
+   "rtf": 1.598,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 84.672,
+   "uptime_s": 65.5,
+   "audio_seconds": 65.4,
+   "input_level": 0.00018,
+   "merged_segments": 1,
+   "realtime_factor": 0.956,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2044,
+     "mean_ms": 4.2,
+     "p50_ms": 2.5,
+     "p95_ms": 15.0,
+     "min_ms": 1.0,
+     "max_ms": 61.5
+    },
+    {
+     "stage": "asr",
+     "count": 9,
+     "mean_ms": 6948.7,
+     "p50_ms": 6782.7,
+     "p95_ms": 8358.2,
+     "min_ms": 5837.6,
+     "max_ms": 8358.2
+    },
+    {
+     "stage": "translate",
+     "count": 7,
+     "mean_ms": 8108.5,
+     "p50_ms": 8374.4,
+     "p95_ms": 11024.5,
+     "min_ms": 5576.8,
+     "max_ms": 11024.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 84.672,
+   "text": "...",
+   "index": 10
+  },
+  {
+   "kind": "level",
+   "t": 84.864,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 85.078,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 85.289,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 85.514,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 85.744,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 85.973,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 86.192,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 86.42,
+   "rms": 4e-05
+  },
+  {
+   "kind": "level",
+   "t": 86.656,
+   "rms": 0.08815
+  },
+  {
+   "kind": "level",
+   "t": 86.924,
+   "rms": 0.09673
+  },
+  {
+   "kind": "level",
+   "t": 87.142,
+   "rms": 0.13273
+  },
+  {
+   "kind": "level",
+   "t": 87.362,
+   "rms": 0.10898
+  },
+  {
+   "kind": "level",
+   "t": 87.588,
+   "rms": 0.00019
+  },
+  {
+   "kind": "level",
+   "t": 87.788,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 87.989,
+   "rms": 0.00032
+  },
+  {
+   "kind": "level",
+   "t": 88.218,
+   "rms": 0.09095
+  },
+  {
+   "kind": "level",
+   "t": 88.451,
+   "rms": 0.14885
+  },
+  {
+   "kind": "level",
+   "t": 88.677,
+   "rms": 0.24713
+  },
+  {
+   "kind": "level",
+   "t": 88.902,
+   "rms": 0.07133
+  },
+  {
+   "kind": "level",
+   "t": 89.146,
+   "rms": 0.07174
+  },
+  {
+   "kind": "level",
+   "t": 89.389,
+   "rms": 0.06126
+  },
+  {
+   "kind": "level",
+   "t": 89.609,
+   "rms": 0.0737
+  },
+  {
+   "kind": "level",
+   "t": 89.824,
+   "rms": 0.06682
+  },
+  {
+   "kind": "level",
+   "t": 90.046,
+   "rms": 0.06574
+  },
+  {
+   "kind": "level",
+   "t": 90.265,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 90.492,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 90.697,
+   "rms": 0.14368
+  },
+  {
+   "kind": "level",
+   "t": 90.934,
+   "rms": 0.15536
+  },
+  {
+   "kind": "level",
+   "t": 91.146,
+   "rms": 0.08873
+  },
+  {
+   "kind": "level",
+   "t": 91.372,
+   "rms": 0.07187
+  },
+  {
+   "kind": "level",
+   "t": 91.587,
+   "rms": 0.07642
+  },
+  {
+   "kind": "level",
+   "t": 91.813,
+   "rms": 0.13299
+  },
+  {
+   "kind": "level",
+   "t": 92.042,
+   "rms": 0.11678
+  },
+  {
+   "kind": "level",
+   "t": 92.263,
+   "rms": 0.12142
+  },
+  {
+   "kind": "caption",
+   "t": 92.382,
+   "index": 9,
+   "text": "The determinant of a minus lambda times the identity must equal zero.",
+   "language": "en",
+   "start_s": 53.27,
+   "latency_ms": 7709.4,
+   "rtf": 1.393,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 92.383,
+   "uptime_s": 73.2,
+   "audio_seconds": 73.1,
+   "input_level": 0.12142,
+   "merged_segments": 1,
+   "realtime_factor": 0.961,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2284,
+     "mean_ms": 4.2,
+     "p50_ms": 2.5,
+     "p95_ms": 13.1,
+     "min_ms": 1.0,
+     "max_ms": 61.5
+    },
+    {
+     "stage": "asr",
+     "count": 10,
+     "mean_ms": 7024.8,
+     "p50_ms": 7014.5,
+     "p95_ms": 8358.2,
+     "min_ms": 5837.6,
+     "max_ms": 8358.2
+    },
+    {
+     "stage": "translate",
+     "count": 7,
+     "mean_ms": 8108.5,
+     "p50_ms": 8374.4,
+     "p95_ms": 11024.5,
+     "min_ms": 5576.8,
+     "max_ms": 11024.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 92.384,
+   "text": "...",
+   "index": 11
+  },
+  {
+   "kind": "level",
+   "t": 92.485,
+   "rms": 0.23766
+  },
+  {
+   "kind": "level",
+   "t": 92.69,
+   "rms": 0.00858
+  },
+  {
+   "kind": "level",
+   "t": 92.9,
+   "rms": 8e-05
+  },
+  {
+   "kind": "level",
+   "t": 93.101,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 93.319,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 93.545,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 93.744,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 93.961,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 94.175,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 94.401,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 94.621,
+   "rms": 4e-05
+  },
+  {
+   "kind": "translation",
+   "t": 94.715,
+   "index": 7,
+   "text": "ഈ വെക്ടറുകൾ eigenvectors ആണ്, അവർ നീട്ടുന്ന ഘടകം eigenvalue ആണ്.",
+   "target_language": "ml",
+   "latency_ms": 10206.5,
+   "passthrough": false,
+   "protected_terms": [
+    "eigenvectors",
+    "eigenvalue"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 94.828,
+   "rms": 0.16315
+  },
+  {
+   "kind": "level",
+   "t": 95.043,
+   "rms": 0.00847
+  },
+  {
+   "kind": "level",
+   "t": 95.29,
+   "rms": 0.0031
+  },
+  {
+   "kind": "level",
+   "t": 95.497,
+   "rms": 0.13568
+  },
+  {
+   "kind": "level",
+   "t": 95.716,
+   "rms": 0.10366
+  },
+  {
+   "kind": "level",
+   "t": 95.936,
+   "rms": 0.11739
+  },
+  {
+   "kind": "level",
+   "t": 96.172,
+   "rms": 0.15328
+  },
+  {
+   "kind": "level",
+   "t": 96.429,
+   "rms": 0.12167
+  },
+  {
+   "kind": "level",
+   "t": 96.667,
+   "rms": 0.05212
+  },
+  {
+   "kind": "level",
+   "t": 96.892,
+   "rms": 0.06022
+  },
+  {
+   "kind": "level",
+   "t": 97.115,
+   "rms": 0.1395
+  },
+  {
+   "kind": "level",
+   "t": 97.351,
+   "rms": 0.03219
+  },
+  {
+   "kind": "level",
+   "t": 97.573,
+   "rms": 0.01949
+  },
+  {
+   "kind": "level",
+   "t": 97.779,
+   "rms": 0.13634
+  },
+  {
+   "kind": "level",
+   "t": 97.997,
+   "rms": 0.09605
+  },
+  {
+   "kind": "level",
+   "t": 98.216,
+   "rms": 0.0441
+  },
+  {
+   "kind": "level",
+   "t": 98.448,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 98.65,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 98.855,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 99.073,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 99.295,
+   "rms": 3e-05
+  },
+  {
+   "kind": "level",
+   "t": 99.499,
+   "rms": 0.19925
+  },
+  {
+   "kind": "level",
+   "t": 99.721,
+   "rms": 0.10242
+  },
+  {
+   "kind": "level",
+   "t": 99.938,
+   "rms": 0.10082
+  },
+  {
+   "kind": "level",
+   "t": 100.159,
+   "rms": 0.08836
+  },
+  {
+   "kind": "caption",
+   "t": 100.373,
+   "index": 10,
+   "text": "The determinant is a single number that tells you whether the matrix squashes space flat.",
+   "language": "en",
+   "start_s": 59.8,
+   "latency_ms": 7989.2,
+   "rtf": 1.294,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 100.374,
+   "uptime_s": 81.2,
+   "audio_seconds": 81.1,
+   "input_level": 0.08836,
+   "merged_segments": 1,
+   "realtime_factor": 0.964,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2535,
+     "mean_ms": 3.5,
+     "p50_ms": 2.3,
+     "p95_ms": 9.8,
+     "min_ms": 1.1,
+     "max_ms": 39.0
+    },
+    {
+     "stage": "asr",
+     "count": 11,
+     "mean_ms": 7112.5,
+     "p50_ms": 7014.5,
+     "p95_ms": 8358.2,
+     "min_ms": 5837.6,
+     "max_ms": 8358.2
+    },
+    {
+     "stage": "translate",
+     "count": 8,
+     "mean_ms": 8370.8,
+     "p50_ms": 8502.6,
+     "p95_ms": 11024.5,
+     "min_ms": 5576.8,
+     "max_ms": 11024.5
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 100.376,
+   "text": "...",
+   "index": 12
+  },
+  {
+   "kind": "level",
+   "t": 100.386,
+   "rms": 0.0898
+  },
+  {
+   "kind": "level",
+   "t": 100.622,
+   "rms": 0.18803
+  },
+  {
+   "kind": "level",
+   "t": 100.839,
+   "rms": 0.02467
+  },
+  {
+   "kind": "level",
+   "t": 101.112,
+   "rms": 0.04053
+  },
+  {
+   "kind": "level",
+   "t": 101.324,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 101.553,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 101.78,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 102.005,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 102.219,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 102.438,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 102.658,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 102.881,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 103.124,
+   "rms": 0.23775
+  },
+  {
+   "kind": "level",
+   "t": 103.335,
+   "rms": 0.04288
+  },
+  {
+   "kind": "translation",
+   "t": 103.465,
+   "index": 8,
+   "text": "അവ കണ്ടെത്താനായി നമ്മൾ മാട്രിക്സിന്റെ സ്വഭാവ സമവാക്യം പരിഹരിക്കണം.",
+   "target_language": "ml",
+   "latency_ms": 8749.8,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "level",
+   "t": 103.559,
+   "rms": 0.15647
+  },
+  {
+   "kind": "level",
+   "t": 103.763,
+   "rms": 0.08831
+  },
+  {
+   "kind": "level",
+   "t": 103.976,
+   "rms": 0.20079
+  },
+  {
+   "kind": "level",
+   "t": 104.203,
+   "rms": 0.08791
+  },
+  {
+   "kind": "level",
+   "t": 104.415,
+   "rms": 0.12372
+  },
+  {
+   "kind": "level",
+   "t": 104.627,
+   "rms": 0.24516
+  },
+  {
+   "kind": "level",
+   "t": 104.836,
+   "rms": 0.12954
+  },
+  {
+   "kind": "level",
+   "t": 105.05,
+   "rms": 0.18979
+  },
+  {
+   "kind": "level",
+   "t": 105.291,
+   "rms": 0.13549
+  },
+  {
+   "kind": "level",
+   "t": 105.508,
+   "rms": 0.09134
+  },
+  {
+   "kind": "level",
+   "t": 105.71,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 105.927,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 106.134,
+   "rms": 0.11575
+  },
+  {
+   "kind": "level",
+   "t": 106.348,
+   "rms": 0.13462
+  },
+  {
+   "kind": "level",
+   "t": 106.57,
+   "rms": 0.19286
+  },
+  {
+   "kind": "level",
+   "t": 106.783,
+   "rms": 0.14103
+  },
+  {
+   "kind": "level",
+   "t": 107.01,
+   "rms": 0.13945
+  },
+  {
+   "kind": "level",
+   "t": 107.246,
+   "rms": 0.13706
+  },
+  {
+   "kind": "level",
+   "t": 107.46,
+   "rms": 0.11662
+  },
+  {
+   "kind": "level",
+   "t": 107.681,
+   "rms": 0.14392
+  },
+  {
+   "kind": "level",
+   "t": 107.883,
+   "rms": 0.11238
+  },
+  {
+   "kind": "level",
+   "t": 108.105,
+   "rms": 0.02734
+  },
+  {
+   "kind": "level",
+   "t": 108.326,
+   "rms": 7e-05
+  },
+  {
+   "kind": "level",
+   "t": 108.554,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 108.77,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 109.003,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 109.221,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 109.422,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 109.643,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 109.865,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 109.968,
+   "index": 11,
+   "text": "If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.",
+   "language": "en",
+   "start_s": 67.03,
+   "latency_ms": 9591.6,
+   "rtf": 0.82,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 109.968,
+   "uptime_s": 90.8,
+   "audio_seconds": 90.7,
+   "input_level": 0.0,
+   "merged_segments": 2,
+   "realtime_factor": 0.968,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 2835,
+     "mean_ms": 3.6,
+     "p50_ms": 2.4,
+     "p95_ms": 9.0,
+     "min_ms": 1.1,
+     "max_ms": 50.4
+    },
+    {
+     "stage": "asr",
+     "count": 12,
+     "mean_ms": 7319.1,
+     "p50_ms": 7709.8,
+     "p95_ms": 9591.8,
+     "min_ms": 5837.6,
+     "max_ms": 9591.8
+    },
+    {
+     "stage": "translate",
+     "count": 9,
+     "mean_ms": 8412.9,
+     "p50_ms": 8502.6,
+     "p95_ms": 11024.5,
+     "min_ms": 5576.8,
+     "max_ms": 11024.5
+    }
+   ]
+  },
+  {
+   "kind": "gloss",
+   "t": 109.971,
+   "term": "determinant",
+   "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
+   "language": "ml",
+   "source_line": "If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.",
+   "latency_ms": 0.4,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "partial",
+   "t": 109.972,
+   "text": "...",
+   "index": 14
+  },
+  {
+   "kind": "level",
+   "t": 110.097,
+   "rms": 5e-05
+  },
+  {
+   "kind": "level",
+   "t": 110.311,
+   "rms": 0.15445
+  },
+  {
+   "kind": "level",
+   "t": 110.545,
+   "rms": 0.06042
+  },
+  {
+   "kind": "level",
+   "t": 110.758,
+   "rms": 0.12523
+  },
+  {
+   "kind": "level",
+   "t": 110.998,
+   "rms": 0.16994
+  },
+  {
+   "kind": "level",
+   "t": 111.207,
+   "rms": 0.06868
+  },
+  {
+   "kind": "level",
+   "t": 111.412,
+   "rms": 0.01592
+  },
+  {
+   "kind": "level",
+   "t": 111.623,
+   "rms": 0.12207
+  },
+  {
+   "kind": "level",
+   "t": 111.847,
+   "rms": 0.0438
+  },
+  {
+   "kind": "level",
+   "t": 112.081,
+   "rms": 0.21819
+  },
+  {
+   "kind": "level",
+   "t": 112.282,
+   "rms": 0.08408
+  },
+  {
+   "kind": "level",
+   "t": 112.49,
+   "rms": 0.01958
+  },
+  {
+   "kind": "level",
+   "t": 112.701,
+   "rms": 0.12885
+  },
+  {
+   "kind": "level",
+   "t": 112.944,
+   "rms": 0.21175
+  },
+  {
+   "kind": "level",
+   "t": 113.19,
+   "rms": 0.04404
+  },
+  {
+   "kind": "level",
+   "t": 113.401,
+   "rms": 0.00676
+  },
+  {
+   "kind": "level",
+   "t": 113.606,
+   "rms": 0.09668
+  },
+  {
+   "kind": "level",
+   "t": 113.825,
+   "rms": 0.1084
+  },
+  {
+   "kind": "level",
+   "t": 114.027,
+   "rms": 0.06356
+  },
+  {
+   "kind": "level",
+   "t": 114.239,
+   "rms": 0.10853
+  },
+  {
+   "kind": "level",
+   "t": 114.459,
+   "rms": 0.09555
+  },
+  {
+   "kind": "translation",
+   "t": 114.523,
+   "index": 9,
+   "text": "ഒരു -ലാംബ്ഡയുടെ ക്യുക്സ0സും തിരിച്ചറിയൽ നമ്പറും പൂജ്യമായിരിക്കണം.",
+   "target_language": "ml",
+   "latency_ms": 11057.7,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "level",
+   "t": 114.674,
+   "rms": 0.03673
+  },
+  {
+   "kind": "level",
+   "t": 114.895,
+   "rms": 0.09528
+  },
+  {
+   "kind": "level",
+   "t": 115.141,
+   "rms": 0.01555
+  },
+  {
+   "kind": "level",
+   "t": 115.389,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 115.606,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 115.816,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 116.044,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 116.25,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 116.456,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 116.677,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 116.898,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 117.12,
+   "rms": 0.16033
+  },
+  {
+   "kind": "level",
+   "t": 117.346,
+   "rms": 0.13773
+  },
+  {
+   "kind": "level",
+   "t": 117.572,
+   "rms": 0.17449
+  },
+  {
+   "kind": "level",
+   "t": 117.793,
+   "rms": 0.15077
+  },
+  {
+   "kind": "level",
+   "t": 117.996,
+   "rms": 0.01803
+  },
+  {
+   "kind": "level",
+   "t": 118.219,
+   "rms": 0.01651
+  },
+  {
+   "kind": "level",
+   "t": 118.448,
+   "rms": 0.12754
+  },
+  {
+   "kind": "level",
+   "t": 118.657,
+   "rms": 0.02116
+  },
+  {
+   "kind": "level",
+   "t": 118.923,
+   "rms": 0.06562
+  },
+  {
+   "kind": "caption",
+   "t": 118.996,
+   "index": 12,
+   "text": "That is a useful guarantee. Once we have a full set of eigenvectors, we can diagonalize the matrix.",
+   "language": "en",
+   "start_s": 79.93,
+   "latency_ms": 9023.5,
+   "rtf": 1.012,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 118.996,
+   "uptime_s": 99.8,
+   "audio_seconds": 99.7,
+   "input_level": 0.06562,
+   "merged_segments": 3,
+   "realtime_factor": 0.971,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3116,
+     "mean_ms": 4.0,
+     "p50_ms": 2.3,
+     "p95_ms": 10.1,
+     "min_ms": 1.0,
+     "max_ms": 133.5
+    },
+    {
+     "stage": "asr",
+     "count": 13,
+     "mean_ms": 7450.3,
+     "p50_ms": 7709.8,
+     "p95_ms": 9591.8,
+     "min_ms": 5837.6,
+     "max_ms": 9591.8
+    },
+    {
+     "stage": "translate",
+     "count": 10,
+     "mean_ms": 8677.4,
+     "p50_ms": 8749.8,
+     "p95_ms": 11057.7,
+     "min_ms": 5576.8,
+     "max_ms": 11057.7
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 118.997,
+   "text": "...",
+   "index": 16
+  },
+  {
+   "kind": "level",
+   "t": 119.134,
+   "rms": 0.08356
+  },
+  {
+   "kind": "level",
+   "t": 119.363,
+   "rms": 0.08339
+  },
+  {
+   "kind": "level",
+   "t": 119.577,
+   "rms": 0.16673
+  },
+  {
+   "kind": "level",
+   "t": 119.801,
+   "rms": 0.0699
+  },
+  {
+   "kind": "level",
+   "t": 120.006,
+   "rms": 0.17992
+  },
+  {
+   "kind": "level",
+   "t": 120.256,
+   "rms": 0.08716
+  },
+  {
+   "kind": "level",
+   "t": 120.487,
+   "rms": 0.11973
+  },
+  {
+   "kind": "level",
+   "t": 120.705,
+   "rms": 0.02672
+  },
+  {
+   "kind": "level",
+   "t": 120.905,
+   "rms": 0.15101
+  },
+  {
+   "kind": "level",
+   "t": 121.12,
+   "rms": 0.08054
+  },
+  {
+   "kind": "level",
+   "t": 121.323,
+   "rms": 0.02722
+  },
+  {
+   "kind": "level",
+   "t": 121.561,
+   "rms": 0.00542
+  },
+  {
+   "kind": "level",
+   "t": 121.797,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 122.003,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 122.241,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 122.499,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 122.732,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 122.963,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 123.166,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 123.37,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 123.6,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 123.822,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 124.038,
+   "rms": 0.0
+  },
+  {
+   "kind": "level",
+   "t": 124.254,
+   "rms": 0.0
+  },
+  {
+   "kind": "caption",
+   "t": 126.672,
+   "index": 13,
+   "text": "Diagonalization turns a hard repeated multiplication into a simple one.",
+   "language": "en",
+   "start_s": 90.71,
+   "latency_ms": 7674.9,
+   "rtf": 1.311,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 126.672,
+   "uptime_s": 107.5,
+   "audio_seconds": 105.2,
+   "input_level": 0.0,
+   "merged_segments": 3,
+   "realtime_factor": 0.994,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3288,
+     "mean_ms": 3.8,
+     "p50_ms": 2.2,
+     "p95_ms": 10.1,
+     "min_ms": 0.5,
+     "max_ms": 133.5
+    },
+    {
+     "stage": "asr",
+     "count": 14,
+     "mean_ms": 7466.3,
+     "p50_ms": 7709.8,
+     "p95_ms": 9591.8,
+     "min_ms": 5837.6,
+     "max_ms": 9591.8
+    },
+    {
+     "stage": "translate",
+     "count": 10,
+     "mean_ms": 8677.4,
+     "p50_ms": 8749.8,
+     "p95_ms": 11057.7,
+     "min_ms": 5576.8,
+     "max_ms": 11057.7
+    }
+   ]
+  },
+  {
+   "kind": "partial",
+   "t": 126.672,
+   "text": "...",
+   "index": 17
+  },
+  {
+   "kind": "translation",
+   "t": 126.811,
+   "index": 10,
+   "text": "determinant എന്നത് ഒരു സംഖ്യയാണ്. അത് മാട്രിക്സ് സ്പേസ് ഫ്ലാറ്റ് ആണോ എന്ന് പറയുന്നു.",
+   "target_language": "ml",
+   "latency_ms": 12287.9,
+   "passthrough": false,
+   "protected_terms": [
+    "determinant"
+   ]
+  },
+  {
+   "kind": "caption",
+   "t": 134.498,
+   "index": 14,
+   "text": "We will use this next week when we look at principal component analysis.",
+   "language": "en",
+   "start_s": 97.62,
+   "latency_ms": 7825.7,
+   "rtf": 1.464,
+   "provider": "CPUExecutionProvider"
+  },
+  {
+   "kind": "metric",
+   "t": 134.499,
+   "uptime_s": 115.3,
+   "audio_seconds": 105.2,
+   "input_level": 0.0,
+   "merged_segments": 3,
+   "realtime_factor": 1.068,
+   "stages": [
+    {
+     "stage": "vad",
+     "count": 3288,
+     "mean_ms": 3.8,
+     "p50_ms": 2.2,
+     "p95_ms": 10.1,
+     "min_ms": 0.5,
+     "max_ms": 133.5
+    },
+    {
+     "stage": "asr",
+     "count": 15,
+     "mean_ms": 7490.3,
+     "p50_ms": 7709.8,
+     "p95_ms": 9591.8,
+     "min_ms": 5837.6,
+     "max_ms": 9591.8
+    },
+    {
+     "stage": "translate",
+     "count": 11,
+     "mean_ms": 9005.6,
+     "p50_ms": 8749.8,
+     "p95_ms": 12287.9,
+     "min_ms": 5576.8,
+     "max_ms": 12287.9
+    }
+   ]
+  },
+  {
+   "kind": "gloss",
+   "t": 134.5,
+   "term": "diagonalize",
+   "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
+   "language": "ml",
+   "source_line": "We will use this next week when we look at principal component analysis.",
+   "latency_ms": 0.6,
+   "backend": "heuristic"
+  },
+  {
+   "kind": "translation",
+   "t": 144.038,
+   "index": 11,
+   "text": "അത് പൂജ്യമാണെങ്കിൽ, ഒരു നിസ്സാര പരിഹാരമുണ്ട്, അതാണ് നമ്മൾ ആഗ്രഹിക്കുന്നത്. സിംട്രിക് മാട്രിക്സുകൾക്ക് എല്ലായ്പ്പോഴും യഥാർത്ഥ eigenvalues ഉണ്ട്.",
+   "target_language": "ml",
+   "latency_ms": 17226.1,
+   "passthrough": false,
+   "protected_terms": [
+    "eigenvalues"
+   ]
+  },
+  {
+   "kind": "translation",
+   "t": 151.846,
+   "index": 12,
+   "text": "eigenvectors ന്റെ ഒരു സെറ്റ് കിട്ടിയാൽ നമുക്ക് diagonalize മാട്രിക്സ്",
+   "target_language": "ml",
+   "latency_ms": 7807.9,
+   "passthrough": false,
+   "protected_terms": [
+    "eigenvectors",
+    "diagonalize"
+   ]
+  },
+  {
+   "kind": "translation",
+   "t": 157.92,
+   "index": 13,
+   "text": "Diagonalization ഒരു ഹാർഡ് ആവർത്തിച്ചുള്ള ഗുണനത്തെ ലളിതമായി പരിവർത്തനം ചെയ്യുന്നു.",
+   "target_language": "ml",
+   "latency_ms": 6073.8,
+   "passthrough": false,
+   "protected_terms": [
+    "Diagonalization"
+   ]
+  },
+  {
+   "kind": "translation",
+   "t": 161.938,
+   "index": 14,
+   "text": "അടുത്തയാഴ്ച നാം ഇത് ഉപയോഗിക്കും പ്രധാന ഘടക വിശകലനം ചെയ്യുമ്പോൾ.",
+   "target_language": "ml",
+   "latency_ms": 4018.1,
+   "passthrough": false,
+   "protected_terms": []
+  },
+  {
+   "kind": "status",
+   "t": 164.843,
+   "stage": "summarising",
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 15,
+   "glossary": 4,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 145.7,
+    "audio_seconds": 105.2,
+    "input_level": 0.0,
+    "merged_segments": 3,
+    "realtime_factor": 1.068,
+    "stages": [
+     {
+      "stage": "vad",
+      "count": 3288,
+      "mean_ms": 3.8,
+      "p50_ms": 2.2,
+      "p95_ms": 10.1,
+      "min_ms": 0.5,
+      "max_ms": 133.5
+     },
+     {
+      "stage": "asr",
+      "count": 15,
+      "mean_ms": 7490.3,
+      "p50_ms": 7709.8,
+      "p95_ms": 9591.8,
+      "min_ms": 5837.6,
+      "max_ms": 9591.8
+     },
+     {
+      "stage": "translate",
+      "count": 15,
+      "mean_ms": 8945.9,
+      "p50_ms": 8502.6,
+      "p95_ms": 17226.2,
+      "min_ms": 4018.1,
+      "max_ms": 17226.2
+     }
+    ]
+   }
+  },
+  {
+   "kind": "notes",
+   "t": 164.882,
+   "title": "Good morning everyone. - 2026-09-27 15:04",
+   "path": "sessions/20260927-1504-good-morning-everyone-2026-09-27-15-04.md",
+   "markdown": "# Good morning everyone. - 2026-09-27 15:04\n\n**Date** 27 Sep 2026, 15:04 · **Duration** 2 min · **Captions** 15\n\n_Processed entirely on-device: CPU_\n\n## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- but a few special vectors only change length. Their direction is preserved.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.\n- That is a useful guarantee. Once we have a full set of eigenvectors, we can diagonalize the matrix.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._\n\n## Glossary\n\n_Explanations in മലയാളം (Malayalam)._\n\n- **eigenvalue** — A scalar showing how much a matrix stretches a special direction (its eigenvector).\n- **eigenvector** — A direction that a matrix only stretches or shrinks, without rotating it.\n- **determinant** — A single number from a square matrix; zero means the matrix squashes space flat.\n- **diagonalize** — Rewriting a matrix in a basis where it becomes a simple diagonal scaling.\n\n## Transcript\n\n**[00:00]** Good morning everyone.\n> എല്ലാവർക്കും സുപ്രഭാതം.\n\n**[00:02]** Today we will start with eigenvalues and eigenvectors.\n> ഇന്ന് നാം eigenvalues ഉം eigenvectors ഉം ഉപയോഗിച്ച് തുടങ്ങും.\n\n**[00:08]** These two ideas sit at the center of linear algebra, so it is worth going slowly.\n> ഈ രണ്ടു ആശയങ്ങളും രേഖീയ അൽഗെബറയുടെ കേന്ദ്രത്തിലാണ്.\n\n**[00:15]** A matrix is a linear transformation.\n> ഒരു മാട്രിക്സ് എന്നത് ഒരു ലീനിയർ പരിവർത്തനമാണ്.\n\n**[00:19]** It stretches, rotates and shears space.\n> അത് നീളുന്നു, തിരിക്കുകയും സ്ഥലം മുറിക്കുകയും ചെയ്യുന്നു.\n\n**[00:24]** For most vectors, applying the matrix changes both direction and length.\n> മിക്ക വെക്ടറുകളിലും മാട്രിക്സ് പ്രയോഗിക്കുന്നതിലൂടെ ദിശയും നീളവും മാറുന്നു.\n\n**[00:31]** but a few special vectors only change length. Their direction is preserved.\n> എന്നാൽ ചില പ്രത്യേക വെക്ടറുകൾ നീളം മാറ്റുന്നു.\n\n**[00:39]** Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n> ഈ വെക്ടറുകൾ eigenvectors ആണ്, അവർ നീട്ടുന്ന ഘടകം eigenvalue ആണ്.\n\n**[00:47]** To find them we solve the characteristic equation of the matrix.\n> അവ കണ്ടെത്താനായി നമ്മൾ മാട്രിക്സിന്റെ സ്വഭാവ സമവാക്യം പരിഹരിക്കണം.\n\n**[00:53]** The determinant of a minus lambda times the identity must equal zero.\n> ഒരു -ലാംബ്ഡയുടെ ക്യുക്സ0സും തിരിച്ചറിയൽ നമ്പറും പൂജ്യമായിരിക്കണം.\n\n**[00:59]** The determinant is a single number that tells you whether the matrix squashes space flat.\n> determinant എന്നത് ഒരു സംഖ്യയാണ്. അത് മാട്രിക്സ് സ്പേസ് ഫ്ലാറ്റ് ആണോ എന്ന് പറയുന്നു.\n\n**[01:07]** If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.\n> അത് പൂജ്യമാണെങ്കിൽ, ഒരു നിസ്സാര പരിഹാരമുണ്ട്, അതാണ് നമ്മൾ ആഗ്രഹിക്കുന്നത്. സിംട്രിക് മാട്രിക്സുകൾക്ക് എല്ലായ്പ്പോഴും യഥാർത്ഥ eigenvalues ഉണ്ട്.\n\n**[01:19]** That is a useful guarantee. Once we have a full set of eigenvectors, we can diagonalize the matrix.\n> eigenvectors ന്റെ ഒരു സെറ്റ് കിട്ടിയാൽ നമുക്ക് diagonalize മാട്രിക്സ്\n\n**[01:30]** Diagonalization turns a hard repeated multiplication into a simple one.\n> Diagonalization ഒരു ഹാർഡ് ആവർത്തിച്ചുള്ള ഗുണനത്തെ ലളിതമായി പരിവർത്തനം ചെയ്യുന്നു.\n\n**[01:37]** We will use this next week when we look at principal component analysis.\n> അടുത്തയാഴ്ച നാം ഇത് ഉപയോഗിക്കും പ്രധാന ഘടക വിശകലനം ചെയ്യുമ്പോൾ.\n\n## Performance\n\n```json\n{\n  \"uptime_s\": 145.7,\n  \"audio_seconds\": 105.2,\n  \"input_level\": 0.0,\n  \"merged_segments\": 3,\n  \"realtime_factor\": 1.068,\n  \"stages\": [\n    {\n      \"stage\": \"vad\",\n      \"count\": 3288,\n      \"mean_ms\": 3.8,\n      \"p50_ms\": 2.2,\n      \"p95_ms\": 10.1,\n      \"min_ms\": 0.5,\n      \"max_ms\": 133.5\n    },\n    {\n      \"stage\": \"asr\",\n      \"count\": 15,\n      \"mean_ms\": 7490.3,\n      \"p50_ms\": 7709.8,\n      \"p95_ms\": 9591.8,\n      \"min_ms\": 5837.6,\n      \"max_ms\": 9591.8\n    },\n    {\n      \"stage\": \"translate\",\n      \"count\": 15,\n      \"mean_ms\": 8945.9,\n      \"p50_ms\": 8502.6,\n      \"p95_ms\": 17226.2,\n      \"min_ms\": 4018.1,\n      \"max_ms\": 17226.2\n    }\n  ]\n}\n```\n",
+   "summary": "## Topics\n\n- eigenvalue\n- eigenvector\n- determinant\n- diagonalize\n\n## Key points\n\n- These two ideas sit at the center of linear algebra, so it is worth going slowly.\n- but a few special vectors only change length. Their direction is preserved.\n- Those vectors are the eigenvectors, and the factor they stretch by is the eigenvalue.\n- The determinant is a single number that tells you whether the matrix squashes space flat.\n- If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.\n- That is a useful guarantee. Once we have a full set of eigenvectors, we can diagonalize the matrix.\n\n## Follow up\n\nNone mentioned.\n\n_Generated without an LLM - install the model for better notes._",
+   "quiz": [],
+   "glossary": [
+    {
+     "term": "eigenvalue",
+     "explanation": "A scalar showing how much a matrix stretches a special direction (its eigenvector).",
+     "language": "ml",
+     "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+     "latency_ms": 9.1,
+     "backend": "heuristic"
+    },
+    {
+     "term": "eigenvector",
+     "explanation": "A direction that a matrix only stretches or shrinks, without rotating it.",
+     "language": "ml",
+     "source_line": "These two ideas sit at the center of linear algebra, so it is worth going slowly.",
+     "latency_ms": 9.1,
+     "backend": "heuristic"
+    },
+    {
+     "term": "determinant",
+     "explanation": "A single number from a square matrix; zero means the matrix squashes space flat.",
+     "language": "ml",
+     "source_line": "If it is zero, there is a non-trivial solution, and that is exactly what we want. Symmetric matrices always have real eigenvalues.",
+     "latency_ms": 0.4,
+     "backend": "heuristic"
+    },
+    {
+     "term": "diagonalize",
+     "explanation": "Rewriting a matrix in a basis where it becomes a simple diagonal scaling.",
+     "language": "ml",
+     "source_line": "We will use this next week when we look at principal component analysis.",
+     "latency_ms": 0.6,
+     "backend": "heuristic"
+    }
+   ],
+   "duration_minutes": 2.4
+  },
+  {
+   "kind": "status",
+   "t": 164.882,
+   "running": false,
+   "device": {
+    "provider": "CPUExecutionProvider",
+    "provider_label": "CPU",
+    "available_providers": [
+     "AzureExecutionProvider",
+     "CPUExecutionProvider"
+    ],
+    "ort_version": "1.30.0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "is_arm64": false,
+    "npu_active": false,
+    "fallback_reason": "QNN not installed; Dml not installed",
+    "qnn_hardware": null
+   },
+   "captions": 15,
+   "glossary": 4,
+   "target_language": "ml",
+   "mock": false,
+   "metrics": {
+    "uptime_s": 145.7,
+    "audio_seconds": 105.2,
+    "input_level": 0.0,
+    "merged_segments": 3,
+    "realtime_factor": 1.068,
+    "stages": [
+     {
+      "stage": "vad",
+      "count": 3288,
+      "mean_ms": 3.8,
+      "p50_ms": 2.2,
+      "p95_ms": 10.1,
+      "min_ms": 0.5,
+      "max_ms": 133.5
+     },
+     {
+      "stage": "asr",
+      "count": 15,
+      "mean_ms": 7490.3,
+      "p50_ms": 7709.8,
+      "p95_ms": 9591.8,
+      "min_ms": 5837.6,
+      "max_ms": 9591.8
+     },
+     {
+      "stage": "translate",
+      "count": 15,
+      "mean_ms": 8945.9,
+      "p50_ms": 8502.6,
+      "p95_ms": 17226.2,
+      "min_ms": 4018.1,
+      "max_ms": 17226.2
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -33,12 +33,28 @@
    "duration_s": 141.017
   },
   {
+   "code": "ml",
+   "name": "മലയാളം (Malayalam)",
+   "file": "session.ml.json",
+   "mode": "real",
+   "captions": 15,
+   "duration_s": 164.882
+  },
+  {
    "code": "bn",
    "name": "বাংলা (Bengali)",
    "file": "session.bn.json",
    "mode": "real",
    "captions": 18,
    "duration_s": 121.447
+  },
+  {
+   "code": "mr",
+   "name": "मराठी (Marathi)",
+   "file": "session.mr.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 126.584
   },
   {
    "code": "gu",
@@ -95,6 +111,70 @@
    "mode": "real",
    "captions": 18,
    "duration_s": 392.483
+  },
+  {
+   "code": "ks",
+   "name": "کٲشُر (Kashmiri)",
+   "file": "session.ks.json",
+   "mode": "real",
+   "captions": 16,
+   "duration_s": 296.21
+  },
+  {
+   "code": "sd",
+   "name": "سنڌي (Sindhi)",
+   "file": "session.sd.json",
+   "mode": "real",
+   "captions": 13,
+   "duration_s": 213.507
+  },
+  {
+   "code": "mni",
+   "name": "মৈতৈলোন্ (Manipuri)",
+   "file": "session.mni.json",
+   "mode": "real",
+   "captions": 17,
+   "duration_s": 325.4
+  },
+  {
+   "code": "bho",
+   "name": "भोजपुरी (Bhojpuri)",
+   "file": "session.bho.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 164.216
+  },
+  {
+   "code": "awa",
+   "name": "अवधी (Awadhi)",
+   "file": "session.awa.json",
+   "mode": "real",
+   "captions": 14,
+   "duration_s": 172.194
+  },
+  {
+   "code": "hne",
+   "name": "छत्तीसगढ़ी (Chhattisgarhi)",
+   "file": "session.hne.json",
+   "mode": "real",
+   "captions": 17,
+   "duration_s": 167.403
+  },
+  {
+   "code": "mag",
+   "name": "मगही (Magahi)",
+   "file": "session.mag.json",
+   "mode": "real",
+   "captions": 14,
+   "duration_s": 167.31
+  },
+  {
+   "code": "lus",
+   "name": "Mizo ṭawng (Mizo)",
+   "file": "session.lus.json",
+   "mode": "real",
+   "captions": 16,
+   "duration_s": 174.012
   }
  ]
 }
