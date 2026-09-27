@@ -113,6 +113,14 @@
    "duration_s": 126.987
   },
   {
+   "code": "hne",
+   "name": "छत्तीसगढ़ी (Chhattisgarhi)",
+   "file": "session.hne.json",
+   "mode": "real",
+   "captions": 18,
+   "duration_s": 126.575
+  },
+  {
    "code": "lus",
    "name": "Mizo ṭawng (Mizo)",
    "file": "session.lus.json",
