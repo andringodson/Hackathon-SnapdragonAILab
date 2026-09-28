@@ -57,8 +57,35 @@ LIVE_BANNER = """
   this is the version you can try without installing anything.</span>
   <span id="live-status"></span>
   <a href="../">How it works &rarr;</a>
+  <div class="live-progress"><span id="live-bar"></span></div>
 </div>
 """.strip()
+
+# /live's own idle hint and its source picker, written into the page rather
+# than swapped in by live.js. Swapped in, they arrived after the first paint:
+# the header gained a row and the hint changed length, moving the whole app
+# (layout shift 0.31 on a 412 px phone), and app.js had already saved the
+# desktop hint as the one to restore, so /live showed the wrong instructions.
+LIVE_HINT = (
+    "Press <kbd>Start</kbd> and talk, or pick <b>A browser tab</b> to caption a "
+    "lecture playing in one. Whisper (about 80 MB, downloaded once) runs on this "
+    "device, and your audio never leaves it. Pick a language to translate too."
+)
+LIVE_SOURCE = (
+    '<label class="live-source"><span>Listen to</span>'
+    '<select id="live-source-select">'
+    '<option value="mic">Microphone</option>'
+    '<option value="tab">A browser tab</option>'
+    "</select></label>"
+)
+
+DESCRIPTIONS = {
+    "replay.js": "A real Sahaay desktop session, replayed in your browser: live English captions, "
+                 "translation into 22 Indian languages with technical terms kept intact, and the "
+                 "jargon glossary, exactly as the app rendered them.",
+    "live.js": "Run Sahaay in your browser: Whisper captions your microphone or a lecture tab on your "
+               "own machine, and NLLB-200 translates into 22 Indian languages. No audio leaves the tab.",
+}
 
 BANNER_CSS = """
 /* Added by scripts/build_web.py - not part of the product UI. */
@@ -95,6 +122,8 @@ BANNER_CSS = """
   .replay-banner { font-size: 0.78rem; padding: 0.45rem var(--gap); }
   .replay-long { display: none; }
   .replay-controls { display: none; }
+  /* The idle hint shares a short panel with the header; keep it whole. */
+  .empty { padding: 1rem; font-size: 0.85rem; }
 }
 
 /* The live page reports what it is doing - downloading the model, listening,
@@ -119,6 +148,12 @@ BANNER_CSS = """
   background: var(--surface-2);
   color: var(--text);
 }
+/* The header is filled in after load: the provider badge ("connecting…"
+   becomes "WASM (your CPU)") and the language list. On a phone the header
+   wraps, so either one growing pushed the whole app down. Both get their
+   final width from the first paint. */
+#device { min-width: 12.5em; justify-content: center; }
+#language { width: 14.5em; max-width: 100%; }
 .live-progress {
   height: 4px;
   border-radius: 2px;
@@ -136,6 +171,12 @@ BANNER_CSS = """
 """.strip()
 
 
+def replace_once(text: str, old: str, new: str) -> str:
+    if text.count(old) != 1:
+        raise ValueError(f"expected exactly one {old!r}")
+    return text.replace(old, new)
+
+
 def build_page(source: str, *, script: str, banner: str, title: str) -> str:
     """Rewrite the product's index.html for one of the hosted pages.
 
@@ -150,13 +191,20 @@ def build_page(source: str, *, script: str, banner: str, title: str) -> str:
     out = out.replace('src="/static/', 'src="../static/')
 
     out = out.replace("<title>Sahaay</title>", f"<title>{title}</title>")
+    out = out.replace(
+        '<meta name="theme-color" content="#000000">',
+        f'<meta name="description" content="{DESCRIPTIONS[script]}">\n<meta name="theme-color" content="#000000">',
+        1,
+    )
 
     # The transport script must be evaluated before app.js: it installs the
     # fetch and WebSocket stubs that app.js reaches for the moment it boots.
+    # Deferred, in this order: parsing and the first paint no longer wait for
+    # them, and the transport still runs before app.js.
     out = out.replace(
         '<script src="../static/app.js"></script>',
-        f'<script src="../static/{script}"></script>\n'
-        '<script src="../static/app.js"></script>',
+        f'<script src="../static/{script}" defer></script>\n'
+        '<script src="../static/app.js" defer></script>',
     )
 
     out = out.replace("<body>", "<body>\n\n" + banner, 1)
@@ -181,6 +229,10 @@ def expected_files() -> dict[Path, str]:
         ui, script="replay.js", banner=BANNER, title="Sahaay — recorded session"
     )
     live = build_page(ui, script="live.js", banner=LIVE_BANNER, title="Sahaay — live in your browser")
+    live = replace_once(live, '<div class="bar-right">', '<div class="bar-right">\n    ' + LIVE_SOURCE)
+    hint_start = live.index('<p id="empty" class="empty">')
+    hint_end = live.index("</p>", hint_start)
+    live = live[:hint_start] + '<p id="empty" class="empty">\n      ' + LIVE_HINT + "\n    " + live[hint_end:]
     # The runtime comes from jsDelivr and the models from Hugging Face; open
     # both connections while the page parses, so the first request to each
     # does not also pay for DNS and TLS.

@@ -8,6 +8,16 @@
 <meta property="og:title" content="Sahaay — offline lecture captioning for Snapdragon PCs">
 <meta property="og:description" content="Live captions, translation into 22 Indian languages and a jargon glossary, running on the device. On a CPU the glossary pushes captions past real time; on the Snapdragon NPU it does not.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://sahaay-offline.vercel.app/">
+<meta property="og:site_name" content="Sahaay">
+<meta property="og:image" content="https://sahaay-offline.vercel.app/static/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sahaay: live captions, 22 Indian languages, a jargon glossary.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sahaay-offline.vercel.app/static/og.jpg">
+<link rel="canonical" href="https://sahaay-offline.vercel.app/">
+<link rel="apple-touch-icon" href="static/icon-180.png">
 <link rel="stylesheet" href="static/site.css">
 <link rel="icon" href="static/logo.svg" type="image/svg+xml">
 <meta name="theme-color" content="#000000">
@@ -22,6 +32,7 @@
   <div class="wrap top-in">
     <a class="top-brand" href="#top"><svg class="logo logo-sm" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#050607" stroke="#23272d" stroke-width="3"/><g fill="none" stroke-linecap="round" stroke-width="4.5"><path d="M16 27v10" stroke="#ececec"/><path d="M24 19v26" stroke="#4db8ff"/><path d="M32 24v16" stroke="#ececec"/><path d="M41 26h9" stroke="#ececec" stroke-opacity=".6"/><path d="M41 38h5" stroke="#ececec" stroke-opacity=".6"/></g></svg><span>Sahaay</span></a>
     <div class="top-links">
+      <a href="#film">Film</a>
       <a href="#problem">Problem</a>
       <a href="#npu">Why an NPU</a>
       <a href="#silicon">Evidence</a>
@@ -50,6 +61,7 @@
 
       <div class="cta">
         <a class="btn btn-primary" href="live/">Try it in your browser</a>
+        <a class="btn" href="#film">Watch the 2-minute film</a>
         <a class="btn" href="demo/?play=1">Watch a recorded session</a>
         <a class="btn" href="https://github.com/andringodson/Hackathon-SnapdragonAILab">Source on GitHub</a>
       </div>
@@ -76,6 +88,8 @@
         </div>
         <div class="shot-body"><div>
         <img src="static/hero.webp" width="1600" height="1000" fetchpriority="high" decoding="async"
+             srcset="static/hero-800.webp 800w, static/hero-1200.webp 1200w, static/hero.webp 1600w"
+             sizes="(max-width: 980px) calc(100vw - 2.5rem), 680px"
              alt="The Sahaay app mid-lecture: English captions, each translated into Hindi with technical terms such as eigenvalue kept in English, and a jargon panel explaining eigenvector and eigenvalue.">
         </div></div>
       </div>
@@ -93,6 +107,26 @@
   <a class="kpi" href="#silicon"><b data-count="13.47" data-dec="2" data-unit=" ms">13.47 ms</b><span>Whisper encoder on the Snapdragon X2 Elite NPU</span></a>
   <a class="kpi" href="#silicon"><b data-count="129" data-dec="0" data-unit=" / 129">129 / 129</b><span>layers on the Hexagon NPU, zero CPU fallback</span></a>
   <a class="kpi" href="#offline"><b data-count="0" data-dec="0">0</b><span>outbound connections in a full session — tested, not asserted</span></a>
+</section>
+
+<section class="film wrap" id="film" aria-labelledby="film-h">
+  <div class="film-head">
+    <div><span class="num">THE FILM · 2:00</span><h2 id="film-h">One lecture line, followed through the product</h2></div>
+    <p>Captioned as it is spoken, translated into all 22 languages with
+    <em>eigenvalues</em> kept intact, the network switched off mid-lecture, and
+    the measurement that makes this a Snapdragon application. Every caption and
+    translation in it is from a real recorded session; the score is original.</p>
+  </div>
+  <div class="film-frame">
+    <video controls preload="none" playsinline width="1920" height="1080" poster="static/showreel-poster.webp"
+           aria-label="Sahaay: the two-minute film">
+      <source src="static/showreel.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p class="film-note">Full quality (1080p, 60 fps) on GitHub:
+    <a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2">release submission-v2</a>.
+    Made frame by frame from the project's own UI and data:
+    <a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/tree/main/brag-output">how</a>.</p>
 </section>
 
 <main class="wrap" id="evidence">

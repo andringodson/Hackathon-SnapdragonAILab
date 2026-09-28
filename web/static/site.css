@@ -41,6 +41,12 @@
 
 * { box-sizing: border-box; }
 
+/* The hidden attribute only works while no class rule sets display: the
+   "Show the app preview" button's inline-flex beat it, so the button sat
+   under the open preview on every visit. The product stylesheet learned
+   this first (sahaay/ui/style.css); this one had not. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
 
 body {
@@ -209,30 +215,35 @@ pre code { background: none; border: 0; padding: 0; font-size: 0.9rem; line-heig
 .shot-bar { display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-bottom: 1px solid var(--line);
   user-select: none;
   background: #0a0b0d; font-size: 0.72rem; color: var(--text-dim); }
-.shot-title { flex: 1; margin-right: 52px; text-align: center; letter-spacing: 0.02em;
+.shot-title { flex: 1; margin-right: 66px; text-align: center; letter-spacing: 0.02em;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* macOS traffic lights. Real buttons: close, minimise (window shade) and
    zoom. The glyphs appear when the pointer is over the group, as on a Mac. */
-.lights { display: flex; gap: 8px; }
+/* Each light is a 24px button - the WCAG 2.5.8 minimum target - with the
+   12px dot drawn inside it. A pseudo-element hit area does not count: the
+   audit, and a thumb, measure the button itself. */
+.lights { display: flex; margin-left: -6px; }
 .light {
-  width: 12px; height: 12px; padding: 0; border-radius: 50%; cursor: pointer;
-  display: grid; place-items: center; position: relative;
+  --dot: #ff5f57; --rim: #e0443e;
+  width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer;
+  display: grid; place-items: center; position: relative; border-radius: 50%;
   transition: transform 0.15s var(--ease), filter 0.15s;
 }
-.light::before { content: ""; position: absolute; inset: -6px -4px; }   /* bigger hit target */
-.light svg { width: 8px; height: 8px; fill: none; stroke: rgba(0, 0, 0, 0.62); stroke-width: 1.4;
+.light::before { content: ""; grid-area: 1 / 1; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--dot); box-shadow: inset 0 0 0 0.5px var(--rim); }
+.light svg { grid-area: 1 / 1; position: relative; width: 8px; height: 8px; fill: none; stroke: rgba(0, 0, 0, 0.62); stroke-width: 1.4;
   stroke-linecap: round; opacity: 0; transition: opacity 0.12s; }
 .light-zoom svg path { fill: rgba(0, 0, 0, 0.62); stroke: none; }
 .light-zoom .shrink, .shot.zoomed .light-zoom .grow { display: none; }
 .shot.zoomed .light-zoom .shrink { display: inline; }
-.light-close { background: #ff5f57; border: 0.5px solid #e0443e; }
-.light-min   { background: #febc2e; border: 0.5px solid #d99e22; }
-.light-zoom  { background: #28c840; border: 0.5px solid #1aab29; }
+.light-close { --dot: #ff5f57; --rim: #e0443e; }
+.light-min   { --dot: #febc2e; --rim: #d99e22; }
+.light-zoom  { --dot: #28c840; --rim: #1aab29; }
 .lights:hover .light svg, .lights:focus-within .light svg { opacity: 1; }
 .light:hover { filter: brightness(1.08); }
 .light:active { transform: scale(0.88); filter: brightness(0.85); }
-.light:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.light:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
 
 /* Minimise: roll the window up to its title bar. */
 .shot-body { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.45s var(--ease); }
@@ -515,3 +526,17 @@ footer a { transition: color 0.2s, text-underline-offset 0.25s var(--ease); }
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
   .sec.pre .sec-body, .sec.pre .num, .sec.pre h2 { opacity: 1; transform: none; }
 }
+
+/* ---------- the two-minute film ----------
+   preload="none": the page costs nothing until someone presses play, and
+   then only the part they watch (the file is served with range requests). */
+.film { margin-bottom: clamp(3rem, 2rem + 4vw, 5rem); }
+.film-head { display: grid; grid-template-columns: minmax(180px, 250px) minmax(0, 1fr); gap: clamp(1rem, 0.5rem + 2vw, 3rem); align-items: end; margin-bottom: 1.1rem; }
+@media (max-width: 860px) { .film-head { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; } }
+.film-head p { margin: 0; color: var(--text-dim); }
+.film-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000;
+  border: 1px solid var(--line-hi); box-shadow: 0 40px 90px -40px rgba(77, 184, 255, 0.35);
+  transition: border-color 0.4s, box-shadow 0.5s var(--ease); }
+.film-frame:hover { border-color: rgba(77, 184, 255, 0.45); box-shadow: 0 50px 110px -40px rgba(77, 184, 255, 0.5); }
+.film-frame video { display: block; width: 100%; height: 100%; background: #000; }
+.film-note { margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--text-dim); max-width: none; }

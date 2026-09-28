@@ -122,12 +122,27 @@ def landing(browser, base: str) -> None:
     page.wait_for_timeout(600)
     h = page.eval_on_selector(".shot-frame", "e => e.getBoundingClientRect().height")
     check("yellow again: restores", h > 300, f"{h:.0f}px")
+    # The reopen button must only exist once the window is closed: a class
+    # rule's display once beat its hidden attribute and it showed all along.
+    check("the reopen button is hidden while the window is open", not page.is_visible(".shot-reopen"))
     page.click(".light-close")
     page.wait_for_timeout(500)
     check("red: close leaves a way back", page.is_visible(".shot-reopen"))
     page.click(".shot-reopen")
     page.wait_for_timeout(500)
     check("reopen brings the window back", page.is_visible(".shot-frame img"))
+    check("and hides the reopen button again", not page.is_visible(".shot-reopen"))
+    sizes = page.eval_on_selector_all(".light", "els => els.map(e => Math.min(e.offsetWidth, e.offsetHeight))")
+    check("window controls are 24 px targets", sizes and min(sizes) >= 24, f"{sizes}")
+
+    # The film: present, not preloaded, and its poster and file are served.
+    film = page.eval_on_selector("#film video", "v => ({preload: v.preload, poster: v.poster, src: v.querySelector('source').src})")
+    check("the film does not download with the page", film["preload"] == "none", film["preload"])
+    for what in ("poster", "src"):
+        code = http_status(film[what])
+        check(f"the film's {what} is served", code in (200, 206), f"{code} {film[what]}")
+    card = page.get_attribute('meta[property="og:image"]', "content")
+    check("the share card is served", http_status(card) == 200, card)
 
     links = page.eval_on_selector_all("a[href]", "els => [...new Set(els.map(e => e.href))]")
     bad, private, signin = [], [], []

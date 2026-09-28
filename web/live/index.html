@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../static/style.css">
 <link rel="stylesheet" href="../static/replay.css">
 <link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<meta name="description" content="Run Sahaay in your browser: Whisper captions your microphone or a lecture tab on your own machine, and NLLB-200 translates into 22 Indian languages. No audio leaves the tab.">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://huggingface.co" crossorigin>
@@ -21,6 +22,7 @@
   this is the version you can try without installing anything.</span>
   <span id="live-status"></span>
   <a href="../">How it works &rarr;</a>
+  <div class="live-progress"><span id="live-bar"></span></div>
 </div>
 
 <header class="bar">
@@ -33,6 +35,7 @@
   </div>
 
   <div class="bar-right">
+    <label class="live-source"><span>Listen to</span><select id="live-source-select"><option value="mic">Microphone</option><option value="tab">A browser tab</option></select></label>
     <!-- The EP badge is the whole Snapdragon story in one element: it says
          what silicon the models are actually on, live. -->
     <!-- Input level. Every other signal in this UI is downstream of a
@@ -72,8 +75,7 @@
     <ol id="captions" class="captions" aria-live="polite" aria-atomic="false"></ol>
 
     <p id="empty" class="empty">
-      Press <kbd>Start</kbd> and play a lecture. Everything — speech recognition,
-      translation and the glossary — runs on this device. No audio leaves it.
+      Press <kbd>Start</kbd> and talk, or pick <b>A browser tab</b> to caption a lecture playing in one. Whisper (about 80 MB, downloaded once) runs on this device, and your audio never leaves it. Pick a language to translate too.
     </p>
   </section>
 
@@ -109,7 +111,7 @@
 
 <script src="../static/matrix.js" defer></script>
 <script src="../static/cursor.js" defer></script>
-<script src="../static/live.js"></script>
-<script src="../static/app.js"></script>
+<script src="../static/live.js" defer></script>
+<script src="../static/app.js" defer></script>
 </body>
 </html>

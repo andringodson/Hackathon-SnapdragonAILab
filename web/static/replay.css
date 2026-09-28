@@ -32,6 +32,8 @@
   .replay-banner { font-size: 0.78rem; padding: 0.45rem var(--gap); }
   .replay-long { display: none; }
   .replay-controls { display: none; }
+  /* The idle hint shares a short panel with the header; keep it whole. */
+  .empty { padding: 1rem; font-size: 0.85rem; }
 }
 
 /* The live page reports what it is doing - downloading the model, listening,
@@ -56,6 +58,12 @@
   background: var(--surface-2);
   color: var(--text);
 }
+/* The header is filled in after load: the provider badge ("connecting…"
+   becomes "WASM (your CPU)") and the language list. On a phone the header
+   wraps, so either one growing pushed the whole app down. Both get their
+   final width from the first paint. */
+#device { min-width: 12.5em; justify-content: center; }
+#language { width: 14.5em; max-width: 100%; }
 .live-progress {
   height: 4px;
   border-radius: 2px;

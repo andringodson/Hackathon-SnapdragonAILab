@@ -291,3 +291,53 @@ class TestLivePerformance:
         assert "form-action 'none'" in csp
         connect = next(d for d in csp.split(";") if d.strip().startswith("connect-src"))
         assert " * " not in f" {connect} ", "connect-src must not allow posting anywhere"
+
+
+class TestSiteFineTune:
+    """Fixes from the 28 Sep 2026 Lighthouse and translation passes (docs/TUNING.md)."""
+
+    def _live(self) -> str:
+        return (WEB / "live" / "index.html").read_text(encoding="utf-8")
+
+    def test_the_live_page_paints_its_own_controls_and_hint(self):
+        """Swapped in after the first paint they moved the app (CLS 0.31 on a phone),
+        and app.js had already saved the desktop's hint as the one to show."""
+        live = self._live()
+        assert 'id="live-source-select"' in live, "the source picker is injected after first paint again"
+        assert 'id="live-bar"' in live, "the progress bar is injected after first paint again"
+        assert "A browser tab</b>" in live, "/live carries the desktop's idle hint"
+        js = (WEB / "static" / "live.js").read_text(encoding="utf-8")
+        assert "empty.innerHTML" not in js, "live.js swaps the hint at runtime again"
+
+    def test_the_hosted_pages_describe_themselves_and_defer_their_scripts(self):
+        for page in ("demo", "live"):
+            html = (WEB / page / "index.html").read_text(encoding="utf-8")
+            assert '<meta name="description"' in html, f"/{page} has no description"
+            assert '<script src="../static/app.js" defer></script>' in html, f"/{page} blocks rendering on app.js"
+
+    def test_translation_streams_and_its_backlog_rule_sees_the_backlog(self):
+        js = (WEB / "static" / "translate-worker.js").read_text(encoding="utf-8")
+        assert "TextStreamer" in js and 'type: "partial"' in js, "translations no longer stream"
+        # A translation blocks the worker; unless it yields between jobs, the
+        # captions that arrived meanwhile stay undelivered and MAX_BACKLOG never fires.
+        loop = js[js.index("async function drain"):]
+        assert "setTimeout(resolve, 0)" in loop, "the worker no longer yields between translations"
+        # Padded batches came back in the wrong script (measured); one at a time.
+        assert "MAX_BATCH" not in js
+        app = (UI / "app.js").read_text(encoding="utf-8")
+        assert 'classList.toggle("partial"' in app, "a streaming line is not marked as partial"
+
+    def test_the_two_workers_do_not_oversubscribe_the_cores(self):
+        """Whisper 8 + translation 6 threads on 12 cores slowed both (docs/TUNING.md)."""
+        js = (WEB / "static" / "live.js").read_text(encoding="utf-8")
+        assert "whisperThreads" in js and "translatorThreads(" in js
+
+    def test_the_landing_page_share_card_hero_and_film_exist(self):
+        html = (WEB / "index.html").read_text(encoding="utf-8")
+        card = re.search(r'og:image" content="https://sahaay-offline\.vercel\.app/(static/[\w.-]+)"', html)
+        assert card and (WEB / card.group(1)).exists(), "the share card is missing"
+        for src in re.findall(r"(static/hero-\d+\.webp)", html):
+            assert (WEB / src).exists(), f"{src} is in the srcset but not on disk"
+        assert 'preload="none"' in html, "the film must not download with the page"
+        for src in re.findall(r'(?:src|poster)="(static/showreel[\w.-]*)"', html):
+            assert (WEB / src).exists(), f"{src} is missing"

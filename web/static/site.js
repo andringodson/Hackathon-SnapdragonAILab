@@ -3,10 +3,11 @@
    cards light up under it, the product shot tilts to follow it, and a
    click ripples from where it landed.
 
-   Loaded at the end of <body> without defer, so it runs before first paint:
-   sections below the fold are hidden before anyone can see them pop. With
-   JavaScript off, nothing is hidden. All motion is transform, opacity and
-   CSS custom properties, written at most once per frame. */
+   Sections are hidden only once an observer reports them wholly below the
+   viewport, so nobody sees them pop out, and nothing reads layout before the
+   first paint (measuring every section up front forced a 222 ms layout on a
+   desktop). With JavaScript off, nothing is hidden. All motion is transform,
+   opacity and CSS custom properties, written at most once per frame. */
 
 (() => {
   "use strict";
@@ -18,20 +19,27 @@
 
   const sections = [...document.querySelectorAll(".sec")];
   if (!reduced && "IntersectionObserver" in window) {
-    const fold = window.innerHeight * 0.92;
-    sections.forEach((s) => {
-      if (s.getBoundingClientRect().top > fold) s.classList.add("pre");
-    });
-    const io = new IntersectionObserver((entries) => {
+    const reveal = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
         e.target.classList.remove("pre");
         e.target.classList.add("in");
-        io.unobserve(e.target);
+        reveal.unobserve(e.target);
         countUp(e.target);
       });
     }, { rootMargin: "0px 0px -12% 0px", threshold: 0.05 });
-    sections.forEach((s) => { if (s.classList.contains("pre")) io.observe(s); });
+    // First report only: a section entirely below the viewport can be hidden
+    // unseen; anything already on screen stays as it is.
+    const sort = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        sort.unobserve(e.target);
+        if (!e.isIntersecting && e.boundingClientRect.top > 0) {
+          e.target.classList.add("pre");
+          reveal.observe(e.target);
+        }
+      });
+    });
+    sections.forEach((s) => sort.observe(s));
   }
 
   /* ---------- key numbers count up the first time they are seen ---------- */
