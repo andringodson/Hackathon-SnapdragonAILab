@@ -166,6 +166,86 @@ on every visit and makes loads look 2-3 times slower than they are. Edge
 (`channel="msedge"`) and ordinary contexts cache correctly; measure
 returning visits there.
 
+### Third pass, 28 Sep 2026: live translation and the site
+
+**Translation.** Measured end to end this time: from the English caption
+appearing to its translation appearing, over 100 s of the lecture into
+Hindi, with the model served from disk so every run is a returning visitor
+(Edge, 12 logical cores, WASM, Whisper captioning at the same time).
+
+| Caption → translation | before | after |
+|---|---:|---:|
+| First translated words on screen (median / p90) | 9.9 s / 15.2 s (the whole line, at once) | **1.4 s / 2.9 s** |
+| Finished line (median / p90) | 9.9 s / 15.2 s | **4.7 s / 6.6 s** |
+| Whisper RTF while translating | 0.84 | **0.51** |
+
+The second pass reported "caption → translated line 3.8 s". That was the
+translator's compute time only - what `check_live.py` records - not what a
+reader waits: a caption also waits for the ones queued ahead of it. With
+both counted, the same configuration was 9.9 s.
+
+- **Streaming.** Each caption's translation is shown word by word as it
+  decodes (transformers.js `TextStreamer`); the finished line replaces it.
+  Half-words and half-placeholders are never shown.
+- **No oversubscribed cores.** Whisper and the translator are separate
+  workers with separate thread pools, so their threads add up; 8 + 6 on 12
+  cores slowed both (the "before" row). Measured splits, Whisper +
+  translator (first words / finished line, medians; Whisper RTF): 6 + 8
+  1.4 / 5.6 s, 0.64; 7 + 5 1.5 / 5.9 s, 0.60; 6 + 6 1.3 / 4.6 s, 0.58;
+  8 + 4 1.4 / 5.1 s, 0.49. Whisper keeps its 8 - the English caption is
+  what is read live, and English-only needs them - and the translator gets
+  the cores that are left, from two to six.
+- **The backlog rule now works.** A translation holds the worker's thread
+  until its last word, so captions that arrived meanwhile stayed
+  undelivered messages: the drop-the-oldest rule never saw more than one,
+  and under load the backlog grew without limit in the browser. The worker
+  yields between translations.
+- **Batching was tried and dropped.** Padded NLLB batches came back partly
+  in the wrong script (14% Tamil letters for one sentence), and three queued
+  captions took 23 s instead of 12.
+
+All 22 languages pass through the browser's own worker
+(`scripts/check_live_languages.py`: script, protected terms, no leaked
+placeholders even mid-stream, no loops, a queued caption identical to the
+same sentence alone). With nothing else running: first words in 0.7-1.3 s,
+the finished line in 4.7-7.3 s.
+
+**The site** (Lighthouse 12, Edge, production; performance / accessibility /
+best practices / SEO):
+
+| Page | before | after |
+|---|---|---|
+| Landing, mobile | 100 / 96 / 100 / 100 | **100 / 100 / 100 / 100** |
+| Landing, desktop | 100 / 96 / 100 / 100 | **100 / 100 / 100 / 100** |
+| /demo, mobile | 100 / 100 / 100 / 90 | **100 / 100 / 100 / 100** |
+| /demo, desktop | 100 / 100 / 100 / 90 | **100 / 100 / 100 / 100** |
+| /live, mobile | **84** / 100 / 100 / 90 (layout shift 0.31) | **100 / 100 / 100 / 100** (0.02) |
+| /live, desktop | 100 / 100 / 100 / 90 | **100 / 100 / 100 / 100** |
+
+- **/live no longer jumps on a phone.** The header was filled in after the
+  first paint - the provider badge grew from "connecting…" to "WASM (your
+  CPU)", the language list arrived, the source picker was injected - and on
+  a narrow screen it wrapped one row deeper, pushing the whole app down.
+  The picker and progress bar are now in the page, and the badge and list
+  have their final widths from the start.
+- **/live showed the desktop's instructions.** live.js swapped its own hint
+  in after app.js had saved the desktop hint as the one to restore, so the
+  swap was undone on boot. The page is now built with the right one.
+- **"Show the app preview" showed all along** under the landing page's
+  hero. Its `display: inline-flex` beat the `hidden` attribute; the product
+  stylesheet already guarded against that, the landing one did not.
+  `scripts/check_ui.py` now checks it is hidden while the window is open.
+- **The window's traffic lights are 24 px targets** (WCAG 2.5.8), each with
+  the 12 px dot drawn inside it.
+- **No forced layout before the first paint** (222 ms on a desktop):
+  sections below the fold are hidden once an observer reports them off
+  screen, instead of by measuring each one.
+- **The hero image comes in three sizes** (a phone gets 34 KB instead of
+  95 KB), /demo and /live have descriptions and deferred scripts, and the
+  landing page has a share card, a canonical URL and a home-screen icon.
+- **The two-minute film is on the landing page**, 1080p at 30 fps (27 MB),
+  `preload="none"`, so it costs nothing until someone presses play.
+
 ## The desktop pipeline
 
 Measured by `scripts/bench_e2e.py`: the same 104 s lecture played through
@@ -286,6 +366,8 @@ python scripts/bench_live.py --inference 4 --rounds 3      # threads, isolated
 python scripts/bench_e2e.py                                # desktop pipeline
 python scripts/bench_e2e.py --serial --no-merge            # desktop, the old way
 python scripts/bench_e2e.py --spin --llm-threads 0         # desktop, old threading
+python scripts/check_live_languages.py --model-dir <nllb q8 dir>   # /live, all 22 languages
+python scripts/check_ui.py --base https://sahaay-offline.vercel.app   # every control
 ```
 
 A laptop someone is using is a noisy place to benchmark. One run here
