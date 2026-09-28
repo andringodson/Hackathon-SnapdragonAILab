@@ -23,10 +23,11 @@ submit the showreel.
 - **Recorded desktop session:** https://sahaay-offline.vercel.app/demo/?play=1
 - **Project site and evidence:** https://sahaay-offline.vercel.app
 - **Source:** https://github.com/andringodson/Hackathon-SnapdragonAILab
+- **Demo video (direct download):** https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/download/submission-v2/Sahaay_showreel.mp4
 
-> The repository is **private**. If the form asks for a source link, judges
-> will get a 404 unless it is made public or they are added as collaborators.
-> Every "method and full results" link on the site points into it as well.
+The repository is public again as of 28 September 2026, so the source, the
+release and every "method and full results" link on the site open without a
+GitHub account.
 
 ## Project title
 

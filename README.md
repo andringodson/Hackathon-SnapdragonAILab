@@ -9,6 +9,7 @@
 
 <p align="center">
   <a href="https://sahaay-offline.vercel.app/live/"><b>Try it in your browser</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2">Demo video (2 min)</a> &nbsp;·&nbsp;
   <a href="https://sahaay-offline.vercel.app/demo/?play=1">Watch a recorded session</a> &nbsp;·&nbsp;
   <a href="https://sahaay-offline.vercel.app">Measured results</a> &nbsp;·&nbsp;
   <a href="docs/SUBMISSION.md">Submission kit</a>
