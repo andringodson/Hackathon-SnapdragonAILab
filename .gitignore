@@ -29,3 +29,7 @@ testaudio/
 .vercel
 video/work/
 slides/_print.html
+
+# Showreel: frames, stems and the render are rebuilt by brag-output/composition; the film is on the release.
+brag-output/work/
+brag-output/brag.mp4

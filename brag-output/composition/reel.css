@@ -1,0 +1,63 @@
+@font-face { font-family: "Inter"; src: url("fonts/Inter.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Noto Sans Devanagari"; src: url("fonts/NotoSansDevanagari.ttf") format("truetype"); font-weight: 100 900; }
+
+/* The reel's look, taken from the product: sahaay/ui/style.css and web/static/site.css. */
+
+:root {
+  --bg: #000000;
+  --surface: rgba(9, 10, 12, 0.92);
+  --surface-2: #101215;
+  --line: #1d2025;
+  --line-hi: #2c3139;
+  --text: #ececec;
+  --dim: #8b919a;
+  --accent: #4db8ff;
+  --accent-dim: #07161f;
+  --glow: rgba(77, 184, 255, 0.35);
+  --npu: #00d68f;
+  --glitch: #ff3b6b;
+  --warn: #ffb020;
+  --danger: #ff5c5c;
+  --display: "Segoe UI Variable Display", "Segoe UI", "Nirmala UI", system-ui, sans-serif;
+  --ui: "Segoe UI Variable Text", "Segoe UI", "Nirmala UI", system-ui, sans-serif;
+  --mono: "Cascadia Mono", "Cascadia Code", Consolas, monospace;
+  --indic: "Segoe UI Variable Display", "Nirmala UI", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; background: #000; overflow: hidden; }
+body { color: var(--text); font-family: var(--display); -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+.frame, .world, .scene { position: absolute; inset: 0; }
+.frame { will-change: transform; }
+.scene { overflow: hidden; }
+canvas.bg { position: absolute; inset: 0; }
+
+.abs { position: absolute; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.mono { font-family: var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
+.term { color: var(--accent); text-shadow: 0 0 28px var(--glow); }
+.w, .c { display: inline-block; white-space: pre; will-change: transform, opacity; }
+
+/* ---- global fx ---- */
+.flash { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; opacity: 0; }
+.vignette {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+/* ---- HUD ---- */
+.hud { position: absolute; inset: 0; pointer-events: none; font-family: var(--mono); font-size: 15px; letter-spacing: 0.18em; color: var(--dim); text-transform: uppercase; }
+.hud .mark { position: absolute; width: 22px; height: 22px; border-color: rgba(236, 236, 236, 0.28); border-style: solid; border-width: 0; }
+.hud .mark.tl { left: 44px; top: 44px; border-left-width: 1.5px; border-top-width: 1.5px; }
+.hud .mark.tr { right: 44px; top: 44px; border-right-width: 1.5px; border-top-width: 1.5px; }
+.hud .mark.bl { left: 44px; bottom: 44px; border-left-width: 1.5px; border-bottom-width: 1.5px; }
+.hud .mark.br { right: 44px; bottom: 44px; border-right-width: 1.5px; border-bottom-width: 1.5px; }
+.hud-chap { position: absolute; left: 82px; top: 52px; display: flex; gap: 18px; white-space: pre; }
+.hud-chap b { color: var(--accent); font-weight: 400; }
+.hud-right { position: absolute; right: 82px; top: 52px; }
+.hud-tc { position: absolute; right: 82px; bottom: 50px; color: rgba(236, 236, 236, 0.55); font-variant-numeric: tabular-nums; }
+.hud-bar { position: absolute; left: 82px; bottom: 58px; width: 360px; height: 2px; background: rgba(236, 236, 236, 0.12); }
+.hud-fill { position: absolute; inset: 0; background: var(--accent); transform-origin: 0 50%; box-shadow: 0 0 10px var(--glow); }
+.hud-tick { position: absolute; top: -4px; width: 1.5px; height: 10px; background: rgba(236, 236, 236, 0.35); }

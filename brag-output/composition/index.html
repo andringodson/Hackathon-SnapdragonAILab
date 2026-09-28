@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sahaay showreel</title>
+<link rel="stylesheet" href="reel.css">
+<link rel="stylesheet" href="scenes.css">
+</head>
+<body>
+<div id="stage"></div>
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script src="scenes/00-global.js"></script>
+<script src="scenes/01-hook.js"></script>
+<script src="scenes/02-problem.js"></script>
+<script src="scenes/03-reveal.js"></script>
+<script src="scenes/04-app.js"></script>
+<script src="scenes/05-languages.js"></script>
+<script src="scenes/06-offline.js"></script>
+<script src="scenes/07-npu.js"></script>
+<script src="scenes/08-checked.js"></script>
+<script src="scenes/09-outro.js"></script>
+<script>
+  // ?t=12.5 shows one frame; ?play plays in real time with the score; the renderer drives R.seek itself.
+  R.init().then(() => {
+    const q = new URLSearchParams(location.search);
+    if (q.has("play")) R.play(parseFloat(q.get("play")) || 0);
+    else if (!q.has("render")) R.seek(parseFloat(q.get("t")) || 0);
+  });
+</script>
+</body>
+</html>

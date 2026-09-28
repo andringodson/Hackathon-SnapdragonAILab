@@ -8,10 +8,14 @@ Challenge 2026** is likely to ask for, ready to paste. Deadline: **30 September
 
 | What | Where |
 |---|---|
-| Demo video (2:51, 1080p, captioned) | Release [`submission-v1`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v1): `Sahaay_demo.mp4` |
+| Demo video (2:00, 1080p60, original score) | Release [`submission-v2`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2): `Sahaay_showreel.mp4` |
 | Presentation (11 slides, PDF) | Same release: `Sahaay_deck.pdf` |
 
-Regenerate either with `video/README.md` or `python slides/export_pdf.py`.
+The showreel is rebuilt with [`brag-output/`](../brag-output/README.md), the
+deck with `python slides/export_pdf.py`. The older narrated walkthrough (2:51,
+release `submission-v1`, [`video/`](../video/README.md)) still says the AI Hub
+job links are public; they open after signing in with a Qualcomm ID, so
+submit the showreel.
 
 ## Links
 
