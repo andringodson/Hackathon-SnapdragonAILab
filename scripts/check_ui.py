@@ -168,8 +168,13 @@ def landing(browser, base: str) -> None:
         page.click(".cta .btn-primary")
     check("'Try it in your browser' opens /live", page.url.rstrip("/").endswith("/live"))
     page.go_back()
+    # By target, not position: the hero's buttons change order as the page grows.
+    page.click(".cta a[href='#film']")
+    page.wait_for_timeout(900)
+    top = page.eval_on_selector("#film", "e => e.getBoundingClientRect().top")
+    check("'Watch the 2-minute film' scrolls to the film", -5 < top < 250, f"top {top:.0f}px")
     with page.expect_navigation():
-        page.click(".cta .btn:nth-child(2)")
+        page.click(".cta a[href^='demo/']")
     check("'Watch a recorded session' opens /demo", "/demo/" in page.url)
 
     blocked = [e for e in errors if "Content Security Policy" in e or "Refused" in e]
