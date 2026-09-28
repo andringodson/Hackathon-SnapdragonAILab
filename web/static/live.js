@@ -63,6 +63,7 @@
     index: 0,
     glossary: null,
     seen: new Set(),
+    firstWords: new Map(),   // caption index -> when its translation's first words showed
     // Segmentation state
     buffer: [],
     bufferLen: 0,
@@ -269,8 +270,17 @@
         METRICS.translatorThreads = m.threads;
         if (bar) bar.style.width = "100%";
         status(L.running ? "listening" : "translation ready");
+      } else if (m.type === "partial") {
+        // The words decoded so far, shown as they arrive; the finished line replaces them.
+        if (m.code !== L.target) return;
+        if (!L.firstWords.has(m.id)) L.firstWords.set(m.id, performance.now());
+        emit({ kind: "translation", index: m.id, text: m.text, target_language: m.code, partial: true, passthrough: false });
       } else if (m.type === "translation") {
-        METRICS.translations.push({ index: m.id, code: m.code, ms: m.ms, at: performance.now() });
+        METRICS.translations.push({
+          index: m.id, code: m.code, ms: m.ms, at: performance.now(),
+          first: L.firstWords.has(m.id) ? L.firstWords.get(m.id) : null,
+        });
+        L.firstWords.delete(m.id);
         emit({
           kind: "translation",
           index: m.id,
@@ -290,16 +300,32 @@
         L.target = "en";
       }
     };
-    // Half the cores, at most six. Measured on 12 cores over 80 s of lecture
-    // into Hindi (median / p90 translation, Whisper RTF): 2 threads 5.1 s /
-    // 7.1 s / 0.45, 4 threads 4.7 / 6.9 / 0.48, 6 threads 3.8 / 5.9 / 0.45,
-    // 8 threads 3.9 / 6.0 / 0.43, 11 threads 5.3 / 7.7 / 0.71. Past half the
-    // cores the two workers fight and both slow down; taking threads from
-    // Whisper instead made the captions - what is read live - slower.
-    const cores = navigator.hardwareConcurrency || 4;
-    // ?tt=N overrides, for scripts/check_live.py tuning runs.
-    const tt = Number(new URLSearchParams(location.search).get("tt"));
-    worker.postMessage({ type: "load", threads: tt > 0 ? tt : Math.max(1, Math.min(6, Math.floor(cores / 2))) });
+    worker.postMessage({ type: "load", threads: translatorThreads() });
+  }
+
+  /* ---------- one CPU, two models ---------- */
+  // Whisper and the translator run in separate workers with separate thread
+  // pools, so their thread counts add up. Measured on 12 cores over 100 s of
+  // lecture into Hindi, translation streaming (Whisper + translator threads:
+  // caption to first translated words median / p90, to the finished line
+  // median / p90, Whisper RTF while translating):
+  //   8 + 6   3.5 / 8.8 s   7.8 / 12.1 s   0.72   (14 threads on 12 cores)
+  //   6 + 8   1.4 / 3.5 s   5.6 / 7.3 s    0.64
+  //   7 + 5   1.5 / 3.4 s   5.9 / 7.4 s    0.60
+  //   6 + 6   1.3 / 3.1 s   4.6 / 6.7 s    0.58
+  //   8 + 4   1.4 / 4.1 s   5.1 / 7.8 s    0.49
+  // Oversubscribing the cores slowed both models. Whisper keeps its threads -
+  // the English caption is what is read live, and English-only needs them -
+  // and the translator gets the cores that are left, from two to six.
+  const TUNING = new URLSearchParams(location.search);   // ?wt=N&tt=N override, for tuning runs
+  function whisperThreads() {
+    const wt = Number(TUNING.get("wt"));
+    return wt > 0 ? wt : Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1));
+  }
+  function translatorThreads() {
+    const tt = Number(TUNING.get("tt"));
+    if (tt > 0) return tt;
+    return Math.max(2, Math.min(6, (navigator.hardwareConcurrency || 4) - whisperThreads()));
   }
 
   function translate(index, text) {
@@ -504,6 +530,7 @@
 
       if (text && !/^[\s.]*$/.test(text)) {
         METRICS.captions.push({
+          index,
           text,
           at: performance.now(),
           latency_ms: Math.round(ms),
@@ -566,8 +593,7 @@
 
     status("fetching Whisper (about 80 MB, cached after this)…");
     const progress = document.getElementById("live-bar");
-    const wt = Number(new URLSearchParams(location.search).get("wt"));   // ?wt=N, for tuning runs
-    const threads = wt > 0 ? wt : Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1));
+    const threads = whisperThreads();
     const worker = new Worker("../static/whisper-worker.js", { type: "module" });
     const pending = new Map();
     const files = {};
@@ -676,6 +702,9 @@
   /* ---------- injected controls ---------- */
 
   function addSourcePicker() {
+    // scripts/build_web.py writes the picker and the progress bar into the
+    // page; this only fills in for a page built without them.
+    if (document.getElementById("live-source-select")) return;
     const bar = document.querySelector(".bar-right");
     if (!bar) return;
     const wrap = document.createElement("label");
@@ -708,14 +737,5 @@
       console.warn("preload failed; Start will retry", err);
       status("");
     });
-
-    const empty = document.getElementById("empty");
-    if (empty) {
-      empty.innerHTML =
-        "Press <kbd>Start</kbd> and talk, or pick <b>A browser tab</b> and share a " +
-        "tab playing a lecture. The first run downloads Whisper (about 80 MB) and " +
-        "then runs it here &mdash; your audio never leaves this tab. Pick a language " +
-        "to translate the captions into it, on this device too.";
-    }
   });
 })();

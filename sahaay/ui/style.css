@@ -293,6 +293,20 @@ main {
   transition: opacity 0.3s;
   animation: rise 0.3s var(--ease);
 }
+/* Still arriving: slightly dimmer, with a caret where the next word lands. */
+.cap-tr.partial { opacity: 0.78; }
+.cap-tr.partial::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 1em;
+  margin-left: 0.15em;
+  vertical-align: -0.12em;
+  background: currentColor;
+  animation: caret 0.9s steps(1, end) infinite;
+}
+@keyframes caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .cap-tr.partial::after { animation: none; } }
 .cap-foot {
   display: flex; gap: 0.6rem; flex-wrap: wrap;
   margin-top: 0.4rem;

@@ -138,6 +138,9 @@ function onTranslation(msg) {
   } else {
     entry.trEl.textContent = msg.text;
     entry.trEl.style.opacity = "";
+    // The browser build streams a translation word by word; the finished
+    // line arrives without the flag and replaces it.
+    entry.trEl.classList.toggle("partial", Boolean(msg.partial));
     // The language tag lets the browser pick the right font and shaping:
     // Sindhi and Urdu share a script but not all their letter forms.
     if (msg.target_language) entry.trEl.lang = msg.target_language;
