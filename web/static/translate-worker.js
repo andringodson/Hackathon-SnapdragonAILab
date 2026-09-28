@@ -130,6 +130,11 @@ self.onmessage = async (e) => {
     await load(m.threads);
     drain();
   } else if (m.type === "translate") {
+    // A new language makes whatever is waiting in the old one stale: it would
+    // hold the switch up by about five seconds a caption.
+    for (let i = queue.length - 1; i >= 0; i--) {
+      if (queue[i].nllb !== m.nllb) postMessage({ type: "dropped", id: queue.splice(i, 1)[0].id });
+    }
     queue.push(m);
     while (queue.length > MAX_BACKLOG) postMessage({ type: "dropped", id: queue.shift().id });
     drain();

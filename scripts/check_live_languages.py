@@ -105,6 +105,7 @@ async ({ langs, sentences, threads }) => {
       if (!firsts.has(m.id)) firsts.set(m.id, performance.now());
       (partials.get(m.id) || partials.set(m.id, []).get(m.id)).push(m.text);
     } else if (m.type === "translation" && waiters.has(m.id)) waiters.get(m.id)(m);
+    else if (m.type === "dropped" && waiters.has(m.id)) waiters.get(m.id)({ dropped: true });
   };
   worker.postMessage({ type: "load", threads });
   const t0 = performance.now();
@@ -112,7 +113,7 @@ async ({ langs, sentences, threads }) => {
   const load_s = (performance.now() - t0) / 1000;
   const ask = (id, text, lang) => new Promise((res) => {
     const sent = performance.now();
-    waiters.set(id, (m) => res({ id, text, out: m.text, terms: m.terms,
+    waiters.set(id, (m) => res({ id, text, dropped: Boolean(m.dropped), out: m.text || "", terms: m.terms || [],
       full_s: (performance.now() - sent) / 1000,
       first_s: firsts.has(id) ? (firsts.get(id) - sent) / 1000 : null,
       partials: partials.get(id) || [] }));
@@ -127,8 +128,15 @@ async ({ langs, sentences, threads }) => {
     const queued = await Promise.all(sentences.slice(0, 3).map((s) => ask(++id, s, lang)));
     results[lang.code] = { single, queued };
   }
+  // A switch mid-backlog: three captions queued in one language, then one in
+  // another. The old language's queue is stale and must give way at once.
+  const other = langs[langs.length > 1 ? 1 : 0];
+  const sw = await Promise.all([
+    ...sentences.slice(0, 3).map((s) => ask(++id, s, langs[0])),
+    ask(++id, sentences[3], other),
+  ]);
   worker.terminate();
-  return { load_s, results };
+  return { load_s, results, switch: { dropped: sw.filter((r) => r.dropped).length, last: sw[3] } };
 }
 """
 
@@ -220,6 +228,18 @@ def main() -> int:
         failures += bool(problems)
         print(f"  {lang['code']:<5} {first:>12} {full:>9}  {bt:>8}  {status}")
         print(f"        {single[0]['out'][:110]}")
+    if len(langs) > 1:
+        sw, other = data["switch"], langs[1]
+        last = sw["last"]
+        problems = [] if not last.get("dropped") else ["the new language's caption was dropped"]
+        if not problems:
+            problems += judge(other, last)
+            if sw["dropped"] < 1:
+                problems.append("the old language's queue was not discarded")
+        failures += bool(problems)
+        took = f"{last['full_s']:.1f} s" if not last.get("dropped") else "-"
+        print(f"\n  switch {langs[0]['code']} -> {other['code']} with 3 queued: {sw['dropped']} stale dropped, "
+              f"new line in {took}  {'ok' if not problems else 'FAIL: ' + '; '.join(problems)}")
     if args.json:
         args.json.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n  {'OK' if not failures else f'{failures} language(s) FAILED'}")

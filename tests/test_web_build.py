@@ -324,6 +324,10 @@ class TestSiteFineTune:
         assert "setTimeout(resolve, 0)" in loop, "the worker no longer yields between translations"
         # Padded batches came back in the wrong script (measured); one at a time.
         assert "MAX_BATCH" not in js
+        # Switching language discards the old one's queue instead of making the
+        # new language wait about five seconds a caption behind it.
+        handler = js[js.index("self.onmessage"):]
+        assert ".nllb !== m.nllb" in handler, "a language switch waits behind the old language's backlog"
         app = (UI / "app.js").read_text(encoding="utf-8")
         assert 'classList.toggle("partial"' in app, "a streaming line is not marked as partial"
 
