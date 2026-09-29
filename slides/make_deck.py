@@ -208,7 +208,7 @@ slide("who", f"""
   {eyebrow('Who this is for', ACCENT_L)}
   <h2 style="font-family:{HEAD}; font-size:68px; font-weight:600; line-height:1.12; letter-spacing:-1px">Three people, one product</h2>
   <div style="display:flex; gap:32px">{"".join(_who)}</div>
-  <p style="font-size:34px; line-height:1.45; color:{ON_L}; width:1600px">Not a hypothetical persona. This is the majority experience in Indian engineering education.</p>
+  <p style="font-size:34px; line-height:1.45; color:{ON_L}; width:1600px">Three needs, and often one student, in the same lecture hall.</p>
   {footer('Who this is for', ON_L_DIM)}
   <aside>Do not linger. One breath per card, then the last line slowly.</aside>
 </section>
@@ -344,7 +344,7 @@ slide("honesty", f"""
 <section id="honesty" style="{dark}; gap:32px">
   {eyebrow('Engineering honesty', WARN)}
   <h2 style="font-family:{HEAD}; font-size:64px; font-weight:600; line-height:1.1; letter-spacing:-1px">Two things I got wrong</h2>
-  {card_d(f'<h3 style="font-family:{HEAD}; font-size:38px; font-weight:600; line-height:1.18; color:{WARN}">The benchmark measured the wrong model</h3><p style="font-size:29px; line-height:1.45; color:{ON_D}">The published figure was RTF 0.042; the product runs at 0.43. The model id is <b>auto</b>, so what got benchmarked was whichever weights happened to be on the machine &mdash; Whisper Tiny, not the Small the product ships. Neither the model nor the signal was recorded, so nobody could check it.</p><p style="font-size:29px; line-height:1.45; color:{ON_D_DIM}">Both harnesses now print the model and the signal beside every number. Correcting it reversed the previous slide &mdash; for the worse, and in the NPU&rsquo;s favour.</p>')}
+  {card_d(f'<h3 style="font-family:{HEAD}; font-size:38px; font-weight:600; line-height:1.18; color:{WARN}">The benchmark measured the wrong model</h3><p style="font-size:29px; line-height:1.45; color:{ON_D}">The published figure was RTF 0.043; the product, alone on a CPU, runs at 0.41. The model id is <b>auto</b>, so what got benchmarked was whichever weights happened to be on the machine &mdash; Whisper Tiny, not the Small the product ships. Neither the model nor the signal was recorded, so nobody could check it.</p><p style="font-size:29px; line-height:1.45; color:{ON_D_DIM}">Both harnesses now print the model and the signal beside every number. Correcting it reversed the previous slide &mdash; for the worse, and in the NPU&rsquo;s favour.</p>')}
   {card_d(f'<h3 style="font-family:{HEAD}; font-size:38px; font-weight:600; line-height:1.18; color:{WARN}">Term protection was wired up but never seeded</h3><p style="font-size:29px; line-height:1.45; color:{ON_D}">Telugu translated &ldquo;eigenvalues&rdquo; into &ldquo;self values&rdquo; &mdash; the exact failure the feature exists to prevent. Only real weights against speech with known ground truth caught it.</p><p style="font-size:29px; line-height:1.45; color:{ON_D_DIM}">A feature that exists in the code is not a feature that works.</p>')}
   {footer('Engineering honesty', ON_D_DIM)}
   <aside>This slide is worth more than another feature. Every judge on a Qualcomm panel has shipped a wrong benchmark. Mention the QNN trap too if there is time: pip install onnxruntime-qnn is not sufficient - without an explicit register_execution_provider_library call the app silently runs on CPU on the Snapdragon device itself.</aside>

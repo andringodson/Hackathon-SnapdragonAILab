@@ -33,3 +33,9 @@ slides/_print.html
 # Showreel: frames, stems and the render are rebuilt by brag-output/composition; the film is on the release.
 brag-output/work/
 brag-output/brag.mp4
+
+# Submission files are built by slides/ and published on the release, not committed.
+Sahaay_deck.pptx
+Sahaay_deck.pdf
+Sahaay_brief.pdf
+slides/_brief.html

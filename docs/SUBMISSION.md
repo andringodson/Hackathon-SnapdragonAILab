@@ -4,15 +4,24 @@ Everything the Unstop form for the **Snapdragon AI Lab Build & Present
 Challenge 2026** is likely to ask for, ready to paste. Deadline: **30 September
 2026, 11:59 PM IST**. One submission, so check it once before pressing submit.
 
-## Files to upload
+## The form, field by field
 
-| What | Where |
+Every file is on release
+[`submission-v2`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2).
+
+| Field | What to give it |
 |---|---|
-| Demo video (2:00, 1080p60, narrated, subtitles) | Release [`submission-v2`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2): `Sahaay_showreel.mp4` |
-| Presentation (11 slides, PDF) | Same release: `Sahaay_deck.pdf` |
+| Project Title | `Sahaay: the lecture understands you, offline` |
+| Brief Project Description (pdf/doc/docx) | `Sahaay_brief.pdf` - two pages: problem, what it does, the measured NPU case, what is not proven yet, links, stack |
+| GitHub Repository Link | `https://github.com/andringodson/Hackathon-SnapdragonAILab` |
+| Short Pitch Presentation in PDF | `Sahaay_deck.pdf` - 11 slides |
+| Short Pitch Presentation in PPT (pptx) | `Sahaay_deck.pptx` - the same 11 slides, editable, with speaker notes |
+| You have a Snapdragon laptop / eligibility checkbox | **Yours to answer.** The project was built and measured without a Snapdragon PC on the desk (docs/AIHUB.md, slide 10), and the form says winners must have one |
+| Demo video, if asked | `Sahaay_showreel.mp4` (2:00, 1080p60, narrated, subtitles) |
 
-The showreel is rebuilt with [`brag-output/`](../brag-output/README.md), the
-deck with `python slides/export_pdf.py`. The older narrated walkthrough (2:51,
+Rebuild them with `python slides/make_brief.py`, `node slides/make_pptx.js`
+(the PDF is PowerPoint's export of that deck, so the two uploads match), and
+[`brag-output/`](../brag-output/README.md) for the film. The older narrated walkthrough (2:51,
 release `submission-v1`, [`video/`](../video/README.md)) still says the AI Hub
 job links are public; they open after signing in with a Qualcomm ID, so
 submit the showreel.
