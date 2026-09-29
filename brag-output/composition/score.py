@@ -12,6 +12,9 @@ switched off (64 s) and comes back as the captions keep coming; it tape-stops
 when the second model pushes the captions past real time (78 s); the 13.47 ms
 lands on the downbeat that brings the full groove back (90 s).
 
+With a voiceover (work/vo.json from voice.py), the lines go on their own bus
+and the music ducks under each one.
+
 Reads work/cues.json (from render.py cues), writes work/score.wav at -14 LUFS.
 """
 import json
@@ -313,6 +316,49 @@ def make_ir(rt60, seed, bright=6000):
     pre = int(0.022 * SR)
     ir = np.concatenate([np.zeros((2, pre)), ir], axis=1)
     return ir / np.sqrt(np.sum(ir ** 2) / 2)
+
+
+def voice_track():
+    """The voiceover from work/vo.json (voice.py), and the envelope the music ducks under.
+
+    The narrator is close and dry. The lecturer is band-limited and put in a
+    hall, so he sounds like a room being recorded rather than a studio.
+    """
+    from scipy.signal import resample_poly
+
+    zeros = np.zeros((2, N))
+    path = WORK / "vo.json"
+    if not path.exists():
+        return zeros, np.zeros(N)
+    narr, lect = Bus(), Bus()
+    gate = np.zeros(N)
+    for ln in json.loads(path.read_text(encoding="utf-8")):
+        rate, x = wavfile.read(ln["file"])
+        x = x.astype(float) / (32768.0 if x.dtype == np.int16 else 1.0)
+        if x.ndim > 1:
+            x = x.mean(axis=1)
+        x = resample_poly(x, SR, rate)
+        x = filt(x, "highpass", 75, 2)
+        voiced = np.abs(x) > 0.02
+        level = np.sqrt(np.mean(x[voiced] ** 2)) if voiced.any() else 1.0
+        x = x / level * 0.085                     # every line at the same loudness
+        if ln["voice"].startswith("h"):
+            lect.add(filt(x, "bp", (160, 6500)) * 0.9, ln["t"], 1.0, pan=-0.08)
+        else:
+            narr.add(x, ln["t"], 1.0, pan=0.0)
+        a, b = int(max(0, ln["t"] - 0.12) * SR), int(min(DUR, ln["t"] + ln["dur"] + 0.2) * SR)
+        gate[a:b] = 1.0
+    voice = (narr.out + reverb(narr.out, make_ir(0.45, 7, 7500), 0.05)
+             + lect.out + reverb(lect.out, make_ir(1.3, 8, 5000), 0.24))
+    # Duck envelope: ~60 ms down, ~400 ms back up.
+    duck = np.empty(N)
+    g, up, down = 0.0, np.exp(-1 / (0.06 * SR)), np.exp(-1 / (0.4 * SR))
+    step = 48
+    for i in range(0, N, step):
+        target = gate[i]
+        g = target + (g - target) * ((up if target > g else down) ** step)
+        duck[i:i + step] = g
+    return voice, duck
 
 
 def reverb(x, ir, wet):
@@ -635,7 +681,10 @@ def main():
 
     # Effects on top, in their own room.
     fxmix = sfx.out + reverb(sfx.out, room, 0.25)
-    total = mix * db(-1.0) + fxmix * db(-2.5)
+    voice, duck = voice_track()
+    # Under a line the music drops to 0.15 (the /brag voiceover rule) and the
+    # effects to 0.45; between lines both come back, so every hit still lands.
+    total = mix * db(-1.0) * (1 - 0.85 * duck) + fxmix * db(-2.5) * (1 - 0.55 * duck) + voice
 
     # Fade the very end.
     tail = int(1.6 * SR)

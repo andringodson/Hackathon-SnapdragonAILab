@@ -1,0 +1,119 @@
+1
+00:00:00,200 --> 00:00:05,673
+[Lecturer] Matrix A ka determinant zero hoga, tabhi non-trivial solution milega.
+
+2
+00:00:05,850 --> 00:00:08,355
+A real lecture, in two languages at once.
+
+3
+00:00:08,450 --> 00:00:10,804
+Now imagine it isn't your first language.
+
+4
+00:00:10,900 --> 00:00:14,125
+The usual answer is the cloud. It stumbles on the mix,
+
+5
+00:00:14,250 --> 00:00:15,810
+it runs a meter the whole time,
+
+6
+00:00:16,850 --> 00:00:18,703
+and it assumes the hall has Wi-Fi.
+
+7
+00:00:23,250 --> 00:00:25,176
+This is Sahaay. Hindi, for help.
+
+8
+00:00:26,900 --> 00:00:29,578
+Everything you're about to see runs on one laptop.
+
+9
+00:00:30,750 --> 00:00:34,000
+Whisper writes each sentence down the moment the lecturer pauses.
+
+10
+00:00:34,100 --> 00:00:36,934
+Then it translates the line, and explains the jargon.
+
+11
+00:00:37,050 --> 00:00:39,684
+And the words the exam will use come through untouched.
+
+12
+00:00:40,700 --> 00:00:44,559
+Every caption and translation here is from a real recorded session.
+
+13
+00:00:46,900 --> 00:00:49,918
+Pick any of twenty-two languages, and the line follows.
+
+14
+00:00:54,600 --> 00:00:57,758
+Twenty-two scripts, and every one keeps the textbook's words.
+
+15
+00:01:02,250 --> 00:01:03,697
+Now, switch the network off.
+
+16
+00:01:05,300 --> 00:01:06,564
+It doesn't even notice.
+
+17
+00:01:07,600 --> 00:01:10,579
+Nothing is uploaded, because nothing ever needed to be.
+
+18
+00:01:13,350 --> 00:01:16,097
+On a laptop CPU, Whisper keeps up easily.
+
+19
+00:01:16,200 --> 00:01:17,945
+Then the glossary model starts too.
+
+20
+00:01:19,300 --> 00:01:22,409
+The captions start falling behind, and they never catch up.
+
+21
+00:01:24,200 --> 00:01:28,735
+So the speech encoder moves to the Hexagon NPU, on silicon of its own.
+
+22
+00:01:30,250 --> 00:01:33,852
+Thirteen and a half milliseconds. Every layer, on the NPU.
+
+23
+00:01:34,050 --> 00:01:35,895
+Measured on Qualcomm's device farm.
+
+24
+00:01:36,350 --> 00:01:39,251
+Four hundred tests, on every push, on three platforms.
+
+25
+00:01:40,120 --> 00:01:42,169
+Offline isn't a promise. It's a test.
+
+26
+00:01:42,300 --> 00:01:43,581
+One script installs it.
+
+27
+00:01:44,200 --> 00:01:45,729
+It even runs in your browser.
+
+28
+00:01:46,100 --> 00:01:48,015
+And it writes your notes when the lecture ends.
+
+29
+00:01:50,400 --> 00:01:52,803
+Sahaay. The lecture understands you, offline.
+
+30
+00:01:53,500 --> 00:01:56,882
+Try it in your browser. No install, and nothing uploaded.

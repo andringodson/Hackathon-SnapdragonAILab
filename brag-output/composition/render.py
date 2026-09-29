@@ -116,9 +116,19 @@ def encode(poster=None):
         (OUT / "brag.jpg").write_bytes(src.read_bytes())
         print(f"poster: frame at {poster} s -> brag.jpg and frame 0")
     audio = WORK / "score.wav"
+    subs = OUT / "captions.srt"
     cmd = ["ffmpeg", "-y", "-v", "error", "-stats", "-framerate", str(FPS), "-i", str(WORK / "frames" / "f%06d.jpg")]
     if audio.exists():
-        cmd += ["-i", str(audio), "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "320k", "-shortest"]
+        cmd += ["-i", str(audio)]
+    if subs.exists():
+        cmd += ["-i", str(subs)]
+    cmd += ["-map", "0:v"]
+    if audio.exists():
+        cmd += ["-map", "1:a", "-c:a", "aac", "-b:a", "320k"]   # no -shortest: the subtitles end before the film
+    if subs.exists():
+        # The voiceover's words as a subtitle track players can switch on (voice.py writes it).
+        cmd += ["-map", f"{2 if audio.exists() else 1}:s", "-c:s", "mov_text",
+                "-metadata:s:s:0", "language=eng", "-metadata:s:s:0", "title=English"]
     cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p", "-profile:v", "high",
             "-x264-params", "keyint=120:min-keyint=60", "-movflags", "+faststart", str(OUT / "brag.mp4")]
     subprocess.run(cmd, check=True)

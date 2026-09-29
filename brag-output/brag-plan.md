@@ -1,7 +1,8 @@
 # Sahaay: the showreel
 
 A two-minute motion-graphics demo for the Snapdragon AI Lab Build & Present
-Challenge 2026 submission. Landscape 1920×1080, 60 fps, original score.
+Challenge 2026 submission. Landscape 1920×1080, 60 fps, original score, and a
+voiceover (see the end).
 
 ## The rubric
 
@@ -95,3 +96,56 @@ network goes off. Sidechained pads and bass, a gentle master bus, about
 - The NPU figure is labelled as the Whisper tiny.en encoder on the AI Hub device farm, and the film says the full pipeline has not yet run on a physical Snapdragon PC.
 - The app scenes replay the real recorded session and real translations, unedited, including their imperfections.
 - No Qualcomm or Snapdragon logos: device names are plain text.
+
+## Voiceover script
+
+Added on request (`/brag --voice`): two synthesised voices, generated with
+Kokoro-82M through Hyperframes (`npx hyperframes tts`) by
+`composition/voice.py`, which also writes the captions.
+
+- **The lecturer** speaks the opening line in Hindi (`hm_psi`, Hindi
+  phonemizer, normal speed: at 1.1x and above, Whisper stopped hearing
+  "non-trivial solution" as English). The words appear on screen as he says
+  them, and the waveform under them is his voice's own loudness. In the mix he
+  is band-limited and put in a hall.
+- **The narrator** (`af_heart`) complements the picture rather than reading
+  it, and is timed into each scene: the film is cut to its score, so the voice
+  fits the picture. Every line ends before the next and before the moment it
+  must clear (the network click at 64 s, the crash at 78 s, the 13.47 ms at 90 s).
+- The music ducks to 0.15 under each line, the effects to 0.45, and both come
+  back between lines, so the drops and hits still land.
+- Checked by transcribing with the app's own Whisper: every narrator line word
+  for word, alone and over the music.
+
+| Time (s) | Voice | Line |
+|---|---|---|
+| 0.20–5.67 | Lecturer (hm_psi, Hindi) | Matrix A ka determinant zero hoga, tabhi non-trivial solution milega. |
+| 5.85–8.36 | Narrator (af_heart) | A real lecture, in two languages at once. |
+| 8.45–10.80 | Narrator (af_heart) | Now imagine it isn't your first language. |
+| 10.90–14.12 | Narrator (af_heart) | The usual answer is the cloud. It stumbles on the mix, |
+| 14.25–15.81 | Narrator (af_heart) | it runs a meter the whole time, |
+| 16.85–18.70 | Narrator (af_heart) | and it assumes the hall has Wi-Fi. |
+| 23.25–25.18 | Narrator (af_heart) | This is Sahaay. Hindi, for help. |
+| 26.90–29.58 | Narrator (af_heart) | Everything you're about to see runs on one laptop. |
+| 30.75–34.00 | Narrator (af_heart) | Whisper writes each sentence down the moment the lecturer pauses. |
+| 34.10–36.93 | Narrator (af_heart) | Then it translates the line, and explains the jargon. |
+| 37.05–39.68 | Narrator (af_heart) | And the words the exam will use come through untouched. |
+| 40.70–44.56 | Narrator (af_heart) | Every caption and translation here is from a real recorded session. |
+| 46.90–49.92 | Narrator (af_heart) | Pick any of twenty-two languages, and the line follows. |
+| 54.60–57.76 | Narrator (af_heart) | Twenty-two scripts, and every one keeps the textbook's words. |
+| 62.25–63.70 | Narrator (af_heart) | Now, switch the network off. |
+| 65.30–66.56 | Narrator (af_heart) | It doesn't even notice. |
+| 67.60–70.58 | Narrator (af_heart) | Nothing is uploaded, because nothing ever needed to be. |
+| 73.35–76.10 | Narrator (af_heart) | On a laptop CPU, Whisper keeps up easily. |
+| 76.20–77.95 | Narrator (af_heart) | Then the glossary model starts too. |
+| 79.30–82.41 | Narrator (af_heart) | The captions start falling behind, and they never catch up. |
+| 84.20–88.73 | Narrator (af_heart) | So the speech encoder moves to the Hexagon NPU, on silicon of its own. |
+| 90.25–93.85 | Narrator (af_heart) | Thirteen and a half milliseconds. Every layer, on the NPU. |
+| 94.05–95.89 | Narrator (af_heart) | Measured on Qualcomm's device farm. |
+| 96.35–99.25 | Narrator (af_heart) | Four hundred tests, on every push, on three platforms. |
+| 100.12–102.17 | Narrator (af_heart) | Offline isn't a promise. It's a test. |
+| 102.30–103.58 | Narrator (af_heart) | One script installs it. |
+| 104.20–105.73 | Narrator (af_heart) | It even runs in your browser. |
+| 106.10–108.02 | Narrator (af_heart) | And it writes your notes when the lecture ends. |
+| 110.40–112.80 | Narrator (af_heart) | Sahaay. The lecture understands you, offline. |
+| 113.50–116.88 | Narrator (af_heart) | Try it in your browser. No install, and nothing uploaded. |

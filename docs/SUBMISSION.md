@@ -8,7 +8,7 @@ Challenge 2026** is likely to ask for, ready to paste. Deadline: **30 September
 
 | What | Where |
 |---|---|
-| Demo video (2:00, 1080p60, original score) | Release [`submission-v2`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2): `Sahaay_showreel.mp4` |
+| Demo video (2:00, 1080p60, narrated, subtitles) | Release [`submission-v2`](https://github.com/andringodson/Hackathon-SnapdragonAILab/releases/tag/submission-v2): `Sahaay_showreel.mp4` |
 | Presentation (11 slides, PDF) | Same release: `Sahaay_deck.pdf` |
 
 The showreel is rebuilt with [`brag-output/`](../brag-output/README.md), the
